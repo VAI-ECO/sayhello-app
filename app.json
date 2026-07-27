@@ -1,0 +1,189 @@
+{
+  "expo": {
+    "name": "Time2sayhello",
+    "slug": "hello-app",
+    // "scheme": "sayhello",
+    "version": "2.20.1",
+    "orientation": "portrait",
+    "icon": "./assets/appicon.png",
+    "userInterfaceStyle": "automatic",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "jsEngine": "hermes",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sayhelloworld",
+      "googleServicesFile": "./google_sevices/GoogleService-Info.plist",
+      "config": {
+        "googleMapsApiKey": "AIzaSyB_CgdO_VOduVITee_LP0xWQgqh_ZAa2mQ"
+      },
+      "infoPlist": {
+        "CFBundleAllowMixedLocalizations": true,
+        "LSMinimumSystemVersion": "12.0",
+        "NSLocationWhenInUseUsageDescription": "This app requires access to your location to show nearby events, local recommendations, and personalized content based on your area. For example, we use your location to find activities happening near you.",
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to let you upload images for your profile, share photos in posts, and customize your experience. For example, you can select an image to use as your profile picture.",
+        "NSCameraUsageDescription": "This app requires access to your camera to enable you to capture photos or videos for sharing or updating your profile. For example, you can take a selfie to set as your profile picture directly in the app.",
+        "NSMicrophoneUsageDescription": "This app requires access to your microphone to record voice messages or audio content. For example, you can send voice notes to other users within the app.",
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.24464594119-rdciad6i56feq0d87ns1qkiga08q2r6i"
+            ]
+          },
+          {
+            "CFBundleURLSchemes": [
+              "com.googleusercontent.apps.24464594119-rdciad6i56feq0d87ns1qkiga08q2r6i"
+            ]
+          }
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "locales": {
+      "en": "./locales/en/translation.json",
+      "es": "./locales/es/translation.json",
+      "ar": "./locales/ar/translation.json",
+      "bn": "./locales/bn/translation.json",
+      "de": "./locales/de/translation.json",
+      "fr": "./locales/fr/translation.json",
+      "ha": "./locales/ha/translation.json",
+      "hi": "./locales/hi/translation.json",
+      "id": "./locales/id/translation.json",
+      "ja": "./locales/ja/translation.json",
+      "ko": "./locales/ko/translation.json",
+      "mr": "./locales/mr/translation.json",
+      "pt": "./locales/pt/translation.json",
+      "ru": "./locales/ru/translation.json",
+      "ta": "./locales/ta/translation.json",
+      "te": "./locales/te/translation.json",
+      "tr": "./locales/tr/translation.json",
+      "ur": "./locales/ur/translation.json",
+      "vi": "./locales/vi/translation.json",
+      "zh": "./locales/zh/translation.json"
+    },
+    "android": {
+      "versionCode": 15,
+      "edgeToEdgeEnabled": true,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "say-hello-882cc.web.app",
+              "pathPattern": "/SignUp.*"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/appicon.png",
+        "backgroundColor": "#338AFF"
+      },
+      "googleServicesFile": "./google_sevices/google-services.json",
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.INTERNET",
+        "android.permission.CAMERA"
+      ],
+      "package": "com.saysayhello",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyB_CgdO_VOduVITee_LP0xWQgqh_ZAa2mQ"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/appicon.png"
+    },
+    "notification": {
+      "icon": "./assets/appicon.png",
+      "color": "#E81F76",
+      "iosDisplayInForeground": true,
+      "androidMode": "default",
+      "androidCollapsedTitle": "Updates from Colab.notes"
+    },
+    "plugins": [
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "This app requires access to your photo library to let you upload images for your profile, share photos in posts, and customize your experience. For example, you can select an image to use as your profile picture."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "We use your location to display your position on the map, connect you with nearby users, and provide real-time updates for local events. For example, when you manually check in at an event, your location will be visible to other participants."
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/appicon.png",
+          "color": "#ffffff",
+          "iosDisplayInForeground": true,
+          "androidMode": "default",
+          "androidCollapsedTitle": "Updates from Colab.notes"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "We use your camera to allow you to take profile pictures, share photos in posts, and capture moments directly within the app. For example, you can take a selfie to set as your profile picture or share photos with friends in your feed",
+          "microphonePermission": "We use your microphone to enable you to record and send voice messages, participate in voice calls, and create audio content within the app. For example, you can send voice notes to friends or record audio for your posts.",
+          "recordAudioAndroid": true
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "enableGooglePay": true
+        }
+      ],
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#338AFF",
+          "image": "./assets/appicon.png",
+          "dark": {
+            "image": "./assets/appicon.png",
+            "backgroundColor": "#338AFF"
+          },
+          "imageWidth": 200
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "project": "react-native",
+          "organization": "sayhello"
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "5bb28858-ded5-4c0c-8330-597451787450"
+      }
+    }
+  }
+}

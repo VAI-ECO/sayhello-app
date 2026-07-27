@@ -1,0 +1,17 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sayhelloworld",
+      "sha256_cert_fingerprints": [
+        "8F:CF:09:7C:4C:4A:91:7E:1E:A3:0A:50:9E:28:D7:F8:EF:C9:FF:70:7F:A2:F5:EB:7A:43:76:EA:AE:6C:67:9F",
+        "B9:76:A6:77:E6:CC:06:0A:58:0C:C3:A7:0C:D3:12:DC:39:54:8F:BD:C9:EF:73:DA:2B:43:A1:CC:31:00:DC:7C",
+        "90:96:7B:AA:EC:46:27:75:AA:B5:D9:57:E7:58:CE:34:BA:63:27:F5:E6:3A:AC:0C:0F:DF:85:9A:2C:56:B7:B6",
+        "E1:D6:86:F1:3A:65:DC:9F:90:3F:D5:AB:57:88:19:2F:42:6E:DD:47:91:BB:C5:D9:8B:C6:D0:86:E9:F7:9B:C9"
+      ]
+    }
+  }
+]
