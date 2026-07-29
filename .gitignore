@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.expo/
+.expo-shared/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Secrets & Keys
+keys.txt
+*.keystore
+*.jks
+*firebase*.json
+*admin*.json
+google-services.json
+GoogleService-Info.plist
+
+# Build outputs
+dist/
+build/
+*.apk
+*.ipa
+*.aab
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Testing
+coverage/
+.nyc_output/
