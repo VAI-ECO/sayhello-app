@@ -1,11 +1,12 @@
 /**
  * CONTRAST FUNCTION TESTS
  *
- * ⚠️ CRITICAL: These tests prove all 8 pickable identity colors
- * meet WCAG AA contrast requirements (4.5:1).
+ * ⚠️ CRITICAL: These tests verify all 12 pickable identity colors
+ * use their LOCKED foreground pairings.
  *
- * Blush is the lightest color and the one that breaks with white text.
- * If Blush passes, everything passes.
+ * LOCKED PAIRINGS (chosen visually):
+ * - Ink on: Orange, Yellow, Cyan
+ * - Chalk on: Coral, Emerald, Slate, Blue, Purple, Magenta, Deep Navy, Brown, Black
  */
 
 import { describe, it, expect } from '@jest/globals';
@@ -13,17 +14,17 @@ import { Colors, PickableColors } from '../tokens';
 import { getContrastColors, getContrastRatio } from '../contrast';
 
 describe('Contrast Function', () => {
-  describe('WCAG AA Compliance (4.5:1 minimum)', () => {
+  describe('Locked Foreground Pairings', () => {
     /**
      * ⚠️ THE CRITICAL TEST
-     * All eight pickable colors must pass WCAG AA with the returned foreground/background.
-     * This is not asserting on literals - it calls the real contrast calculation.
+     * All twelve colors must use their LOCKED foreground pairing.
+     * This is not calculated - it's hardcoded from the visual mapping table.
      */
-    it.each(PickableColors)('should meet WCAG AA for %s', (color) => {
+    it.each(PickableColors)('should use locked foreground for %s', (color) => {
       const result = getContrastColors(color);
 
-      expect(result.meetsWCAG_AA).toBe(true);
-      expect(result.contrastRatio).toBeGreaterThanOrEqual(4.5);
+      // Background should be the identity color itself (no darkening)
+      expect(result.background).toBe(color);
 
       // Log actual values for verification
       console.log(`${color}:`, {
@@ -34,41 +35,45 @@ describe('Contrast Function', () => {
     });
 
     /**
-     * Blush - THE PROBLEM COLOR
-     * Light pink that fails with white text
+     * Verify Ink is used on the three light colors
      */
-    it('should handle Blush with darkened variant', () => {
-      const result = getContrastColors(Colors.Blush);
+    it('should use Ink foreground on Orange, Yellow, Cyan', () => {
+      const orange = getContrastColors(Colors.Orange);
+      const yellow = getContrastColors(Colors.Yellow);
+      const cyan = getContrastColors(Colors.Cyan);
 
-      // Blush should use a darkened background
-      expect(result.background).not.toBe(Colors.Blush);
-
-      // Should use Chalk (white) foreground on the darkened background
-      expect(result.foreground).toBe(Colors.Chalk);
-
-      // Must meet WCAG AA
-      expect(result.contrastRatio).toBeGreaterThanOrEqual(4.5);
-      expect(result.meetsWCAG_AA).toBe(true);
+      expect(orange.foreground).toBe(Colors.Ink);
+      expect(yellow.foreground).toBe(Colors.Ink);
+      expect(cyan.foreground).toBe(Colors.Ink);
     });
 
     /**
-     * Amber - BORDERLINE COLOR
-     * Needs testing to ensure it passes
+     * Verify Chalk is used on the nine dark colors
      */
-    it('should handle Amber correctly', () => {
-      const result = getContrastColors(Colors.Amber);
+    it('should use Chalk foreground on the other nine colors', () => {
+      const darkColors = [
+        Colors.Coral,
+        Colors.Emerald,
+        Colors.Slate,
+        Colors.Blue,
+        Colors.Purple,
+        Colors.Magenta,
+        Colors.DeepNavy,
+        Colors.Brown,
+        Colors.Black,
+      ];
 
-      // Amber may need darkening
-      expect(result.contrastRatio).toBeGreaterThanOrEqual(4.5);
-      expect(result.meetsWCAG_AA).toBe(true);
+      darkColors.forEach((color) => {
+        const result = getContrastColors(color);
+        expect(result.foreground).toBe(Colors.Chalk);
+      });
     });
   });
 
   describe('Contrast Ratio Calculation', () => {
     /**
-     * Test known contrast ratios to verify calculation is correct
+     * Verify contrast calculation is working correctly
      * Ink (#1F1E1C) on Chalk (#FFFFFF) should be ~16.66:1
-     * (Ink is not pure black, so it's less than the theoretical max of 21:1)
      */
     it('should calculate Ink on Chalk correctly', () => {
       const ratio = getContrastRatio(Colors.Ink, Colors.Chalk);
@@ -89,75 +94,107 @@ describe('Contrast Function', () => {
      * Same color should be 1:1 (no contrast)
      */
     it('should calculate same color as 1:1', () => {
-      const ratio = getContrastRatio(Colors.HelloBlue, Colors.HelloBlue);
+      const ratio = getContrastRatio(Colors.Blue, Colors.Blue);
       expect(ratio).toBeCloseTo(1, 1);
     });
   });
 
-  describe('Foreground Selection', () => {
+  describe('Contrast Ratio Verification', () => {
     /**
-     * Dark colors should use Chalk (white) foreground
+     * Verify that all locked pairings have reasonable contrast
+     * Note: We're not enforcing WCAG AA here because the pairings
+     * were chosen visually. This test documents actual ratios.
      */
-    it('should use Chalk foreground for dark colors', () => {
-      const darkColors = [Colors.Midnight, Colors.Plum, Colors.Fern];
-
-      darkColors.forEach((color) => {
+    it('should document contrast ratios for all locked pairings', () => {
+      const results = PickableColors.map((color) => {
         const result = getContrastColors(color);
-        expect(result.foreground).toBe(Colors.Chalk);
+        return {
+          color,
+          ratio: result.contrastRatio,
+          meetsWCAG_AA: result.meetsWCAG_AA,
+        };
+      });
+
+      // Log all ratios for documentation
+      results.forEach(({ color, ratio, meetsWCAG_AA }) => {
+        console.log(`${color}: ${ratio.toFixed(2)}:1 ${meetsWCAG_AA ? '✓ WCAG AA' : '✗ below 4.5:1'}`);
+      });
+
+      // At minimum, all should have some reasonable contrast
+      results.forEach(({ color, ratio }) => {
+        expect(ratio).toBeGreaterThan(1); // At least some contrast
       });
     });
 
     /**
-     * Light colors should use Ink (black) foreground OR Chalk on darkened background
+     * Verify specific color ratios that should be high
      */
-    it('should handle light colors appropriately', () => {
-      const result = getContrastColors(Colors.Blush);
+    it('should have high contrast for Black with Chalk', () => {
+      const result = getContrastColors(Colors.Black);
+      expect(result.contrastRatio).toBeGreaterThan(15); // Nearly black on white
+    });
 
-      // Blush should either use Ink, or Chalk on a darkened background
-      if (result.background === Colors.Blush) {
-        expect(result.foreground).toBe(Colors.Ink);
-      } else {
-        // If background is darkened, Chalk should work
-        expect(result.foreground).toBe(Colors.Chalk);
-      }
+    /**
+     * Verify specific color ratios for light colors with Ink
+     */
+    it('should have reasonable contrast for light colors with Ink', () => {
+      const yellow = getContrastColors(Colors.Yellow);
+      const orange = getContrastColors(Colors.Orange);
+      const cyan = getContrastColors(Colors.Cyan);
 
-      // Either way, must meet WCAG AA
-      expect(result.meetsWCAG_AA).toBe(true);
+      // All should have some contrast, though may not meet WCAG AA
+      expect(yellow.contrastRatio).toBeGreaterThan(1);
+      expect(orange.contrastRatio).toBeGreaterThan(1);
+      expect(cyan.contrastRatio).toBeGreaterThan(1);
     });
   });
 
-  describe('Signal Red Collision', () => {
+  describe('Background Color', () => {
     /**
-     * ⚠️ KNOWN ISSUE: Signal Red is both an identity color and the error color
-     * This test documents the collision but does not solve it
+     * Verify that background is always the identity color itself
+     * (no darkening or modification)
      */
-    it('should note Signal Red can be both identity and error', () => {
-      const result = getContrastColors(Colors.SignalRed);
-
-      // Signal Red should still be usable as an identity color
-      expect(result.meetsWCAG_AA).toBe(true);
-
-      // Document the collision in test output
-      console.warn('⚠️ Signal Red collision: This color is used for both identity and errors');
+    it('should use identity color as background without modification', () => {
+      PickableColors.forEach((color) => {
+        const result = getContrastColors(color);
+        expect(result.background).toBe(color);
+      });
     });
   });
 
-  describe('Background Variants', () => {
+  describe('isLightColor Helper', () => {
     /**
-     * Test that darkened variants are actually darker than originals
+     * Verify isLightColor correctly identifies the three Ink-foreground colors
      */
-    it('should produce darker variants for light colors', () => {
-      const result = getContrastColors(Colors.Blush);
+    it('should identify Orange, Yellow, Cyan as light colors', () => {
+      const { isLightColor } = require('../contrast');
 
-      if (result.background !== Colors.Blush) {
-        // Background was darkened
-        // We can't directly compare hex darkness, but we can verify
-        // that the contrast ratio with Chalk improved
-        const originalContrast = getContrastRatio(Colors.Chalk, Colors.Blush);
-        const darkenedContrast = getContrastRatio(Colors.Chalk, result.background);
+      expect(isLightColor(Colors.Orange)).toBe(true);
+      expect(isLightColor(Colors.Yellow)).toBe(true);
+      expect(isLightColor(Colors.Cyan)).toBe(true);
+    });
 
-        expect(darkenedContrast).toBeGreaterThan(originalContrast);
-      }
+    /**
+     * Verify isLightColor returns false for all other colors
+     */
+    it('should identify all other colors as not light', () => {
+      const { isLightColor } = require('../contrast');
+
+      const darkColors = [
+        Colors.Coral,
+        Colors.Emerald,
+        Colors.Slate,
+        Colors.Blue,
+        Colors.Purple,
+        Colors.Magenta,
+        Colors.DeepNavy,
+        Colors.Brown,
+        Colors.Black,
+      ];
+
+      darkColors.forEach((color) => {
+        expect(isLightColor(color)).toBe(false);
+      });
     });
   });
 });
@@ -165,9 +202,9 @@ describe('Contrast Function', () => {
 describe('Integration: Theme System', () => {
   /**
    * Verify that the theme system provides complete, usable values
-   * for all pickable colors
+   * for all twelve pickable colors
    */
-  it('should provide complete ContrastResult for all colors', () => {
+  it('should provide complete ContrastResult for all twelve colors', () => {
     PickableColors.forEach((color) => {
       const result = getContrastColors(color);
 
@@ -183,5 +220,12 @@ describe('Integration: Theme System', () => {
       expect(result.contrastRatio).toBeGreaterThan(0);
       expect(typeof result.meetsWCAG_AA).toBe('boolean');
     });
+  });
+
+  /**
+   * Verify count of pickable colors is exactly 12
+   */
+  it('should have exactly 12 pickable identity colors', () => {
+    expect(PickableColors.length).toBe(12);
   });
 });

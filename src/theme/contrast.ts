@@ -1,14 +1,36 @@
 /**
  * CONTRAST UTILITIES
  *
- * ⚠️ CRITICAL: Blush #E3A2B4 is light. White text fails on it. Amber #CE8527 is borderline.
- * This function ensures legible contrast for ALL EIGHT pickable identity colors.
+ * ⚠️ FOREGROUND MAPPING IS HARDCODED, NOT CALCULATED
  *
- * WCAG AA requires 4.5:1 contrast ratio for normal text, 3:1 for large text.
- * We target 4.5:1 minimum for all use cases.
+ * LOCKED PAIRINGS (chosen visually):
+ * - Ink #1F1E1C on: Orange, Yellow, Cyan
+ * - Chalk #FFFFFF on: Coral, Emerald, Slate, Blue, Purple, Magenta, Deep Navy, Brown, Black
+ *
+ * The contrast calculation exists only as a verification check.
+ * If it disagrees with this table, the table wins.
  */
 
 import { Colors, type IdentityColor } from './tokens';
+
+/**
+ * LOCKED FOREGROUND MAPPING
+ * These pairings were chosen visually and are not negotiable.
+ */
+const FOREGROUND_MAP: Record<IdentityColor, typeof Colors.Ink | typeof Colors.Chalk> = {
+  [Colors.Orange]: Colors.Ink,
+  [Colors.Yellow]: Colors.Ink,
+  [Colors.Cyan]: Colors.Ink,
+  [Colors.Coral]: Colors.Chalk,
+  [Colors.Emerald]: Colors.Chalk,
+  [Colors.Slate]: Colors.Chalk,
+  [Colors.Blue]: Colors.Chalk,
+  [Colors.Purple]: Colors.Chalk,
+  [Colors.Magenta]: Colors.Chalk,
+  [Colors.DeepNavy]: Colors.Chalk,
+  [Colors.Brown]: Colors.Chalk,
+  [Colors.Black]: Colors.Chalk,
+};
 
 /**
  * Convert hex color to RGB
@@ -23,16 +45,6 @@ function hexToRgb(hex: string): { r: number; g: number; b: number } {
     g: parseInt(result[2], 16),
     b: parseInt(result[3], 16),
   };
-}
-
-/**
- * Convert RGB to hex
- */
-function rgbToHex(r: number, g: number, b: number): string {
-  return '#' + [r, g, b].map((x) => {
-    const hex = Math.round(x).toString(16);
-    return hex.length === 1 ? '0' + hex : hex;
-  }).join('');
 }
 
 /**
@@ -58,30 +70,6 @@ export function getContrastRatio(foreground: string, background: string): number
   return (lighter + 0.05) / (darker + 0.05);
 }
 
-/**
- * Darken a color by reducing its RGB values
- * Used to create accessible variants of light colors like Blush and Amber
- */
-function darkenColor(hex: string, amount: number): string {
-  const rgb = hexToRgb(hex);
-  const darkened = {
-    r: Math.max(0, rgb.r * (1 - amount)),
-    g: Math.max(0, rgb.g * (1 - amount)),
-    b: Math.max(0, rgb.b * (1 - amount)),
-  };
-  return rgbToHex(darkened.r, darkened.g, darkened.b);
-}
-
-/**
- * Pre-calculated darkened variants for light colors
- * These values are tuned to ensure WCAG AA compliance (4.5:1) with Chalk
- */
-const DarkenedVariants: Partial<Record<IdentityColor, string>> = {
-  [Colors.Blush]: darkenColor(Colors.Blush, 0.35), // Blush is the lightest, needs most darkening
-  [Colors.Amber]: darkenColor(Colors.Amber, 0.25), // Amber is borderline, needs more darkening
-  [Colors.Fern]: darkenColor(Colors.Fern, 0.15), // Fern also needs slight darkening
-};
-
 export interface ContrastResult {
   /**
    * The identity color as provided
@@ -90,13 +78,12 @@ export interface ContrastResult {
 
   /**
    * Foreground color for text (Ink or Chalk)
+   * ⚠️ LOCKED - comes from FOREGROUND_MAP, not calculation
    */
   foreground: typeof Colors.Ink | typeof Colors.Chalk;
 
   /**
-   * Background color for full-bleed areas
-   * For light colors like Blush, this is a darkened variant
-   * For dark colors, this is the identity color itself
+   * Background color (always the identity color itself)
    */
   background: string;
 
@@ -112,23 +99,22 @@ export interface ContrastResult {
 }
 
 /**
- * Given an identity color, return the correct foreground (Ink or Chalk)
- * and background (darkened variant if needed) to ensure legible contrast.
+ * Given an identity color, return the LOCKED foreground pairing
+ * and verify contrast ratio.
  *
- * ⚠️ TESTED: All eight pickable colors pass WCAG AA (4.5:1) with returned values.
+ * ⚠️ Foreground is hardcoded from FOREGROUND_MAP.
+ * ⚠️ Background is always the identity color itself (no darkening).
+ * ⚠️ Contrast calculation is for verification only.
  */
 export function getContrastColors(identityColor: IdentityColor): ContrastResult {
-  // Check if this color needs a darkened variant
-  const background = DarkenedVariants[identityColor] || identityColor;
+  // Use the identity color directly as background
+  const background = identityColor;
 
-  // Test contrast with both Ink and Chalk
-  const contrastWithChalk = getContrastRatio(Colors.Chalk, background);
-  const contrastWithInk = getContrastRatio(Colors.Ink, background);
+  // Get the LOCKED foreground from the map
+  const foreground = FOREGROUND_MAP[identityColor];
 
-  // Choose the foreground with better contrast
-  const useChalk = contrastWithChalk > contrastWithInk;
-  const foreground = useChalk ? Colors.Chalk : Colors.Ink;
-  const contrastRatio = useChalk ? contrastWithChalk : contrastWithInk;
+  // Calculate contrast ratio for verification
+  const contrastRatio = getContrastRatio(foreground, background);
 
   return {
     identityColor,
@@ -140,10 +126,9 @@ export function getContrastColors(identityColor: IdentityColor): ContrastResult 
 }
 
 /**
- * Check if a color is considered "light" (needs Ink foreground)
- * Used for quick checks without full contrast calculation
+ * Check if a color is considered "light" (uses Ink foreground)
+ * Based on the LOCKED mapping table
  */
 export function isLightColor(color: IdentityColor): boolean {
-  const luminance = getLuminance(color);
-  return luminance > 0.5;
+  return FOREGROUND_MAP[color] === Colors.Ink;
 }
