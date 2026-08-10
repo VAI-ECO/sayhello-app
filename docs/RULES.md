@@ -213,7 +213,7 @@ rules only.
 | 10.6 🔒 | **Mutual accept is required before any profile is shown** |
 | 10.7 🔒 | **QR is PER-ENCOUNTER**, generated at mutual accept, valid only for that encounter. **Live camera only.** |
 | 10.8 🔒 | QR scan drops a **permanent pin** on the Hello Map |
-| 10.9 🔒 | Selfie attached to the pin permanently. Optional. Worth 25 points. Its presence grants display permission. |
+| 10.9 🔒 | Selfie attached to the pin permanently. **Optional until the first capture — committed after.** Worth 25 points. Its presence grants display permission. See 10.29–10.35. |
 | 10.10 🔒 | The pin **survives account deletion.** Consented at signup. |
 | 10.11 🔒 | The selfie is **revocable by either party** — by formal request, never a button, and never inside the encounter flow. Once 10.29 has fired this is the ONLY route to removal, and it is handled out of band by an admin. There is no user-facing endpoint. Pin and count remain. Business cannot remove one. |
 | 10.12 🔒 | Reveal is **3 hours** out, stored as a column, executed by a job |
