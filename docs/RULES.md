@@ -244,6 +244,22 @@ rules only.
 | 10.27 🔒 | **The never-met Icebreaker send is NEVER advertised.** Not in copy, the App Store description, or a video. |
 | 10.28 ❓ | How long after mutual accept before it is declared never-met? *Recommend 30 minutes.* |
 
+### Selfie retake — ruled 2026-08-10
+
+The first captured selfie is saved immediately. Retakes replace it. There is no discard path once one exists.
+
+| # | Rule |
+|---|---|
+| 10.29 🔒 | On first capture the photo is persisted before any confirmation UI |
+| 10.30 🔒 | Retake overwrites the stored photo |
+| 10.31 🔒 | No delete, no discard, no cancel that results in no photo |
+| 10.32 🔒 | Abandoning the screen keeps the last saved photo |
+| 10.33 🔒 | Skipping is allowed BEFORE the first capture only — no photo, no 25 points |
+
+**Rationale:** the selfie is joint. One party discarding it removes the other party's record of the meeting. Retaking improves it; refusing takes it from somebody else.
+
+**Unchanged:** either party may have the photo removed later by request. The pin and the connection count remain. That is an admin action, not a user button.
+
 ---
 
 ## 11. NUDGE LIMITS
