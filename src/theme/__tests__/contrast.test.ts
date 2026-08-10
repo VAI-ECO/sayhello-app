@@ -1,12 +1,12 @@
 /**
  * CONTRAST FUNCTION TESTS
  *
- * ⚠️ CRITICAL: These tests verify all 12 pickable identity colors
+ * ⚠️ CRITICAL: These tests verify all 10 pickable identity colors
  * use their LOCKED foreground pairings.
  *
  * LOCKED PAIRINGS (chosen visually):
  * - Ink on: Orange, Yellow, Cyan
- * - Chalk on: Coral, Emerald, Slate, Blue, Purple, Magenta, Deep Navy, Brown, Black
+ * - Chalk on: Emerald, Slate, Purple, Magenta, Deep Navy, Brown, Black
  */
 
 import { describe, it, expect } from '@jest/globals';
@@ -17,7 +17,7 @@ describe('Contrast Function', () => {
   describe('Locked Foreground Pairings', () => {
     /**
      * ⚠️ THE CRITICAL TEST
-     * All twelve colors must use their LOCKED foreground pairing.
+     * All ten colors must use their LOCKED foreground pairing.
      * This is not calculated - it's hardcoded from the visual mapping table.
      */
     it.each(PickableColors)('should use locked foreground for %s', (color) => {
@@ -48,14 +48,12 @@ describe('Contrast Function', () => {
     });
 
     /**
-     * Verify Chalk is used on the nine dark colors
+     * Verify Chalk is used on the seven dark colors
      */
-    it('should use Chalk foreground on the other nine colors', () => {
+    it('should use Chalk foreground on the other seven colors', () => {
       const darkColors = [
-        Colors.Coral,
         Colors.Emerald,
         Colors.Slate,
-        Colors.Blue,
         Colors.Purple,
         Colors.Magenta,
         Colors.DeepNavy,
@@ -94,7 +92,7 @@ describe('Contrast Function', () => {
      * Same color should be 1:1 (no contrast)
      */
     it('should calculate same color as 1:1', () => {
-      const ratio = getContrastRatio(Colors.Blue, Colors.Blue);
+      const ratio = getContrastRatio(Colors.Purple, Colors.Purple);
       expect(ratio).toBeCloseTo(1, 1);
     });
   });
@@ -181,10 +179,8 @@ describe('Contrast Function', () => {
       const { isLightColor } = require('../contrast');
 
       const darkColors = [
-        Colors.Coral,
         Colors.Emerald,
         Colors.Slate,
-        Colors.Blue,
         Colors.Purple,
         Colors.Magenta,
         Colors.DeepNavy,
@@ -202,9 +198,9 @@ describe('Contrast Function', () => {
 describe('Integration: Theme System', () => {
   /**
    * Verify that the theme system provides complete, usable values
-   * for all twelve pickable colors
+   * for all ten pickable colors
    */
-  it('should provide complete ContrastResult for all twelve colors', () => {
+  it('should provide complete ContrastResult for all ten colors', () => {
     PickableColors.forEach((color) => {
       const result = getContrastColors(color);
 
@@ -223,9 +219,9 @@ describe('Integration: Theme System', () => {
   });
 
   /**
-   * Verify count of pickable colors is exactly 12
+   * Verify count of pickable colors is exactly 10
    */
-  it('should have exactly 12 pickable identity colors', () => {
-    expect(PickableColors.length).toBe(12);
+  it('should have exactly 10 pickable identity colors', () => {
+    expect(PickableColors.length).toBe(10);
   });
 });

@@ -1,20 +1,18 @@
 /**
  * SAY HELLO DESIGN TOKENS
  *
- * ⚠️ THE TWELVE - pickable identity colors
+ * ⚠️ THE TEN - pickable identity colors
  * No greys invented on the fly, no opacity hacks producing new hues.
  * Neutrals derive from Ink and Chalk only.
  */
 
 export const Colors = {
-  // THE TWELVE - Pickable identity colors
-  Coral: '#F4511E',
+  // THE TEN - Pickable identity colors
   Orange: '#FB8C00',
   Yellow: '#FDD835',
-  Emerald: '#00A05A',
+  Emerald: '#00893F',
   Slate: '#546E7A',
   Cyan: '#00ACC1',
-  Blue: '#1E88E5',
   Purple: '#8E24AA',
   Magenta: '#D81B60',
   DeepNavy: '#0B1F5C',
@@ -46,17 +44,15 @@ export const FixedColors = {
 } as const;
 
 /**
- * PICKABLE IDENTITY COLORS - THE TWELVE
+ * PICKABLE IDENTITY COLORS - THE TEN
  * Ink and Chalk are NOT pickable - they are text and ground only.
  */
 export type IdentityColor =
-  | typeof Colors.Coral
   | typeof Colors.Orange
   | typeof Colors.Yellow
   | typeof Colors.Emerald
   | typeof Colors.Slate
   | typeof Colors.Cyan
-  | typeof Colors.Blue
   | typeof Colors.Purple
   | typeof Colors.Magenta
   | typeof Colors.DeepNavy
@@ -64,28 +60,24 @@ export type IdentityColor =
   | typeof Colors.Black;
 
 export const PickableColors: readonly IdentityColor[] = [
-  Colors.Coral,
   Colors.Orange,
   Colors.Yellow,
-  Colors.Emerald,
   Colors.Slate,
   Colors.Cyan,
-  Colors.Blue,
   Colors.Purple,
   Colors.Magenta,
   Colors.DeepNavy,
   Colors.Brown,
   Colors.Black,
+  Colors.Emerald,
 ] as const;
 
 export const ColorNames: Record<IdentityColor, string> = {
-  [Colors.Coral]: 'Coral',
   [Colors.Orange]: 'Orange',
   [Colors.Yellow]: 'Yellow',
   [Colors.Emerald]: 'Emerald',
   [Colors.Slate]: 'Slate',
   [Colors.Cyan]: 'Cyan',
-  [Colors.Blue]: 'Blue',
   [Colors.Purple]: 'Purple',
   [Colors.Magenta]: 'Magenta',
   [Colors.DeepNavy]: 'Deep Navy',

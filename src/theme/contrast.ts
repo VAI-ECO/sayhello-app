@@ -5,7 +5,7 @@
  *
  * LOCKED PAIRINGS (chosen visually):
  * - Ink #1F1E1C on: Orange, Yellow, Cyan
- * - Chalk #FFFFFF on: Coral, Emerald, Slate, Blue, Purple, Magenta, Deep Navy, Brown, Black
+ * - Chalk #FFFFFF on: Emerald, Slate, Purple, Magenta, Deep Navy, Brown, Black
  *
  * The contrast calculation exists only as a verification check.
  * If it disagrees with this table, the table wins.
@@ -21,10 +21,8 @@ const FOREGROUND_MAP: Record<IdentityColor, typeof Colors.Ink | typeof Colors.Ch
   [Colors.Orange]: Colors.Ink,
   [Colors.Yellow]: Colors.Ink,
   [Colors.Cyan]: Colors.Ink,
-  [Colors.Coral]: Colors.Chalk,
   [Colors.Emerald]: Colors.Chalk,
   [Colors.Slate]: Colors.Chalk,
-  [Colors.Blue]: Colors.Chalk,
   [Colors.Purple]: Colors.Chalk,
   [Colors.Magenta]: Colors.Chalk,
   [Colors.DeepNavy]: Colors.Chalk,

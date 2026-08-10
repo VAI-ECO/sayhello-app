@@ -39,12 +39,12 @@ interface ThemeProviderProps {
   children: ReactNode;
   /**
    * Initial identity color
-   * Defaults to Blue if not provided (used before login)
+   * Defaults to Purple if not provided (used before login)
    */
   initialColor?: IdentityColor;
 }
 
-export function ThemeProvider({ children, initialColor = Colors.Blue }: ThemeProviderProps) {
+export function ThemeProvider({ children, initialColor = Colors.Purple }: ThemeProviderProps) {
   const [identityColor, setIdentityColor] = useState<IdentityColor>(initialColor);
   const [contrast, setContrast] = useState<ContrastResult>(() => getContrastColors(initialColor));
 
