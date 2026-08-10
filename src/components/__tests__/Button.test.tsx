@@ -38,9 +38,13 @@ describe('Button', () => {
       </ThemeProvider>
     );
 
-    // Verify button is rendered but pressing it doesn't call onPress
-    expect(screen.getByText('Test Button')).toBeTruthy();
-    fireEvent.press(screen.getByText('Test Button'));
+    const button = screen.getByRole('button');
+
+    // Assert disabled STATE
+    expect(button.props.accessibilityState.disabled).toBe(true);
+
+    // Assert disabled BEHAVIOR
+    fireEvent.press(button);
     expect(onPress).not.toHaveBeenCalled();
   });
 
@@ -53,5 +57,16 @@ describe('Button', () => {
 
     expect(screen.queryByText('Test Button')).toBeNull(); // No text when loading
     expect(screen.getByTestId('loading-indicator')).toBeTruthy();
+  });
+
+  it('sets accessibilityState.busy when loading', async () => {
+    const screen = await render(
+      <ThemeProvider>
+        <Button title="Test Button" onPress={() => {}} loading />
+      </ThemeProvider>
+    );
+
+    const button = screen.getByRole('button');
+    expect(button.props.accessibilityState.busy).toBe(true);
   });
 });
