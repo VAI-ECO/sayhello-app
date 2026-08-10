@@ -35,7 +35,10 @@ export function Button({ title, onPress, disabled, loading, variant = 'primary',
       activeOpacity={0.7}
     >
       {loading ? (
-        <ActivityIndicator color={isPrimary ? contrast.foreground : identityColor} />
+        <ActivityIndicator
+          color={isPrimary ? contrast.foreground : identityColor}
+          testID="loading-indicator"
+        />
       ) : (
         <Text
           style={[
