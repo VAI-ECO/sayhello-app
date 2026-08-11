@@ -107,6 +107,29 @@ export const en = {
     },
   },
 
+  // Encounter
+  encounter: {
+    nudge: {
+      headline: "It's time to Say Hello.",
+      body: "Go ahead, it's just one word.",
+      accept: 'Accept',
+      decline: 'Not right now',
+    },
+    accepted: {
+      points: '+25',
+      pointsLabel: 'points',
+      body: 'Waverly will point you at them.',
+      continue: 'Show me',
+    },
+    arrow: {
+      headline: "Waverly's pointing. Go Say Hello.",
+    },
+    scan: {
+      headline: 'Scan the QR code and Say Hello.',
+      body: 'Hold their code in the frame. It logs itself — you keep talking.',
+    },
+  },
+
   // Tabs
   tabs: {
     whatsHappening: "What's Happening",

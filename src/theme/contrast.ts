@@ -130,3 +130,20 @@ export function getContrastColors(identityColor: IdentityColor): ContrastResult 
 export function isLightColor(color: IdentityColor): boolean {
   return FOREGROUND_MAP[color] === Colors.Ink;
 }
+
+/**
+ * Darken a color by multiplying each RGB channel by 0.72
+ * Used for nudge screen ground color
+ *
+ * @param color - Hex color to darken
+ * @returns Darkened hex color
+ */
+export function darkenColor(color: string): string {
+  const rgb = hexToRgb(color);
+  const darkened = {
+    r: Math.round(rgb.r * 0.72),
+    g: Math.round(rgb.g * 0.72),
+    b: Math.round(rgb.b * 0.72),
+  };
+  return `#${darkened.r.toString(16).padStart(2, '0')}${darkened.g.toString(16).padStart(2, '0')}${darkened.b.toString(16).padStart(2, '0')}`;
+}
