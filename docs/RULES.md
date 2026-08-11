@@ -161,6 +161,15 @@ rules only.
 | 7.13 🔒 | Earnings figures require the disclaimer: *"Illustration only — results depend on your effort. Not typical or guaranteed."* |
 | 7.14 🔒 | **No invented figures in canonical files.** Example numbers are marked as invented or not written. |
 
+### Dreaming script rules — ruled 2026-08-11
+
+| # | Rule |
+|---|---|
+| 7.15 🔒 | **Font is Assistant** — weights 300, 400, 600, 700, 800. Not Inter. |
+| 7.16 🔒 | **TIER 1 — always Dreaming, at every size, in every context:** "Hello" (the brand word) and "Say Hello" (the locked lockup, both words together, capital S and capital H, never split across lines, never styled separately). Exception: in "It's time to say Hello" the lower-case verb "say" stays in Assistant; only "Hello" is script. |
+| 7.17 🔒 | **TIER 2 — Dreaming at headlines and brand moments only, Assistant in tabs, buttons, list rows, data and labels:** Hootza / Hootzas, Holla / Hollas, Hello Hangout / Hello Hangouts. The word "Hello" inside "Hello Hangout" follows Tier 2 — the phrase is one unit. |
+| 7.18 🔒 | **"Hello Hangout" is never shortened.** Never bare "Hangout" in any copy. |
+
 ---
 
 ## 8. PROXIMITY ARCHITECTURE
