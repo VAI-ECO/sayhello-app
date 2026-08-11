@@ -199,6 +199,48 @@ export const en = {
     },
   },
 
+  // Hello Map
+  map: {
+    search: {
+      placeholder: 'Search a city, state or country',
+      cancel: 'Cancel',
+      sectionsPlaces: 'Places',
+      sectionsHangouts: 'Hello Hangouts',
+      sectionsRecent: 'Recent',
+    },
+    filters: {
+      nearMe: 'Near me',
+      mine: 'Mine',
+      helloHangouts: 'Hello Hangouts',
+      thisYear: 'This year',
+    },
+    browsing: {
+      hellosCount: '{{count}} Hellos',
+      coachMark: 'Pins are people. Squares are places. Rings are happening now.',
+      scrollHint: 'Scroll a pin to see the selfie behind it.',
+    },
+    pinSheet: {
+      labelWhere: 'Where',
+      labelWhen: 'When',
+      labelPinNumber: 'Pin number',
+      permanence: 'This pin is permanent. Both of them chose to put it here.',
+      share: 'Share',
+      report: 'Report',
+    },
+    place: {
+      statsThisMonth: 'This month',
+      statsHangouts: 'Hello Hangouts',
+      statsYours: 'Yours',
+      sectionRecent: 'Most recent',
+      openOnMap: 'Open on the map',
+    },
+    empty: {
+      title: 'No pins here yet',
+      body: 'Somebody has to be first. If you\'re in {{city}}, that\'s a fun thing to be.',
+      turnOnHello: 'Turn on Hello mode',
+    },
+  },
+
   // Tabs
   tabs: {
     whatsHappening: "What's Happening",
