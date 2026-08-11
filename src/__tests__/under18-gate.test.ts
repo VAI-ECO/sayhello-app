@@ -32,9 +32,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const UNDER_18_ATTEMPT_KEY = '@sayhello:under18_attempt';
 
 describe('Under 18 Gate - One Correction Rule', () => {
-  beforeEach(async () => {
-    // Clear AsyncStorage before each test
-    await AsyncStorage.clear();
+  beforeEach(() => {
+    mockStorage.clear();
+    jest.clearAllMocks();
   });
 
   it('first under-18 attempt sets the flag', async () => {
