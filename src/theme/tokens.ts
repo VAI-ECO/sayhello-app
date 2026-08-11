@@ -23,6 +23,7 @@ export const Colors = {
   Fern: '#4F8C36', // Hangout, money, completion
   Plum: '#6A4A9C', // Holla
   HelloBlue: '#2E6FD1', // Hootza, brand
+  Terracotta: '#B5502A', // Discount
   Amber: '#CE8527', // Points, prizes, rewards
   SignalRed: '#C63A2C', // Error only
   Midnight: '#1E2B63', // Gradient stop
@@ -43,12 +44,14 @@ export const Colors = {
  * - Fern: Hello Hangout, money, completion
  * - Plum: Holla
  * - HelloBlue: Hootza, the brand itself
+ * - Terracotta: Discount
  * - SignalRed: error, and nothing else on that screen
  */
 export const FixedColors = {
   hangout: Colors.Fern,
   holla: Colors.Plum,
   hootza: Colors.HelloBlue,
+  discount: Colors.Terracotta,
   error: Colors.SignalRed,
   brand: Colors.HelloBlue,
 } as const;

@@ -63,6 +63,10 @@ describe('Theme Tokens', () => {
       expect(Colors.Plum).toBe('#6A4A9C');
     });
 
+    it('matches Terracotta exactly', () => {
+      expect(Colors.Terracotta).toBe('#B5502A');
+    });
+
     it('matches Amber exactly', () => {
       expect(Colors.Amber).toBe('#CE8527');
     });

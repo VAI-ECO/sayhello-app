@@ -787,3 +787,62 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 32.3 🔒 | Ambassadors are **notified when a perk is added** |
 | 32.4 🔒 | ⚠️ **A perk cannot be removed from existing Founding Hangouts.** Anything added here is a five-year commitment. |
 | 32.5 ❓ | Does a later perk apply to those who signed before it existed? *Recommend yes — one Founding class, no vintages.* |
+
+---
+
+## 33. MAP LEGEND
+
+| # | Rule |
+|---|---|
+| 33.1 🔒 | **People are solid; places, events and things are outlined.** |
+| 33.2 🔒 | A **Discount** is a **TAG**, outlined. The eyelet sits in the neck, not the body. |
+
+---
+
+## 34. COLOUR SYSTEM
+
+### The Ten Identity Colours
+
+Every user picks one. Waverly renders in it. Profile rings, highlights, the Hello toggle ring — all the user's identity colour.
+
+| Name | Hex | Foreground |
+|---|---|---|
+| Orange | `#FB8C00` | Ink |
+| Yellow | `#FDD835` | Ink |
+| Slate | `#546E7A` | Chalk |
+| Cyan | `#00ACC1` | Ink |
+| Purple | `#8E24AA` | Chalk |
+| Magenta | `#D81B60` | Chalk |
+| Deep Navy | `#0B1F5C` | Chalk |
+| Brown | `#6B3F1D` | Chalk |
+| Black | `#101010` | Chalk |
+| Emerald | `#00893F` | Chalk |
+
+| # | Rule |
+|---|---|
+| 34.1 🔒 | **All ten are pickable.** There is no excluded subset. |
+| 34.2 🔒 | **Foreground is a FIXED TABLE**, never a computed contrast check. The table above is canonical. |
+| 34.3 🔒 | **Dead as identity, remove on sight:** Red · Coral · Amber · Lime · Blush `#E3A2B4` · Fuchsia `#C03B80` · Fern · Hello Blue · Midnight · Signal Red · Plum · Terracotta. |
+| 34.4 🔒 | **Fixed roles, never a user's colour:** Fern `#4F8C36` Hello Hangout/money/completion · Plum `#6A4A9C` Holla · Hello Blue `#2E6FD1` Hootza/brand · Amber `#CE8527` points/rewards/Founding · Signal Red `#C63A2C` errors only · Midnight `#1E2B63` gradient stop · Terracotta `#B5502A` Discounts. |
+| 34.5 🔒 | **The picker is ONE screen, three states.** Copy: *"Waverly looks good in [colour]."* / *"Change it any time."* ⚠️ **NEVER** *"Nice choice."* Waverly notices, never grades. |
+
+---
+
+### Fixed Semantic Colours
+
+These colours have **fixed roles** and are **never pickable as identity colours**.
+
+| Role | Colour | Hex |
+|---|---|---|
+| Hello Hangout | Fern | `#4F8C36` |
+| Holla | Plum | `#6A4A9C` |
+| Hootza | Hello Blue | `#2E6FD1` |
+| **Discount** | **Terracotta** | **`#B5502A`** |
+| Points, prizes, rewards | Amber | `#CE8527` |
+| Error only | Signal Red | `#C63A2C` |
+
+| # | Rule |
+|---|---|
+| 34.6 🔒 | Fixed semantic colours **never take the user's identity colour** |
+| 34.7 🔒 | Fixed semantic colours are **never pickable** in onboarding or settings |
+| 34.8 🔒 | **Terracotta `#B5502A`** is the colour for **Discounts**. This closes the collision where Discount was Magenta `#D81B60`, which is a pickable identity colour. |
