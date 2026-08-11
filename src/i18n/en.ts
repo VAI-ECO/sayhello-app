@@ -128,6 +128,36 @@ export const en = {
       headline: 'Scan the QR code and Say Hello.',
       body: 'Hold their code in the frame. It logs itself — you keep talking.',
     },
+    selfiePrompt: {
+      title: 'Waverly wants to remember this one.',
+      subtitle: 'Take one together.',
+      points: '+25',
+      pointsLabel: 'points, each of you',
+      button: 'Take the selfie',
+      disclosure: 'The first one counts. You can always take a better one.',
+    },
+    selfieReview: {
+      saved: 'Saved.',
+      looksGood: 'Looks good',
+      retake: 'Retake',
+      disclaimer: "Take another if you want. We'll keep the best one.",
+    },
+    pinDrop: {
+      title: "Waverly just dropped a pin. Right where you're standing. It stays.",
+    },
+    countdown: {
+      header: "Waverly's holding something for you.",
+      until: 'until Waverly hands it over',
+    },
+    reveal: {
+      header: "Waverly's back. Here's what she wrote.",
+      moreBelow: 'Seven more of hers below',
+    },
+    missedConnection: {
+      header: 'Waverly thought you might want to know who you missed today.',
+      points: 'The 25 points stand.',
+      moreBelow: 'Four more of his below',
+    },
   },
 
   // Tabs
