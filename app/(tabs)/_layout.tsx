@@ -54,15 +54,15 @@ export default function TabsLayout() {
       <Tabs.Screen
         name="points"
         options={{
-          title: t('tabs.points'),
-          tabBarLabel: t('tabs.points'),
+          title: t('tabs.prizes'),
+          tabBarLabel: t('tabs.prizes'),
         }}
       />
       <Tabs.Screen
         name="profile"
         options={{
-          title: t('tabs.profile'),
-          tabBarLabel: t('tabs.profile'),
+          title: t('tabs.you'),
+          tabBarLabel: t('tabs.you'),
         }}
       />
     </Tabs>

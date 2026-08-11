@@ -105,8 +105,8 @@ export const en = {
     whatsHappening: "What's Happening",
     map: 'Map',
     hellos: 'Hellos',
-    points: 'Points',
-    profile: 'Profile',
+    prizes: 'Prizes',
+    you: 'You',
   },
 
   // Placeholders
