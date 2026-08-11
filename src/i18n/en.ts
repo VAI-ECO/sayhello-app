@@ -160,6 +160,45 @@ export const en = {
     },
   },
 
+  // What's Happening
+  whatsHappening: {
+    header: {
+      openToHellos: "You're open to Hellos",
+      toggleOn: 'On',
+      toggleOff: 'Off',
+    },
+    filters: {
+      all: 'All',
+      hootzas: 'Hootzas',
+      discounts: 'Discounts',
+      hollas: 'Hollas',
+    },
+    quietDay: {
+      title: 'Quiet around here today',
+      subtitle: "Nothing posted within a mile. Here's what's on this week a little further out.",
+      postCta: {
+        title: 'Start one yourself',
+        body: 'A Hootza is just a time and a place. Coffee counts.',
+        button: 'Post a Hootza',
+      },
+    },
+    helloTakeover: {
+      title: "It's time to",
+      subtitle: "You'll both find out who a few hours from now.",
+      accept: "Go ahead, it's just one word",
+      decline: 'Not right now',
+    },
+    feedItem: {
+      tonight: 'Tonight',
+      join: 'Join',
+      discount: 'Discount',
+      ends: 'ends',
+      holla: 'Holla',
+      hootza: 'Hootza',
+      going: 'going',
+    },
+  },
+
   // Tabs
   tabs: {
     whatsHappening: "What's Happening",
