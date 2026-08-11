@@ -41,7 +41,7 @@ export default function ColorScreen() {
       // Continue anyway - color is already set in theme
     }
 
-    router.push('/(onboarding)/location');
+    router.push('/(onboarding)/photo');
   };
 
   const colorName = ColorNames[selectedColor];

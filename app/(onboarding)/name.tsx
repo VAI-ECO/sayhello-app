@@ -7,10 +7,13 @@
 import { useState } from 'react';
 import { View, Text, StyleSheet, Alert } from 'react-native';
 import { useRouter } from 'expo-router';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ScreenContainer, Button, TextInput } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme';
 import { api } from '../../src/api/client';
+
+const UNDER_18_ATTEMPT_KEY = '@sayhello:under18_attempt';
 
 export default function NameScreen() {
   const router = useRouter();
@@ -52,9 +55,21 @@ export default function NameScreen() {
     const age = calculateAge(birthYear, birthMonth, birthDay);
 
     if (age < 18) {
-      Alert.alert('Age Requirement', t('onboarding.birthday.error'));
+      // Check if this is the first or second under-18 attempt
+      const hasAttemptedBefore = await AsyncStorage.getItem(UNDER_18_ATTEMPT_KEY);
+
+      if (!hasAttemptedBefore) {
+        // First attempt - mark it and allow one correction
+        await AsyncStorage.setItem(UNDER_18_ATTEMPT_KEY, 'true');
+      }
+
+      router.push('/(onboarding)/under-18');
       return;
     }
+
+    // Success: 18 or over. Clear any previous under-18 attempt flag.
+    // A successful pass wipes the strike.
+    await AsyncStorage.removeItem(UNDER_18_ATTEMPT_KEY);
 
     setError('');
     setLoading(true);
@@ -71,7 +86,7 @@ export default function NameScreen() {
       return;
     }
 
-    router.push('/(onboarding)/photo');
+    router.push('/(onboarding)/color');
   };
 
   return (

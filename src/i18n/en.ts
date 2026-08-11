@@ -98,6 +98,13 @@ export const en = {
       point3: 'Earn points and entries with every hello',
       getStarted: "Let's go",
     },
+    under18: {
+      title: 'Come back and see us.',
+      body1: "Say Hello is built for people 18 and up, so we can't set up an account today. Nothing you entered has been saved.",
+      body2: 'If you got the date wrong, you can go back and fix it.',
+      goBack: 'Go back',
+      closeApp: 'Close the app',
+    },
   },
 
   // Tabs

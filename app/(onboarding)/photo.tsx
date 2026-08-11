@@ -67,11 +67,11 @@ export default function PhotoScreen() {
       }
     }
 
-    router.push('/(onboarding)/color');
+    router.push('/(onboarding)/location');
   };
 
   const handleSkip = () => {
-    router.push('/(onboarding)/color');
+    router.push('/(onboarding)/location');
   };
 
   return (

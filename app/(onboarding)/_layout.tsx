@@ -13,8 +13,9 @@ export default function OnboardingLayout() {
       <Stack.Screen name="phone" />
       <Stack.Screen name="otp" />
       <Stack.Screen name="name" />
-      <Stack.Screen name="photo" />
+      <Stack.Screen name="under-18" />
       <Stack.Screen name="color" />
+      <Stack.Screen name="photo" />
       <Stack.Screen name="location" />
       <Stack.Screen name="notifications" />
       <Stack.Screen name="welcome" />
