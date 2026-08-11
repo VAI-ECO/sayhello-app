@@ -185,6 +185,10 @@ rules only.
 | 8.7 🔒 | **Meeting is a social choice, never a technology setting.** Turning meeting off turns Bluetooth off; the user is never told that. |
 | 8.8 🔒 | Turning the app on turns Bluetooth on, and the user is warned of that at the start |
 | 8.9 🔒 | **Direction arrow.** UWB (Nearby Interaction) where both phones support it; hot/cold fallback where they don't. UWB is phone-to-phone. |
+| 8.10 🔒 | Proximity is two-stage: GPS coarse filter server-side, BLE fine confirm in the foreground. See FLOW-14. |
+| 8.11 🔒 | The push notification is the handoff. Accept brings the app forward, and BLE only operates from there. |
+| 8.12 🔒 | ⚠️ The UI NEVER states a distance. Not in copy, a notification, an empty state, or marketing. |
+| 8.13 🔒 | BLE confirmation failure closes the encounter as a lost connection under 10.23. The user is never told why. |
 
 ### Maintenance after mutual accept
 
