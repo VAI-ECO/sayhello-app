@@ -11,3 +11,12 @@ NEVER commit a file you were told not to modify. If it is already dirty,
 STOP and show me the diff.
 
 @AGENTS.md
+
+BEFORE WRITING OR EDITING ANY TEST, read the version-matched docs shipped in
+node_modules/@testing-library/react-native/docs/ — especially
+guides/llm-guidelines.md and guides/common-mistakes.md. RNTL v14 changed the
+API: render, fireEvent, renderHook and userEvent are ALL async and must be
+awaited. Do not write v13-style tests.
+
+READ A LIBRARY'S SHIPPED DOCS BEFORE DEBUGGING IT. Many packages ship
+version-matched documentation inside node_modules. Check there first.
