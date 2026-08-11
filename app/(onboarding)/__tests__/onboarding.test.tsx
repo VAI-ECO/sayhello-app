@@ -1,33 +1,11 @@
 /**
- * ⚠️ KNOWN FAILURE — 4 of 5 tests fail. DO NOT DELETE OR SKIP THIS FILE.
- *
- * Cause: React 19 + jest-expo 57 + @react-native/jest-preset do not wire up
- * IS_REACT_ACT_ENVIRONMENT. React discards async state updates, so screens
- * render nothing and queries find no elements.
- *
- * Errors: "The current testing environment is not configured to support
- * act(...)" and "You seem to have overlapping act() calls".
- *
- * Ruled out: AsyncStorage mock, SafeAreaView mock, API mock, ThemeProvider
- * wrapping, await placement on render/query, mockStorage leaking between
- * tests, setting the flag in jest.setup.js and in this file, and setting
- * testEnvironment explicitly. The setup file IS loaded and the flag IS set —
- * React does not read it.
- *
- * The Under 18 LOGIC is fully covered and passing in
- * src/__tests__/under18-gate.test.ts. What is untested here is rendering.
- *
- * Revisit when jest-expo supports React 19 act(). Ruled 2026-08-11.
- */
-
-/**
  * ONBOARDING TESTS
  *
  * Tests for onboarding screen order and Under 18 hard stop
  */
 
 import React from 'react';
-import { render, fireEvent, waitFor } from '@testing-library/react-native';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
 import { useRouter } from 'expo-router';
 import NameScreen from '../name';
 import Under18Screen from '../under-18';
@@ -99,7 +77,7 @@ describe('Onboarding Flow', () => {
       const mockUpdateProfile = require('../../../src/api/client').api.user.updateProfile;
       mockUpdateProfile.mockResolvedValue({ data: {}, error: null });
 
-      const screen = await render(
+      await render(
         <ThemeProvider>
           <NameScreen />
         </ThemeProvider>
@@ -107,7 +85,7 @@ describe('Onboarding Flow', () => {
 
       // Fill in name
       const nameInput = await screen.findByPlaceholderText('Your name');
-      fireEvent.changeText(nameInput, 'Test User');
+      await fireEvent.changeText(nameInput, 'Test User');
 
       // Fill in valid birthday (age 25)
       const today = new Date();
@@ -117,13 +95,13 @@ describe('Onboarding Flow', () => {
       const dayInput = await screen.findByPlaceholderText('DD');
       const yearInput = await screen.findByPlaceholderText('YYYY');
 
-      fireEvent.changeText(monthInput, '01');
-      fireEvent.changeText(dayInput, '01');
-      fireEvent.changeText(yearInput, year.toString());
+      await fireEvent.changeText(monthInput, '01');
+      await fireEvent.changeText(dayInput, '01');
+      await fireEvent.changeText(yearInput, year.toString());
 
       // Press continue
       const continueButton = await screen.findByText('Continue');
-      fireEvent.press(continueButton);
+      await fireEvent.press(continueButton);
 
       await waitFor(() => {
         expect(mockPush).toHaveBeenCalledWith('/(onboarding)/color');
@@ -136,7 +114,7 @@ describe('Onboarding Flow', () => {
       const mockUpdateProfile = require('../../../src/api/client').api.user.updateProfile;
       mockUpdateProfile.mockResolvedValue({ data: {}, error: null });
 
-      const screen = await render(
+      await render(
         <ThemeProvider>
           <NameScreen />
         </ThemeProvider>
@@ -144,7 +122,7 @@ describe('Onboarding Flow', () => {
 
       // Fill in name
       const nameInput = await screen.findByPlaceholderText('Your name');
-      fireEvent.changeText(nameInput, 'Test User');
+      await fireEvent.changeText(nameInput, 'Test User');
 
       // Fill in under-18 birthday (age 16)
       const today = new Date();
@@ -154,13 +132,13 @@ describe('Onboarding Flow', () => {
       const dayInput = await screen.findByPlaceholderText('DD');
       const yearInput = await screen.findByPlaceholderText('YYYY');
 
-      fireEvent.changeText(monthInput, '01');
-      fireEvent.changeText(dayInput, '01');
-      fireEvent.changeText(yearInput, year.toString());
+      await fireEvent.changeText(monthInput, '01');
+      await fireEvent.changeText(dayInput, '01');
+      await fireEvent.changeText(yearInput, year.toString());
 
       // Press continue
       const continueButton = await screen.findByText('Continue');
-      fireEvent.press(continueButton);
+      await fireEvent.press(continueButton);
 
       await waitFor(() => {
         expect(mockPush).toHaveBeenCalledWith('/(onboarding)/under-18');
@@ -168,7 +146,7 @@ describe('Onboarding Flow', () => {
     });
 
     it('does not allow continuing from Under 18 screen', async () => {
-      const screen = await render(
+      await render(
         <ThemeProvider>
           <Under18Screen />
         </ThemeProvider>
@@ -189,20 +167,20 @@ describe('Onboarding Flow', () => {
     });
 
     it('allows going back from Under 18 screen', async () => {
-      const screen = await render(
+      await render(
         <ThemeProvider>
           <Under18Screen />
         </ThemeProvider>
       );
 
       const goBackButton = await screen.findByText('Go back');
-      fireEvent.press(goBackButton);
+      await fireEvent.press(goBackButton);
 
       expect(mockBack).toHaveBeenCalled();
     });
 
     it('displays Under 18 hard stop copy', async () => {
-      const screen = await render(
+      await render(
         <ThemeProvider>
           <Under18Screen />
         </ThemeProvider>
