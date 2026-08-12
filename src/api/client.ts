@@ -4,6 +4,7 @@
  * Typed client against sayhello-api backend.
  * - Auth token storage in secure storage (never AsyncStorage)
  * - Automatic token attachment
+ * - Case transformation (snake_case ↔ camelCase)
  * - Single error shape
  *
  * ⚠️ NO BUSINESS FIGURES HARDCODED IN APP
@@ -11,8 +12,16 @@
  */
 
 import * as SecureStore from 'expo-secure-store';
+import Constants from 'expo-constants';
+import { keysToCamel, keysToSnake } from '../lib/case-transform';
 
 const TOKEN_KEY = 'auth_token';
+
+// Read API URL from environment, with sane default
+// iOS Simulator: localhost works
+// Android Emulator: use 10.0.2.2
+// Physical Device: set API_URL in .env to your machine's LAN IP
+const API_URL = Constants.expoConfig?.extra?.apiUrl || 'http://localhost:3000';
 
 interface APIError {
   message: string;
@@ -31,8 +40,9 @@ class APIClient {
   private baseURL: string;
   private token: string | null = null;
 
-  constructor(baseURL: string = 'http://localhost:54321') {
+  constructor(baseURL: string = API_URL) {
     this.baseURL = baseURL;
+    console.log(`[API Client] Base URL: ${this.baseURL}`);
   }
 
   /**
@@ -40,6 +50,9 @@ class APIClient {
    */
   async init(): Promise<void> {
     this.token = await SecureStore.getItemAsync(TOKEN_KEY);
+    if (this.token) {
+      console.log('[API Client] Token loaded from SecureStore');
+    }
   }
 
   /**
@@ -48,6 +61,7 @@ class APIClient {
   async setToken(token: string): Promise<void> {
     this.token = token;
     await SecureStore.setItemAsync(TOKEN_KEY, token);
+    console.log('[API Client] Token stored in SecureStore');
   }
 
   /**
@@ -56,10 +70,14 @@ class APIClient {
   async clearToken(): Promise<void> {
     this.token = null;
     await SecureStore.deleteItemAsync(TOKEN_KEY);
+    console.log('[API Client] Token cleared from SecureStore');
   }
 
   /**
-   * Make authenticated request
+   * Make authenticated request with case transformation
+   *
+   * Request bodies: camelCase → snake_case
+   * Response bodies: snake_case → camelCase
    */
   private async request<T = unknown>(
     endpoint: string,
@@ -75,27 +93,48 @@ class APIClient {
         headers['Authorization'] = `Bearer ${this.token}`;
       }
 
-      const response = await fetch(`${this.baseURL}${endpoint}`, {
+      // Transform request body from camelCase to snake_case
+      let body = options.body;
+      if (body && typeof body === 'string') {
+        try {
+          const parsed = JSON.parse(body);
+          const transformed = keysToSnake(parsed);
+          body = JSON.stringify(transformed);
+        } catch {
+          // If body isn't valid JSON, leave it as-is
+        }
+      }
+
+      const url = `${this.baseURL}${endpoint}`;
+      console.log(`[API Client] ${options.method || 'GET'} ${url}`);
+
+      const response = await fetch(url, {
         ...options,
         headers,
+        body,
       });
 
-      const data = await response.json();
+      const rawData = await response.json();
 
       if (!response.ok) {
+        // Transform error response to camelCase
+        const errorData = keysToCamel<any>(rawData);
         return {
           error: {
-            message: data.message || 'An error occurred',
-            code: data.error || data.code,
+            message: errorData.message || 'An error occurred',
+            code: errorData.error || errorData.code,
             status: response.status,
-            lockedUntil: data.lockedUntil,
-            attemptsRemaining: data.attemptsRemaining,
+            lockedUntil: errorData.lockedUntil,
+            attemptsRemaining: errorData.attemptsRemaining,
           },
         };
       }
 
+      // Transform success response to camelCase
+      const data = keysToCamel<T>(rawData);
       return { data };
     } catch (error) {
+      console.error('[API Client] Request failed:', error);
       return {
         error: {
           message: error instanceof Error ? error.message : 'Network error',
@@ -109,17 +148,29 @@ class APIClient {
    * Auth endpoints
    */
   auth = {
-    sendOTP: async (phone: string): Promise<APIResponse> => {
-      return this.request('/auth/otp', {
+    /**
+     * Request OTP code
+     * Backend: POST /auth/request-otp
+     */
+    requestOTP: async (phoneNumber: string, dateOfBirth: string): Promise<APIResponse> => {
+      return this.request('/auth/request-otp', {
         method: 'POST',
-        body: JSON.stringify({ phone }),
+        body: JSON.stringify({ phoneNumber, dateOfBirth }),
       });
     },
 
-    verifyOTP: async (phone: string, code: string): Promise<APIResponse<{ token: string }>> => {
-      const response = await this.request<{ token: string }>('/auth/verify', {
+    /**
+     * Verify OTP code and get token
+     * Backend: POST /auth/verify-otp
+     */
+    verifyOTP: async (
+      phoneNumber: string,
+      code: string,
+      locale: string
+    ): Promise<APIResponse<{ token: string }>> => {
+      const response = await this.request<{ token: string }>('/auth/verify-otp', {
         method: 'POST',
-        body: JSON.stringify({ phone, code }),
+        body: JSON.stringify({ phoneNumber, code, locale }),
       });
 
       if (response.data?.token) {
@@ -129,23 +180,67 @@ class APIClient {
       return response;
     },
 
+    /**
+     * Sign out (client-side only - clears token)
+     * No backend endpoint for this
+     */
     signOut: async (): Promise<void> => {
       await this.clearToken();
     },
   };
 
   /**
-   * User endpoints - placeholders for now
+   * User endpoints
    */
   user = {
+    /**
+     * Get current user profile
+     * Backend: GET /users/me
+     */
     getProfile: async (): Promise<APIResponse> => {
-      return this.request('/user/profile');
+      return this.request('/users/me');
     },
 
+    /**
+     * Update user profile
+     * Backend: PATCH /users/me
+     */
     updateProfile: async (data: Record<string, unknown>): Promise<APIResponse> => {
-      return this.request('/user/profile', {
+      return this.request('/users/me', {
         method: 'PATCH',
         body: JSON.stringify(data),
+      });
+    },
+  };
+
+  /**
+   * Icebreakers endpoints
+   */
+  icebreakers = {
+    /**
+     * Get all icebreaker questions
+     * Backend: GET /icebreakers/questions
+     */
+    getQuestions: async (): Promise<APIResponse> => {
+      return this.request('/icebreakers/questions');
+    },
+
+    /**
+     * Get user's icebreaker answers
+     * Backend: GET /icebreakers/my-answers
+     */
+    getMyAnswers: async (): Promise<APIResponse> => {
+      return this.request('/icebreakers/my-answers');
+    },
+
+    /**
+     * Save or update an answer
+     * Backend: POST /icebreakers/answers
+     */
+    saveAnswer: async (questionId: string, text: string): Promise<APIResponse> => {
+      return this.request('/icebreakers/answers', {
+        method: 'POST',
+        body: JSON.stringify({ questionId, text }),
       });
     },
   };

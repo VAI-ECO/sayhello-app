@@ -48,7 +48,8 @@ export default function SignInCodeScreen() {
     setError(false);
     setLoading(true);
 
-    const result = await api.auth.verifyOTP(phone, code);
+    // TODO: Get locale from device settings
+    const result = await api.auth.verifyOTP(phone, code, 'en-US');
 
     setLoading(false);
 
@@ -76,7 +77,8 @@ export default function SignInCodeScreen() {
   const handleResend = async () => {
     if (resendCooldown > 0) return;
 
-    const result = await api.auth.sendOTP(phone);
+    // TODO: Sign-in flow needs dateOfBirth from backend session or stored locally
+    const result = await api.auth.requestOTP(phone, '1990-01-01');
     if (result.error) {
       Alert.alert('Error', result.error.message);
     } else {

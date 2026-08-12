@@ -27,7 +27,8 @@ export default function PhoneScreen() {
     setError(false);
     setLoading(true);
 
-    const result = await api.auth.sendOTP(phone);
+    // TODO: Get dateOfBirth from onboarding flow state
+    const result = await api.auth.requestOTP(phone, '1990-01-01');
 
     setLoading(false);
 

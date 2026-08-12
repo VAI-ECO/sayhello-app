@@ -28,7 +28,8 @@ export default function OTPScreen() {
     setError(false);
     setLoading(true);
 
-    const result = await api.auth.verifyOTP(phone, code);
+    // TODO: Get locale from device settings
+    const result = await api.auth.verifyOTP(phone, code, 'en-US');
 
     setLoading(false);
 
@@ -43,7 +44,8 @@ export default function OTPScreen() {
   };
 
   const handleResend = async () => {
-    const result = await api.auth.sendOTP(phone);
+    // TODO: Get dateOfBirth from onboarding flow state
+    const result = await api.auth.requestOTP(phone, '1990-01-01');
     if (result.error) {
       Alert.alert('Error', result.error.message);
     } else {

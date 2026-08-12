@@ -24,7 +24,7 @@ jest.mock('../../../src/api/client', () => ({
   api: {
     init: jest.fn(),
     auth: {
-      sendOTP: jest.fn(),
+      requestOTP: jest.fn(),
       verifyOTP: jest.fn(),
     },
   },
@@ -86,7 +86,7 @@ describe('Sign In Flow', () => {
     });
 
     it('sends OTP and navigates to code screen', async () => {
-      (api.auth.sendOTP as jest.Mock).mockResolvedValue({ data: {} });
+      (api.auth.requestOTP as jest.Mock).mockResolvedValue({ data: {} });
 
       await renderWithTheme(<SignInPhoneScreen />);
 
@@ -97,7 +97,7 @@ describe('Sign In Flow', () => {
       await fireEvent.press(button);
 
       await waitFor(() => {
-        expect(api.auth.sendOTP).toHaveBeenCalledWith('5551234567');
+        expect(api.auth.requestOTP).toHaveBeenCalledWith('5551234567', '1990-01-01');
       });
 
       expect(mockRouter.push).toHaveBeenCalledWith({
@@ -228,7 +228,7 @@ describe('Sign In Flow', () => {
         });
       });
 
-      (api.auth.sendOTP as jest.Mock).mockImplementation(() => {
+      (api.auth.requestOTP as jest.Mock).mockImplementation(() => {
         // Server resets attempt counter on successful OTP resend
         attemptCount = 0;
         return Promise.resolve({ data: {} });
@@ -258,7 +258,7 @@ describe('Sign In Flow', () => {
       await fireEvent.press(resendButton);
 
       await waitFor(() => {
-        expect(api.auth.sendOTP).toHaveBeenCalled();
+        expect(api.auth.requestOTP).toHaveBeenCalled();
       });
 
       // Attempts should be reset — can make 5 more before lockout
@@ -441,7 +441,7 @@ describe('Sign In Flow', () => {
       await fireEvent.press(button);
 
       await waitFor(() => {
-        expect(api.auth.verifyOTP).toHaveBeenCalledWith('5551234567', '123456');
+        expect(api.auth.verifyOTP).toHaveBeenCalledWith('5551234567', '123456', 'en-US');
       });
 
       expect(mockRouter.replace).toHaveBeenCalledWith('/(tabs)');

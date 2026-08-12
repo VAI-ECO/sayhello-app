@@ -27,7 +27,9 @@ export default function SignInPhoneScreen() {
     setError(false);
     setLoading(true);
 
-    const result = await api.auth.sendOTP(phone);
+    // TODO: Sign-in flow needs dateOfBirth from backend session or stored locally
+    // For now, placeholder to match API signature
+    const result = await api.auth.requestOTP(phone, '1990-01-01');
 
     setLoading(false);
 
