@@ -250,6 +250,29 @@ export const en = {
     you: 'You',
   },
 
+  // Icebreakers
+  icebreakers: {
+    title: 'Icebreakers',
+    headerDefault: 'Your answers',
+    headerCount: '{{count}} answered',
+    emptyTitle: 'Questions to answer in your own words',
+    emptyBody: "These show up after you've both said Hello. Answer three to share at the reveal.",
+    questionUnanswered: 'Tap to answer',
+    questionAnswered: 'Tap to edit',
+    fieldPlaceholder: 'Your answer…',
+    fieldLabel: 'Your answer',
+    backButton: 'Back',
+    doneButton: 'Done',
+  },
+
+  // Reveal Gate
+  revealGate: {
+    title: 'Three answers to share',
+    body: "Icebreakers show up after you've both said Hello. Answer three questions so they have something to see.",
+    answerButton: 'Answer Icebreakers',
+    skipButton: 'Skip for now',
+  },
+
   // Placeholders
   placeholder: {
     title: '{{screen}} coming soon',

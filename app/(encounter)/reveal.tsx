@@ -5,13 +5,19 @@
  * A late accept reads "[Name] accepted your hello" — no timestamp,
  * no elapsed time, indistinguishable from immediate (RULES 10.22).
  *
+ * RULING 3: Gate on sharing (reveal), NOT on signup.
+ * If user has < 3 Icebreaker answers, show gate with option to answer.
+ *
  * Minimal decoration. This is the screen somebody screenshots.
  */
 
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { useRouter } from 'expo-router';
+import { useState, useEffect } from 'react';
 import { Waverly } from '../../src/components';
 import { t } from '../../src/i18n';
 import { useTheme, Colors } from '../../src/theme';
+import { getMockIcebreakerAnswers } from '../../src/data/mockIcebreakersData';
 
 // Helper to blend identity color 35% over Midnight
 function blendColorOverMidnight(identityColor: string): string {
@@ -20,8 +26,28 @@ function blendColorOverMidnight(identityColor: string): string {
 }
 
 export default function RevealScreen() {
+  const router = useRouter();
   const { identityColor } = useTheme();
   const blendedBackground = blendColorOverMidnight(identityColor);
+
+  // RULING 3: Check if user has < 3 Icebreaker answers (gate on sharing)
+  const [showGate, setShowGate] = useState(false);
+
+  useEffect(() => {
+    const answers = getMockIcebreakerAnswers();
+    if (answers.length < 3) {
+      setShowGate(true);
+    }
+  }, []);
+
+  const handleAnswerIcebreakers = () => {
+    setShowGate(false);
+    router.push('/profile/icebreakers');
+  };
+
+  const handleSkipGate = () => {
+    setShowGate(false);
+  };
 
   // For production, these would come from encounter data
   const otherPersonName = 'Mara';
@@ -93,6 +119,43 @@ export default function RevealScreen() {
       <View style={styles.footer}>
         <Text style={styles.footerText}>{t('encounter.reveal.moreBelow')}</Text>
       </View>
+
+      {/* Icebreaker Gate Modal (RULING 3) */}
+      <Modal
+        visible={showGate}
+        transparent
+        animationType="fade"
+        onRequestClose={handleSkipGate}
+      >
+        <View style={styles.gateOverlay}>
+          <View style={styles.gateCard}>
+            <Text style={styles.gateTitle}>{t('revealGate.title')}</Text>
+            <Text style={styles.gateBody}>{t('revealGate.body')}</Text>
+            <View style={styles.gateActions}>
+              <TouchableOpacity
+                style={styles.gateButtonPrimary}
+                onPress={handleAnswerIcebreakers}
+                accessibilityRole="button"
+                testID="reveal-gate-answer-button"
+              >
+                <Text style={styles.gateButtonPrimaryText}>
+                  {t('revealGate.answerButton')}
+                </Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={styles.gateButtonSecondary}
+                onPress={handleSkipGate}
+                accessibilityRole="button"
+                testID="reveal-gate-skip-button"
+              >
+                <Text style={styles.gateButtonSecondaryText}>
+                  {t('revealGate.skipButton')}
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </View>
+      </Modal>
     </View>
   );
 }
@@ -213,5 +276,64 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.Faint,
     textAlign: 'center',
+  },
+  // Gate modal styles
+  gateOverlay: {
+    flex: 1,
+    backgroundColor: 'rgba(10, 10, 10, 0.75)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 26,
+  },
+  gateCard: {
+    backgroundColor: Colors.Chalk,
+    borderRadius: 16,
+    padding: 24,
+    gap: 16,
+    maxWidth: 400,
+    width: '100%',
+  },
+  gateTitle: {
+    fontFamily: 'Assistant',
+    fontSize: 24,
+    fontWeight: '700',
+    color: Colors.Ink,
+    letterSpacing: -0.02,
+    textAlign: 'center',
+  },
+  gateBody: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    lineHeight: 16 * 1.5,
+    color: Colors.Muted,
+    textAlign: 'center',
+  },
+  gateActions: {
+    gap: 12,
+    marginTop: 8,
+  },
+  gateButtonPrimary: {
+    backgroundColor: Colors.Ink,
+    borderRadius: 26,
+    height: 52,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gateButtonPrimaryText: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.Chalk,
+  },
+  gateButtonSecondary: {
+    height: 44,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  gateButtonSecondaryText: {
+    fontFamily: 'Assistant',
+    fontSize: 15,
+    fontWeight: '600',
+    color: Colors.Muted,
   },
 });
