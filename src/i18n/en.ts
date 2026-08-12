@@ -300,6 +300,35 @@ export const en = {
     skipButton: 'Skip for now',
   },
 
+  // Settings
+  settings: {
+    sectionTheApp: 'The app',
+    sectionWhatYouShare: 'What you share',
+    sectionPeople: 'People',
+    sectionSmallPrint: 'The small print',
+    notifications: {
+      label: 'Notifications',
+      value: 'Most on',
+    },
+    hostMode: {
+      label: 'Host Mode',
+      value: 'Ask each time',
+    },
+    icebreakers: {
+      label: 'Your Icebreakers',
+      value: '{{count}} answered',
+    },
+    blocked: {
+      label: 'Blocked',
+      value: '{{count}}',
+    },
+    terms: 'Terms of Service',
+    privacy: 'Privacy Policy',
+    drawingRules: 'Drawing rules',
+    signOut: 'Sign out',
+    deleteAccount: 'Delete my account',
+  },
+
   // Placeholders
   placeholder: {
     title: '{{screen}} coming soon',

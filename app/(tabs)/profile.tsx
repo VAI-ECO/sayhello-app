@@ -1,45 +1,262 @@
 /**
- * PROFILE TAB
+ * SETTINGS SCREEN
  *
  * User's profile and settings.
- * Links to Icebreakers (editable forever per RULES 13.10).
+ * Grouped by user intent: "The app", "What you share", "People", "The small print"
+ *
+ * DEAD DESTINATIONS (disabled, coming later):
+ * - Notifications, Host Mode, Blocked, Terms, Privacy, Drawing rules, Delete account
+ *
+ * LIVE DESTINATIONS:
+ * - Icebreakers (wired with real count)
+ * - Sign out (clears token, navigates to sign-in)
  */
 
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 import { useRouter } from 'expo-router';
-import { Colors } from '../../src/theme';
+import { useState, useEffect } from 'react';
+import { Colors, ColorNames } from '../../src/theme/tokens';
+import { useTheme } from '../../src/theme';
 import { t } from '../../src/i18n';
+import { getMockUserProfile } from '../../src/data/mockUserData';
+import { getMockIcebreakerAnswers } from '../../src/data/mockIcebreakersData';
+import { api } from '../../src/api/client';
 
-export default function ProfileScreen() {
+export default function SettingsScreen() {
   const router = useRouter();
+  const { identityColor } = useTheme();
+  const [icebreakersCount, setIcebreakersCount] = useState(0);
+
+  // Load user data (mock for now)
+  const user = getMockUserProfile();
+  const colorName = ColorNames[identityColor];
+
+  // Load icebreakers count
+  useEffect(() => {
+    const answers = getMockIcebreakerAnswers();
+    setIcebreakersCount(answers.length);
+  }, []);
+
+  const handleSignOut = async () => {
+    await api.auth.signOut();
+    router.replace('/(auth)/sign-in-phone');
+  };
+
+  const handleIcebreakers = () => {
+    router.push('/profile/icebreakers');
+  };
+
+  // Disabled row handler (no-op)
+  const handleDisabledRow = () => {
+    // Intentionally empty - disabled rows do nothing
+  };
 
   return (
     <View style={styles.container}>
       <View style={styles.statusBar} />
 
-      <View style={styles.header}>
-        <Text style={styles.headerTitle}>{t('tabs.you')}</Text>
-      </View>
-
-      <View style={styles.content}>
-        {/* Icebreakers link */}
-        <TouchableOpacity
-          style={styles.menuItem}
-          onPress={() => router.push('/profile/icebreakers')}
-          accessibilityRole="button"
-          testID="profile-icebreakers-link"
-        >
-          <Text style={styles.menuItemLabel}>{t('icebreakers.title')}</Text>
-          <Text style={styles.menuItemArrow}>→</Text>
-        </TouchableOpacity>
-
-        {/* Placeholder for future menu items */}
-        <View style={styles.placeholder}>
-          <Text style={styles.placeholderText}>
-            More profile options coming soon
+      <ScrollView style={styles.content}>
+        {/* Header */}
+        <View style={styles.header}>
+          <Text style={styles.headerName}>{user.name}</Text>
+          <Text style={styles.headerPhone}>
+            {user.phone_number} · {colorName}
           </Text>
         </View>
-      </View>
+
+        {/* Section: The app */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>{t('settings.sectionTheApp')}</Text>
+
+          {/* Notifications - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-notifications"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.notifications.label')}
+              </Text>
+              <View style={styles.rowValue}>
+                <Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>
+                  {t('settings.notifications.value')}
+                </Text>
+                <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+
+          {/* Host Mode - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-host-mode"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.hostMode.label')}
+              </Text>
+              <View style={styles.rowValue}>
+                <Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>
+                  {t('settings.hostMode.value')}
+                </Text>
+                <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Section: What you share */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>{t('settings.sectionWhatYouShare')}</Text>
+
+          {/* Icebreakers - LIVE */}
+          <TouchableOpacity
+            style={styles.row}
+            onPress={handleIcebreakers}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: false }}
+            testID="settings-icebreakers"
+          >
+            <View style={styles.rowContent}>
+              <Text style={styles.rowLabel}>
+                {t('settings.icebreakers.label')}
+              </Text>
+              <View style={styles.rowValue}>
+                <Text style={styles.rowValueText} testID="icebreakers-count-value">
+                  {t('settings.icebreakers.value', { count: icebreakersCount })}
+                </Text>
+                <Text style={styles.rowChevron}>›</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Section: People */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>{t('settings.sectionPeople')}</Text>
+
+          {/* Blocked - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-blocked"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.blocked.label')}
+              </Text>
+              <View style={styles.rowValue}>
+                <Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>
+                  {t('settings.blocked.value', { count: 2 })}
+                </Text>
+                <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+              </View>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Section: The small print */}
+        <View style={styles.section}>
+          <Text style={styles.sectionHeader}>{t('settings.sectionSmallPrint')}</Text>
+
+          {/* Terms - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-terms"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.terms')}
+              </Text>
+              <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+            </View>
+          </TouchableOpacity>
+
+          {/* Privacy - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-privacy"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.privacy')}
+              </Text>
+              <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+            </View>
+          </TouchableOpacity>
+
+          {/* Drawing rules - DISABLED */}
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-drawing-rules"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.rowLabelDisabled]}>
+                {t('settings.drawingRules')}
+              </Text>
+              <Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Sign out - LIVE */}
+        <View style={styles.section}>
+          <TouchableOpacity
+            style={styles.row}
+            onPress={handleSignOut}
+            accessibilityRole="button"
+            accessibilityState={{ disabled: false }}
+            testID="settings-sign-out"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.signOutLabel]}>
+                {t('settings.signOut')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+
+        {/* Delete account - DISABLED */}
+        <View style={styles.section}>
+          <TouchableOpacity
+            style={[styles.row, styles.rowDisabled]}
+            onPress={handleDisabledRow}
+            disabled
+            accessibilityRole="button"
+            accessibilityState={{ disabled: true }}
+            testID="settings-delete-account"
+          >
+            <View style={styles.rowContent}>
+              <Text style={[styles.rowLabel, styles.deleteLabel, styles.rowLabelDisabled]}>
+                {t('settings.deleteAccount')}
+              </Text>
+            </View>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </View>
   );
 }
@@ -52,49 +269,89 @@ const styles = StyleSheet.create({
   statusBar: {
     height: 44,
   },
+  content: {
+    flex: 1,
+  },
   header: {
-    paddingVertical: 12,
+    paddingVertical: 22,
     paddingHorizontal: 22,
     borderBottomWidth: 1,
     borderBottomColor: Colors.Hairline,
+    gap: 4,
   },
-  headerTitle: {
+  headerName: {
     fontFamily: 'Assistant',
     fontSize: 24,
     fontWeight: '700',
     color: Colors.Ink,
     letterSpacing: -0.02,
   },
-  content: {
-    flex: 1,
+  headerPhone: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    color: Colors.Muted,
   },
-  menuItem: {
+  section: {
+    marginTop: 24,
+  },
+  sectionHeader: {
+    fontFamily: 'Assistant',
+    fontSize: 13,
+    fontWeight: '600',
+    color: Colors.Muted,
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
+    paddingHorizontal: 22,
+    paddingBottom: 8,
+  },
+  row: {
+    backgroundColor: Colors.Chalk,
+    borderBottomWidth: 1,
+    borderBottomColor: Colors.Hairline,
+  },
+  rowDisabled: {
+    opacity: 0.5,
+  },
+  rowContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingVertical: 16,
     paddingHorizontal: 22,
-    borderBottomWidth: 1,
-    borderBottomColor: Colors.Hairline,
   },
-  menuItemLabel: {
+  rowLabel: {
     fontFamily: 'Assistant',
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: '400',
     color: Colors.Ink,
   },
-  menuItemArrow: {
-    fontSize: 18,
+  rowLabelDisabled: {
     color: Colors.Muted,
   },
-  placeholder: {
-    padding: 22,
-    paddingTop: 40,
+  rowValue: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
   },
-  placeholderText: {
+  rowValueText: {
     fontFamily: 'Assistant',
-    fontSize: 14,
+    fontSize: 16,
+    color: Colors.Muted,
+  },
+  rowValueTextDisabled: {
     color: Colors.Faint,
-    textAlign: 'center',
+  },
+  rowChevron: {
+    fontSize: 20,
+    color: Colors.Muted,
+  },
+  rowChevronDisabled: {
+    color: Colors.Faint,
+  },
+  signOutLabel: {
+    fontWeight: '600',
+  },
+  deleteLabel: {
+    color: Colors.SignalRed,
   },
 });
