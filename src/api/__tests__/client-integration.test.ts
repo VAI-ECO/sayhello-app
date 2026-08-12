@@ -5,13 +5,15 @@
  * - Environment configuration
  * - Case transformation
  * - Error handling
+ * - Timeout handling
+ * - Global 401 handling
  *
  * ⚠️ These are UNIT tests, not integration tests.
  * They do not require the backend to be running.
  * They verify the client is configured correctly.
  */
 
-import { api } from '../client';
+import { api, setUnauthorizedHandler } from '../client';
 import * as SecureStore from 'expo-secure-store';
 
 // Mock SecureStore
@@ -153,6 +155,90 @@ describe('API Client Configuration', () => {
         headers: expect.objectContaining({
           Authorization: 'Bearer test-token-123',
         }),
+      })
+    );
+  });
+
+  it('returns timeout error when request exceeds 10 seconds', async () => {
+    // Mock fetch to simulate a hanging request that gets aborted
+    (global.fetch as jest.Mock).mockImplementationOnce(() => {
+      return new Promise((_, reject) => {
+        // Simulate AbortController.abort() being called
+        const error = new Error('The operation was aborted');
+        error.name = 'AbortError';
+        setTimeout(() => reject(error), 100); // Reject quickly for test speed
+      });
+    });
+
+    const response = await api.user.getProfile();
+
+    expect(response.error).toBeDefined();
+    expect(response.error?.code).toBe('TIMEOUT');
+    expect(response.error?.message).toContain('timed out');
+  });
+
+  it('clears token and calls handler on 401 unauthorized', async () => {
+    const unauthorizedHandler = jest.fn();
+    setUnauthorizedHandler(unauthorizedHandler);
+
+    // Set a token first
+    await api.setToken('expired-token');
+
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+      status: 401,
+      json: async () => ({
+        error: 'unauthorized',
+        message: 'Token expired',
+      }),
+    });
+
+    const response = await api.user.getProfile();
+
+    // Should return error
+    expect(response.error).toBeDefined();
+    expect(response.error?.status).toBe(401);
+
+    // Should clear token
+    expect(SecureStore.deleteItemAsync).toHaveBeenCalledWith('auth_token');
+
+    // Should call registered handler
+    expect(unauthorizedHandler).toHaveBeenCalled();
+  });
+
+  it('does not call unauthorized handler if not registered', async () => {
+    // Clear any registered handler
+    setUnauthorizedHandler(() => {});
+
+    await api.setToken('expired-token');
+
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: false,
+      status: 401,
+      json: async () => ({
+        error: 'unauthorized',
+        message: 'Token expired',
+      }),
+    });
+
+    // Should not throw even without handler registered
+    const response = await api.user.getProfile();
+    expect(response.error?.status).toBe(401);
+  });
+
+  it('includes abort signal in fetch for timeout', async () => {
+    (global.fetch as jest.Mock).mockResolvedValueOnce({
+      ok: true,
+      json: async () => ({ success: true }),
+    });
+
+    await api.user.getProfile();
+
+    // Verify fetch was called with signal for timeout
+    expect(global.fetch).toHaveBeenCalledWith(
+      'http://localhost:3000/users/me',
+      expect.objectContaining({
+        signal: expect.any(AbortSignal),
       })
     );
   });

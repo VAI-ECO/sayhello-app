@@ -1,13 +1,28 @@
 /**
  * ROOT LAYOUT
  *
- * Wraps entire app with providers
+ * Wraps entire app with providers and registers global handlers
  */
 
-import { Stack } from 'expo-router';
+import { useEffect } from 'react';
+import { Stack, useRouter } from 'expo-router';
 import { ThemeProvider } from '../src/theme';
+import { setUnauthorizedHandler, api } from '../src/api/client';
 
 export default function RootLayout() {
+  const router = useRouter();
+
+  // Register global 401 handler - navigates to sign-in on token expiry
+  useEffect(() => {
+    setUnauthorizedHandler(() => {
+      console.log('[App] 401 received - navigating to sign-in');
+      router.replace('/(auth)/sign-in-phone');
+    });
+
+    // Initialize API client (loads stored token)
+    api.init();
+  }, [router]);
+
   return (
     <ThemeProvider>
       <Stack screenOptions={{ headerShown: false }}>

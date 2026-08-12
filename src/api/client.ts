@@ -17,11 +17,28 @@ import { keysToCamel, keysToSnake } from '../lib/case-transform';
 
 const TOKEN_KEY = 'auth_token';
 
+// Request timeout in milliseconds
+// 10 seconds: short enough to fail fast on bad signal, long enough for reasonable requests
+// Users are in bars with spotty WiFi — this is the common case, not the edge case
+const REQUEST_TIMEOUT_MS = 10000;
+
 // Read API URL from environment, with sane default
 // iOS Simulator: localhost works
 // Android Emulator: use 10.0.2.2
 // Physical Device: set API_URL in .env to your machine's LAN IP
 const API_URL = Constants.expoConfig?.extra?.apiUrl || 'http://localhost:3000';
+
+// Global 401 handler - registered by app root
+let onUnauthorizedCallback: (() => void) | null = null;
+
+/**
+ * Register a handler to be called when a 401 response is received
+ * Should navigate to sign-in screen
+ * Call this once from app root (_layout.tsx)
+ */
+export function setUnauthorizedHandler(handler: () => void) {
+  onUnauthorizedCallback = handler;
+}
 
 interface APIError {
   message: string;
@@ -74,10 +91,12 @@ class APIClient {
   }
 
   /**
-   * Make authenticated request with case transformation
+   * Make authenticated request with case transformation and timeout
    *
    * Request bodies: camelCase → snake_case
    * Response bodies: snake_case → camelCase
+   * Timeout: 10 seconds (fail fast on bad signal)
+   * 401 handling: Clears token and calls registered handler
    */
   private async request<T = unknown>(
     endpoint: string,
@@ -108,31 +127,64 @@ class APIClient {
       const url = `${this.baseURL}${endpoint}`;
       console.log(`[API Client] ${options.method || 'GET'} ${url}`);
 
-      const response = await fetch(url, {
-        ...options,
-        headers,
-        body,
-      });
+      // Create abort controller for timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
 
-      const rawData = await response.json();
+      try {
+        const response = await fetch(url, {
+          ...options,
+          headers,
+          body,
+          signal: controller.signal,
+        });
 
-      if (!response.ok) {
-        // Transform error response to camelCase
-        const errorData = keysToCamel<any>(rawData);
-        return {
-          error: {
-            message: errorData.message || 'An error occurred',
-            code: errorData.error || errorData.code,
-            status: response.status,
-            lockedUntil: errorData.lockedUntil,
-            attemptsRemaining: errorData.attemptsRemaining,
-          },
-        };
+        clearTimeout(timeoutId);
+
+        const rawData = await response.json();
+
+        if (!response.ok) {
+          // Handle 401 Unauthorized globally
+          if (response.status === 401) {
+            console.log('[API Client] 401 Unauthorized - clearing token');
+            await this.clearToken();
+            if (onUnauthorizedCallback) {
+              onUnauthorizedCallback();
+            }
+          }
+
+          // Transform error response to camelCase
+          const errorData = keysToCamel<any>(rawData);
+          return {
+            error: {
+              message: errorData.message || 'An error occurred',
+              code: errorData.error || errorData.code,
+              status: response.status,
+              lockedUntil: errorData.lockedUntil,
+              attemptsRemaining: errorData.attemptsRemaining,
+            },
+          };
+        }
+
+        // Transform success response to camelCase
+        const data = keysToCamel<T>(rawData);
+        return { data };
+      } catch (fetchError) {
+        clearTimeout(timeoutId);
+
+        // Check if error was caused by timeout
+        if (fetchError instanceof Error && fetchError.name === 'AbortError') {
+          console.error('[API Client] Request timed out');
+          return {
+            error: {
+              message: 'Request timed out. Please check your connection and try again.',
+              code: 'TIMEOUT',
+            },
+          };
+        }
+
+        throw fetchError;
       }
-
-      // Transform success response to camelCase
-      const data = keysToCamel<T>(rawData);
-      return { data };
     } catch (error) {
       console.error('[API Client] Request failed:', error);
       return {
