@@ -18,6 +18,8 @@ interface APIError {
   message: string;
   code?: string;
   status?: number;
+  lockedUntil?: number;
+  attemptsRemaining?: number;
 }
 
 interface APIResponse<T = unknown> {
@@ -84,8 +86,10 @@ class APIClient {
         return {
           error: {
             message: data.message || 'An error occurred',
-            code: data.code,
+            code: data.error || data.code,
             status: response.status,
+            lockedUntil: data.lockedUntil,
+            attemptsRemaining: data.attemptsRemaining,
           },
         };
       }

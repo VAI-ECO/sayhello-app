@@ -14,9 +14,10 @@ interface ButtonProps {
   loading?: boolean;
   variant?: 'primary' | 'secondary';
   style?: ViewStyle;
+  testID?: string;
 }
 
-export function Button({ title, onPress, disabled, loading, variant = 'primary', style }: ButtonProps) {
+export function Button({ title, onPress, disabled, loading, variant = 'primary', style, testID }: ButtonProps) {
   const { identityColor, contrast } = useTheme();
 
   const isPrimary = variant === 'primary';
@@ -36,6 +37,7 @@ export function Button({ title, onPress, disabled, loading, variant = 'primary',
       accessibilityRole="button"
       accessibilityLabel={title}
       accessibilityState={{ disabled: isDisabled, busy: loading }}
+      testID={testID}
     >
       {loading ? (
         <ActivityIndicator

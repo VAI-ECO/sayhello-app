@@ -20,6 +20,33 @@
  */
 
 export const en = {
+  // Sign In
+  signIn: {
+    phone: {
+      title: 'Welcome back.',
+      subtitle: "Your number is your account. We'll text you six digits.",
+      disclaimer: "Changed your number? Sign in on the old one first if you still have it, or get in touch — a person will help.",
+      button: 'Send the code',
+      newUser: 'New here? Start from the beginning',
+    },
+    code: {
+      title: 'Check your phone.',
+      subtitle: "If there's an account on {{phone}}, a code is on its way.",
+      resendLabel: "Didn't arrive? Send another in {{seconds}}",
+      resendAvailable: "Didn't arrive? Send another",
+      expiryNote: 'The code lasts ten minutes. After that, ask for a new one.',
+    },
+    locked: {
+      title: "Let's slow down a second.",
+      subtitle: "That's five wrong codes. We'll open it back up in fifteen minutes.",
+      tryAgain: 'Try again at {{time}}',
+      reassurance: "Nothing's wrong with your account",
+      whyLink: 'Why this happens',
+      helpLink: 'Get help instead',
+      disclaimer: 'A person reads these.',
+    },
+  },
+
   // Onboarding
   onboarding: {
     value1: {
