@@ -176,6 +176,7 @@ export default function IcebreakersScreen() {
       if (result.error) {
         console.error('[Icebreakers] Failed to save answer:', result.error);
         // Don't show error to user — they can retry by editing again
+        savingRef.current.delete(questionId); // Clear flag after error
         return;
       }
 
@@ -189,8 +190,12 @@ export default function IcebreakersScreen() {
         }
         return next;
       });
-    } finally {
-      // Clear saving flag
+
+      // Clear saving flag after successful save
+      savingRef.current.delete(questionId);
+    } catch (error) {
+      // Handle unexpected errors (network failures, etc.)
+      console.error('[Icebreakers] Save failed with exception:', error);
       savingRef.current.delete(questionId);
     }
   };
