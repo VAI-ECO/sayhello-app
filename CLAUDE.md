@@ -20,3 +20,8 @@ awaited. Do not write v13-style tests.
 
 READ A LIBRARY'S SHIPPED DOCS BEFORE DEBUGGING IT. Many packages ship
 version-matched documentation inside node_modules. Check there first.
+
+NEVER report a test result you did not see in tool output. If output is
+truncated, say it was truncated and re-run with a narrower command until you
+have the real numbers. An inferred PASS line is a fabrication, and I rely on
+these reports to catch problems.
