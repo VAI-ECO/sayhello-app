@@ -552,4 +552,89 @@ describe('IcebreakersScreen - Success State', () => {
     expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
     expect(screen.getByTestId('answer-input-q1').props.value).toBe('Draft answer');
   });
+
+  it('collapse guard releases after save completes, text preserved throughout', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    // Mock save with controllable resolution
+    let resolveSave: ((value: any) => void) | undefined;
+    (api.icebreakers.saveAnswer as jest.Mock).mockImplementation(
+      () =>
+        new Promise((resolve) => {
+          resolveSave = resolve;
+        })
+    );
+
+    await render(<IcebreakersScreen />);
+
+    const question = await screen.findByTestId('question-q1');
+    await fireEvent.press(question);
+
+    const input = await screen.findByTestId('answer-input-q1');
+    await fireEvent.changeText(input, 'My answer text');
+
+    // Start save (stays in flight until we resolve it)
+    fireEvent(input, 'blur');
+
+    // Wait for save to start
+    await new Promise((resolve) => setTimeout(resolve, 100));
+
+    // Try to collapse while save is in flight - should be blocked
+    await fireEvent.press(question);
+    expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
+    expect(screen.getByTestId('answer-input-q1').props.value).toBe('My answer text');
+
+    // Now resolve the save
+    resolveSave!({
+      data: {
+        answer: {
+          userId: 'user1',
+          questionId: 'q1',
+          freeTextAnswer: 'My answer text',
+          contentLanguage: 'en-US',
+          answeredAt: '2024-01-01T00:00:00Z',
+          updatedAt: '2024-01-01T00:00:00Z',
+        },
+      },
+    });
+
+    // Wait for save to complete and savingRef to be cleared
+    await waitFor(() => {
+      expect(api.icebreakers.saveAnswer).toHaveBeenCalledWith('q1', {
+        freeTextAnswer: 'My answer text',
+        contentLanguage: 'en-US',
+      });
+    });
+
+    // Now collapse should work
+    await fireEvent.press(question);
+
+    await waitFor(() => {
+      expect(screen.queryByTestId('answer-input-q1')).toBeNull();
+    });
+
+    // Re-expand and verify text was preserved
+    await fireEvent.press(question);
+
+    await waitFor(() => {
+      const inputAgain = screen.getByTestId('answer-input-q1');
+      expect(inputAgain.props.value).toBe('My answer text');
+    });
+  });
 });
