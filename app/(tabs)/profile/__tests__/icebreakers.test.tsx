@@ -503,7 +503,7 @@ describe('IcebreakersScreen - Success State', () => {
     });
   });
 
-  it('prevents collapse when save is in flight', async () => {
+  it('prevents collapse when save is in flight, preserves draft text', async () => {
     (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
       data: {
         questions: [
@@ -529,27 +529,27 @@ describe('IcebreakersScreen - Success State', () => {
 
     await render(<IcebreakersScreen />);
 
-    await waitFor(() => {
-      expect(screen.getByTestId('question-q1')).toBeTruthy();
-    });
+    // Wait for data to load
+    const question = await screen.findByTestId('question-q1');
 
     // Expand and type
-    await fireEvent.press(screen.getByTestId('question-q1'));
+    await fireEvent.press(question);
 
-    await waitFor(() => {
-      expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
-    });
+    const input = await screen.findByTestId('answer-input-q1');
+    await fireEvent.changeText(input, 'Draft answer');
 
-    const input = screen.getByTestId('answer-input-q1');
-    await fireEvent.changeText(input, 'My answer');
-
-    // Start save (will stay in flight since promise never resolves)
+    // Trigger save by blurring
     fireEvent(input, 'blur'); // Don't await - let it start async
 
-    // Try to collapse immediately (save should be in flight)
-    await fireEvent.press(screen.getByTestId('question-q1'));
+    // Give blur handler time to start async save and add to savingRef
+    await new Promise(resolve => setTimeout(resolve, 100));
 
-    // Field should still be visible (collapse blocked)
+    // Try to collapse while save is in flight - should be blocked
+    await fireEvent.press(question);
+
+    // Field should still be visible (collapse blocked by guard)
+    // This is the critical assertion: the guard prevents collapse during save
     expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
+    expect(screen.getByTestId('answer-input-q1').props.value).toBe('Draft answer');
   });
 });
