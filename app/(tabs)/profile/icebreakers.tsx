@@ -4,8 +4,8 @@
  * Browsable library of questions — users type their own answers.
  *
  * RULES:
- * - 13.1-13.3: Tree structure (parent_id, arbitrary depth)
- * - 13.4: User's written entry IS the Icebreaker
+ * - 13.1-13.3: Tree structure (backend uses flat categoryId, not parent_id — see OPEN-QUESTIONS.md)
+ * - 13.4: User's written entry IS the Icebreaker (backend supports multiple types, we show short_answer only)
  * - 13.5: Checking node immediately expands write-in field
  * - 13.7: Unchecking collapses field but KEEPS TEXT in memory
  * - 13.9: Backend-driven (loaded from API)
@@ -17,6 +17,7 @@
  * - Three answers minimum to share (floor, not cap)
  * - Gate is on sharing at reveal, NOT on signup
  * - Progress shown as plain counts (no completion badges)
+ * - 2026-08-13: Backend shape diverges from canon. Take backend shape. See BUILD-LOG.md.
  */
 
 import {
@@ -26,113 +27,253 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+  ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { t } from '../../../src/i18n';
 import { Colors } from '../../../src/theme';
-import {
-  getMockIcebreakerNodes,
-  getMockIcebreakerAnswers,
-  saveMockIcebreakerAnswer,
-  type IcebreakerNode,
-  type IcebreakerAnswer,
-} from '../../../src/data/mockIcebreakersData';
+import { api } from '../../../src/api/client';
+
+interface Question {
+  id: string;
+  categoryId: string;
+  questionText: string;
+  questionType: string;
+  displayOrder: number;
+  sliderMin?: number;
+  sliderMax?: number;
+  sliderLabelMin?: string;
+  sliderLabelMax?: string;
+  isShownAtSignup: boolean;
+}
+
+interface Answer {
+  userId: string;
+  questionId: string;
+  selectedOptionIds?: string[];
+  freeTextAnswer?: string;
+  sliderValue?: number;
+  contentLanguage: string;
+  answeredAt: string;
+  updatedAt: string;
+}
 
 export default function IcebreakersScreen() {
   const router = useRouter();
-  const [nodes, setNodes] = useState<IcebreakerNode[]>([]);
-  const [answers, setAnswers] = useState<Map<string, string>>(new Map());
-  const [expandedQuestions, setExpandedQuestions] = useState<Set<string>>(
-    new Set()
-  );
+
+  // Data state
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [answers, setAnswers] = useState<Map<string, Answer>>(new Map());
+
+  // UI state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [expandedQuestions, setExpandedQuestions] = useState<Set<string>>(new Set());
   const [draftText, setDraftText] = useState<Map<string, string>>(new Map());
 
-  // Load nodes and answers on mount
+  // Track in-flight saves to handle collapse during save
+  const savingRef = useRef<Set<string>>(new Set());
+
+  // Load questions and answers on mount
   useEffect(() => {
-    const loadedNodes = getMockIcebreakerNodes();
-    const loadedAnswers = getMockIcebreakerAnswers();
-
-    setNodes(loadedNodes);
-
-    // Build answers map
-    const answersMap = new Map<string, string>();
-    const expanded = new Set<string>();
-    loadedAnswers.forEach((answer) => {
-      answersMap.set(answer.node_id, answer.text);
-      expanded.add(answer.node_id); // Questions with answers start expanded
-    });
-    setAnswers(answersMap);
-    setExpandedQuestions(expanded);
-
-    // Initialize draft text with saved answers
-    const drafts = new Map<string, string>();
-    loadedAnswers.forEach((answer) => {
-      drafts.set(answer.node_id, answer.text);
-    });
-    setDraftText(drafts);
+    loadData();
   }, []);
 
-  const answerCount = answers.size;
+  const loadData = async () => {
+    setLoading(true);
+    setError(null);
+
+    try {
+      // Load questions and answers in parallel
+      const [questionsResult, answersResult] = await Promise.all([
+        api.icebreakers.getQuestions(),
+        api.icebreakers.getMyAnswers(),
+      ]);
+
+      if (questionsResult.error) {
+        setError(questionsResult.error.message);
+        setLoading(false);
+        return;
+      }
+
+      if (answersResult.error) {
+        setError(answersResult.error.message);
+        setLoading(false);
+        return;
+      }
+
+      const loadedQuestions = (questionsResult.data as any)?.questions || [];
+      const loadedAnswers = (answersResult.data as any)?.answers || [];
+
+      setQuestions(loadedQuestions);
+
+      // Build answers map and expanded set
+      const answersMap = new Map<string, Answer>();
+      const expanded = new Set<string>();
+      const drafts = new Map<string, string>();
+
+      loadedAnswers.forEach((answer: Answer) => {
+        answersMap.set(answer.questionId, answer);
+        if (answer.freeTextAnswer) {
+          expanded.add(answer.questionId); // Questions with answers start expanded
+          drafts.set(answer.questionId, answer.freeTextAnswer);
+        }
+      });
+
+      setAnswers(answersMap);
+      setExpandedQuestions(expanded);
+      setDraftText(drafts);
+      setLoading(false);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to load icebreakers');
+      setLoading(false);
+    }
+  };
 
   // RULES 13.5: Tapping question toggles expansion
-  const handleQuestionPress = (nodeId: string) => {
+  const handleQuestionPress = (questionId: string) => {
+    // If save is in flight, don't allow collapse
+    if (savingRef.current.has(questionId)) {
+      return;
+    }
+
     setExpandedQuestions((prev) => {
       const next = new Set(prev);
-      if (next.has(nodeId)) {
-        next.delete(nodeId); // Collapse
+      if (next.has(questionId)) {
+        next.delete(questionId); // Collapse
       } else {
-        next.add(nodeId); // Expand
+        next.add(questionId); // Expand
       }
       return next;
     });
   };
 
   // RULES 13.7: Update draft text (kept in memory even when collapsed)
-  const handleTextChange = (nodeId: string, text: string) => {
+  const handleTextChange = (questionId: string, text: string) => {
     setDraftText((prev) => {
       const next = new Map(prev);
-      next.set(nodeId, text);
+      next.set(questionId, text);
       return next;
     });
   };
 
   // Auto-save answer when field loses focus
-  const handleBlur = (nodeId: string) => {
-    const text = draftText.get(nodeId) || '';
+  const handleBlur = async (questionId: string) => {
+    const text = draftText.get(questionId) || '';
     const trimmed = text.trim();
 
-    // Save to mock API
-    saveMockIcebreakerAnswer(nodeId, trimmed);
+    // Mark as saving
+    savingRef.current.add(questionId);
 
-    // Update local state
-    setAnswers((prev) => {
-      const next = new Map(prev);
-      if (trimmed === '') {
-        next.delete(nodeId); // Remove answer if empty
-      } else {
-        next.set(nodeId, trimmed); // Save answer
+    try {
+      // Save to API
+      const result = await api.icebreakers.saveAnswer(questionId, {
+        freeTextAnswer: trimmed || undefined,
+        contentLanguage: 'en-US', // TODO: Get from device settings
+      });
+
+      if (result.error) {
+        console.error('[Icebreakers] Failed to save answer:', result.error);
+        // Don't show error to user — they can retry by editing again
+        return;
       }
-      return next;
-    });
+
+      // Update local state
+      setAnswers((prev) => {
+        const next = new Map(prev);
+        if (trimmed === '') {
+          next.delete(questionId); // Remove answer if empty
+        } else if ((result.data as any)?.answer) {
+          next.set(questionId, (result.data as any).answer); // Save answer
+        }
+        return next;
+      });
+    } finally {
+      // Clear saving flag
+      savingRef.current.delete(questionId);
+    }
   };
 
-  // Render selectable question (leaf node)
-  const renderQuestion = (node: IcebreakerNode) => {
-    const isExpanded = expandedQuestions.has(node.id);
-    const hasAnswer = answers.has(node.id);
-    const draftValue = draftText.get(node.id) || '';
+  // Filter to only short_answer questions (the only type we can render)
+  const shortAnswerQuestions = questions.filter(
+    (q) => q.questionType === 'short_answer'
+  );
+
+  const answerCount = Array.from(answers.values()).filter(
+    (a) => a.freeTextAnswer && a.freeTextAnswer.trim() !== ''
+  ).length;
+
+  // Render loading state
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.header}>
+          <TouchableOpacity
+            onPress={() => router.back()}
+            accessibilityRole="button"
+            accessibilityLabel={t('icebreakers.backButton')}
+          >
+            <Text style={styles.backArrow}>←</Text>
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>{t('icebreakers.title')}</Text>
+        </View>
+        <View style={styles.centerContainer}>
+          <ActivityIndicator size="large" color={Colors.Ink} />
+          <Text style={styles.loadingText}>Loading questions...</Text>
+        </View>
+      </View>
+    );
+  }
+
+  // Render error state
+  if (error) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.header}>
+          <TouchableOpacity
+            onPress={() => router.back()}
+            accessibilityRole="button"
+            accessibilityLabel={t('icebreakers.backButton')}
+          >
+            <Text style={styles.backArrow}>←</Text>
+          </TouchableOpacity>
+          <Text style={styles.headerTitle}>{t('icebreakers.title')}</Text>
+        </View>
+        <View style={styles.centerContainer}>
+          <Text style={styles.errorTitle}>Something went wrong</Text>
+          <Text style={styles.errorMessage}>{error}</Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={loadData}
+            accessibilityRole="button"
+          >
+            <Text style={styles.retryButtonText}>Try Again</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  // Render selectable question
+  const renderQuestion = (question: Question) => {
+    const isExpanded = expandedQuestions.has(question.id);
+    const answer = answers.get(question.id);
+    const hasAnswer = answer?.freeTextAnswer && answer.freeTextAnswer.trim() !== '';
+    const draftValue = draftText.get(question.id) || '';
 
     return (
-      <View key={node.id} style={styles.questionCard}>
+      <View key={question.id} style={styles.questionCard}>
         <TouchableOpacity
-          onPress={() => handleQuestionPress(node.id)}
+          onPress={() => handleQuestionPress(question.id)}
           accessibilityRole="button"
           accessibilityState={{ expanded: isExpanded }}
-          testID={`question-${node.id}`}
+          testID={`question-${question.id}`}
         >
           <View style={styles.questionHeader}>
-            <Text style={styles.questionLabel}>{node.label}</Text>
+            <Text style={styles.questionLabel}>{question.questionText}</Text>
             <Text style={styles.questionStatus}>
               {hasAnswer
                 ? t('icebreakers.questionAnswered')
@@ -146,27 +287,18 @@ export default function IcebreakersScreen() {
             <TextInput
               style={styles.textInput}
               value={draftValue}
-              onChangeText={(text) => handleTextChange(node.id, text)}
-              onBlur={() => handleBlur(node.id)}
+              onChangeText={(text) => handleTextChange(question.id, text)}
+              onBlur={() => handleBlur(question.id)}
               placeholder={t('icebreakers.fieldPlaceholder')}
               placeholderTextColor={Colors.Muted}
               multiline
               accessibilityLabel={t('icebreakers.fieldLabel')}
-              testID={`answer-input-${node.id}`}
+              testID={`answer-input-${question.id}`}
             />
           </View>
         )}
       </View>
     );
-  };
-
-  // Render node (recursive for tree support)
-  const renderNode = (node: IcebreakerNode) => {
-    if (node.selectable) {
-      return renderQuestion(node);
-    }
-    // Future: render category headers for non-selectable parent nodes
-    return null;
   };
 
   // Header copy (plain counts, no completion badge)
@@ -202,9 +334,9 @@ export default function IcebreakersScreen() {
         style={styles.content}
         contentContainerStyle={styles.contentContainer}
       >
-        {/* Empty state */}
-        {nodes.length === 0 && (
-          <View style={styles.emptyState}>
+        {/* Empty state — no short_answer questions available */}
+        {shortAnswerQuestions.length === 0 && (
+          <View style={styles.emptyState} testID="empty-state">
             <Text style={styles.emptyTitle}>
               {t('icebreakers.emptyTitle')}
             </Text>
@@ -212,10 +344,10 @@ export default function IcebreakersScreen() {
           </View>
         )}
 
-        {/* Question list */}
-        {nodes
-          .sort((a, b) => a.sort_order - b.sort_order)
-          .map((node) => renderNode(node))}
+        {/* Question list — only short_answer questions */}
+        {shortAnswerQuestions
+          .sort((a, b) => a.displayOrder - b.displayOrder)
+          .map((question) => renderQuestion(question))}
       </ScrollView>
     </View>
   );
@@ -264,6 +396,45 @@ const styles = StyleSheet.create({
   contentContainer: {
     padding: 22,
     gap: 12,
+  },
+  centerContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 22,
+    gap: 16,
+  },
+  loadingText: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    color: Colors.Muted,
+  },
+  errorTitle: {
+    fontFamily: 'Assistant',
+    fontSize: 20,
+    fontWeight: '700',
+    color: Colors.Ink,
+    textAlign: 'center',
+    marginBottom: 8,
+  },
+  errorMessage: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    color: Colors.Muted,
+    textAlign: 'center',
+    marginBottom: 24,
+  },
+  retryButton: {
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    backgroundColor: Colors.Ink,
+    borderRadius: 8,
+  },
+  retryButtonText: {
+    fontFamily: 'Assistant',
+    fontSize: 16,
+    fontWeight: '600',
+    color: Colors.Chalk,
   },
   emptyState: {
     paddingVertical: 40,

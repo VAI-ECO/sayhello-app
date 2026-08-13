@@ -288,11 +288,20 @@ class APIClient {
     /**
      * Save or update an answer
      * Backend: POST /icebreakers/answers
+     * Supports text, multiple choice, and slider answers
      */
-    saveAnswer: async (questionId: string, text: string): Promise<APIResponse> => {
+    saveAnswer: async (
+      questionId: string,
+      answer: {
+        selectedOptionIds?: string[];
+        freeTextAnswer?: string;
+        sliderValue?: number;
+        contentLanguage?: string;
+      }
+    ): Promise<APIResponse> => {
       return this.request('/icebreakers/answers', {
         method: 'POST',
-        body: JSON.stringify({ questionId, text }),
+        body: JSON.stringify({ questionId, ...answer }),
       });
     },
   };

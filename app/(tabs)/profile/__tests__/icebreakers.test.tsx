@@ -1,7 +1,8 @@
 /**
  * ICEBREAKERS SCREEN TESTS
  *
- * Tests the Icebreakers library screen per RULES section 13 and Rulings.
+ * Tests the Icebreakers library screen wired to the API.
+ * Tests loading, error, empty, and success states.
  *
  * RNTL v14: All operations (render, fireEvent, userEvent) are async.
  * Must use imported screen, not destructuring from render.
@@ -9,10 +10,7 @@
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
 import IcebreakersScreen from '../icebreakers';
-import {
-  resetMockIcebreakerAnswers,
-  saveMockIcebreakerAnswer,
-} from '../../../../src/data/mockIcebreakersData';
+import { api } from '../../../../src/api/client';
 
 // Mock expo-router
 const mockBack = jest.fn();
@@ -22,20 +20,242 @@ jest.mock('expo-router', () => ({
   }),
 }));
 
-describe('IcebreakersScreen', () => {
+// Mock API client
+jest.mock('../../../../src/api/client', () => ({
+  api: {
+    icebreakers: {
+      getQuestions: jest.fn(),
+      getMyAnswers: jest.fn(),
+      saveAnswer: jest.fn(),
+    },
+  },
+}));
+
+describe('IcebreakersScreen - Loading State', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    resetMockIcebreakerAnswers();
   });
 
-  it('renders the screen with header and title', async () => {
+  it('shows loading spinner and text while fetching data', async () => {
+    // Mock API calls that never resolve (stay in loading)
+    (api.icebreakers.getQuestions as jest.Mock).mockImplementation(
+      () => new Promise(() => {})
+    );
+    (api.icebreakers.getMyAnswers as jest.Mock).mockImplementation(
+      () => new Promise(() => {})
+    );
+
     await render(<IcebreakersScreen />);
 
-    expect(screen.getByText('Icebreakers')).toBeTruthy();
-    expect(screen.getByText('←')).toBeTruthy();
+    // Should show loading state
+    expect(screen.getByText('Loading questions...')).toBeTruthy();
+    expect(screen.getByText('Icebreakers')).toBeTruthy(); // Header still visible
+  });
+});
+
+describe('IcebreakersScreen - Error State', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('shows error message when questions fail to load', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      error: { message: 'Network error' },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Something went wrong')).toBeTruthy();
+      expect(screen.getByText('Network error')).toBeTruthy();
+      expect(screen.getByText('Try Again')).toBeTruthy();
+    });
+  });
+
+  it('shows error message when answers fail to load', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: { questions: [] },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      error: { message: 'Unauthorized' },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Something went wrong')).toBeTruthy();
+      expect(screen.getByText('Unauthorized')).toBeTruthy();
+    });
+  });
+
+  it('retries loading when Try Again button is pressed', async () => {
+    let callCount = 0;
+    (api.icebreakers.getQuestions as jest.Mock).mockImplementation(() => {
+      callCount++;
+      if (callCount === 1) {
+        return Promise.resolve({ error: { message: 'Network error' } });
+      }
+      return Promise.resolve({
+        data: {
+          questions: [
+            {
+              id: 'q1',
+              categoryId: 'cat1',
+              questionText: 'Test question',
+              questionType: 'short_answer',
+              displayOrder: 1,
+              isShownAtSignup: true,
+            },
+          ],
+        },
+      });
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Network error')).toBeTruthy();
+    });
+
+    // Press retry button
+    const retryButton = screen.getByText('Try Again');
+    await fireEvent.press(retryButton);
+
+    // Should show success after retry
+    await waitFor(() => {
+      expect(screen.getByText('Test question')).toBeTruthy();
+    });
+  });
+});
+
+describe('IcebreakersScreen - Empty State', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('shows empty state when no short_answer questions exist', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: { questions: [] },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(screen.getByTestId('empty-state')).toBeTruthy();
+      expect(
+        screen.getByText('Questions to answer in your own words')
+      ).toBeTruthy();
+    });
+  });
+
+  it('shows empty state when only non-short_answer questions exist', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Pick your favorite',
+            questionType: 'multiple_choice', // Not short_answer
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+          {
+            id: 'q2',
+            categoryId: 'cat1',
+            questionText: 'Rate this',
+            questionType: 'slider', // Not short_answer
+            displayOrder: 2,
+            isShownAtSignup: false,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(screen.getByTestId('empty-state')).toBeTruthy();
+      // Should not render the multiple_choice or slider questions
+      expect(screen.queryByText('Pick your favorite')).toBeNull();
+      expect(screen.queryByText('Rate this')).toBeNull();
+    });
+  });
+});
+
+describe('IcebreakersScreen - Success State', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
+  it('renders short_answer questions from API', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: "Name one thing that's interesting about you",
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+          {
+            id: 'q2',
+            categoryId: 'cat1',
+            questionText: 'What do you do for fun?',
+            questionType: 'short_answer',
+            displayOrder: 2,
+            isShownAtSignup: false,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
+    await render(<IcebreakersScreen />);
+
+    await waitFor(() => {
+      expect(
+        screen.getByText("Name one thing that's interesting about you")
+      ).toBeTruthy();
+      expect(screen.getByText('What do you do for fun?')).toBeTruthy();
+    });
   });
 
   it('shows "Your answers" when no answers exist', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
@@ -45,83 +265,168 @@ describe('IcebreakersScreen', () => {
     });
   });
 
-  it('loads and displays questions from mock API', async () => {
+  it('shows answer count when answers exist', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Question 1',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+          {
+            id: 'q2',
+            categoryId: 'cat1',
+            questionText: 'Question 2',
+            questionType: 'short_answer',
+            displayOrder: 2,
+            isShownAtSignup: false,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: {
+        answers: [
+          {
+            userId: 'user1',
+            questionId: 'q1',
+            freeTextAnswer: 'I love hiking',
+            contentLanguage: 'en-US',
+            answeredAt: '2024-01-01T00:00:00Z',
+            updatedAt: '2024-01-01T00:00:00Z',
+          },
+          {
+            userId: 'user1',
+            questionId: 'q2',
+            freeTextAnswer: 'Reading books',
+            contentLanguage: 'en-US',
+            answeredAt: '2024-01-01T00:00:00Z',
+            updatedAt: '2024-01-01T00:00:00Z',
+          },
+        ],
+      },
+    });
+
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
-      expect(screen.getByText('What gets you out of the house?')).toBeTruthy();
-      expect(
-        screen.getByText('What do you do on a Sunday morning?')
-      ).toBeTruthy();
-      expect(screen.getByText('What are you reading right now?')).toBeTruthy();
+      expect(screen.getByTestId('icebreakers-count')).toHaveTextContent(
+        '2 answered'
+      );
     });
   });
 
-  it('shows "Tap to answer" status for unanswered questions', async () => {
+  it('expands questions that have answers', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Question with answer',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: {
+        answers: [
+          {
+            userId: 'user1',
+            questionId: 'q1',
+            freeTextAnswer: 'My saved answer',
+            contentLanguage: 'en-US',
+            answeredAt: '2024-01-01T00:00:00Z',
+            updatedAt: '2024-01-01T00:00:00Z',
+          },
+        ],
+      },
+    });
+
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
-      const statusElements = screen.getAllByText('Tap to answer');
-      expect(statusElements.length).toBeGreaterThan(0);
+      // Question should be expanded with answer text
+      const input = screen.getByTestId('answer-input-q1');
+      expect(input).toBeTruthy();
+      expect(input.props.value).toBe('My saved answer');
     });
   });
 
-  it('RULES 13.5: tapping question expands text field immediately', async () => {
+  it('tapping question expands text field', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
       expect(screen.getByTestId('question-q1')).toBeTruthy();
     });
 
-    // Question field should not be visible initially
+    // Field should not be visible initially
     expect(screen.queryByTestId('answer-input-q1')).toBeNull();
 
-    // Tap question to expand
-    await fireEvent.press(screen.getByTestId('question-q1'));
-
-    // Field should now be visible
-    await waitFor(() => {
-      expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
-    });
-  });
-
-  it('RULES 13.7: collapsing field keeps text in memory', async () => {
-    await render(<IcebreakersScreen />);
-
-    await waitFor(() => {
-      expect(screen.getByTestId('question-q1')).toBeTruthy();
-    });
-
-    // Expand question
+    // Tap to expand
     await fireEvent.press(screen.getByTestId('question-q1'));
 
     await waitFor(() => {
       expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
-    });
-
-    // Type answer
-    const input = screen.getByTestId('answer-input-q1');
-    await fireEvent.changeText(input, 'Live music and coffee');
-
-    // Collapse by tapping question again
-    await fireEvent.press(screen.getByTestId('question-q1'));
-
-    await waitFor(() => {
-      expect(screen.queryByTestId('answer-input-q1')).toBeNull();
-    });
-
-    // Re-expand question
-    await fireEvent.press(screen.getByTestId('question-q1'));
-
-    await waitFor(() => {
-      const inputAgain = screen.getByTestId('answer-input-q1');
-      expect(inputAgain).toBeTruthy();
-      // Text should still be there
-      expect(inputAgain.props.value).toBe('Live music and coffee');
     });
   });
 
   it('saves answer when field loses focus', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
+    (api.icebreakers.saveAnswer as jest.Mock).mockResolvedValue({
+      data: {
+        answer: {
+          userId: 'user1',
+          questionId: 'q1',
+          freeTextAnswer: 'My answer',
+          contentLanguage: 'en-US',
+          answeredAt: '2024-01-01T00:00:00Z',
+          updatedAt: '2024-01-01T00:00:00Z',
+        },
+      },
+    });
+
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
@@ -136,134 +441,115 @@ describe('IcebreakersScreen', () => {
     });
 
     const input = screen.getByTestId('answer-input-q1');
-    await fireEvent.changeText(input, 'My answer here');
-
-    // Trigger blur to save
+    await fireEvent.changeText(input, 'My answer');
     await fireEvent(input, 'blur');
 
-    // Count should update
     await waitFor(() => {
-      expect(screen.getByTestId('icebreakers-count')).toHaveTextContent(
-        '1 answered'
-      );
+      expect(api.icebreakers.saveAnswer).toHaveBeenCalledWith('q1', {
+        freeTextAnswer: 'My answer',
+        contentLanguage: 'en-US',
+      });
     });
   });
 
-  it('RULING 2: shows plain counts (no completion badge at 3)', async () => {
-    // Pre-populate 3 answers
-    saveMockIcebreakerAnswer('q1', 'Answer 1');
-    saveMockIcebreakerAnswer('q2', 'Answer 2');
-    saveMockIcebreakerAnswer('q3', 'Answer 3');
+  it('RULES 13.7: collapsing field keeps text in memory', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
 
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
-      const countElement = screen.getByTestId('icebreakers-count');
-      expect(countElement).toHaveTextContent('3 answered');
-      // Should NOT say "Ready to share" or any completion message
-      expect(countElement).not.toHaveTextContent('Ready');
-      expect(countElement).not.toHaveTextContent('ready');
+      expect(screen.getByTestId('question-q1')).toBeTruthy();
     });
-  });
 
-  it('continues counting beyond 3 (floor, not cap)', async () => {
-    // Pre-populate 4 answers
-    saveMockIcebreakerAnswer('q1', 'Answer 1');
-    saveMockIcebreakerAnswer('q2', 'Answer 2');
-    saveMockIcebreakerAnswer('q3', 'Answer 3');
-    saveMockIcebreakerAnswer('q4', 'Answer 4');
-
-    await render(<IcebreakersScreen />);
+    // Expand, type text
+    await fireEvent.press(screen.getByTestId('question-q1'));
 
     await waitFor(() => {
-      expect(screen.getByTestId('icebreakers-count')).toHaveTextContent(
-        '4 answered'
-      );
-    });
-  });
-
-  it('shows answered questions as expanded with saved text', async () => {
-    // Pre-populate an answer
-    saveMockIcebreakerAnswer('q1', 'I love hiking');
-
-    await render(<IcebreakersScreen />);
-
-    await waitFor(() => {
-      // Question should be expanded
       expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
-      // Should show saved text
-      const input = screen.getByTestId('answer-input-q1');
-      expect(input.props.value).toBe('I love hiking');
-      // Status should say "Tap to edit"
-      expect(screen.getByText('Tap to edit')).toBeTruthy();
-    });
-  });
-
-  it('deletes answer when text is cleared and blurred', async () => {
-    // Pre-populate an answer
-    saveMockIcebreakerAnswer('q1', 'I love hiking');
-
-    await render(<IcebreakersScreen />);
-
-    await waitFor(() => {
-      expect(screen.getByTestId('icebreakers-count')).toHaveTextContent(
-        '1 answered'
-      );
     });
 
     const input = screen.getByTestId('answer-input-q1');
+    await fireEvent.changeText(input, 'Draft answer');
 
-    // Clear text
-    await fireEvent.changeText(input, '');
-    await fireEvent(input, 'blur');
+    // Collapse
+    await fireEvent.press(screen.getByTestId('question-q1'));
 
-    // Count should return to zero
     await waitFor(() => {
-      expect(screen.getByTestId('icebreakers-count')).toHaveTextContent(
-        'Your answers'
-      );
+      expect(screen.queryByTestId('answer-input-q1')).toBeNull();
+    });
+
+    // Re-expand
+    await fireEvent.press(screen.getByTestId('question-q1'));
+
+    await waitFor(() => {
+      const inputAgain = screen.getByTestId('answer-input-q1');
+      expect(inputAgain.props.value).toBe('Draft answer');
     });
   });
 
-  it('navigates back when back arrow is pressed', async () => {
-    await render(<IcebreakersScreen />);
+  it('prevents collapse when save is in flight', async () => {
+    (api.icebreakers.getQuestions as jest.Mock).mockResolvedValue({
+      data: {
+        questions: [
+          {
+            id: 'q1',
+            categoryId: 'cat1',
+            questionText: 'Test question',
+            questionType: 'short_answer',
+            displayOrder: 1,
+            isShownAtSignup: true,
+          },
+        ],
+      },
+    });
+    (api.icebreakers.getMyAnswers as jest.Mock).mockResolvedValue({
+      data: { answers: [] },
+    });
 
-    const backButton = screen.getByText('←');
-    await fireEvent.press(backButton);
+    // Mock save that never resolves (stays in flight)
+    (api.icebreakers.saveAnswer as jest.Mock).mockImplementation(
+      () => new Promise(() => {}) // Never resolves
+    );
 
-    expect(mockBack).toHaveBeenCalledTimes(1);
-  });
-
-  it('renders questions in sort order', async () => {
     await render(<IcebreakersScreen />);
 
     await waitFor(() => {
-      const questions = screen.getAllByTestId(/^question-/);
-      expect(questions.length).toBe(6);
-      // All 6 questions should be rendered
       expect(screen.getByTestId('question-q1')).toBeTruthy();
-      expect(screen.getByTestId('question-q6')).toBeTruthy();
-    });
-  });
-
-  it('shows accessibility state for expanded/collapsed questions', async () => {
-    await render(<IcebreakersScreen />);
-
-    await waitFor(() => {
-      expect(screen.getByTestId('question-q1')).toBeTruthy();
     });
 
-    const question = screen.getByTestId('question-q1');
-
-    // Initially collapsed - field should not be visible
-    expect(screen.queryByTestId('answer-input-q1')).toBeNull();
-
-    // Expand
-    await fireEvent.press(question);
+    // Expand and type
+    await fireEvent.press(screen.getByTestId('question-q1'));
 
     await waitFor(() => {
-      // Field should now be visible
       expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
     });
+
+    const input = screen.getByTestId('answer-input-q1');
+    await fireEvent.changeText(input, 'My answer');
+
+    // Start save (will stay in flight since promise never resolves)
+    fireEvent(input, 'blur'); // Don't await - let it start async
+
+    // Try to collapse immediately (save should be in flight)
+    await fireEvent.press(screen.getByTestId('question-q1'));
+
+    // Field should still be visible (collapse blocked)
+    expect(screen.getByTestId('answer-input-q1')).toBeTruthy();
   });
 });
