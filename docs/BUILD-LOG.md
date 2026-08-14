@@ -261,3 +261,117 @@ Romance matching currently covers age range (§13.14-13.17) and gender (§13.20-
 
 *Updated: 2026-08-14*
 *Type: Ruling documentation*
+
+---
+
+# Ruling - 2026-08-14 (Final Session)
+
+## Romance Identity — Gender, Looking For, Pronouns
+
+**Ruling by:** Brian
+**Documented in:** RULES.md §13.14-13.38
+**Status:** 🔒 Locked
+
+### Summary
+
+Complete Romance identity system with three fields: Gender (private matching input), Looking For (private matching input), and Pronouns (public display). No orientation labels stored. The principle: the app never shows what somebody is, only matches on it.
+
+### Rules Updated and Added
+
+**Updated existing rules:**
+| Rule | Description |
+|------|-------------|
+| **13.17** | Updated to clarify: "All conditions match, it matches. No scoring, no ranking." |
+| **13.18** | **ANSWERED YES** — Romance mismatch STILL produces ordinary hello nudge. Close-by people meet regardless of Romance settings. |
+
+**New rules added (§13.19-13.38):**
+
+| Rule | Description |
+|------|-------------|
+| **13.19** | The principle: app never shows what somebody is, only matches on it (same as age) |
+| **13.20** | No orientation labels collected — "gay", "straight", "bisexual" appear nowhere. Orientation derived, never stored. |
+| **13.21** | GENDER — radio, PRIVATE, matching input only. Options: Male · Female · Other |
+| **13.22** | Other opens curated modal (no free text): Non-binary · Genderqueer · Genderfluid · Agender · Prefer not to say |
+| **13.23** | Curated because free text gives unmatchable values. Missing identities = support request, not text box. |
+| **13.24** | Gender NEVER displayed to another user. Not on profile, reveal, or notification. |
+| **13.25** | LOOKING FOR — radio, PRIVATE, matching input only. Options: Men · Women · Anyone |
+| **13.26** | "Anyone" replaces orientation. Satisfies every gender including Other, must not read as lesser option. |
+| **13.27** | PRONOUNS — dropdown, PUBLIC. Used for copy throughout app. |
+| **13.28** | Pronoun options: He/Him · She/Her · They/Them · He/They · She/They · Any pronouns · Use my name only · Prefer not to say · Custom |
+| **13.29** | Custom allows free text — pronouns rendered, never matched on |
+| **13.30** | Pronouns NEVER inferred from gender. A woman may use they/them. |
+| **13.31** | Pronouns are ONLY field displayed to others (appear in copy about that person) |
+| **13.32** | "Use my name only" substitutes name: "Marco won't be told" not "He won't be told" |
+| **13.33** | Matching rule: all four conditions, both directions. (1) A's gender in B's Looking For, (2) B's gender in A's Looking For, (3) A's age in B's range, (4) B's age in A's range |
+| **13.34** | "Anyone" satisfies conditions 1 and 2 for every gender |
+| **13.35** | "Romantic nudges only" toggle in notification settings. Governs which nudges YOU receive. Never visible to others. |
+| **13.36** | Other person's nudge fires normally regardless of your Romantic nudges setting |
+| **13.37** | Asymmetry is the design. Nobody told somebody approached them romantically. |
+| **13.38** | Placement at signup: gender and pronouns on ONE LINE (radio then dropdown). Looking For and age range in Romance settings only. |
+
+### The Three Fields
+
+**1. GENDER (Private)**
+- Radio button, matching input only
+- Options: Male · Female · Other
+- Other opens modal with curated list (no free text)
+- Never displayed to another user
+- Appears: signup, Romance settings ("who I'm looking for")
+
+**2. LOOKING FOR (Private)**
+- Radio button, matching input only
+- Options: Men · Women · Anyone
+- "Anyone" replaces orientation labels
+- Never displayed to another user
+- Appears: Romance settings only
+
+**3. PRONOUNS (Public)**
+- Dropdown, used for copy throughout app
+- Nine options including Custom (free text)
+- Never inferred from gender
+- Only field displayed to other users
+- Appears: signup (same line as gender), user profiles (in copy)
+
+### Key Principles
+
+**No Orientation Labels:**
+"Gay", "straight", "bisexual" appear nowhere in the app, database, or settings. Orientation is derived from Gender + Looking For combination, never stored as a label.
+
+**Privacy by Default:**
+Gender and Looking For are private matching inputs, like age. Only pronouns are public because they appear in copy about the person.
+
+**Matching Algorithm:**
+All four conditions required, both directions:
+1. A's gender must be in B's Looking For
+2. B's gender must be in A's Looking For
+3. A's age must be in B's age range
+4. B's age must be in A's age range
+
+"Anyone" in Looking For satisfies conditions 1 and 2 for every gender.
+
+**Romance Mismatch Behavior:**
+§13.18 answered: YES, Romance mismatch STILL produces an ordinary hello nudge. Close-by people meet regardless of Romance settings. This supports the core Say Hello principle that proximity matters more than filters.
+
+### Implementation Notes
+
+**No UI Built:**
+This ruling documents the system only. No screens or components built in this session.
+
+**Database Impact:**
+- New columns needed: `gender`, `looking_for` (both enums)
+- `pronouns` column (text, supports custom values)
+- No `orientation` column — never stored
+
+**Gender Enum Values:**
+`male`, `female`, `non_binary`, `genderqueer`, `genderfluid`, `agender`, `prefer_not_to_say`
+
+**Looking For Enum Values:**
+`men`, `women`, `anyone`
+
+**Pronoun Handling:**
+Free text allowed via "Custom" option. Must support name substitution for "Use my name only" option in all copy that uses pronouns.
+
+---
+
+*Updated: 2026-08-14*
+*Type: Ruling documentation*

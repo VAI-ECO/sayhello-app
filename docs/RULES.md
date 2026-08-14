@@ -342,18 +342,28 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 13.14 🔒 | **A user's age is never revealed. Ever.** |
 | 13.15 🔒 | The user states the **age range they are looking for** |
 | 13.16 🔒 | A Romance match requires **both ranges satisfied, in both directions** |
-| 13.17 🔒 | **Say Hello does not judge.** Everyone is 18+. Both ranges match, it matches. |
-| 13.18 ❓ | If Romance ranges don't match, do they still get a normal hello nudge? *Recommend yes.* |
-| 13.19 🔒 | **Gender and pronouns are two separate fields, one line.** They do different jobs and must not be conflated. |
-| 13.20 🔒 | **Gender** — radio, single select, two options: **Male · Female**. Used ONLY for Romance matching. |
-| 13.21 🔒 | Gender appears in exactly two places: signup, and "who I'm looking for" in Romance settings. |
-| 13.22 🔒 | **Gender is never displayed to another user.** It is matching input only, like age. |
-| 13.23 🔒 | **Pronouns** — dropdown, sits alongside gender on the same line. Used for copy throughout the app. |
-| 13.24 🔒 | Pronoun options, in this order: **He/Him · She/Her · They/Them · He/They · She/They · Any pronouns · Use my name only · Prefer not to say · Custom** |
-| 13.25 🔒 | "Custom" opens a free text field for pronoun entry. |
-| 13.26 🔒 | **"Use my name only" means copy uses their name instead of a pronoun** — "Marco won't be told" rather than "He won't be told". |
-| 13.27 🔒 | **Pronouns ARE displayed** to other users, because they appear in copy about that person. |
-| 13.28 ❓ | **Orientation** — not yet ruled. Romance matching on age range and gender alone pairs people regardless of who they want to meet. |
+| 13.17 🔒 | **Say Hello does not judge.** Everyone is 18+. All conditions match, it matches. No scoring, no ranking. |
+| 13.18 🔒 | **Romance mismatch STILL produces an ordinary hello nudge.** Close-by people meet regardless of Romance settings. |
+| 13.19 🔒 | **The principle: the app never shows what somebody is, only matches on it.** Same as age. |
+| 13.20 🔒 | **No orientation labels are ever collected.** "Gay", "straight", "bisexual" appear nowhere in the app, database, or settings. Orientation is derived, never stored. |
+| 13.21 🔒 | **GENDER** — radio, PRIVATE, matching input only. Options: **Male · Female · Other** |
+| 13.22 🔒 | **Other** opens a modal with curated list (no free text): **Non-binary · Genderqueer · Genderfluid · Agender · Prefer not to say** |
+| 13.23 🔒 | Curated list because free text gives values nobody can match on. Missing identities are a support request, not a text box. |
+| 13.24 🔒 | **Gender is NEVER displayed to another user.** Not on a profile, not in a reveal, not in a notification. |
+| 13.25 🔒 | **LOOKING FOR** — radio, PRIVATE, matching input only. Options: **Men · Women · Anyone** |
+| 13.26 🔒 | **"Anyone" replaces orientation.** Anyone satisfies every gender including Other, and must not read as a lesser option. |
+| 13.27 🔒 | **PRONOUNS** — dropdown, PUBLIC. Used for copy throughout the app. |
+| 13.28 🔒 | Pronoun options: **He/Him · She/Her · They/Them · He/They · She/They · Any pronouns · Use my name only · Prefer not to say · Custom** |
+| 13.29 🔒 | **Custom allows free text** — pronouns are rendered, never matched on. |
+| 13.30 🔒 | **Pronouns are NEVER inferred from gender.** A woman may use they/them. |
+| 13.31 🔒 | **Pronouns are the ONLY field ever displayed** to other users, because they appear in copy about that person. |
+| 13.32 🔒 | **"Use my name only" substitutes the name** — "Marco won't be told" instead of "He won't be told". |
+| 13.33 🔒 | **The matching rule: all four conditions, both directions.** (1) A's gender is in B's Looking For, (2) B's gender is in A's Looking For, (3) A's age inside B's range, (4) B's age inside A's range. |
+| 13.34 🔒 | **"Anyone" satisfies conditions 1 and 2 for every gender.** |
+| 13.35 🔒 | **"Romantic nudges only" toggle** in notification settings. Governs which nudges YOU receive. Never visible to anybody else. |
+| 13.36 🔒 | **The other person's nudge fires normally regardless** of your Romantic nudges setting. |
+| 13.37 🔒 | **Asymmetry is the design.** Nobody is ever told somebody approached them romantically. |
+| 13.38 🔒 | **Placement at signup:** gender and pronouns on ONE LINE, radio then dropdown. Looking For and age range live in Romance settings only. |
 
 ---
 
