@@ -8,7 +8,7 @@ rules only.
 
 🔒 locked · ❓ open · 📌 deferred · ⚠️ needs confirming
 
-**Last updated:** 2026-08-08
+**Last updated:** 2026-08-14
 
 ---
 
@@ -344,6 +344,16 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 13.16 🔒 | A Romance match requires **both ranges satisfied, in both directions** |
 | 13.17 🔒 | **Say Hello does not judge.** Everyone is 18+. Both ranges match, it matches. |
 | 13.18 ❓ | If Romance ranges don't match, do they still get a normal hello nudge? *Recommend yes.* |
+| 13.19 🔒 | **Gender and pronouns are two separate fields, one line.** They do different jobs and must not be conflated. |
+| 13.20 🔒 | **Gender** — radio, single select, two options: **Male · Female**. Used ONLY for Romance matching. |
+| 13.21 🔒 | Gender appears in exactly two places: signup, and "who I'm looking for" in Romance settings. |
+| 13.22 🔒 | **Gender is never displayed to another user.** It is matching input only, like age. |
+| 13.23 🔒 | **Pronouns** — dropdown, sits alongside gender on the same line. Used for copy throughout the app. |
+| 13.24 🔒 | Pronoun options, in this order: **He/Him · She/Her · They/Them · He/They · She/They · Any pronouns · Use my name only · Prefer not to say · Custom** |
+| 13.25 🔒 | "Custom" opens a free text field for pronoun entry. |
+| 13.26 🔒 | **"Use my name only" means copy uses their name instead of a pronoun** — "Marco won't be told" rather than "He won't be told". |
+| 13.27 🔒 | **Pronouns ARE displayed** to other users, because they appear in copy about that person. |
+| 13.28 ❓ | **Orientation** — not yet ruled. Romance matching on age range and gender alone pairs people regardless of who they want to meet. |
 
 ---
 
