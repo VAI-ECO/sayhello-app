@@ -637,4 +637,12 @@ describe('IcebreakersScreen - Success State', () => {
       expect(inputAgain.props.value).toBe('My answer text');
     });
   });
+
+  it('never shows distance (§8.12)', async () => {
+    const { container } = await render(<IcebreakersScreen />);
+
+    const text = JSON.stringify(container);
+    expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
+    expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+  });
 });

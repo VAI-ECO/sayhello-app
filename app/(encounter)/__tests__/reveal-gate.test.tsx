@@ -139,4 +139,14 @@ describe('RevealScreen — Icebreaker Gate', () => {
       expect(skipButton).toBeTruthy();
     });
   });
+
+  it('never shows distance (§8.12)', async () => {
+    const { container } = await render(<RevealScreen />);
+
+    await waitFor(() => {
+      const text = JSON.stringify(container);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+    });
+  });
 });

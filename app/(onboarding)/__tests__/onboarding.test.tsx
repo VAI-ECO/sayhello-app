@@ -197,5 +197,17 @@ describe('Onboarding Flow', () => {
       expect(screen.getByText('Go back')).toBeTruthy();
       expect(screen.getByText('Close the app')).toBeTruthy();
     });
+
+    it('never shows distance (§8.12)', async () => {
+      const { container } = await render(
+        <ThemeProvider>
+          <Under18Screen />
+        </ThemeProvider>
+      );
+
+      const text = JSON.stringify(container);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+    });
   });
 });

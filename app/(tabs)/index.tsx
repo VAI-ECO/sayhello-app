@@ -240,7 +240,7 @@ function FeedItemCard({ item }: { item: FeedItem }) {
         <Text style={styles.feedCardTitle}>{item.title}</Text>
         <View style={styles.feedCardFooter}>
           <Text style={styles.feedCardFooterText}>
-            {item.locationName} · {item.distance}
+            {item.locationName}
             {item.attendeeCount && ` · ${item.attendeeCount} ${t('whatsHappening.feedItem.going')}`}
           </Text>
           <Text style={styles.feedCardJoin}>{t('whatsHappening.feedItem.join')}</Text>
@@ -257,7 +257,6 @@ function FeedItemRow({ item }: { item: FeedItem }) {
       const parts = [t('whatsHappening.feedItem.hootza')];
       if (item.date) parts.push(item.date);
       if (item.time) parts.push(item.time);
-      if (item.distance && !item.date) parts.push(item.distance);
       return parts.join(' · ');
     }
     if (item.type === 'discount') {
@@ -283,7 +282,6 @@ function FeedItemRow({ item }: { item: FeedItem }) {
         <Text style={styles.feedRowFooter}>
           {item.locationName}
           {item.postedAt && ` · ${item.postedAt}`}
-          {item.distance && !item.date && ` · ${item.distance}`}
           {item.attendeeCount && ` · ${item.attendeeCount} ${t('whatsHappening.feedItem.going')}`}
         </Text>
       </View>

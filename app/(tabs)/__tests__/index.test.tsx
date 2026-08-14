@@ -320,18 +320,21 @@ describe('What\'s Happening Screen', () => {
       expect(screen.getByText(/2h ago/)).toBeTruthy();
     });
 
-    it('shows location and distance for all items', async () => {
-      await render(
+    it('shows location but NEVER distance (§8.12)', async () => {
+      const { container } = await render(
         <ThemeProvider>
           <WhatsHappeningScreen />
         </ThemeProvider>
       );
 
+      // Location names ARE shown
       expect(screen.getByText(/412 Bell St/)).toBeTruthy();
-      expect(screen.getByText(/0.4 mi/)).toBeTruthy();
-      // Ridge Tavern and 0.3 mi appear multiple times, use getAllByText
       expect(screen.getAllByText(/Ridge Tavern/).length).toBeGreaterThan(0);
-      expect(screen.getAllByText(/0.3 mi/).length).toBeGreaterThan(0);
+
+      // §8.12: Distance MUST NOT be shown anywhere
+      const text = JSON.stringify(container);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
+      expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
     });
   });
 });

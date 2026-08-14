@@ -216,4 +216,12 @@ describe('SettingsScreen', () => {
       expect(row.props.accessibilityRole).toBe('button');
     });
   });
+
+  it('never shows distance (§8.12)', async () => {
+    const { container } = await render(<SettingsScreen />);
+
+    const text = JSON.stringify(container);
+    expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
+    expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+  });
 });

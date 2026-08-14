@@ -17,13 +17,11 @@ export interface FeedItem {
   type: FeedItemType;
   title: string;
   locationName: string;
-  distance: string;
   time?: string; // For Hootzas
   date?: string; // For Hootzas
   expiryDate?: string; // For Discounts
   postedAt?: string; // For Hollas
   attendeeCount?: number; // For Hootzas
-  imageUrl?: string;
   isTonight?: boolean; // For featured Hootzas
 }
 
@@ -36,7 +34,6 @@ export const mockFeedItems: FeedItem[] = [
     type: 'hootza',
     title: 'Trivia at Foxhole',
     locationName: '412 Bell St',
-    distance: '0.4 mi',
     time: '7:00pm',
     attendeeCount: 16,
     isTonight: true,
@@ -46,7 +43,6 @@ export const mockFeedItems: FeedItem[] = [
     type: 'discount',
     title: '20% off at Ridge Tavern',
     locationName: 'Ridge Tavern',
-    distance: '0.3 mi',
     expiryDate: 'Aug 28',
   },
   {
@@ -54,7 +50,6 @@ export const mockFeedItems: FeedItem[] = [
     type: 'holla',
     title: 'Patio is open again',
     locationName: 'Bell St Coffee',
-    distance: '0.3 mi',
     postedAt: '2h ago',
   },
   {
@@ -62,7 +57,6 @@ export const mockFeedItems: FeedItem[] = [
     type: 'hootza',
     title: 'Sunrise 5k',
     locationName: 'Riverfront lot',
-    distance: '1.2 mi',
     date: 'Sat',
     time: '6:30am',
     attendeeCount: 40,
@@ -78,7 +72,6 @@ export const mockQuietDayItems: FeedItem[] = [
     type: 'hootza',
     title: 'Sunrise 5k',
     locationName: 'Riverfront lot',
-    distance: '3.2 mi',
     date: 'Sat',
     attendeeCount: 40,
   },
@@ -87,7 +80,6 @@ export const mockQuietDayItems: FeedItem[] = [
     type: 'hootza',
     title: 'Flea market meetup',
     locationName: 'Downtown plaza',
-    distance: '4.1 mi',
     date: 'Sun',
     attendeeCount: 11,
   },
