@@ -20,7 +20,7 @@
  * ⚠️ NEVER state a distance (RULES 8.12)
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -28,33 +28,84 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
+  ActivityIndicator,
 } from 'react-native';
 import { useRouter } from 'expo-router';
 import { Waverly } from '../../../src/components';
 import { t } from '../../../src/i18n';
 import { Colors } from '../../../src/theme';
 import {
-  mockHelloPins,
-  mockHelloClusters,
   mockPlaceResults,
   mockHangoutResults,
   mockRecentSearches,
-  type HelloPin,
   type PlaceSearchResult,
 } from '../../../src/data/mockMapData';
+import { getHellos, type HelloPin as ApiHelloPin } from '../../../src/api/hellos';
 
 type FilterType = 'nearMe' | 'mine' | 'helloHangouts' | 'thisYear';
+type ViewState = 'loading' | 'error' | 'empty' | 'data';
+
+interface HelloPin {
+  id: string;
+  person1Name: string;
+  person2Name: string;
+  locationName: string;
+  timestamp: string;
+  pinNumber: string;
+}
 
 export default function MapBrowsingScreen() {
   const router = useRouter();
+  const [viewState, setViewState] = useState<ViewState>('loading');
   const [activeFilter, setActiveFilter] = useState<FilterType>('nearMe');
   const [searchQuery, setSearchQuery] = useState('');
   const [isSearching, setIsSearching] = useState(false);
   const [selectedPin, setSelectedPin] = useState<HelloPin | null>(null);
+  const [helloPins, setHelloPins] = useState<HelloPin[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // For demo: location and count for bottom sheet overview
   const currentLocationName = 'Nashville, Tennessee';
-  const currentHellosCount = 1204;
+  const currentHellosCount = helloPins.length;
+
+  // Fetch hellos on mount
+  useEffect(() => {
+    loadHellos();
+  }, []);
+
+  async function loadHellos() {
+    setViewState('loading');
+    setErrorMessage(null);
+
+    const { data, error } = await getHellos();
+
+    if (error) {
+      setViewState('error');
+      setErrorMessage(error.message);
+      return;
+    }
+
+    if (data && data.hellos.length > 0) {
+      // Transform API hellos to UI format
+      const transformed = data.hellos.map(transformHelloPin);
+      setHelloPins(transformed);
+      setViewState('data');
+    } else {
+      setHelloPins([]);
+      setViewState('empty');
+    }
+  }
+
+  function transformHelloPin(apiPin: ApiHelloPin): HelloPin {
+    return {
+      id: apiPin.id,
+      person1Name: apiPin.user1FullName || 'User ' + apiPin.user1Id.slice(0, 4),
+      person2Name: apiPin.user2FullName || 'User ' + apiPin.user2Id.slice(0, 4),
+      locationName: apiPin.locationName || 'Unknown location',
+      timestamp: apiPin.metAt,
+      pinNumber: apiPin.helloCode,
+    };
+  }
 
   const handlePlaceSelect = (place: PlaceSearchResult) => {
     setIsSearching(false);
@@ -78,6 +129,56 @@ export default function MapBrowsingScreen() {
       });
     }
   };
+
+  // Loading state
+  if (viewState === 'loading' && !isSearching) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color={Colors.Ink} testID="loading-indicator" />
+        </View>
+      </View>
+    );
+  }
+
+  // Error state
+  if (viewState === 'error' && !isSearching) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorTitle}>Can't load map</Text>
+          <Text style={styles.errorMessage}>{errorMessage || 'Something went wrong'}</Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={loadHellos}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+            testID="retry-button"
+          >
+            <Text style={styles.retryButtonText}>Try again</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
+  // Empty state
+  if (viewState === 'empty' && !isSearching) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.emptyContainer}>
+          <Waverly size={120} color={Colors.Faint} />
+          <Text style={styles.emptyTitle}>No Hellos yet</Text>
+          <Text style={styles.emptyMessage}>
+            Your pins will appear here as you meet people.
+          </Text>
+        </View>
+      </View>
+    );
+  }
 
   // Search overlay
   if (isSearching) {
@@ -195,44 +296,39 @@ export default function MapBrowsingScreen() {
           <Text style={styles.placeholderText}>REPLACE WITH MAP TILE LAYER</Text>
 
           {/* Mock pins - in production these would be map markers */}
-          <TouchableOpacity
-            style={[
-              styles.pinTeardrop,
-              { top: 250, left: 96, backgroundColor: '#D81B60' },
-            ]}
-            onPress={() => setSelectedPin(mockHelloPins[0])}
-            testID="pin-1"
-            accessibilityRole="button"
-            accessibilityLabel={`Pin for ${mockHelloPins[0].person1Name} and ${mockHelloPins[0].person2Name}`}
-          />
-          <TouchableOpacity
-            style={[
-              styles.pinTeardrop,
-              { top: 592, left: 244, backgroundColor: '#D81B60' },
-            ]}
-            onPress={() => setSelectedPin(mockHelloPins[1])}
-            testID="pin-2"
-            accessibilityRole="button"
-            accessibilityLabel={`Pin for ${mockHelloPins[1].person1Name} and ${mockHelloPins[1].person2Name}`}
-          />
-          <TouchableOpacity
-            style={[
-              styles.pinTeardrop,
-              { top: 500, left: 288, backgroundColor: '#FB8C00' },
-            ]}
-            onPress={() => setSelectedPin(mockHelloPins[2])}
-            testID="pin-3"
-            accessibilityRole="button"
-            accessibilityLabel={`Pin for ${mockHelloPins[2].person1Name} and ${mockHelloPins[2].person2Name}`}
-          />
+          {helloPins.slice(0, 3).map((pin, index) => (
+            <TouchableOpacity
+              key={pin.id}
+              style={[
+                styles.pinTeardrop,
+                {
+                  top: 250 + (index * 150),
+                  left: 96 + (index * 80),
+                  backgroundColor: '#D81B60',
+                },
+              ]}
+              onPress={() => setSelectedPin(pin)}
+              testID={`pin-${index + 1}`}
+              accessibilityRole="button"
+              accessibilityLabel={`Pin for ${pin.person1Name} and ${pin.person2Name}`}
+            />
+          ))}
 
-          {/* Mock clusters */}
-          <View style={[styles.clusterBadge, { top: 250, left: 62 }]}>
-            <Text style={styles.clusterCount}>12</Text>
-          </View>
-          <View style={[styles.clusterBadge, { top: 372, left: 218 }]}>
-            <Text style={styles.clusterCount}>7</Text>
-          </View>
+          {/* Mock clusters - only show if we have more than 3 pins */}
+          {helloPins.length > 3 && (
+            <>
+              <View style={[styles.clusterBadge, { top: 250, left: 62 }]}>
+                <Text style={styles.clusterCount}>
+                  {Math.min(12, helloPins.length - 3)}
+                </Text>
+              </View>
+              <View style={[styles.clusterBadge, { top: 372, left: 218 }]}>
+                <Text style={styles.clusterCount}>
+                  {Math.max(0, helloPins.length - 15)}
+                </Text>
+              </View>
+            </>
+          )}
         </View>
 
         {/* Search bar and filters */}
@@ -409,6 +505,65 @@ const styles = StyleSheet.create({
   statusBar: {
     height: 44,
     backgroundColor: 'transparent',
+  },
+  // Loading
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  // Error
+  errorContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 32,
+    gap: 16,
+  },
+  errorTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: Colors.Ink,
+    textAlign: 'center',
+  },
+  errorMessage: {
+    fontSize: 15,
+    lineHeight: 23,
+    color: Colors.Muted,
+    textAlign: 'center',
+  },
+  retryButton: {
+    borderWidth: 1,
+    borderColor: Colors.Ink,
+    borderRadius: 22,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    marginTop: 8,
+  },
+  retryButtonText: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: Colors.Ink,
+  },
+  // Empty
+  emptyContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 32,
+    gap: 16,
+  },
+  emptyTitle: {
+    fontSize: 24,
+    fontWeight: '700',
+    color: Colors.Ink,
+    textAlign: 'center',
+  },
+  emptyMessage: {
+    fontSize: 16,
+    lineHeight: 24,
+    color: Colors.Muted,
+    textAlign: 'center',
   },
   mapContainer: {
     flex: 1,
@@ -946,21 +1101,6 @@ const styles = StyleSheet.create({
   },
   waverlyContainer: {
     opacity: 0.13,
-  },
-  emptyTitle: {
-    fontFamily: 'Assistant',
-    fontSize: 28,
-    fontWeight: '700',
-    color: Colors.Ink,
-    letterSpacing: -0.015,
-    textAlign: 'center',
-  },
-  emptyBody: {
-    fontFamily: 'Assistant',
-    fontSize: 16,
-    lineHeight: 16 * 1.55,
-    color: Colors.Muted,
-    textAlign: 'center',
   },
   helloButton: {
     backgroundColor: Colors.Magenta,

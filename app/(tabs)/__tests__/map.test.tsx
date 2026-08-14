@@ -36,6 +36,69 @@ jest.mock('../../../src/components', () => ({
   Waverly: () => null,
 }));
 
+// Mock hellos API
+jest.mock('../../../src/api/hellos', () => ({
+  getHellos: jest.fn(() =>
+    Promise.resolve({
+      data: {
+        hellos: [
+          {
+            id: 'pin-1',
+            user1Id: 'user-maya',
+            user1FullName: 'Maya',
+            user2Id: 'user-jordan',
+            user2FullName: 'Jordan',
+            locationLat: 36.1627,
+            locationLng: -86.7816,
+            locationName: 'Ridge Tavern, Nashville',
+            hangoutId: null,
+            metAt: '2026-08-02T18:42:00Z',
+            revealScheduledAt: '2026-08-02T21:42:00Z',
+            revealedAt: '2026-08-02T21:42:00Z',
+            hasSelfie: false,
+            helloCode: '1204',
+            createdAt: '2026-08-02T18:42:00Z',
+          },
+          {
+            id: 'pin-2',
+            user1Id: 'user-alex',
+            user1FullName: 'Alex',
+            user2Id: 'user-sam',
+            user2FullName: 'Sam',
+            locationLat: 36.1707,
+            locationLng: -86.7844,
+            locationName: 'The Pharmacy, Nashville',
+            hangoutId: null,
+            metAt: '2026-07-28T14:15:00Z',
+            revealScheduledAt: '2026-07-28T17:15:00Z',
+            revealedAt: '2026-07-28T17:15:00Z',
+            hasSelfie: false,
+            helloCode: '1187',
+            createdAt: '2026-07-28T14:15:00Z',
+          },
+          {
+            id: 'pin-3',
+            user1Id: 'user-taylor',
+            user1FullName: 'Taylor',
+            user2Id: 'user-casey',
+            user2FullName: 'Casey',
+            locationLat: 36.1547,
+            locationLng: -86.7754,
+            locationName: 'Centennial Park, Nashville',
+            hangoutId: null,
+            metAt: '2026-07-15T10:30:00Z',
+            revealScheduledAt: '2026-07-15T13:30:00Z',
+            revealedAt: '2026-07-15T13:30:00Z',
+            hasSelfie: false,
+            helloCode: '1142',
+            createdAt: '2026-07-15T10:30:00Z',
+          },
+        ],
+      },
+    })
+  ),
+}));
+
 describe('Hello Map', () => {
   beforeEach(() => {
     mockPush.mockClear();
