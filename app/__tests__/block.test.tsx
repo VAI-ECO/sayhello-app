@@ -14,13 +14,10 @@ import * as apiClient from '../../src/api/client';
 
 // Mock router
 const mockBack = jest.fn();
+let mockParams: { userId: string; name: string; gender?: string } = { userId: 'user-123', name: 'Marco', gender: 'male' };
 jest.mock('expo-router', () => ({
   useRouter: () => ({ back: mockBack }),
-  useLocalSearchParams: () => ({
-    userId: 'user-123',
-    name: 'Marco',
-    gender: 'male',
-  }),
+  useLocalSearchParams: () => mockParams,
 }));
 
 // Mock API
@@ -32,6 +29,8 @@ describe('Block Screen', () => {
   beforeEach(() => {
     jest.clearAllMocks();
     mockPost.mockResolvedValue({ data: { success: true } });
+    // Reset to default params
+    mockParams = { userId: 'user-123', name: 'Marco', gender: 'male' };
   });
 
   describe('Header and Title', () => {
@@ -119,8 +118,9 @@ describe('Block Screen', () => {
   });
 
   describe('Pronoun Handling', () => {
-    it('component supports gender-based pronouns', async () => {
-      // Default mock uses male pronouns
+    it('uses male pronouns when gender is male', async () => {
+      mockParams = { userId: 'user-123', name: 'Marco', gender: 'male' };
+
       await render(
         <ThemeProvider>
           <BlockScreen />
@@ -129,6 +129,32 @@ describe('Block Screen', () => {
 
       expect(screen.getByText("He won't be told")).toBeTruthy();
       expect(screen.getByText('Block him')).toBeTruthy();
+    });
+
+    it('uses female pronouns when gender is female', async () => {
+      mockParams = { userId: 'user-456', name: 'Jo', gender: 'female' };
+
+      await render(
+        <ThemeProvider>
+          <BlockScreen />
+        </ThemeProvider>
+      );
+
+      expect(screen.getByText("She won't be told")).toBeTruthy();
+      expect(screen.getByText('Block her')).toBeTruthy();
+    });
+
+    it('uses they pronouns when gender is unspecified', async () => {
+      mockParams = { userId: 'user-789', name: 'Alex', gender: undefined };
+
+      await render(
+        <ThemeProvider>
+          <BlockScreen />
+        </ThemeProvider>
+      );
+
+      expect(screen.getByText("They won't be told")).toBeTruthy();
+      expect(screen.getByText('Block them')).toBeTruthy();
     });
   });
 
