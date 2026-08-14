@@ -214,6 +214,13 @@ class APIClient {
   }
 
   /**
+   * Generic DELETE request
+   */
+  async delete<T = unknown>(endpoint: string): Promise<APIResponse<T>> {
+    return this.request<T>(endpoint, { method: 'DELETE' });
+  }
+
+  /**
    * Auth endpoints
    */
   auth = {
