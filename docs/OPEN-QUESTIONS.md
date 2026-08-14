@@ -2,35 +2,31 @@
 
 ## Item 5: Delete Account Feature
 
-**Status:** STOPPED - Design file missing
+**Status:** STOPPED - API endpoint does not exist
 
 **Issue:**
-The design handoff directory exists at `~/Downloads/design_handoff_sayhello_build/screens/` but there is no specific Delete account design file (e.g., `Delete Account.dc.html` or `Settings.dc.html`).
+Design spec found in `Missing Mobile Screens.dc.html` (Frame 5), but the API backend has no account deletion endpoint.
 
-**Available design files:**
-- Ambassador Panel.dc.html
-- Ambassadors and Hangouts.dc.html
-- App Screens.dc.html
-- Category Marks.dc.html
-- Dashboards.dc.html
-- Hangout Directory.dc.html
-- Hello Map.dc.html
-- Icebreakers.dc.html
-- Identity Colors.dc.html
-- Notification.dc.html
-- Onboarding Individual.dc.html
-- Waverlys Journey.dc.html
-- Waverlys Place Store.dc.html
+**Design complete:**
+- UI properly warns per §10.10: "Your pins on the Hello Map" stays (emphasized in bordered box)
+- Explains reason: "Both of you put each pin there. It's their record of meeting you as much as yours of meeting them"
+- §10.11 compliant: "Selfies you're in can be taken down — ask us and a person handles it" (not a button)
+- Copy: "Where your name was, a pin will say **a Say Hello member**"
 
-**Note:**
-Delete account feature requires design spec before implementation. Must include warning per �10.10: "the pin survives deletion."
+**API status:**
+- ❌ No DELETE /users/me endpoint exists in `sayhello-api/src/routes/users.ts`
+- ✅ Only GET /users/me and PATCH /users/me currently implemented
 
 **Next steps:**
-1. Check if Delete account UI is included in "App Screens.dc.html"
-2. If not, request design spec from design team
-3. Implement once design is available, ensuring �10.10 warning is prominently displayed before user confirms deletion
+1. Create DELETE /users/me endpoint in API
+2. Implement soft deletion (mark deleted_at, preserve pins per §10.10)
+3. Remove: name, photo, icebreaker answers, points/entries, chats
+4. Keep: pins (with name replaced by "a Say Hello member")
+5. Selfie removal remains out-of-band (§10.11)
+
+**Blocked:** UI implementation blocked until API endpoint exists
 
 ---
 
-*Generated: 2026-08-14*
-*Session: Unattended build queue*
+*Updated: 2026-08-14*
+*Session: Queue items 5-7 - Delete Account, Report, Block*
