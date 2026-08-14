@@ -8,7 +8,6 @@
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
 import SettingsScreen from '../profile';
-import * as mockUserData from '../../../src/data/mockUserData';
 import * as mockIcebreakersData from '../../../src/data/mockIcebreakersData';
 import { api } from '../../../src/api/client';
 
@@ -41,22 +40,25 @@ jest.mock('../../../src/api/client', () => ({
     auth: {
       signOut: jest.fn(() => Promise.resolve()),
     },
+    user: {
+      getProfile: jest.fn(() =>
+        Promise.resolve({
+          data: {
+            id: 'test-user',
+            displayName: 'Alex Chen',
+            phoneNumber: '+1 (555) 123-4567',
+            dateOfBirth: '1990-01-01',
+            drawingNumber: 'AB-123456',
+          },
+        })
+      ),
+    },
   },
 }));
 
 describe('SettingsScreen', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-
-    // Mock user data
-    jest.spyOn(mockUserData, 'getMockUserProfile').mockReturnValue({
-      id: 'test-user',
-      name: 'Alex Chen',
-      phone_number: '+1 (555) 123-4567',
-      date_of_birth: '1990-01-01',
-      drawing_number: 'AB-123456',
-      created_at: '2024-01-01T00:00:00Z',
-    });
 
     // Mock icebreakers data with 6 answers
     jest.spyOn(mockIcebreakersData, 'getMockIcebreakerAnswers').mockReturnValue([

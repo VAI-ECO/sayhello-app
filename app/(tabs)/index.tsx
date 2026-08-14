@@ -9,40 +9,152 @@
  *
  * ⚠️ ONLY a Hello supersedes home. Not a Discount, not a Holla, not a Hootza starting soon.
  * ⚠️ "Hello Hangout" is NEVER shortened to "Hangout" (RULES 7.17)
+ * ⚠️ An error must NOT render as the quiet day. Quiet day is a real state, server failure is different.
  */
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   View,
   Text,
   StyleSheet,
   ScrollView,
   TouchableOpacity,
-  Image,
+  ActivityIndicator,
   Animated,
 } from 'react-native';
 import { Waverly } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors, useTheme } from '../../src/theme';
 import { darkenColor } from '../../src/theme/contrast';
-import { mockFeedItems, mockQuietDayItems, type FeedItem } from '../../src/data/mockFeedData';
+import { mockFeedItems, mockQuietDayItems, type FeedItem as MockFeedItem } from '../../src/data/mockFeedData';
+import { getFeed, type FeedItem as ApiFeedItem } from '../../src/api/feed';
 
-type ViewState = 'feed' | 'quiet' | 'helloTakeover';
+type ViewState = 'feed' | 'quiet' | 'helloTakeover' | 'loading' | 'error';
 type FilterType = 'all' | 'hootzas' | 'discounts' | 'hollas';
+
+// UI feed item (transformed from API or mock)
+interface UIFeedItem {
+  id: string;
+  type: 'hootza' | 'discount' | 'holla';
+  title: string;
+  locationName: string;
+  time?: string;
+  date?: string;
+  expiryDate?: string;
+  postedAt?: string;
+  attendeeCount?: number;
+  isTonight?: boolean;
+}
 
 export default function WhatsHappeningScreen() {
   const { identityColor } = useTheme();
-  const [viewState, setViewState] = useState<ViewState>('feed');
+  const [viewState, setViewState] = useState<ViewState>('loading');
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
   const [isOpenToHellos, setIsOpenToHellos] = useState(true);
-
-  // For demo purposes, use mock data
-  const feedItems = viewState === 'quiet' ? mockQuietDayItems : mockFeedItems;
+  const [feedItems, setFeedItems] = useState<UIFeedItem[]>([]);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // For Hello takeover, use OTHER person's identity color (darkened ground)
   // In production, this would come from encounter data
   const otherPersonColor = identityColor; // Placeholder: use user's own color
   const groundColor = darkenColor(otherPersonColor);
+
+  // Fetch feed on mount
+  useEffect(() => {
+    loadFeed();
+  }, []);
+
+  async function loadFeed() {
+    setViewState('loading');
+    setErrorMessage(null);
+
+    const { data, error } = await getFeed({ view: 'today' });
+
+    if (error) {
+      setViewState('error');
+      setErrorMessage(error.message);
+      return;
+    }
+
+    if (data && data.items.length > 0) {
+      const transformed = data.items.map(transformFeedItem);
+      setFeedItems(transformed);
+      setViewState('feed');
+    } else {
+      setFeedItems([]);
+      setViewState('quiet');
+    }
+  }
+
+  function transformFeedItem(item: ApiFeedItem): UIFeedItem {
+    if (item.type === 'hootza') {
+      const startTime = new Date(item.startTime);
+      const isTonight = isEventTonight(startTime);
+
+      return {
+        id: item.id,
+        type: 'hootza',
+        title: item.title,
+        locationName: item.locationName || 'Location TBD',
+        time: formatTime(startTime),
+        date: formatDate(startTime),
+        attendeeCount: item.rsvpCount + item.checkinCount,
+        isTonight,
+      };
+    } else {
+      // Post item (special or holla)
+      return {
+        id: item.id,
+        type: item.type === 'special' ? 'discount' : 'holla',
+        title: item.title,
+        locationName: item.hangout.businessName,
+        expiryDate: item.dealEndDate ? formatExpiryDate(new Date(item.dealEndDate)) : undefined,
+        postedAt: formatPostedAt(new Date(item.createdAt)),
+      };
+    }
+  }
+
+  function isEventTonight(date: Date): boolean {
+    const now = new Date();
+    const isToday = date.toDateString() === now.toDateString();
+    const isEvening = date.getHours() >= 17; // 5pm or later
+    return isToday && isEvening;
+  }
+
+  function formatTime(date: Date): string {
+    const hours = date.getHours();
+    const minutes = date.getMinutes();
+    const ampm = hours >= 12 ? 'pm' : 'am';
+    const displayHours = hours % 12 || 12;
+    const displayMinutes = minutes > 0 ? `:${minutes.toString().padStart(2, '0')}` : '';
+    return `${displayHours}${displayMinutes}${ampm}`;
+  }
+
+  function formatDate(date: Date): string {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+    return days[date.getDay()];
+  }
+
+  function formatExpiryDate(date: Date): string {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return `${months[date.getMonth()]} ${date.getDate()}`;
+  }
+
+  function formatPostedAt(date: Date): string {
+    const now = new Date();
+    const diffMs = now.getTime() - date.getTime();
+    const diffHours = Math.floor(diffMs / (1000 * 60 * 60));
+
+    if (diffHours < 1) {
+      const diffMinutes = Math.floor(diffMs / (1000 * 60));
+      return `${diffMinutes}m ago`;
+    } else if (diffHours < 24) {
+      return `${diffHours}h ago`;
+    } else {
+      const diffDays = Math.floor(diffHours / 24);
+      return `${diffDays}d ago`;
+    }
+  }
 
   // Filter items based on active filter
   const filteredItems = activeFilter === 'all'
@@ -94,6 +206,54 @@ export default function WhatsHappeningScreen() {
               <Text style={styles.declineButtonText}>{t('whatsHappening.helloTakeover.decline')}</Text>
             </TouchableOpacity>
           </View>
+        </View>
+      </View>
+    );
+  }
+
+  // Loading state
+  if (viewState === 'loading') {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color={Colors.Ink} testID="loading-indicator" />
+        </View>
+      </View>
+    );
+  }
+
+  // Error state (MUST NOT render as quiet day)
+  if (viewState === 'error') {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+
+        {/* Header */}
+        <View style={styles.header}>
+          <View style={styles.headerLeft}>
+            <Waverly size={28} color={Colors.Ink} />
+            <Text style={styles.headerTitle}>Say Hello</Text>
+          </View>
+          <View style={styles.headerRight}>
+            <View style={styles.pointsBadge}>
+              <Text style={styles.pointsText}>340</Text>
+            </View>
+            <View style={[styles.avatar, { backgroundColor: Colors.HelloBlue }]} />
+          </View>
+        </View>
+
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorTitle}>Can't load What's Happening</Text>
+          <Text style={styles.errorMessage}>{errorMessage || 'Something went wrong'}</Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={loadFeed}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+          >
+            <Text style={styles.retryButtonText}>Try again</Text>
+          </TouchableOpacity>
         </View>
       </View>
     );
@@ -182,11 +342,13 @@ export default function WhatsHappeningScreen() {
             </View>
 
             {/* Distant items */}
-            <View style={styles.feedList}>
-              {filteredItems.map((item) => (
-                <FeedItemRow key={item.id} item={item} />
-              ))}
-            </View>
+            {filteredItems.length > 0 && (
+              <View style={styles.feedList}>
+                {filteredItems.map((item) => (
+                  <FeedItemRow key={item.id} item={item} />
+                ))}
+              </View>
+            )}
 
             {/* Post CTA */}
             <View style={styles.postCtaCard}>
@@ -222,7 +384,7 @@ export default function WhatsHappeningScreen() {
 }
 
 // Featured card component (with image)
-function FeedItemCard({ item }: { item: FeedItem }) {
+function FeedItemCard({ item }: { item: UIFeedItem }) {
   return (
     <View style={styles.feedCard}>
       <View style={styles.feedCardImage}>
@@ -251,7 +413,7 @@ function FeedItemCard({ item }: { item: FeedItem }) {
 }
 
 // Feed row component (compact)
-function FeedItemRow({ item }: { item: FeedItem }) {
+function FeedItemRow({ item }: { item: UIFeedItem }) {
   const getMetaText = () => {
     if (item.type === 'hootza') {
       const parts = [t('whatsHappening.feedItem.hootza')];
@@ -297,6 +459,47 @@ const styles = StyleSheet.create({
   },
   statusBar: {
     height: 44,
+  },
+
+  // Loading
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  // Error
+  errorContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 32,
+    gap: 16,
+  },
+  errorTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: Colors.Ink,
+    textAlign: 'center',
+  },
+  errorMessage: {
+    fontSize: 15,
+    lineHeight: 23,
+    color: Colors.Muted,
+    textAlign: 'center',
+  },
+  retryButton: {
+    borderWidth: 1,
+    borderColor: Colors.Ink,
+    borderRadius: 22,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    marginTop: 8,
+  },
+  retryButtonText: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: Colors.Ink,
   },
 
   // Header

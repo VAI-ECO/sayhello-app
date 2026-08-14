@@ -197,6 +197,23 @@ class APIClient {
   }
 
   /**
+   * Generic GET request
+   */
+  async get<T = unknown>(endpoint: string): Promise<APIResponse<T>> {
+    return this.request<T>(endpoint, { method: 'GET' });
+  }
+
+  /**
+   * Generic POST request
+   */
+  async post<T = unknown>(endpoint: string, data?: unknown): Promise<APIResponse<T>> {
+    return this.request<T>(endpoint, {
+      method: 'POST',
+      body: data ? JSON.stringify(data) : undefined,
+    });
+  }
+
+  /**
    * Auth endpoints
    */
   auth = {

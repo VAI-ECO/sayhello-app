@@ -12,30 +12,62 @@
  * - Sign out (clears token, navigates to sign-in)
  */
 
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, ActivityIndicator } from 'react-native';
 import { useRouter } from 'expo-router';
 import { useState, useEffect } from 'react';
 import { Colors, ColorNames } from '../../src/theme/tokens';
 import { useTheme } from '../../src/theme';
 import { t } from '../../src/i18n';
-import { getMockUserProfile } from '../../src/data/mockUserData';
 import { getMockIcebreakerAnswers } from '../../src/data/mockIcebreakersData';
 import { api } from '../../src/api/client';
+
+interface UserProfile {
+  id: string;
+  displayName?: string;
+  phoneNumber: string;
+  dateOfBirth?: string;
+  drawingNumber?: string;
+}
 
 export default function SettingsScreen() {
   const router = useRouter();
   const { identityColor } = useTheme();
   const [icebreakersCount, setIcebreakersCount] = useState(0);
+  const [user, setUser] = useState<UserProfile | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Load user data (mock for now)
-  const user = getMockUserProfile();
   const colorName = ColorNames[identityColor];
 
-  // Load icebreakers count
+  // Load user data
   useEffect(() => {
+    loadProfile();
+    loadIcebreakersCount();
+  }, []);
+
+  async function loadProfile() {
+    setLoading(true);
+    setError(null);
+
+    const response = await api.user.getProfile();
+
+    if (response.error) {
+      setError(response.error.message);
+      setLoading(false);
+      return;
+    }
+
+    if (response.data) {
+      setUser(response.data as UserProfile);
+    }
+
+    setLoading(false);
+  }
+
+  function loadIcebreakersCount() {
     const answers = getMockIcebreakerAnswers();
     setIcebreakersCount(answers.length);
-  }, []);
+  }
 
   const handleSignOut = async () => {
     await api.auth.signOut();
@@ -51,6 +83,40 @@ export default function SettingsScreen() {
     // Intentionally empty - disabled rows do nothing
   };
 
+  // Loading state
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.loadingContainer}>
+          <ActivityIndicator size="large" color={Colors.Ink} testID="loading-indicator" />
+        </View>
+      </View>
+    );
+  }
+
+  // Error state
+  if (error || !user) {
+    return (
+      <View style={styles.container}>
+        <View style={styles.statusBar} />
+        <View style={styles.errorContainer}>
+          <Text style={styles.errorTitle}>Can't load profile</Text>
+          <Text style={styles.errorMessage}>{error || 'Failed to load user data'}</Text>
+          <TouchableOpacity
+            style={styles.retryButton}
+            onPress={loadProfile}
+            accessibilityRole="button"
+            accessibilityLabel="Try again"
+            testID="retry-button"
+          >
+            <Text style={styles.retryButtonText}>Try again</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+    );
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.statusBar} />
@@ -58,9 +124,9 @@ export default function SettingsScreen() {
       <ScrollView style={styles.content}>
         {/* Header */}
         <View style={styles.header}>
-          <Text style={styles.headerName}>{user.name}</Text>
+          <Text style={styles.headerName}>{user.displayName || 'User'}</Text>
           <Text style={styles.headerPhone}>
-            {user.phone_number} · {colorName}
+            {user.phoneNumber} · {colorName}
           </Text>
         </View>
 
@@ -268,6 +334,45 @@ const styles = StyleSheet.create({
   },
   statusBar: {
     height: 44,
+  },
+  // Loading
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  // Error
+  errorContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 32,
+    gap: 16,
+  },
+  errorTitle: {
+    fontSize: 20,
+    fontWeight: '600',
+    color: Colors.Ink,
+    textAlign: 'center',
+  },
+  errorMessage: {
+    fontSize: 15,
+    lineHeight: 23,
+    color: Colors.Muted,
+    textAlign: 'center',
+  },
+  retryButton: {
+    borderWidth: 1,
+    borderColor: Colors.Ink,
+    borderRadius: 22,
+    paddingHorizontal: 24,
+    paddingVertical: 12,
+    marginTop: 8,
+  },
+  retryButtonText: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: Colors.Ink,
   },
   content: {
     flex: 1,
