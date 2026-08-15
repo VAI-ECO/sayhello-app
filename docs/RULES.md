@@ -8,7 +8,7 @@ rules only.
 
 🔒 locked · ❓ open · 📌 deferred · ⚠️ needs confirming
 
-**Last updated:** 2026-08-14
+**Last updated:** 2026-08-15
 
 ---
 
@@ -117,6 +117,17 @@ rules only.
 | 5.7 🔒 | Drawings **will be monthly** — planned, not announced |
 | 5.8 📌 | Winner selection engine — **DEFERRED.** Does not exist. |
 | 5.9 ⚠️ | Live website says "monthly drawings." **Must be pulled** pending MA-05. |
+
+### Transparency posture — ruled 2026-08-12
+
+| # | Rule |
+|---|---|
+| 5.10 🔒 | **Every drawing is described as PLANNED until it is funded and scheduled** — never promise what isn't locked |
+| 5.11 🔒 | ⚠️ **Never state a prize amount that is not held.** No figure appears anywhere — app, site, or marketing — until it exists. |
+| 5.12 🔒 | ⚠️ **Never state a number of entries "in the next drawing."** There is no scheduled drawing. Points are entries; the drawing is planned. |
+| 5.13 🔒 | **Copy describes HOW THE GAME WORKS, not what will be won** — focus on mechanics (more hellos = more entries), not prizes |
+| 5.14 🔒 | **While waiting, points are always spendable in Waverly's Place** — that is the guaranteed value; the drawing is the planned one |
+| 5.15 🔒 | **MA-05 gates all of it** — no public drawing promotion without legal clearance |
 
 ---
 
@@ -640,7 +651,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 |---|---|
 | 24.1 🔒 | **Say Hello is 18+** |
 | 24.2 🔒 | **Consume the app store's age-signal API.** Block anyone not returned as 18+. |
-| 24.3 🔒 | **No KYC. No ID upload. No document collection.** |
+| 24.3 🔒 | **No KYC, no ID upload, no document collection at signup or for account creation.** Ever. The single exception is age verification to join an age-restricted Hootza, and only after the app opens to 13+. |
 | 24.4 🔒 | Age data used **only for compliance**, transmitted encrypted, **deleted after use** |
 | 24.5 🔒 | Own age gate at signup as fallback |
 | 24.6 🔒 | Underage account found → **terminated immediately, data deleted** |
@@ -734,15 +745,16 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 
 ## 29. SCHEDULED JOBS
 
-| Job | |
+| Job | Cadence |
 |---|---|
-| 3-hour reveal | |
-| Monthly points reset | |
-| Host Mode interval windows | |
-| Hold expiry | |
-| Special and Holla expiry | |
-| Renewal warnings | |
-| Visit deadline warnings | |
+| 3-hour reveal | Every minute |
+| Monthly points reset | First of month |
+| Host Mode interval windows | Every 5-15 minutes |
+| Hold expiry | Hourly |
+| Special and Holla expiry | Hourly |
+| Renewal warnings | Weekly |
+| Visit deadline warnings | Daily |
+| Auth cleanup (OTP/attempts) | Every 5 minutes |
 
 ---
 
@@ -761,10 +773,9 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 30.9 | Away mode and visit deadlines | Enforcement |
 | 30.10 | Report vs. private chat privacy | Safety review |
 | 30.11 | Stand minimum standard | Stand ordering |
-| 30.12 | Romance mismatch and normal nudges | Encounter logic |
-| 30.13 | What's Happening web page | Website |
-| 30.14 | ROI guarantee — does it exist | Founding perks |
-| 30.15 | **FLOW numbering collision** — FLOW-07 and FLOW-10 each name two different documents | Every spec reference |
+| 30.12 | What's Happening web page | Website |
+| 30.13 | ROI guarantee — does it exist | Founding perks |
+| 30.14 | **FLOW numbering collision** — FLOW-07 and FLOW-10 each name two different documents | Every spec reference |
 
 ---
 
@@ -866,3 +877,54 @@ These colours have **fixed roles** and are **never pickable as identity colours*
 | 34.6 🔒 | Fixed semantic colours **never take the user's identity colour** |
 | 34.7 🔒 | Fixed semantic colours are **never pickable** in onboarding or settings |
 | 34.8 🔒 | **Terracotta `#B5502A`** is the colour for **Discounts**. This closes the collision where Discount was Magenta `#D81B60`, which is a pickable identity colour. |
+
+---
+
+## 35. CHAT MODERATION
+
+Closes FLOW-15. Rulings 2026-08-12.
+
+| # | Rule |
+|---|---|
+| 35.1 🔒 | **Moderation surfaces: Hootza comments and private chats** (post-encounter messaging between two people who both accepted) |
+| 35.2 🔒 | **Reports arrive with the reported message plus context** — moderator needs enough to assess severity |
+| 35.3 🔒 | **Strikes are cumulative across both surfaces** — one account, one strike count |
+| 35.4 🔒 | **5 strikes = account matter, human review** — not automatic termination |
+
+### Moderator access (FLOW-15 rulings)
+
+| # | Rule |
+|---|---|
+| 35.5 🔒 | **On a report, a moderator reads the reported message plus 10 messages either side** — that is the normal context window |
+| 35.6 🔒 | **Full thread access ONLY on Tier 1 severity items** — serious safety issues requiring complete context |
+| 35.7 🔒 | Tier 1 examples: credible threats, solicitation of minors, distribution of CSAM, doxxing with intent to harm |
+| 35.8 🔒 | **The tier system is defined by policy, not hardcoded** — allows adjustment without deployment |
+
+### Host visibility (Hootza reports)
+
+| # | Rule |
+|---|---|
+| 35.9 🔒 | **The Hootza host does NOT see reports about their own Hootza** — they are not the moderator |
+| 35.10 🔒 | Host sees **that something was reported** and may **end the Hootza or remove a comment** as a result |
+| 35.11 🔒 | **Host never sees the report transcript** — they may be the subject of the report |
+| 35.12 🔒 | Host moderation actions (end/remove) are **logged and reviewable by staff** |
+
+### Strike system
+
+| # | Rule |
+|---|---|
+| 35.13 🔒 | **Strikes expire after 12 months, rolling** — a strike from January 2025 expires January 2026 |
+| 35.14 🔒 | **5 strikes across both surfaces combined becomes an account matter, human review** — not automatic ban, escalation to staff |
+| 35.15 🔒 | Strike issuance is a **manual moderator action with required reason**, never automated |
+| 35.16 🔒 | **Strike count is visible to the user** — in account settings or when a new strike is issued |
+| 35.17 🔒 | Expired strikes remain in the **audit log but do not count toward the threshold** |
+
+### Reporting flow
+
+| # | Rule |
+|---|---|
+| 35.18 🔒 | **Report button available from any message in chat or Hootza comment thread** |
+| 35.19 🔒 | Reporter selects **reason category** — harassment, hate speech, spam, threat, sexual content, other |
+| 35.20 🔒 | Reporter may **add free-text context**, optional |
+| 35.21 🔒 | **Reporter is never told the outcome** — no closure notification, prevents gaming the system |
+| 35.22 🔒 | Reported user is **never told who reported them** |
