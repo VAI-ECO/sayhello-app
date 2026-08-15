@@ -775,7 +775,6 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 30.11 | Stand minimum standard | Stand ordering |
 | 30.12 | What's Happening web page | Website |
 | 30.13 | ROI guarantee — does it exist | Founding perks |
-| 30.14 | **FLOW numbering collision** — FLOW-07 and FLOW-10 each name two different documents | Every spec reference |
 
 ---
 
