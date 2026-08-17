@@ -8,7 +8,7 @@ rules only.
 
 🔒 locked · ❓ open · 📌 deferred · ⚠️ needs confirming
 
-**Last updated:** 2026-08-15
+**Last updated:** 2026-08-17
 
 ---
 
@@ -47,10 +47,10 @@ rules only.
 
 | # | Rule |
 |---|---|
-| 2.1 🔒 | Complete Hangout = **$50 origination** (business pays) + **$50 representation** (visit requirement met) |
+| 2.1 🔒 | Complete Hangout = **$20 origination** (business pays) + **$80 service** (visit requirement met) |
 | 2.2 🔒 | **THE PROTECTED NUMBER: $100/year per Hangout.** Never reduced, for any reason. |
 | 2.3 🔒 | Ambassador signs cold → **$100** |
-| 2.4 🔒 | Someone else originated, Ambassador services → **year 1 = $50** |
+| 2.4 🔒 | Someone else originated, Ambassador services → **year 1 = $80** |
 | 2.5 🔒 | **Every renewal year, all cases → servicing Ambassador earns $100** |
 | 2.6 🔒 | Influencer override **$20/year per Hangout**, paid by Say Hello **on top** |
 | 2.7 🔒 | Business signs directly on an Influencer's code → **$20/year recurring** (supersedes R03 §3.2's $50-year-one) |
@@ -61,6 +61,7 @@ rules only.
 | 2.12 🔒 | Influencer rate is **$20 flat. NEVER a percentage**, anywhere, including comments and variable names. |
 | 2.13 🔒 | One Influencer rate for everyone. Store the rate **on the payout record** anyway. |
 | 2.14 🔒 | **Nobody in the chain is paid until the Hangout pays Say Hello.** Once a year. No renewal, nobody paid — Ambassador, Influencer, retired originator, all of them. |
+| 2.15 🔒 | **Influencers are paid for life on both streams**, as long as the Hangout renews: **(A)** businesses signed directly on their code, **(B)** Hangouts originated by Ambassadors who signed up on their code. **$20/year each.** Never year-one only. |
 
 ---
 
@@ -91,9 +92,9 @@ rules only.
 | 4.6 🔒 | Discount ladder: **25pt→20% · 50pt→30% · 100pt→40%.** 40% is a hard cap. |
 | 4.7 🔒 | **Never show the gap to the next tier while someone is shopping.** Spend-now framing, entries remaining. |
 | 4.8 🔒 | Discount applies to **item price only.** Shipping never discounted. |
-| 4.9 🔒 | Monthly reset to **1, never zero.** That 1 is the automatic drawing entry. |
-| 4.10 🔒 | Retention: **10 activities** in a calendar month |
-| 4.11 🔒 | A **converted** Hangout referral satisfies retention for that month **and the following eleven** |
+| 4.9 🔒 | **No reset until the first drawing.** After it, reset to **1, never zero**, on **30-day cycles** anchored to that drawing. Everyone on the same clock. Cycle length **adjustable in admin.** That 1 is the automatic drawing entry. |
+| 4.10 🔒 | Retention: **10 activities** per cycle. Before the first drawing: no retention requirement, no countdown. After it: the 30-day cycle in 4.9. |
+| 4.11 🔒 | A **converted** Hangout referral earns **100 points** and satisfies retention for that month **and the following eleven** |
 | 4.12 🔒 | **No points in Ambassador mode.** No points from a hello with a business owner the Ambassador originated, either mode. |
 | 4.13 🔒 | Mode is **logged per encounter, timestamped, immutable** |
 | 4.14 🔒 | App **defaults to personal mode** |
@@ -101,6 +102,8 @@ rules only.
 | 4.16 🔒 | **Points are the currency.** No separate token object. |
 | 4.17 🔒 | Balance is **derived from the ledger, never stored and updated** |
 | 4.18 🔒 | The 10-activity count is **recomputed from the ledger**, never trusted from a counter |
+| 4.19 🔒 | **Hosting a Hootza that completes: 10 points.** Not awarded if cancelled. See 28.5. |
+| 4.20 🔒 | **Referring the app: 0 points.** Retention only. |
 
 ---
 
@@ -128,6 +131,8 @@ rules only.
 | 5.13 🔒 | **Copy describes HOW THE GAME WORKS, not what will be won** — focus on mechanics (more hellos = more entries), not prizes |
 | 5.14 🔒 | **While waiting, points are always spendable in Waverly's Place** — that is the guaranteed value; the drawing is the planned one |
 | 5.15 🔒 | **MA-05 gates all of it** — no public drawing promotion without legal clearance |
+| 5.16 🔒 | **The drawing is weighted, not issued.** One permanent drawing number per user (26.3); points are the weight. A snapshot at a fixed moment is the auditable record. |
+| 5.17 🔒 | **Winner announced by drawing number, never by name.** |
 
 ---
 
@@ -150,6 +155,7 @@ rules only.
 | 6.13 🔒 | The store is **Waverly's Place** |
 | 6.14 | **HAPPI** held in reserve for an event, badge, or prize tier |
 | 6.15 ❓ | Is the reveal called **"Hints"**? Never confirmed. |
+| 6.16 🔒 | **Tabs: Happening · Map · Hellos · Prizes · You.** "Hellos" is locked vocabulary and overrides "People." |
 
 ---
 
@@ -200,6 +206,7 @@ rules only.
 | 8.11 🔒 | The push notification is the handoff. Accept brings the app forward, and BLE only operates from there. |
 | 8.12 🔒 | ⚠️ The UI NEVER states a distance. Not in copy, a notification, an empty state, or marketing. |
 | 8.13 🔒 | BLE confirmation failure closes the encounter as a lost connection under 10.23. The user is never told why. |
+| 8.14 🔒 | **Change the town, not a radius.** A radius slider is a distance in disguise. The UI never offers miles. |
 
 ### Maintenance after mutual accept
 
@@ -235,8 +242,8 @@ rules only.
 | 10.4 🔒 | The nudge comes **from Waverly** |
 | 10.5 🔒 | **Mutual accept is the connection.** The countdown starts there. |
 | 10.6 🔒 | **Mutual accept is required before any profile is shown** |
-| 10.7 🔒 | **QR is PER-ENCOUNTER**, generated at mutual accept, valid only for that encounter. **Live camera only.** |
-| 10.8 🔒 | QR scan drops a **permanent pin** on the Hello Map |
+| 10.7 🔒 | **QR is PER-ENCOUNTER**, generated at mutual accept, valid **30 minutes from mutual accept**, not from the notification. **Either phone shows the code, either scans.** No fixed roles. **Live camera only.** |
+| 10.8 🔒 | The **pin is not the row.** A hello exists from mutual accept; it appears on the map as a **permanent pin** only once `qr_scanned_at` is set. The scan drops the pin and awards its points. Selfie points and continue/chat-acceptance points are separate. |
 | 10.9 🔒 | Selfie attached to the pin permanently. **Optional until the first capture — committed after.** Worth 25 points. Its presence grants display permission. See 10.29–10.35. |
 | 10.10 🔒 | The pin **survives account deletion.** Consented at signup. |
 | 10.11 🔒 | The selfie is **revocable by either party** — by formal request, never a button, and never inside the encounter flow. Once 10.29 has fired this is the ONLY route to removal, and it is handled out of band by an admin. There is no user-facing endpoint. Pin and count remain. Business cannot remove one. |
@@ -266,7 +273,7 @@ rules only.
 | 10.25 🔒 | Missed connection: countdown runs, Icebreakers exchange, accept points stand, **no pin, no second wave, no chat.** Pair is burned. |
 | 10.26 🔒 | **A mutual accept that never produced a QR scan is flagged in the database as a missed connection** |
 | 10.27 🔒 | **The never-met Icebreaker send is NEVER advertised.** Not in copy, the App Store description, or a video. |
-| 10.28 ❓ | How long after mutual accept before it is declared never-met? *Recommend 30 minutes.* |
+| 10.28 🔒 | Never-met fallback: **2 hours** after mutual accept, until range detection ships. QR expires at **30 minutes** (10.7). See 10.46. |
 
 ### Selfie retake — ruled 2026-08-10
 
@@ -280,13 +287,27 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 10.32 🔒 | Abandoning the screen keeps the last saved photo |
 | 10.33 🔒 | Skipping is allowed BEFORE the first capture only — no photo, no 25 points |
 | 10.34 🔒 | **Disclosed before the camera opens.** The permission prompt states that the first photo is kept and that retakes replace it. ⚠️ Never disclosed after capture. Without this, 10.29 is a silent capture and is not defensible. |
-| 10.35 🔒 | **The 25 points are awarded at the FIRST capture, not on retake.** A retake never awards points a second time. |
+| 10.35 🔒 | **The 25 points are awarded on successful upload of the FIRST capture, not on attempt, not on retake.** A failed upload awards nothing. A retake never awards points a second time. |
 | 10.36 ❓ | **Retake limit** — unruled. Unlimited reopens the dithering the ruling closes; two people can burn the encounter window retaking. |
 | 10.37 ❓ | **Who may trigger a retake** — either party, or only the phone holder? Unruled. Both faces are in it. |
 
 **Rationale:** the selfie is joint. One party discarding it removes the other party's record of the meeting. Retaking improves it; refusing takes it from somebody else.
 
 **Unchanged:** either party may have the photo removed later by request. The pin and the connection count remain. That is an admin action, not a user button.
+
+### QR fallback, map, location, repeats — ruled 2026-08-16
+
+| # | Rule |
+|---|---|
+| 10.38 🔒 | **Two failed scans opens a manual selfie path.** The failure is evidence they are together. |
+| 10.39 🔒 | **No abuse limit on the fallback.** Faking it costs more coordination than 25 points is worth. |
+| 10.40 🔒 | **Map pins carry no names.** Name and selfie appear only on the enlarged view. |
+| 10.41 🔒 | **Location is stripped before reveal.** `hangout_id`, `location_name`, lat and lng return at reveal with everything else. |
+| 10.42 🔒 | Selfie size limit **8 MB**. |
+| 10.43 🔒 | Selfie bucket is **private, signed URLs**. Non-participants see it only on the enlarged map pin, after reveal. |
+| 10.44 🔒 | Signed URLs stay as they are. A forwarded link working for an hour is not a meaningful escalation over a screenshot. |
+| 10.45 🔒 | **Two people who have already met may say hello again.** No points on the repeat — §4.2 stands. |
+| 10.46 🔒 | Nudge TTL fallback **1 hour**; never-met fallback **2 hours**. Both retire when range detection ships. QR validity is 30 minutes from mutual accept (10.7). |
 
 ---
 
@@ -295,8 +316,8 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | # | Rule |
 |---|---|
 | 11.1 🔒 | **One live nudge at a time** |
-| 11.2 🔒 | **No duplicate nudges.** A pair that has been nudged is never nudged again. |
-| 11.3 🔒 | **One ACCEPTED nudge per pair, ever** — whether or not they met |
+| 11.2 🔒 | **No duplicate live nudges.** A pair in a pending or accepted encounter is not nudged again until that encounter closes. |
+| 11.3 🔒 | **A pair that has already met may say hello again** (10.45). §4.2 stands — no points on the repeat. A declined pair never nudges again (11.7). |
 | 11.4 🔒 | Selection when several qualify: **strongest signal** |
 | 11.5 🔒 | While in an active connection, the user is **unavailable** |
 | 11.6 🔒 | **Immediate reset.** Once Waverly's message is sent, the encounter closes and the user is open for another nudge. No waiting period. |
@@ -409,7 +430,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 
 | # | Rule |
 |---|---|
-| 14.16 🔒 | **$20/Hangout/year for two years, on Hangouts they ORIGINATED only** |
+| 14.16 🔒 | **20% of what the current Ambassador earns on that Hangout, for two years, on Hangouts they ORIGINATED only.** If the $100 moves, the opt-out follows it. |
 | 14.17 🔒 | **Origination never transfers. Servicing does.** Two separate permanent fields. |
 | 14.18 🔒 | Opt-out is a **declared action**, never inferred. Abandonment pays nothing. |
 | 14.19 🔒 | The screen shows **real numbers**, requires **type-to-confirm**, emails a copy |
@@ -474,7 +495,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 16.3 🔒 | Every warning **logged with timestamp and delivery status.** Chatbot replies too. |
 | 16.4 🔒 | **6 months past the deadline, the account is released** |
 | 16.5 🔒 | **5-day grace** after release before reassignment begins |
-| 16.6 🔒 | Offered within **20 km**, ranked by **most Hangouts first**, **5 Ambassadors max, 5 days each** |
+| 16.6 🔒 | Offered within **20 miles**, **admin-adjustable**, ranked by **most Hangouts first**, **5 Ambassadors max, 5 days each** |
 | 16.7 🔒 | Once accepted, **exclusively locked** — blocked for everyone else |
 | 16.8 🔒 | **The point of no return is the replacement's first verified visit**, not the offer |
 | 16.9 🔒 | **THE REINSTATEMENT RULE IS INTERNAL ONLY.** Never published, never in the agreement, never in the chatbot's replies. |
@@ -527,7 +548,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 17.7 🔒 | Dates are **entered by the business, never inferred** |
 | 17.8 🔒 | **The Hangout's own page has NO expiry.** Posts leave the feed and stay on their page. |
 | 17.9 🔒 | Posts live in the Hangout's admin and can be **edited and reposted.** Nothing auto-renews. |
-| 17.10 🔒 | **2 free posts per calendar month. Founding gets 3.** No rollover. Additional posts **$10**. |
+| 17.10 🔒 | **2 free posts per calendar month. Founding gets 3.** No rollover. Additional posts **$10**. **Organizations get the same ration as a regular Hangout** — two a month, $10 after. |
 | 17.11 🔒 | **Expiry does not return a post slot.** Delete-and-repost burns one; edit does not. |
 | 17.12 🔒 | A Holla may **link to a Special** on the Hangout's own page |
 
@@ -542,6 +563,8 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 17.17 🔒 | Sort and display in **the user's local time**, never the venue's offset |
 | 17.18 🔒 | Views: **Today · This week · Nearest · Newest.** Today is default when anything is on today. |
 | 17.19 ❓ | Does What's Happening get a **web page**? *Recommend yes.* |
+| 17.20 🔒 | **A Hootza posted to the feed consumes a slot.** Discounts, Hollas and Hootzas draw from the same ration. |
+| 17.21 🔒 | **A Hootza not posted to the feed is free and unlimited.** It lives on their page and the map. |
 
 ---
 
@@ -554,6 +577,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 18.3 🔒 | Business categories use the **same expandable node tree** as Icebreakers |
 | 18.4 🔒 | Hangouts sort by **distance**; Hollas and Discounts by **time** |
 | 18.5 📌 | **The category list itself is deferred.** Must cover a tyre shop, a dry cleaner, a lawn service. |
+| 18.6 🔒 | **Business categories use the library's own sections**, not generic buckets. Old categories **retired, never deleted**. |
 
 ---
 
@@ -665,6 +689,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 24.14 🔒 | Policy: pins are never removed. Capability: any pin can be removed. |
 | 24.15 🔒 | **Auto-flag keyword pass on all free text** — Icebreakers, specials, Hollas, comments, notes |
 | 24.16 🔒 | Blocking is silent everywhere |
+| 24.17 🔒 | **Under 18 is a hard stop with ONE correction allowed.** A second under-18 entry is a real dead end. |
 
 ---
 
@@ -694,6 +719,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 26.5 🔒 | **Denied permission ≠ blocked.** Limited mode plus one dismissible banner. |
 | 26.6 🔒 | Welcome is **re-openable forever**; each point repeats contextually the first time that surface is reached |
 | 26.7 🔒 | Answers save as they happen. **Nobody ever loses work by leaving.** |
+| 26.8 🔒 | **Onboarding order: colour before photo.** Waverly is already wearing their colour when the photo screen opens. |
 
 ---
 
@@ -722,7 +748,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 28.2 🔒 | **Venue type declared at creation** — public place or private residence — and displayed. Nobody arrives at a house without knowing it is a house. |
 | 28.3 🔒 | **No recurring Hootzas.** A "post again" action on a finished one. |
 | 28.4 🔒 | **Cover charge is display-only.** Say Hello never collects it. |
-| 28.5 🔒 | Points: **100 on completion, plus 1 per attendee who scans in, uncapped.** No "double points" rule. |
+| 28.5 🔒 | **Hosting a Hootza that completes: 10 points.** Not if cancelled. Plus **1 per attendee who scans in, uncapped.** No "double points" rule. |
 | 28.6 🔒 | Cancellation **notifies every RSVP** and leaves the page live, marked cancelled |
 | 28.7 🔒 | Three states: **live · ended · cancelled** |
 | 28.8 🔒 | **END is distinct from cancel.** Ending kills Host Mode instantly, kills the check-in QR, leaves the page live and finished. |
@@ -741,6 +767,14 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 28.16 🔒 | When a window opens, that is **ONE notification** — never one per person nearby |
 | 28.17 🔒 | Build a **developer override** for testing |
 
+### Age, chat — ruled 2026-08-14
+
+| # | Rule |
+|---|---|
+| 28.18 🔒 | **Age is an optional host-set advisory**, off by default, labelled **"Adults only."** Not a required field. |
+| 28.19 🔒 | **Hootza chat is host-activated**, off by default, group only, closes when the Hootza ends. |
+| 28.20 🔒 | **No friend requests from chat.** They are in the same building — the hello happens in the room. |
+
 ---
 
 ## 29. SCHEDULED JOBS
@@ -748,7 +782,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | Job | Cadence |
 |---|---|
 | 3-hour reveal | Every minute |
-| Monthly points reset | First of month |
+| Points reset | **None until the first drawing.** After it: every 30-day cycle, anchored to that drawing, admin-adjustable (4.9) |
 | Host Mode interval windows | Every 5-15 minutes |
 | Hold expiry | Hourly |
 | Special and Holla expiry | Hourly |
@@ -768,7 +802,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 | 30.4 | **Business category list** | Directory, search, What's Happening |
 | 30.5 | Waverly gender | Copy consistency |
 | 30.6 | Is the reveal called "Hints" | Locked scripts |
-| 30.7 | Never-met declaration window | Encounter state machine |
+| 30.7 | Never-met declaration window | **Closed — 10.28 / 10.46.** 2-hour fallback until range detection. |
 | 30.8 | Sub-Ambassador $12 — who pays | Ambassador economics |
 | 30.9 | Away mode and visit deadlines | Enforcement |
 | 30.10 | Report vs. private chat privacy | Safety review |
@@ -826,6 +860,7 @@ The first captured selfie is saved immediately. Retakes replace it. There is no 
 |---|---|
 | 33.1 🔒 | **People are solid; places, events and things are outlined.** |
 | 33.2 🔒 | A **Discount** is a **TAG**, outlined. The eyelet sits in the neck, not the body. |
+| 33.3 🔒 | **The Founding badge shows on the map pin**, not only on the page. Amber `#CE8527`. |
 
 ---
 
