@@ -25,3 +25,13 @@ NEVER report a test result you did not see in tool output. If output is
 truncated, say it was truncated and re-run with a narrower command until you
 have the real numbers. An inferred PASS line is a fabrication, and I rely on
 these reports to catch problems.
+
+## ⚠️ THIS PRODUCT IS TWO REPOS
+
+  /Users/bmac/sayhello-app  — this one. Frontend, every screen.
+  /Users/bmac/sayhello-api  — backend. Endpoints, migrations, jobs.
+                              ⚠️ Canon lives there: docs/canon/, docs/RULES.md
+                              ⚠️ Design lives there: docs/design/
+
+Any question about the product, a rule, or a design reads the api repo too.
+State which repo every claim comes from.
