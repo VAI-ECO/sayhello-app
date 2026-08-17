@@ -22,6 +22,7 @@ import {
   ActivityIndicator,
   Animated,
 } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Waverly } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors, useTheme } from '../../src/theme';
@@ -47,6 +48,7 @@ interface UIFeedItem {
 }
 
 export default function WhatsHappeningScreen() {
+  const router = useRouter();
   const { identityColor } = useTheme();
   const [viewState, setViewState] = useState<ViewState>('loading');
   const [activeFilter, setActiveFilter] = useState<FilterType>('all');
@@ -63,6 +65,12 @@ export default function WhatsHappeningScreen() {
   useEffect(() => {
     loadFeed();
   }, []);
+
+  function openFeedItem(item: UIFeedItem) {
+    if (item.type === 'hootza') {
+      router.push(`/(hootzas)/${item.id}`);
+    }
+  }
 
   async function loadFeed() {
     setViewState('loading');
@@ -367,13 +375,16 @@ export default function WhatsHappeningScreen() {
           <>
             {/* Featured card (first Hootza that's tonight) */}
             {filteredItems.find(item => item.isTonight) && (
-              <FeedItemCard item={filteredItems.find(item => item.isTonight)!} />
+              <FeedItemCard
+                item={filteredItems.find(item => item.isTonight)!}
+                onPress={() => openFeedItem(filteredItems.find(item => item.isTonight)!)}
+              />
             )}
 
             {/* Feed list */}
             <View style={styles.feedList}>
               {filteredItems.filter(item => !item.isTonight).map((item) => (
-                <FeedItemRow key={item.id} item={item} />
+                <FeedItemRow key={item.id} item={item} onPress={() => openFeedItem(item)} />
               ))}
             </View>
           </>
@@ -384,9 +395,14 @@ export default function WhatsHappeningScreen() {
 }
 
 // Featured card component (with image)
-function FeedItemCard({ item }: { item: UIFeedItem }) {
+function FeedItemCard({ item, onPress }: { item: UIFeedItem; onPress?: () => void }) {
   return (
-    <View style={styles.feedCard}>
+    <TouchableOpacity
+      style={styles.feedCard}
+      onPress={onPress}
+      disabled={!onPress}
+      testID={item.type === 'hootza' ? `feed-hootza-${item.id}` : undefined}
+    >
       <View style={styles.feedCardImage}>
         {item.isTonight && (
           <View style={styles.tonightBadge}>
@@ -408,12 +424,12 @@ function FeedItemCard({ item }: { item: UIFeedItem }) {
           <Text style={styles.feedCardJoin}>{t('whatsHappening.feedItem.join')}</Text>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
 // Feed row component (compact)
-function FeedItemRow({ item }: { item: UIFeedItem }) {
+function FeedItemRow({ item, onPress }: { item: UIFeedItem; onPress?: () => void }) {
   const getMetaText = () => {
     if (item.type === 'hootza') {
       const parts = [t('whatsHappening.feedItem.hootza')];
@@ -436,7 +452,12 @@ function FeedItemRow({ item }: { item: UIFeedItem }) {
   };
 
   return (
-    <View style={styles.feedRow}>
+    <TouchableOpacity
+      style={styles.feedRow}
+      onPress={onPress}
+      disabled={!onPress}
+      testID={item.type === 'hootza' ? `feed-hootza-${item.id}` : undefined}
+    >
       <View style={styles.feedRowImage} />
       <View style={styles.feedRowContent}>
         <Text style={[styles.feedRowMeta, { color: getMetaColor() }]}>{getMetaText()}</Text>
@@ -448,7 +469,7 @@ function FeedItemRow({ item }: { item: UIFeedItem }) {
         </Text>
       </View>
       {item.type === 'discount' && <View style={[styles.discountMarker, { backgroundColor: Colors.Amber }]} />}
-    </View>
+    </TouchableOpacity>
   );
 }
 

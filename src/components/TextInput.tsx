@@ -11,7 +11,7 @@ interface TextInputProps extends Omit<RNTextInputProps, 'style'> {
   error?: boolean;
 }
 
-export function TextInput({ error, ...props }: TextInputProps) {
+export function TextInput({ error, testID, ...props }: TextInputProps) {
   return (
     <View style={[styles.container, error && styles.errorContainer]}>
       <RNTextInput
@@ -19,6 +19,7 @@ export function TextInput({ error, ...props }: TextInputProps) {
         placeholderTextColor={Colors.Ink}
         autoCapitalize="none"
         autoCorrect={false}
+        testID={testID}
         {...props}
       />
     </View>

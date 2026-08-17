@@ -74,3 +74,51 @@ export async function getFeed(params?: {
 
   return api.get<FeedResponse>(url);
 }
+
+export interface CreatePostInput {
+  hangoutId: string;
+  postType: 'special' | 'holla';
+  title: string;
+  description?: string;
+  discountAmount?: number;
+  discountType?: 'percentage' | 'fixed_amount' | 'description_only';
+  dealStartDate?: string;
+  dealEndDate?: string;
+  timeOfDay?: string;
+  isAllDay?: boolean;
+}
+
+export interface HangoutPost {
+  id: string;
+  hangoutId: string;
+  postType: string;
+  title: string;
+  description?: string;
+  discountAmount?: number;
+  discountType?: string;
+  dealStartDate?: string;
+  dealEndDate?: string;
+  postExpiryDate?: string;
+  createdAt: string;
+}
+
+export interface PaymentRequiredError {
+  freeSlots: number;
+  slotsUsed: number;
+}
+
+/**
+ * Create a Hello Hangout post (Discount or Holla)
+ * Backend: POST /api/feed/posts
+ */
+export async function createFeedPost(input: CreatePostInput) {
+  return api.post<{ post: HangoutPost }>('/api/feed/posts', input);
+}
+
+/**
+ * List posts on a Hello Hangout's own page
+ * Backend: GET /api/feed/hangouts/:id/posts
+ */
+export async function getHangoutPosts(hangoutId: string) {
+  return api.get<{ posts: HangoutPost[] }>(`/api/feed/hangouts/${hangoutId}/posts`);
+}

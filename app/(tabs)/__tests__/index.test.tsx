@@ -14,12 +14,20 @@
 
 import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
-import WhatsHappeningScreen from '../index';
 import { ThemeProvider } from '../../../src/theme';
 import * as feedApi from '../../../src/api/feed';
 
-// Mock the feed API
+jest.mock('expo-router', () => ({
+  useRouter: jest.fn(() => ({
+    push: jest.fn(),
+    back: jest.fn(),
+    replace: jest.fn(),
+  })),
+}));
+
 jest.mock('../../../src/api/feed');
+
+import WhatsHappeningScreen from '../index';
 
 const mockGetFeed = feedApi.getFeed as jest.MockedFunction<typeof feedApi.getFeed>;
 

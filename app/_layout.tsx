@@ -29,6 +29,11 @@ export default function RootLayout() {
         <Stack.Screen name="(auth)" />
         <Stack.Screen name="(onboarding)" />
         <Stack.Screen name="(tabs)" />
+        <Stack.Screen name="(hootzas)" />
+        <Stack.Screen name="(ambassador)" />
+        <Stack.Screen name="(hangout)" />
+        <Stack.Screen name="(influencer)" />
+        <Stack.Screen name="(refer)" />
       </Stack>
     </ThemeProvider>
   );
