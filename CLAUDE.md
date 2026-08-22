@@ -35,3 +35,9 @@ these reports to catch problems.
 
 Any question about the product, a rule, or a design reads the api repo too.
 State which repo every claim comes from.
+
+## Ambassador panels — Earned vs Building
+
+⚠️ **Both are always shown, side by side. BUILDING must never look as certain as EARNED.**
+Earned is money that arrived; Building may never arrive — nobody is paid until the Hello Hangout
+pays. Earned reads solid, Building reads provisional. Canon: `sayhello-api/docs/canon/ROLE-3-AMBASSADOR.md`.
