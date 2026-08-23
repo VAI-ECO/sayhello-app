@@ -11,15 +11,20 @@ import { ScreenContainer, Button, TextInput } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme';
 import { api } from '../../src/api/client';
+import { deviceLocale, marketForLocale, toE164 } from '../../src/lib/phone';
 
 export default function SignInPhoneScreen() {
   const router = useRouter();
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const locale = deviceLocale();
+  const market = marketForLocale(locale);
+  const storedPhone = toE164(phone, locale);
+  const showPrefix = !phone.trim().startsWith('+');
 
   const handleSendCode = async () => {
-    if (phone.length < 10) {
+    if (!storedPhone) {
       setError(true);
       return;
     }
@@ -29,7 +34,7 @@ export default function SignInPhoneScreen() {
 
     // TODO: Sign-in flow needs dateOfBirth from backend session or stored locally
     // For now, placeholder to match API signature
-    const result = await api.auth.requestOTP(phone, '1990-01-01');
+    const result = await api.auth.requestOTP(storedPhone, '1990-01-01');
 
     setLoading(false);
 
@@ -41,7 +46,7 @@ export default function SignInPhoneScreen() {
     // Never confirm or deny account existence — always proceed
     router.push({
       pathname: '/(auth)/sign-in-code',
-      params: { phone },
+      params: { phone: storedPhone },
     });
   };
 
@@ -62,7 +67,8 @@ export default function SignInPhoneScreen() {
               setPhone(text);
               setError(false);
             }}
-            placeholder="+1 (555) 000-0000"
+            prefix={showPrefix ? `[${market.entryPrefix}]` : undefined}
+            placeholder={market.entryHint}
             keyboardType="phone-pad"
             textContentType="telephoneNumber"
             autoFocus
@@ -86,7 +92,7 @@ export default function SignInPhoneScreen() {
           title={t('signIn.phone.button')}
           onPress={handleSendCode}
           loading={loading}
-          disabled={phone.length < 10}
+          disabled={!storedPhone}
           testID="send-code-button"
         />
 

@@ -11,15 +11,20 @@ import { ScreenContainer, Button, TextInput } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme';
 import { api } from '../../src/api/client';
+import { deviceLocale, marketForLocale, toE164 } from '../../src/lib/phone';
 
 export default function PhoneScreen() {
   const router = useRouter();
   const [phone, setPhone] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
+  const locale = deviceLocale();
+  const market = marketForLocale(locale);
+  const storedPhone = toE164(phone, locale);
+  const showPrefix = !phone.trim().startsWith('+');
 
   const handleContinue = async () => {
-    if (phone.length < 10) {
+    if (!storedPhone) {
       setError(true);
       return;
     }
@@ -28,7 +33,7 @@ export default function PhoneScreen() {
     setLoading(true);
 
     // TODO: Get dateOfBirth from onboarding flow state
-    const result = await api.auth.requestOTP(phone, '1990-01-01');
+    const result = await api.auth.requestOTP(storedPhone, '1990-01-01');
 
     setLoading(false);
 
@@ -39,7 +44,7 @@ export default function PhoneScreen() {
 
     router.push({
       pathname: '/(onboarding)/otp',
-      params: { phone },
+      params: { phone: storedPhone },
     });
   };
 
@@ -55,7 +60,8 @@ export default function PhoneScreen() {
               setPhone(text);
               setError(false);
             }}
-            placeholder={t('onboarding.phone.placeholder')}
+            prefix={showPrefix ? `[${market.entryPrefix}]` : undefined}
+            placeholder={market.entryHint}
             keyboardType="phone-pad"
             textContentType="telephoneNumber"
             autoFocus
@@ -73,7 +79,7 @@ export default function PhoneScreen() {
           title={t('onboarding.phone.continue')}
           onPress={handleContinue}
           loading={loading}
-          disabled={phone.length < 10}
+          disabled={!storedPhone}
         />
       </View>
     </ScreenContainer>

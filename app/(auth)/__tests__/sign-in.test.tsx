@@ -30,6 +30,14 @@ jest.mock('../../../src/api/client', () => ({
   },
 }));
 
+jest.mock('../../../src/lib/phone', () => {
+  const actual = jest.requireActual('../../../src/lib/phone');
+  return {
+    ...actual,
+    deviceLocale: () => 'en-US',
+  };
+});
+
 describe('Sign In Flow', () => {
   const mockRouter = {
     push: jest.fn(),
@@ -97,12 +105,12 @@ describe('Sign In Flow', () => {
       await fireEvent.press(button);
 
       await waitFor(() => {
-        expect(api.auth.requestOTP).toHaveBeenCalledWith('5551234567', '1990-01-01');
+        expect(api.auth.requestOTP).toHaveBeenCalledWith('+15551234567', '1990-01-01');
       });
 
       expect(mockRouter.push).toHaveBeenCalledWith({
         pathname: '/(auth)/sign-in-code',
-        params: { phone: '5551234567' },
+        params: { phone: '+15551234567' },
       });
     });
 
