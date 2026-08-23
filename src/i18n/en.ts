@@ -202,7 +202,7 @@ export const en = {
     },
     quietDay: {
       title: 'Quiet around here today',
-      subtitle: "Nothing posted within a mile. Here's what's on this week a little further out.",
+      subtitle: "Nothing nearby yet. Here's what's on this week a little further out.",
       postCta: {
         title: 'Start one yourself',
         body: 'A Hootza is just a time and a place. Coffee counts.',

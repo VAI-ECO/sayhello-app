@@ -246,7 +246,7 @@ describe('What\'s Happening Screen', () => {
     });
 
     it('quiet day includes empathetic explanation', async () => {
-      // "Nothing posted within a mile. Here's what's on this week a little further out."
+      // Quiet day — no distance (§8.12). Never "within a mile."
       // This copy explains the situation without making the user feel bad
     });
 
