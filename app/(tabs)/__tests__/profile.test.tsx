@@ -8,7 +8,6 @@
 
 import { render, screen, fireEvent, waitFor } from '@testing-library/react-native';
 import SettingsScreen from '../profile';
-import * as mockIcebreakersData from '../../../src/data/mockIcebreakersData';
 import { api } from '../../../src/api/client';
 
 const mockPush = jest.fn();
@@ -53,22 +52,28 @@ jest.mock('../../../src/api/client', () => ({
         })
       ),
     },
+    icebreakers: {
+      getMyAnswers: jest.fn(() =>
+        Promise.resolve({
+          data: {
+            answers: [
+              { questionId: 'q1' },
+              { questionId: 'q2' },
+              { questionId: 'q3' },
+              { questionId: 'q4' },
+              { questionId: 'q5' },
+              { questionId: 'q6' },
+            ],
+          },
+        })
+      ),
+    },
   },
 }));
 
 describe('SettingsScreen', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-
-    // Mock icebreakers data with 6 answers
-    jest.spyOn(mockIcebreakersData, 'getMockIcebreakerAnswers').mockReturnValue([
-      { node_id: 'q1', text: 'Answer 1', updated_at: '2024-01-01T00:00:00Z' },
-      { node_id: 'q2', text: 'Answer 2', updated_at: '2024-01-01T00:00:00Z' },
-      { node_id: 'q3', text: 'Answer 3', updated_at: '2024-01-01T00:00:00Z' },
-      { node_id: 'q4', text: 'Answer 4', updated_at: '2024-01-01T00:00:00Z' },
-      { node_id: 'q5', text: 'Answer 5', updated_at: '2024-01-01T00:00:00Z' },
-      { node_id: 'q6', text: 'Answer 6', updated_at: '2024-01-01T00:00:00Z' },
-    ]);
   });
 
   it('renders header with user name', async () => {

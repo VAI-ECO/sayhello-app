@@ -17,7 +17,7 @@ import { useState, useEffect } from 'react';
 import { Waverly } from '../../src/components';
 import { t } from '../../src/i18n';
 import { useTheme, Colors } from '../../src/theme';
-import { getMockIcebreakerAnswers } from '../../src/data/mockIcebreakersData';
+import { api } from '../../src/api/client';
 
 // Helper to blend identity color 35% over Midnight
 function blendColorOverMidnight(identityColor: string): string {
@@ -34,10 +34,17 @@ export default function RevealScreen() {
   const [showGate, setShowGate] = useState(false);
 
   useEffect(() => {
-    const answers = getMockIcebreakerAnswers();
-    if (answers.length < 3) {
-      setShowGate(true);
-    }
+    (async () => {
+      const result = await api.icebreakers.getMyAnswers();
+      const answers = Array.isArray((result.data as { answers?: unknown[] } | undefined)?.answers)
+        ? (result.data as { answers: unknown[] }).answers
+        : Array.isArray(result.data)
+          ? result.data
+          : [];
+      if (answers.length < 3) {
+        setShowGate(true);
+      }
+    })();
   }, []);
 
   const handleAnswerIcebreakers = () => {

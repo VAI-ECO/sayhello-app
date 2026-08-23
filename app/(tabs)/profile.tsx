@@ -18,7 +18,6 @@ import { useState, useEffect } from 'react';
 import { Colors, ColorNames } from '../../src/theme/tokens';
 import { useTheme } from '../../src/theme';
 import { t } from '../../src/i18n';
-import { getMockIcebreakerAnswers } from '../../src/data/mockIcebreakersData';
 import { api } from '../../src/api/client';
 
 interface UserProfile {
@@ -41,8 +40,10 @@ export default function SettingsScreen() {
 
   // Load user data
   useEffect(() => {
-    loadProfile();
-    loadIcebreakersCount();
+    (async () => {
+      await loadProfile();
+      await loadIcebreakersCount();
+    })();
   }, []);
 
   async function loadProfile() {
@@ -64,9 +65,15 @@ export default function SettingsScreen() {
     setLoading(false);
   }
 
-  function loadIcebreakersCount() {
-    const answers = getMockIcebreakerAnswers();
-    setIcebreakersCount(answers.length);
+  async function loadIcebreakersCount() {
+    const result = await api.icebreakers.getMyAnswers();
+    if (result.data && Array.isArray((result.data as { answers?: unknown[] }).answers)) {
+      setIcebreakersCount((result.data as { answers: unknown[] }).answers.length);
+    } else if (Array.isArray(result.data)) {
+      setIcebreakersCount(result.data.length);
+    } else {
+      setIcebreakersCount(0);
+    }
   }
 
   const handleSignOut = async () => {
