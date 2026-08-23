@@ -40,7 +40,7 @@ export default function SignInCodeScreen() {
   }, [resendAvailableAt]);
 
   const handleVerify = async () => {
-    if (code.length < 4) {
+    if (code.length < 6) {
       setError(true);
       return;
     }
@@ -157,7 +157,7 @@ export default function SignInCodeScreen() {
           title="Verify"
           onPress={handleVerify}
           loading={loading}
-          disabled={code.length < 4}
+          disabled={code.length < 6}
           testID="verify-button"
         />
       </View>

@@ -20,7 +20,7 @@ export default function OTPScreen() {
   const [error, setError] = useState(false);
 
   const handleVerify = async () => {
-    if (code.length < 4) {
+    if (code.length < 6) {
       setError(true);
       return;
     }
@@ -89,7 +89,7 @@ export default function OTPScreen() {
           title={t('onboarding.otp.verify')}
           onPress={handleVerify}
           loading={loading}
-          disabled={code.length < 4}
+          disabled={code.length < 6}
         />
       </View>
     </ScreenContainer>

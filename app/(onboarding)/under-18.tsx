@@ -1,35 +1,18 @@
 /**
  * ONBOARDING HARD STOP: UNDER 18
  *
- * 18+ requirement. One correction allowed.
- * First attempt: Shows "Go back" button
- * Second attempt: Hard stop with no way back into signup
+ * Under the minimum age is a hard stop. Age corrections are UNLIMITED.
+ * Go back is always offered. There is no second-try dead end.
  */
 
-import { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Platform } from 'react-native';
 import { useRouter } from 'expo-router';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 import { ScreenContainer, Button } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme';
 
-const UNDER_18_ATTEMPT_KEY = '@sayhello:under18_attempt';
-
 export default function Under18Screen() {
   const router = useRouter();
-  const [isSecondAttempt, setIsSecondAttempt] = useState(false);
-
-  useEffect(() => {
-    async function checkAttempt() {
-      const hasAttemptedBefore = await AsyncStorage.getItem(UNDER_18_ATTEMPT_KEY);
-      // If the flag exists, this is NOT the first time - it's the second attempt
-      // First time: flag doesn't exist yet (it gets set when they continue)
-      // Second time: flag exists
-      setIsSecondAttempt(hasAttemptedBefore === 'true');
-    }
-    checkAttempt();
-  }, []);
 
   const handleGoBack = () => {
     router.back();
@@ -64,13 +47,11 @@ export default function Under18Screen() {
       </View>
 
       <View style={styles.footer}>
-        {!isSecondAttempt && (
-          <Button
-            title={t('onboarding.under18.goBack')}
-            onPress={handleGoBack}
-            variant="secondary"
-          />
-        )}
+        <Button
+          title={t('onboarding.under18.goBack')}
+          onPress={handleGoBack}
+          variant="secondary"
+        />
         <Text style={styles.closeText} onPress={handleCloseApp}>
           {t('onboarding.under18.closeApp')}
         </Text>
