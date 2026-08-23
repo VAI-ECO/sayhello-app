@@ -140,7 +140,7 @@ export default function QueueOfferScreen() {
 
       <View style={styles.worthCard}>
         <Text style={styles.worthLabel}>{t('ambassador.queue.worthYearOne')}</Text>
-        <Text style={styles.worthAmount}>{t('figures.year1ServiceOnly')}</Text>
+        <Text style={styles.worthAmount}>{t('figures.routeBYearOne')}</Text>
       </View>
 
       <View style={styles.meta}>

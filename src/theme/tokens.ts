@@ -20,7 +20,8 @@ export const Colors = {
   Black: '#101010',
 
   // FIXED COLORS - never pickable, never take user's color
-  Fern: '#4F8C36', // Hangout, money, completion
+  Fern: '#4F8C36', // Hangout map pin, outlined
+  DeepFern: '#437A2D', // Solid green fills carrying white type — Earned, solid green surfaces
   Plum: '#6A4A9C', // Holla
   HelloBlue: '#2E6FD1', // Hootza, brand
   Terracotta: '#B5502A', // Discount
@@ -41,7 +42,8 @@ export const Colors = {
 
 /**
  * FIXED MEANINGS - never overridden by user's identity color:
- * - Fern: Hello Hangout, money, completion
+ * - Fern: Hello Hangout map pin (outlined), money, completion
+ * - DeepFern: solid green fills with white type
  * - Plum: Holla
  * - HelloBlue: Hootza, the brand itself
  * - Terracotta: Discount

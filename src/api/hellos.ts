@@ -1,35 +1,26 @@
 /**
  * HELLOS API
  *
- * Hello pins endpoints
+ * Connections list + encounter endpoints.
+ * Response shape is reveal-gated — pending rows are Waverly-only.
  */
 
 import { api } from './client';
 
-export interface HelloPin {
+export interface ConnectionHello {
   id: string;
-  user1Id: string;
-  user1FullName?: string;
-  user2Id: string;
-  user2FullName?: string;
-  locationLat: number;
-  locationLng: number;
-  locationName: string | null;
-  hangoutId: string | null;
-  metAt: string;
-  revealScheduledAt: string;
-  revealedAt: string | null;
-  hasSelfie: boolean;
-  helloCode: string;
-  createdAt: string;
+  status?: string;
+  hello_code?: string | null;
+  from?: string;
+  [key: string]: unknown;
 }
 
 export interface HellosResponse {
-  hellos: HelloPin[];
+  hellos: ConnectionHello[];
 }
 
 /**
- * Get user's hellos (pins)
+ * Get the current user's hellos (connections). Hides closed.
  */
 export async function getHellos(): Promise<{ data?: HellosResponse; error?: { message: string } }> {
   return api.get<HellosResponse>('/hellos');

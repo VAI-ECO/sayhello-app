@@ -266,7 +266,7 @@ describe('Ambassador Screens', () => {
   });
 
   describe('Commissions tracker', () => {
-    it('shows unavailable with origination/service labels', async () => {
+    it('shows unavailable', async () => {
       await render(
         <ThemeProvider>
           <CommissionsScreen />
