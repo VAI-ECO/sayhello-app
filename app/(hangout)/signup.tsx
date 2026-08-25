@@ -1,17 +1,78 @@
 /**
- * H8 SIGNUP AND TIER — no backend
+ * H8 SIGNUP — one price; founding/deferred are coupons (MONEY Part 2).
+ * WIRE: POST /hello-hangouts. Checkout amount from server. PIXEL is P11.
  */
 
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import { useState } from 'react';
+import { View, Text, StyleSheet, ScrollView, TextInput } from 'react-native';
 import { ScreenContainer, Button } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme/tokens';
+import { createHelloHangout, type HangoutTier } from '../../src/api/hangouts';
 
 export default function HangoutSignupScreen() {
+  const [name, setName] = useState('');
+  const [address, setAddress] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [createdId, setCreatedId] = useState<string | null>(null);
+  const [priced, setPriced] = useState<string | null>(null);
+
+  const create = async (tier: HangoutTier) => {
+    const n = name.trim();
+    const a = address.trim();
+    if (!n || !a) {
+      setError('Name and address are required.');
+      return;
+    }
+    setBusy(true);
+    setError(null);
+    const result = await createHelloHangout({
+      name: n,
+      address: a,
+      lat: 0,
+      lng: 0,
+      tier,
+    });
+    setBusy(false);
+    if (result?.error) {
+      setError(result.error.message);
+      return;
+    }
+    setCreatedId(result?.data?.helloHangout?.id ?? null);
+    const p = result?.data?.pricing;
+    if (p) {
+      setPriced(
+        `List $${(p.listPriceCents / 100).toFixed(0)}` +
+          (p.couponOffCents
+            ? ` − coupon $${(p.couponOffCents / 100).toFixed(0)} = $${(p.priceCents / 100).toFixed(0)}`
+            : ` = $${(p.priceCents / 100).toFixed(0)}`)
+      );
+    }
+  };
+
   return (
     <ScreenContainer style={styles.screen}>
       <ScrollView contentContainerStyle={styles.scroll}>
         <Text style={styles.title}>{t('hangout.signup.title')}</Text>
+        <Text style={styles.law}>{t('figures.onePriceLaw')}</Text>
+
+        <TextInput
+          style={styles.input}
+          value={name}
+          onChangeText={setName}
+          placeholder="Business name"
+          placeholderTextColor={Colors.Muted}
+          testID="hangout-name"
+        />
+        <TextInput
+          style={styles.input}
+          value={address}
+          onChangeText={setAddress}
+          placeholder="Address"
+          placeholderTextColor={Colors.Muted}
+          testID="hangout-address"
+        />
 
         <View style={styles.foundingCard}>
           <View style={styles.foundingHeader}>
@@ -19,13 +80,19 @@ export default function HangoutSignupScreen() {
             <Text style={styles.foundingLabel}>{t('hangout.common.foundingHelloHangout')}</Text>
           </View>
           <View style={styles.priceRow}>
-            <Text style={styles.price}>{t('figures.foundingPrice')}</Text>
+            <Text style={styles.price}>{t('figures.regularPrice')}</Text>
             <Text style={styles.perYear}>{t('hangout.common.perYear')}</Text>
           </View>
+          <Text style={styles.couponLine}>{t('figures.foundingCoupon')}</Text>
           <Bullet text={t('hangout.common.lockFiveYears')} />
           <Bullet text={t('hangout.common.goldenIcon')} />
           <Bullet text={t('hangout.common.everythingRegular')} />
-          <Button title={t('hangout.common.chooseFounding')} onPress={() => {}} disabled testID="choose-founding" />
+          <Button
+            title={t('hangout.common.chooseFounding')}
+            onPress={() => create('founding')}
+            disabled={busy}
+            testID="choose-founding"
+          />
         </View>
 
         <View style={styles.regularCard}>
@@ -36,8 +103,8 @@ export default function HangoutSignupScreen() {
           </View>
           <Button
             title={t('hangout.common.chooseRegular')}
-            onPress={() => {}}
-            disabled
+            onPress={() => create('regular')}
+            disabled={busy}
             variant="secondary"
             testID="choose-regular"
           />
@@ -46,11 +113,27 @@ export default function HangoutSignupScreen() {
         <View style={styles.deferredBox}>
           <Text style={styles.deferredTitle}>{t('hangout.common.nothingDue')}</Text>
           <Text style={styles.deferredBody}>{t('hangout.common.billingNote')}</Text>
+          <Text style={styles.couponLine}>{t('figures.deferredCoupon')}</Text>
+          <Button
+            title="Apply deferred coupon"
+            onPress={() => create('deferred_converted')}
+            disabled={busy}
+            variant="secondary"
+            testID="choose-deferred"
+          />
         </View>
 
-        <Text style={styles.unavailable} testID="hangout-signup-unavailable">
-          {t('hangout.signup.unavailable')}
-        </Text>
+        {error ? <Text style={styles.error}>{error}</Text> : null}
+        {priced ? (
+          <Text style={styles.priced} testID="hangout-priced">
+            {priced}
+          </Text>
+        ) : null}
+        {createdId ? (
+          <Text style={styles.priced} testID="hangout-created">
+            Created {createdId}
+          </Text>
+        ) : null}
       </ScrollView>
     </ScreenContainer>
   );
@@ -69,6 +152,15 @@ const styles = StyleSheet.create({
   screen: { paddingHorizontal: 0 },
   scroll: { padding: 22, gap: 14, paddingBottom: 32 },
   title: { fontSize: 28, fontWeight: '900', color: Colors.Ink, lineHeight: 30 },
+  law: { fontSize: 14, color: Colors.Muted, lineHeight: 20 },
+  input: {
+    borderWidth: 1.5,
+    borderColor: Colors.Ink,
+    borderRadius: 8,
+    padding: 12,
+    fontSize: 16,
+    color: Colors.Ink,
+  },
   foundingCard: { borderWidth: 1.5, borderColor: Colors.Ink, borderRadius: 8, overflow: 'hidden' },
   foundingHeader: {
     backgroundColor: Colors.Ink,
@@ -89,6 +181,13 @@ const styles = StyleSheet.create({
   price: { fontSize: 38, fontWeight: '900', color: Colors.Ink },
   regularPrice: { fontSize: 30, fontWeight: '900', color: Colors.Ink },
   perYear: { fontSize: 15, fontWeight: '600', color: Colors.Muted },
+  couponLine: {
+    paddingHorizontal: 15,
+    paddingBottom: 8,
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colors.Ink,
+  },
   bulletRow: { flexDirection: 'row', gap: 8, paddingHorizontal: 15 },
   bulletDot: { fontSize: 16, fontWeight: '900', color: Colors.Ink },
   bulletText: { flex: 1, fontSize: 14, color: Colors.Ink },
@@ -99,15 +198,16 @@ const styles = StyleSheet.create({
     padding: 15,
     gap: 10,
   },
-  regularLabel: {
-    fontSize: 12,
-    fontWeight: '800',
-    letterSpacing: 1.2,
-    textTransform: 'uppercase',
-    color: Colors.Muted,
+  regularLabel: { fontSize: 14, fontWeight: '800', color: Colors.Ink },
+  deferredBox: {
+    borderWidth: 1,
+    borderColor: Colors.Line,
+    borderRadius: 8,
+    padding: 15,
+    gap: 8,
   },
-  deferredBox: { borderWidth: 1.5, borderColor: Colors.Ink, borderRadius: 8, padding: 14, gap: 4 },
-  deferredTitle: { fontSize: 16, fontWeight: '900', color: Colors.Ink },
-  deferredBody: { fontSize: 14, lineHeight: 20, color: Colors.Muted },
-  unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },
+  deferredTitle: { fontSize: 16, fontWeight: '800', color: Colors.Ink },
+  deferredBody: { fontSize: 14, color: Colors.Muted, lineHeight: 20 },
+  error: { fontSize: 14, color: Colors.SignalRed },
+  priced: { fontSize: 14, fontWeight: '600', color: Colors.Ink },
 });

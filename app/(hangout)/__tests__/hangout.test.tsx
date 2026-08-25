@@ -3,7 +3,13 @@
  */
 
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react-native';
+import {
+  render,
+  screen,
+  fireEvent,
+  waitFor,
+  cleanup,
+} from '@testing-library/react-native';
 import { useRouter, Redirect } from 'expo-router';
 import { ThemeProvider } from '../../../src/theme';
 import HangoutSignupScreen from '../signup';
@@ -12,17 +18,28 @@ import HangoutCreatePostScreen from '../create-post';
 import HangoutDirectoryScreen from '../directory/index';
 import HangoutListingScreen from '../directory/[id]';
 import DealRedemptionScreen from '../redeem';
+import * as hangoutsApi from '../../../src/api/hangouts';
 
 jest.mock('expo-router', () => ({
   useRouter: jest.fn(),
   useLocalSearchParams: jest.fn(() => ({})),
+  useFocusEffect: (cb: () => void) => {
+    const React = require('react');
+    React.useEffect(() => {
+      cb();
+    }, []);
+  },
   Redirect: jest.fn(({ href }: { href: unknown }) => null),
 }));
 
-function distanceGuard(container: unknown) {
-  const text = JSON.stringify(container);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+jest.mock('../../../src/api/hangouts', () => ({
+  createHelloHangout: jest.fn(),
+  listMyHelloHangouts: jest.fn(),
+}));
+
+function distanceGuard() {
+  expect(screen.queryByText(/\d+\s*(miles?|mi|km|meters?|feet|ft)\b/i)).toBeNull();
+  expect(screen.queryByText(/\d+\s*away/i)).toBeNull();
 }
 
 describe('Hello Hangout Screens', () => {
@@ -30,14 +47,21 @@ describe('Hello Hangout Screens', () => {
   let mockBack: jest.Mock;
 
   beforeEach(() => {
+    cleanup();
     jest.clearAllMocks();
     mockPush = jest.fn();
     mockBack = jest.fn();
     (useRouter as jest.Mock).mockReturnValue({ push: mockPush, back: mockBack });
   });
 
-  describe('H8 Signup and tier', () => {
-    it('shows founding and regular tiers with disabled CTAs', async () => {
+  afterEach(() => {
+    cleanup();
+  });
+
+  describe('H8 Signup — one price + coupons', () => {
+    it('shows one list price and coupon CTAs', async () => {
+      (hangoutsApi.createHelloHangout as jest.Mock).mockResolvedValue({ data: {} });
+
       await render(
         <ThemeProvider>
           <HangoutSignupScreen />
@@ -46,30 +70,55 @@ describe('Hello Hangout Screens', () => {
 
       expect(screen.getByTestId('choose-founding')).toBeTruthy();
       expect(screen.getByTestId('choose-regular')).toBeTruthy();
-      expect(screen.getByTestId('hangout-signup-unavailable')).toBeTruthy();
+      expect(screen.getByTestId('choose-deferred')).toBeTruthy();
+      expect(screen.getByText('One price. Coupons carry every discount.')).toBeTruthy();
+      expect(screen.getByTestId('hangout-name')).toBeTruthy();
+      expect(screen.getByTestId('hangout-address')).toBeTruthy();
     });
 
     it('never shows distance (§8.12)', async () => {
-      const { container } = await render(
+      await render(
         <ThemeProvider>
           <HangoutSignupScreen />
         </ThemeProvider>
       );
-      distanceGuard(container);
+      distanceGuard();
     });
   });
 
   describe('H9 Business dashboard', () => {
-    it('shows unavailable dashboard with post CTA', async () => {
+    it('shows status from GET /hello-hangouts', async () => {
+      (hangoutsApi.listMyHelloHangouts as jest.Mock).mockResolvedValue({
+        data: {
+          helloHangouts: [
+            { id: 'hh-1', name: 'Cafe', status: 'active', tier: 'founding', price_cents: 19900 },
+          ],
+        },
+      });
       await render(
         <ThemeProvider>
           <HangoutDashboardScreen />
         </ThemeProvider>
       );
-
-      expect(screen.getByTestId('dashboard-unavailable')).toBeTruthy();
+      await waitFor(() => expect(screen.getByTestId('dashboard-status')).toBeTruthy());
+      expect(screen.getByText('active')).toBeTruthy();
       fireEvent.press(screen.getByTestId('dashboard-post-cta'));
-      expect(mockPush).toHaveBeenCalledWith('/(hangout)/create-post');
+      expect(mockPush).toHaveBeenCalledWith({
+        pathname: '/(hootzas)/discount/compose',
+        params: { helloHangoutId: 'hh-1' },
+      });
+    });
+
+    it('shows unavailable when none', async () => {
+      (hangoutsApi.listMyHelloHangouts as jest.Mock).mockResolvedValue({
+        data: { helloHangouts: [] },
+      });
+      await render(
+        <ThemeProvider>
+          <HangoutDashboardScreen />
+        </ThemeProvider>
+      );
+      await waitFor(() => expect(screen.getByTestId('dashboard-unavailable')).toBeTruthy());
     });
   });
 
@@ -118,12 +167,12 @@ describe('Hello Hangout Screens', () => {
     });
 
     it('never shows distance (§8.12)', async () => {
-      const { container } = await render(
+      await render(
         <ThemeProvider>
           <DealRedemptionScreen />
         </ThemeProvider>
       );
-      distanceGuard(container);
+      distanceGuard();
     });
   });
 });
