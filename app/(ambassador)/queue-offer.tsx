@@ -140,14 +140,14 @@ export default function QueueOfferScreen() {
 
       <View style={styles.worthCard}>
         <Text style={styles.worthLabel}>{t('ambassador.queue.worthYearOne')}</Text>
-        <Text style={styles.worthAmount}>{t('figures.routeBYearOne')}</Text>
+        <Text style={styles.worthAmount}>{t('ambassador.common.notAvailable')}</Text>
       </View>
 
       <View style={styles.meta}>
         <MetaRow label={t('ambassador.queue.signedBy')} value={t('ambassador.queue.anotherAmbassador')} />
         <MetaRow
           label={t('ambassador.queue.renewalYears')}
-          value={t('ambassador.queue.renewalYearsValue', { amount: t('figures.annual') })}
+          value={t('ambassador.queue.renewalYearsValue')}
         />
       </View>
 

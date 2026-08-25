@@ -28,7 +28,7 @@ export default function PhotoPlaceScreen() {
           testID="photo-library"
         />
         <Text style={styles.note}>
-          {t('ambassador.photo.signingNote', { amount: t('figures.annual') })}
+          {t('ambassador.photo.signingNote')}
         </Text>
         <Text style={styles.unavailable} testID="photo-unavailable">
           {t('ambassador.photo.unavailable')}

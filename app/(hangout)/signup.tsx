@@ -9,6 +9,7 @@ import { ScreenContainer, Button } from '../../src/components';
 import { t } from '../../src/i18n';
 import { Colors } from '../../src/theme/tokens';
 import { createHelloHangout, type HangoutTier } from '../../src/api/hangouts';
+import { formatCents } from '../../src/lib/money-format';
 
 export default function HangoutSignupScreen() {
   const [name, setName] = useState('');
@@ -42,12 +43,23 @@ export default function HangoutSignupScreen() {
     setCreatedId(result?.data?.helloHangout?.id ?? null);
     const p = result?.data?.pricing;
     if (p) {
-      setPriced(
-        `List $${(p.listPriceCents / 100).toFixed(0)}` +
-          (p.couponOffCents
-            ? ` − coupon $${(p.couponOffCents / 100).toFixed(0)} = $${(p.priceCents / 100).toFixed(0)}`
-            : ` = $${(p.priceCents / 100).toFixed(0)}`)
-      );
+      if (tier === 'founding') {
+        setPriced(
+          t('figures.foundingCoupon', {
+            off: formatCents(p.couponOffCents),
+            due: formatCents(p.priceCents),
+          })
+        );
+      } else if (tier === 'deferred_converted') {
+        setPriced(
+          t('figures.deferredCoupon', {
+            off: formatCents(p.couponOffCents),
+            due: formatCents(p.priceCents),
+          })
+        );
+      } else {
+        setPriced(t('figures.regularPrice', { amount: formatCents(p.priceCents) }));
+      }
     }
   };
 
@@ -80,10 +92,9 @@ export default function HangoutSignupScreen() {
             <Text style={styles.foundingLabel}>{t('hangout.common.foundingHelloHangout')}</Text>
           </View>
           <View style={styles.priceRow}>
-            <Text style={styles.price}>{t('figures.regularPrice')}</Text>
             <Text style={styles.perYear}>{t('hangout.common.perYear')}</Text>
           </View>
-          <Text style={styles.couponLine}>{t('figures.foundingCoupon')}</Text>
+          <Text style={styles.couponLine}>{t('hangout.common.nothingDue')}</Text>
           <Bullet text={t('hangout.common.lockFiveYears')} />
           <Bullet text={t('hangout.common.goldenIcon')} />
           <Bullet text={t('hangout.common.everythingRegular')} />
@@ -98,7 +109,6 @@ export default function HangoutSignupScreen() {
         <View style={styles.regularCard}>
           <Text style={styles.regularLabel}>{t('hangout.common.regular')}</Text>
           <View style={styles.priceRow}>
-            <Text style={styles.regularPrice}>{t('figures.regularPrice')}</Text>
             <Text style={styles.perYear}>{t('hangout.common.perYear')}</Text>
           </View>
           <Button
@@ -113,7 +123,6 @@ export default function HangoutSignupScreen() {
         <View style={styles.deferredBox}>
           <Text style={styles.deferredTitle}>{t('hangout.common.nothingDue')}</Text>
           <Text style={styles.deferredBody}>{t('hangout.common.billingNote')}</Text>
-          <Text style={styles.couponLine}>{t('figures.deferredCoupon')}</Text>
           <Button
             title="Apply deferred coupon"
             onPress={() => create('deferred_converted')}
