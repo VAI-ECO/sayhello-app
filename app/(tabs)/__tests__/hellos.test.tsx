@@ -9,6 +9,7 @@ import { ThemeProvider } from '../../../src/theme';
 import { getHellos } from '../../../src/api/hellos';
 
 jest.mock('expo-router', () => ({
+  useRouter: jest.fn(() => ({ push: jest.fn(), back: jest.fn() })),
   useFocusEffect: (cb: () => void) => {
     const React = require('react');
     React.useEffect(() => {

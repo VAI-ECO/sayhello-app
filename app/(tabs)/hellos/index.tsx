@@ -13,14 +13,16 @@ import {
   FlatList,
   RefreshControl,
   ActivityIndicator,
+  TouchableOpacity,
 } from 'react-native';
-import { useFocusEffect } from 'expo-router';
-import { ScreenContainer } from '../../src/components';
-import { Colors } from '../../src/theme';
-import { getHellos, type ConnectionHello } from '../../src/api/hellos';
-import { t } from '../../src/i18n';
+import { useFocusEffect, useRouter } from 'expo-router';
+import { ScreenContainer } from '../../../src/components';
+import { Colors } from '../../../src/theme';
+import { getHellos, type ConnectionHello } from '../../../src/api/hellos';
+import { t } from '../../../src/i18n';
 
 export default function HellosScreen() {
+  const router = useRouter();
   const [hellos, setHellos] = useState<ConnectionHello[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -81,7 +83,11 @@ export default function HellosScreen() {
           </View>
         }
         renderItem={({ item }) => (
-          <View style={styles.row} testID={`connection-${item.id}`}>
+          <TouchableOpacity
+            style={styles.row}
+            testID={`connection-${item.id}`}
+            onPress={() => router.push(`/(tabs)/hellos/${item.id}`)}
+          >
             <Text style={styles.rowTitle}>
               {item.status === 'pending'
                 ? 'Hello pending'
@@ -92,7 +98,8 @@ export default function HellosScreen() {
                     : 'Hello'}
             </Text>
             <Text style={styles.rowMeta}>{String(item.status ?? '')}</Text>
-          </View>
+            <Text style={styles.rowAction}>Note</Text>
+          </TouchableOpacity>
         )}
         contentContainerStyle={hellos.length === 0 ? styles.emptyList : styles.list}
       />
@@ -159,6 +166,12 @@ const styles = StyleSheet.create({
     color: Colors.Ink,
     opacity: 0.6,
     marginTop: 4,
+  },
+  rowAction: {
+    fontSize: 14,
+    fontWeight: '600',
+    color: Colors.Ink,
+    marginTop: 8,
   },
   error: {
     fontSize: 14,
