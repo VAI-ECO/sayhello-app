@@ -10,6 +10,12 @@ import { ThemeProvider } from '../../../src/theme';
 jest.mock('expo-router', () => ({
   useRouter: jest.fn(),
   useLocalSearchParams: jest.fn(),
+  useFocusEffect: (cb: () => void) => {
+    const React = require('react');
+    React.useEffect(() => {
+      cb();
+    }, []);
+  },
 }));
 
 jest.mock('../../../src/api/codes', () => ({
@@ -23,14 +29,14 @@ jest.mock('../../../src/api/client', () => ({
 }));
 
 import { checkCodeAvailability, setInfluencerCode } from '../../../src/api/codes';
+import { api } from '../../../src/api/client';
 import InfluencerEarningsScreen from '../earnings';
 import PickCodeScreen from '../pick-code';
 import CodeTakenScreen from '../code-taken';
 
-function distanceGuard(container: unknown) {
-  const text = JSON.stringify(container);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+function distanceGuard() {
+  expect(screen.queryByText(/\d+\s*(miles?|mi|km|meters?|feet|ft)\b/i)).toBeNull();
+  expect(screen.queryByText(/\d+\s*away/i)).toBeNull();
 }
 
 describe('Influencer Screens', () => {
@@ -52,25 +58,35 @@ describe('Influencer Screens', () => {
   });
 
   describe('Two streams earnings', () => {
-    it('shows unavailable earnings dashboard', async () => {
+    it('loads earned and building from GET /influencer/earnings', async () => {
+      (api.get as jest.Mock).mockResolvedValue({
+        data: { earned: 4000, building: 2000, flatRateCents: 2000 },
+      });
+
       await render(
         <ThemeProvider>
           <InfluencerEarningsScreen />
         </ThemeProvider>
       );
 
-      expect(screen.getByTestId('influencer-earnings-unavailable')).toBeTruthy();
+      await waitFor(() => expect(screen.getByTestId('influencer-earned')).toBeTruthy());
+      expect(screen.getByTestId('influencer-earned')).toHaveTextContent('$40');
+      expect(screen.getByTestId('influencer-building')).toHaveTextContent('$20');
       expect(screen.getByTestId('influencer-paid-card')).toBeTruthy();
       expect(screen.getByTestId('influencer-building-card')).toBeTruthy();
     });
 
     it('never shows distance (§8.12)', async () => {
-      const { container } = await render(
+      (api.get as jest.Mock).mockResolvedValue({
+        data: { earned: 0, building: 0, flatRateCents: 2000 },
+      });
+      await render(
         <ThemeProvider>
           <InfluencerEarningsScreen />
         </ThemeProvider>
       );
-      distanceGuard(container);
+      await waitFor(() => expect(screen.getByTestId('influencer-earned')).toBeTruthy());
+      distanceGuard();
     });
   });
 
