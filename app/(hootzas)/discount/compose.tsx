@@ -4,7 +4,7 @@
  * No GET slots endpoint — banner uses generic copy
  */
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   View,
   Text,
@@ -17,18 +17,30 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 import { ScreenContainer, Button, TextInput } from '../../../src/components';
 import { t } from '../../../src/i18n';
 import { Colors, FixedColors } from '../../../src/theme/tokens';
-import { createFeedPost } from '../../../src/api/feed';
+import { createFeedPost, getHangoutPostSlots } from '../../../src/api/feed';
 
 export default function DiscountComposeScreen() {
   const router = useRouter();
-  const { hangoutId } = useLocalSearchParams<{ hangoutId?: string }>();
+  const { hangoutId, helloHangoutId } = useLocalSearchParams<{
+    hangoutId?: string;
+    helloHangoutId?: string;
+  }>();
+  const postTargetId = helloHangoutId ?? hangoutId;
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [postToFeed, setPostToFeed] = useState(true);
   const [posting, setPosting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [remaining, setRemaining] = useState<number | null>(null);
 
-  if (!hangoutId) {
+  useEffect(() => {
+    if (!postTargetId) return;
+    getHangoutPostSlots(postTargetId).then((res) => {
+      if (res.data) setRemaining(res.data.remaining);
+    });
+  }, [postTargetId]);
+
+  if (!postTargetId) {
     return (
       <ScreenContainer>
         <View style={styles.centered} testID="discount-missing-hangout">
@@ -40,12 +52,13 @@ export default function DiscountComposeScreen() {
   }
 
   async function submit() {
-    if (!hangoutId || !title.trim()) return;
+    if (!postTargetId || !title.trim()) return;
     setPosting(true);
     setError(null);
 
     const res = await createFeedPost({
-      hangoutId: hangoutId as string,
+      hangoutId: helloHangoutId ? undefined : hangoutId,
+      helloHangoutId,
       postType: 'special',
       title: title.trim(),
       description: description.trim() || undefined,
@@ -59,7 +72,7 @@ export default function DiscountComposeScreen() {
       if (res.error.status === 402) {
         router.push({
           pathname: '/(hootzas)/discount/out-of-posts',
-          params: { hangoutId },
+          params: { hangoutId: postTargetId },
         });
         return;
       }
@@ -78,7 +91,13 @@ export default function DiscountComposeScreen() {
           <Text style={styles.header}>{t('hootzas.discount.title')}</Text>
         </TouchableOpacity>
 
-        <Text style={styles.banner}>{t('hootzas.discount.slotsBannerGeneric')}</Text>
+        <Text style={styles.banner} testID="discount-slots-banner">
+          {remaining == null
+            ? t('hootzas.discount.slotsBannerGeneric')
+            : remaining > 0
+              ? `${remaining} free post${remaining === 1 ? '' : 's'} left this month`
+              : t('hootzas.discount.outOfPostsTitle')}
+        </Text>
 
         <Text style={styles.label}>{t('hootzas.discount.offerLabel')}</Text>
         <TextInput

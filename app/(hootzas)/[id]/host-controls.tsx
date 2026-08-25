@@ -97,10 +97,12 @@ export default function HostControlsScreen() {
           <Text style={styles.liveLabel}>{t('hootzas.host.liveNow')}</Text>
           <Text style={styles.liveTitle}>{hootza.title}</Text>
           <Text style={styles.liveSub}>
-            {t('hootzas.host.startedBackstop', {
-              start: formatClock(new Date(hootza.startTime)),
-              end: formatClock(new Date(hootza.scheduledEndTime)),
-            })}
+            {hootza.scheduledEndTime
+              ? t('hootzas.host.startedBackstop', {
+                  start: formatClock(new Date(hootza.startTime)),
+                  end: formatClock(new Date(hootza.scheduledEndTime)),
+                })
+              : t('hootzas.create.endHint')}
           </Text>
         </View>
 

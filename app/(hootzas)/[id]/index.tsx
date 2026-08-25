@@ -163,7 +163,9 @@ export default function HootzaPageScreen() {
               {t('hootzas.status.endedAt', {
                 time: hootza.actualEndTime
                   ? formatClock(new Date(hootza.actualEndTime))
-                  : formatClock(new Date(hootza.scheduledEndTime)),
+                  : hootza.scheduledEndTime
+                    ? formatClock(new Date(hootza.scheduledEndTime))
+                    : t('hootzas.create.endHint'),
               })}
             </Text>
           </View>

@@ -65,7 +65,7 @@ export function applyPostAgainTemplate(sourceId: string, template: PostAgainTemp
 }
 
 export function draftToCreateInput(d: HootzaCreateDraft): CreateHootzaInput | null {
-  if (!d.title.trim() || !d.venueType || !d.startTimeIso || !d.scheduledEndTimeIso) {
+  if (!d.title.trim() || !d.venueType || !d.startTimeIso) {
     return null;
   }
 
@@ -73,8 +73,10 @@ export function draftToCreateInput(d: HootzaCreateDraft): CreateHootzaInput | nu
     title: d.title.trim(),
     venueType: d.venueType,
     startTime: d.startTimeIso,
-    scheduledEndTime: d.scheduledEndTimeIso,
   };
+  if (d.scheduledEndTimeIso) {
+    input.scheduledEndTime = d.scheduledEndTimeIso;
+  }
 
   if (d.description.trim()) input.description = d.description.trim();
   if (d.locationName.trim()) input.locationName = d.locationName.trim();

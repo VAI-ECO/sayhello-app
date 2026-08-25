@@ -76,7 +76,8 @@ export async function getFeed(params?: {
 }
 
 export interface CreatePostInput {
-  hangoutId: string;
+  hangoutId?: string;
+  helloHangoutId?: string;
   postType: 'special' | 'holla';
   title: string;
   description?: string;
@@ -121,4 +122,16 @@ export async function createFeedPost(input: CreatePostInput) {
  */
 export async function getHangoutPosts(hangoutId: string) {
   return api.get<{ posts: HangoutPost[] }>(`/api/feed/hangouts/${hangoutId}/posts`);
+}
+
+export interface HangoutPostSlots {
+  monthYear: string;
+  freeSlots: number;
+  slotsUsed: number;
+  remaining: number;
+  additionalPostCents: number;
+}
+
+export async function getHangoutPostSlots(hangoutId: string) {
+  return api.get<HangoutPostSlots>(`/api/feed/hangouts/${hangoutId}/slots`);
 }

@@ -2,10 +2,13 @@
  * Hootza date/time formatting — no distance copy (§8.12).
  */
 
-export function formatHootzaTimeRange(startIso: string, endIso: string): string {
+export function formatHootzaTimeRange(startIso: string, endIso?: string | null): string {
   const start = new Date(startIso);
-  const end = new Date(endIso);
   const day = start.toLocaleDateString(undefined, { weekday: 'short', day: 'numeric', month: 'short' });
+  if (!endIso) {
+    return `${day} · ${formatClock(start)} · It's over when it's over`;
+  }
+  const end = new Date(endIso);
   return `${day} · ${formatClock(start)}–${formatClock(end)}`;
 }
 

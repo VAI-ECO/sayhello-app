@@ -432,8 +432,7 @@ export const en = {
       monthLimit: 'Nothing further out than a month — a month is the limit.',
       endLabel: 'Roughly when it wraps',
       graceNote: '+1 hour grace',
-      endHint:
-        "A backstop, not a bell. You end it yourself when it's over; if you forget, this does it an hour later.",
+      endHint: "It's over when it's over. Leave this blank if there is no end.",
       detailsLabel: 'Anything they should know',
       coverLabel: 'Charging at the door',
       optional: 'optional',

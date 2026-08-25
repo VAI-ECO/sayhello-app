@@ -13,7 +13,7 @@ import {
   Switch,
 } from 'react-native';
 import { useRouter } from 'expo-router';
-import { ScreenContainer, Button } from '../../../src/components';
+import { ScreenContainer, Button, TextInput } from '../../../src/components';
 import { t } from '../../../src/i18n';
 import { Colors, FixedColors } from '../../../src/theme/tokens';
 import { createHootza } from '../../../src/api/hootzas';
@@ -29,33 +29,29 @@ function defaultStart(): Date {
   return d;
 }
 
-function defaultEnd(start: Date): Date {
-  const d = new Date(start);
-  d.setHours(d.getHours() + 3);
-  return d;
-}
-
 export default function CreateHowItRunsScreen() {
   const router = useRouter();
   const [hostModeEnabled, setHostModeEnabled] = useState(() => getHootzaCreateDraft().hostModeEnabled);
-  const [intervalMinutes] = useState(() => getHootzaCreateDraft().intervalMinutes);
-  const [windowLengthMinutes] = useState(() => getHootzaCreateDraft().windowLengthMinutes);
+  const [intervalMinutes, setIntervalMinutes] = useState(() =>
+    String(getHootzaCreateDraft().intervalMinutes)
+  );
+  const [windowLengthMinutes, setWindowLengthMinutes] = useState(() =>
+    String(getHootzaCreateDraft().windowLengthMinutes)
+  );
   const [posting, setPosting] = useState(false);
   const [validationError, setValidationError] = useState<string | null>(null);
 
   async function postIt() {
     const current = getHootzaCreateDraft();
     const start = current.startTimeIso ? new Date(current.startTimeIso) : defaultStart();
-    const end = current.scheduledEndTimeIso
-      ? new Date(current.scheduledEndTimeIso)
-      : defaultEnd(start);
+    const interval = Math.max(1, parseInt(intervalMinutes, 10) || 45);
+    const windowLen = Math.max(1, parseInt(windowLengthMinutes, 10) || 10);
 
     updateHootzaCreateDraft({
       hostModeEnabled,
-      intervalMinutes,
-      windowLengthMinutes,
+      intervalMinutes: interval,
+      windowLengthMinutes: windowLen,
       startTimeIso: start.toISOString(),
-      scheduledEndTimeIso: end.toISOString(),
     });
 
     const input = draftToCreateInput(getHootzaCreateDraft());
@@ -102,15 +98,23 @@ export default function CreateHowItRunsScreen() {
           <View style={styles.intervalRow}>
             <View style={styles.intervalBox}>
               <Text style={styles.intervalLabel}>{t('hootzas.howItRuns.every')}</Text>
-              <Text style={styles.intervalValue}>
-                {intervalMinutes} {t('hootzas.howItRuns.minutes')}
-              </Text>
+              <TextInput
+                value={intervalMinutes}
+                onChangeText={setIntervalMinutes}
+                keyboardType="number-pad"
+                testID="host-mode-interval"
+              />
+              <Text style={styles.intervalValue}>{t('hootzas.howItRuns.minutes')}</Text>
             </View>
             <View style={styles.intervalBox}>
               <Text style={styles.intervalLabel}>{t('hootzas.howItRuns.openFor')}</Text>
-              <Text style={styles.intervalValue}>
-                {windowLengthMinutes} {t('hootzas.howItRuns.minutes')}
-              </Text>
+              <TextInput
+                value={windowLengthMinutes}
+                onChangeText={setWindowLengthMinutes}
+                keyboardType="number-pad"
+                testID="host-mode-window"
+              />
+              <Text style={styles.intervalValue}>{t('hootzas.howItRuns.minutes')}</Text>
             </View>
           </View>
         )}

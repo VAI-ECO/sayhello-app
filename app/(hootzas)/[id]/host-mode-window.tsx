@@ -102,7 +102,9 @@ export default function HostModeWindowScreen() {
         <Text style={styles.whenTitle}>{t('hootzas.hostModeWindow.whenItStops')}</Text>
         <Text style={styles.whenBody}>
           {t('hootzas.hostModeWindow.whenItStopsBody', {
-            endTime: formatClock(new Date(hootza.scheduledEndTime)),
+            endTime: hootza.scheduledEndTime
+              ? formatClock(new Date(hootza.scheduledEndTime))
+              : "It's over when it's over",
             host: hostName,
           })}
         </Text>

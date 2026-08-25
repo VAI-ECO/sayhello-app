@@ -45,7 +45,7 @@ export default function CreateWhatWhereScreen() {
   });
   const [endTime, setEndTime] = useState(() => {
     if (draft.scheduledEndTimeIso) return draft.scheduledEndTimeIso.slice(11, 16);
-    return '22:00';
+    return '';
   });
   const [adultsOnly, setAdultsOnly] = useState(false);
   const [chatEnabled, setChatEnabled] = useState(false);
@@ -75,7 +75,7 @@ export default function CreateWhatWhereScreen() {
       setValidationError(t('hootzas.create.validationVenue'));
       return;
     }
-    if (!startDate || !startTime || !endTime) {
+    if (!startDate || !startTime) {
       setValidationError(t('hootzas.create.validationWhen'));
       return;
     }

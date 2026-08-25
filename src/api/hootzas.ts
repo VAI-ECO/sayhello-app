@@ -35,7 +35,7 @@ export interface Hootza {
   locationLat: number | null;
   locationLng: number | null;
   startTime: string;
-  scheduledEndTime: string;
+  scheduledEndTime: string | null;
   actualEndTime: string | null;
   coverChargeAmount: number | null;
   coverChargeDescription: string | null;
@@ -67,7 +67,7 @@ export interface CreateHootzaInput {
   locationLat?: number;
   locationLng?: number;
   startTime: string;
-  scheduledEndTime: string;
+  scheduledEndTime?: string | null;
   coverChargeAmount?: number;
   coverChargeDescription?: string;
   hostMode?: {

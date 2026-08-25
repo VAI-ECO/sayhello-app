@@ -286,6 +286,21 @@ describe('Hootza Screens', () => {
       await fireEvent.press(await screen.findByTestId('create-next'));
       expect(mockPush).not.toHaveBeenCalled();
     });
+
+    it('allows next without an end time', async () => {
+      await render(
+        <ThemeProvider>
+          <CreateWhatWhereScreen />
+        </ThemeProvider>
+      );
+      fireEvent.changeText(await screen.findByTestId('create-title'), 'Coffee');
+      fireEvent.press(await screen.findByTestId('venue-public'));
+      fireEvent.changeText(await screen.findByTestId('create-date'), '2026-09-01');
+      fireEvent.changeText(await screen.findByTestId('create-start-time'), '19:00');
+      fireEvent.changeText(await screen.findByTestId('create-end-time'), '');
+      await fireEvent.press(await screen.findByTestId('create-next'));
+      expect(mockPush).toHaveBeenCalledWith('/(hootzas)/create/how-it-runs');
+    });
   });
 
   describe('Post error', () => {
