@@ -21,6 +21,12 @@ import * as codesApi from '../../../src/api/codes';
 jest.mock('expo-router', () => ({
   useRouter: jest.fn(),
   useLocalSearchParams: jest.fn(),
+  useFocusEffect: (cb: () => void) => {
+    const React = require('react');
+    React.useEffect(() => {
+      cb();
+    }, []);
+  },
   Redirect: jest.fn(({ href }: { href: unknown }) => null),
 }));
 
@@ -35,6 +41,9 @@ jest.mock('../../../src/api/ambassador', () => {
     getPayoutHistory: jest.fn(),
     requestPayout: jest.fn(),
     submitW9: jest.fn(),
+    getAmbassadorHangouts: jest.fn(),
+    checkInVisit: jest.fn(),
+    getAmbassadorVisits: jest.fn(),
   };
 });
 jest.mock('../../../src/api/codes');
@@ -42,10 +51,9 @@ jest.mock('../../../src/api/client', () => ({
   api: { init: jest.fn() },
 }));
 
-function distanceGuard(container: unknown) {
-  const text = JSON.stringify(container);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*(mile|mi|km|meter|feet|ft)/);
-  expect(text.toLowerCase()).not.toMatch(/\d+\s*away/);
+function distanceGuard() {
+  expect(screen.queryByText(/\d+\s*(miles?|mi|km|meters?|feet|ft)\b/i)).toBeNull();
+  expect(screen.queryByText(/\d+\s*away/i)).toBeNull();
 }
 
 describe('Ambassador Screens', () => {
@@ -118,37 +126,63 @@ describe('Ambassador Screens', () => {
         },
       });
 
-      const { container } = await render(
+      await render(
         <ThemeProvider>
           <EarnedBuildingScreen />
         </ThemeProvider>
       );
 
       await waitFor(() => expect(screen.getByTestId('earned-card')).toBeTruthy());
-      distanceGuard(container);
+      distanceGuard();
     });
   });
 
   describe('A2 My Hello Hangouts', () => {
-    it('shows unavailable state', async () => {
+    it('lists hangouts from GET /ambassador/hangouts', async () => {
+      (ambassadorApi.getAmbassadorHangouts as jest.Mock).mockResolvedValue({
+        data: {
+          hangouts: [{ id: 'hh-1', name: 'Blue Note Cafe', status: 'active', address: '1 Main' }],
+        },
+      });
+
       await render(
         <ThemeProvider>
           <MyHelloHangoutsScreen />
         </ThemeProvider>
       );
 
-      expect(screen.getByTestId('hangouts-unavailable')).toBeTruthy();
+      await waitFor(() => expect(screen.getByTestId('hangouts-list')).toBeTruthy());
+      expect(screen.getByTestId('hangout-hh-1')).toBeTruthy();
+      expect(screen.getByText('Blue Note Cafe')).toBeTruthy();
+    });
+
+    it('shows empty state with queue link', async () => {
+      (ambassadorApi.getAmbassadorHangouts as jest.Mock).mockResolvedValue({
+        data: { hangouts: [] },
+      });
+
+      await render(
+        <ThemeProvider>
+          <MyHelloHangoutsScreen />
+        </ThemeProvider>
+      );
+
+      await waitFor(() => expect(screen.getByTestId('hangouts-empty')).toBeTruthy());
       fireEvent.press(screen.getByTestId('hangouts-queue-link'));
       expect(mockPush).toHaveBeenCalledWith('/(ambassador)/queue-offer');
     });
 
     it('never shows distance (§8.12)', async () => {
-      const { container } = await render(
+      (ambassadorApi.getAmbassadorHangouts as jest.Mock).mockResolvedValue({
+        data: { hangouts: [] },
+      });
+      await render(
         <ThemeProvider>
           <MyHelloHangoutsScreen />
         </ThemeProvider>
       );
-      distanceGuard(container);
+      await waitFor(() => expect(screen.getByTestId('hangouts-empty')).toBeTruthy());
+      distanceGuard();
     });
   });
 
@@ -221,47 +255,78 @@ describe('Ambassador Screens', () => {
         data: { eligible: true, offers: [offer] },
       });
 
-      const { container } = await render(
+      await render(
         <ThemeProvider>
           <QueueOfferScreen />
         </ThemeProvider>
       );
 
       await waitFor(() => expect(screen.getByTestId('queue-accept')).toBeTruthy());
-      distanceGuard(container);
+      distanceGuard();
     });
   });
 
   describe('A4 Visit check-in', () => {
-    it('explains why visit check exists and disables scan', async () => {
+    it('explains why visit check exists and submits check-in', async () => {
+      (useLocalSearchParams as jest.Mock).mockReturnValue({
+        hangoutName: 'Blue Note',
+        helloHangoutId: 'hh-1',
+      });
+      (ambassadorApi.checkInVisit as jest.Mock).mockResolvedValue({
+        data: { visit: { id: 'v1', visited_at: '2026-08-24T00:00:00Z' }, windows: { window1Months: 6, window2Months: 6 } },
+      });
+
       await render(
         <ThemeProvider>
           <VisitCheckInScreen />
         </ThemeProvider>
       );
 
-      expect(screen.getByTestId('visit-checkin-unavailable')).toBeTruthy();
-      expect(screen.getByTestId('visit-scan-disabled')).toBeTruthy();
+      expect(screen.getByTestId('visit-scan-submit')).toBeTruthy();
+      fireEvent.press(screen.getByTestId('visit-scan-submit'));
+      await waitFor(() => {
+        expect(ambassadorApi.checkInVisit).toHaveBeenCalledWith(
+          expect.objectContaining({ helloHangoutId: 'hh-1' })
+        );
+      });
+      await waitFor(() => expect(screen.getByTestId('visit-checkin-done')).toBeTruthy());
     });
 
     it('never shows distance (§8.12)', async () => {
-      const { container } = await render(
+      (useLocalSearchParams as jest.Mock).mockReturnValue({});
+      await render(
         <ThemeProvider>
           <VisitCheckInScreen />
         </ThemeProvider>
       );
-      distanceGuard(container);
+      distanceGuard();
     });
   });
 
   describe('Visit history', () => {
-    it('shows unavailable', async () => {
+    it('lists visits from GET /ambassador/visits', async () => {
+      (ambassadorApi.getAmbassadorVisits as jest.Mock).mockResolvedValue({
+        data: { visits: [{ id: 'v1', visited_at: '2026-08-24T12:00:00Z', visit_window: 1 }] },
+      });
       await render(
         <ThemeProvider>
           <VisitHistoryScreen />
         </ThemeProvider>
       );
-      expect(screen.getByTestId('visit-history-empty')).toBeTruthy();
+      await waitFor(() => expect(screen.getByTestId('visit-history-list')).toBeTruthy());
+      expect(screen.getByTestId('visit-v1')).toBeTruthy();
+    });
+
+    it('shows empty when none', async () => {
+      (ambassadorApi.getAmbassadorVisits as jest.Mock).mockResolvedValue({
+        data: { visits: [] },
+      });
+      await render(
+        <ThemeProvider>
+          <VisitHistoryScreen />
+        </ThemeProvider>
+      );
+      await waitFor(() => expect(screen.getByTestId('visit-history-empty')).toBeTruthy());
     });
   });
 
