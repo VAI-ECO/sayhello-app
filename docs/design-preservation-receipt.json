@@ -1,0 +1,4713 @@
+{
+  "generated": "2026-09-19T06:35:52.143Z",
+  "originalArchive": "/Users/bmac/Documents/SayHello-Design-Preservation-2026-09-19/Say hello 1.zip",
+  "archiveSHA256": "c0fd7e2fb84ec6bb4009df6ccd4f9431bebbab80fb68df83b289c68dbd33d0f2",
+  "extractedFiles": 941,
+  "files": [
+    {
+      "file": "design/.thumbnail",
+      "bytes": 25484,
+      "sha256": "c747e21151f26052a84aae159e196227e96258d563e53f9996a48bbe185d9b4d"
+    },
+    {
+      "file": "design/Admin Panel.dc.html",
+      "bytes": 58733,
+      "sha256": "639f957f930d915b23aede8471e58ef45952575b27319518dde79b7462b89be9"
+    },
+    {
+      "file": "design/Admin Rulings.dc.html",
+      "bytes": 46864,
+      "sha256": "3e6e16a2cd23d12cd71ab227410085fc2c5e8060be920e1f4221c409385e54e7"
+    },
+    {
+      "file": "design/Admin.dc.html",
+      "bytes": 38615,
+      "sha256": "d5c4b2d5e4555ea58b6181368c131db46771f8c916aac939394dec6f9b6e83f5"
+    },
+    {
+      "file": "design/Agency Packet.dc.html",
+      "bytes": 35040,
+      "sha256": "f660374a462cb8f73c3881ee933eba2b2200c8189ed655a2909596261f253622"
+    },
+    {
+      "file": "design/Ambassador Field Flow.dc.html",
+      "bytes": 42994,
+      "sha256": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095"
+    },
+    {
+      "file": "design/Ambassador Panel.dc.html",
+      "bytes": 62586,
+      "sha256": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02"
+    },
+    {
+      "file": "design/Ambassador and Influencer Panels.dc.html",
+      "bytes": 63086,
+      "sha256": "3341c301b109d155dbb7776fb38347ebeb5672599a70a48e35e29a0f44dd2423"
+    },
+    {
+      "file": "design/Ambassadors and Hello Hangouts.dc.html",
+      "bytes": 83757,
+      "sha256": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03"
+    },
+    {
+      "file": "design/App Store Blockers.dc.html",
+      "bytes": 37357,
+      "sha256": "941f11cdfd8a811f575c572d018353050d7c0074cf6aba42470b647c725329e9"
+    },
+    {
+      "file": "design/App Store Screenshots.dc.html",
+      "bytes": 35781,
+      "sha256": "708d68c1457285b196cabd14dc65ce27c60db24298811f3131ea51a09d10461a"
+    },
+    {
+      "file": "design/Brand Directions.dc.html",
+      "bytes": 108454,
+      "sha256": "cbc68712de5f8895abcbc1ae4f2b5afa83e0f754415e0a2f2efb29f758653633"
+    },
+    {
+      "file": "design/CLAUDE.md",
+      "bytes": 9188,
+      "sha256": "be115c5ccd4d4a053f13db77679193c546771b3e38269971c422910ed3af81a4"
+    },
+    {
+      "file": "design/Category Marks.dc.html",
+      "bytes": 23781,
+      "sha256": "7b5b5d74af08c3d03438b0ce5fb55d076c9c218cd852ffc3fc38d5e912779a9d"
+    },
+    {
+      "file": "design/Chat Moderation All Sizes.dc.html",
+      "bytes": 37809,
+      "sha256": "61a1612c2c5f9f8a3caa6cb5df7ca51634410bab3dddbe5e3f8d0fd6abec645b"
+    },
+    {
+      "file": "design/Dashboards.dc.html",
+      "bytes": 50742,
+      "sha256": "47c82bc02c145ce7736b2ce4bb535d873084dd30fc5c3fa9a3b48d667ac6521b"
+    },
+    {
+      "file": "design/Delivered Screens and Sizes.dc.html",
+      "bytes": 35388,
+      "sha256": "9aeb838fb83e7fcd99431b48c827b5db6b9174bacf2722ac1fde48ce94faa1f7"
+    },
+    {
+      "file": "design/Desktop Surfaces at P 375.dc.html",
+      "bytes": 145768,
+      "sha256": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa"
+    },
+    {
+      "file": "design/Drawings and Points.dc.html",
+      "bytes": 33705,
+      "sha256": "b891f5dd5e995b728905a7d8518f939cbf0b774dbbdae1b1be3940390236ed08"
+    },
+    {
+      "file": "design/Feed and Prizes All Sizes.dc.html",
+      "bytes": 36528,
+      "sha256": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839"
+    },
+    {
+      "file": "design/Front Door and Navigation.dc.html",
+      "bytes": 28408,
+      "sha256": "0d30550df169c999423770d4d665eb663cf87ea2f67219de4d74cd608b4ac5e1"
+    },
+    {
+      "file": "design/Hangout Directory Print.html",
+      "bytes": 59423,
+      "sha256": "c8620e3095d2cc1a25aa0c4e192dbf4f0a107c78dd0a46b724281419f5e16feb"
+    },
+    {
+      "file": "design/Hangout Directory.dc.html",
+      "bytes": 196348,
+      "sha256": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe"
+    },
+    {
+      "file": "design/Hello Admin Settings All Sizes.dc.html",
+      "bytes": 26243,
+      "sha256": "3b79719e4f633e9bf16238c184cc718901f1c399057f18bb788750bd0813001b"
+    },
+    {
+      "file": "design/Hello Hangout Operator Surfaces.dc.html",
+      "bytes": 38584,
+      "sha256": "25de302c620c0ab6b2fd0538a19d0046a8315edebd99e4b705f041b439d1997b"
+    },
+    {
+      "file": "design/Hello Map.dc.html",
+      "bytes": 27411,
+      "sha256": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4"
+    },
+    {
+      "file": "design/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 37329,
+      "sha256": "377b1419fab151e286e52fc6dfb02796bef1dcfe1d22c3db767e93496b12f8f9"
+    },
+    {
+      "file": "design/Hootzas.dc.html",
+      "bytes": 120309,
+      "sha256": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65"
+    },
+    {
+      "file": "design/Icebreakers.dc.html",
+      "bytes": 45472,
+      "sha256": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78"
+    },
+    {
+      "file": "design/Identity Colors.dc.html",
+      "bytes": 29499,
+      "sha256": "2d0582812dd19c01f9332e51109f24fedcf858059fd8383ad996c9eaf34abd64"
+    },
+    {
+      "file": "design/Landing and Stores.dc.html",
+      "bytes": 48340,
+      "sha256": "ecfafdbf9b51f0c3f16a71b9c84d887d0cee680cf127b7f6c9747cf7a39f4355"
+    },
+    {
+      "file": "design/Legal Pages.dc.html",
+      "bytes": 50555,
+      "sha256": "1035edb9632df1369751e0cc4adf915fe69411ddb891e4af5dda3d9bf3496bca"
+    },
+    {
+      "file": "design/Map and Pins.dc.html",
+      "bytes": 32235,
+      "sha256": "32cc5ddc9482b14940605747ad736472e0a35bb03be2023cce8a3de85928bdbf"
+    },
+    {
+      "file": "design/Missing Mobile Screens.dc.html",
+      "bytes": 48361,
+      "sha256": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f"
+    },
+    {
+      "file": "design/Notification.dc.html",
+      "bytes": 16657,
+      "sha256": "227ec66eb292b1d76be333fffbb97c8379548e31bd9d14561ab722eb899e5ff3"
+    },
+    {
+      "file": "design/Onboarding All Sizes.dc.html",
+      "bytes": 24448,
+      "sha256": "bd3b4260517301ba887c5c4cef6bb4e1356044d95eec82866ddfb08cc5cf083b"
+    },
+    {
+      "file": "design/Onboarding Individual.dc.html",
+      "bytes": 136803,
+      "sha256": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f"
+    },
+    {
+      "file": "design/Open Items and Gates.dc.html",
+      "bytes": 37014,
+      "sha256": "0ae4e0ab6dfbe1a94bb6b665b9b47f9838cdb8fca7feb75f7b5b74779c2f1e3c"
+    },
+    {
+      "file": "design/Organizations.dc.html",
+      "bytes": 52667,
+      "sha256": "125f7fded8892d3d243dde4800fb177a5970aa56713d8acf2fe192217caa48ef"
+    },
+    {
+      "file": "design/Owed Register.dc.html",
+      "bytes": 23303,
+      "sha256": "e691dde3c65e73c54ae92e36ce819a7e413fe405346bf70404a35c3bf6a0e054"
+    },
+    {
+      "file": "design/Points and Drawings All Sizes.dc.html",
+      "bytes": 68448,
+      "sha256": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3"
+    },
+    {
+      "file": "design/Prizes.dc.html",
+      "bytes": 26896,
+      "sha256": "1a3cf79ddd278c7c955b5a6fb7bcc3efb8c513aececee9fd0b24ae152e98363f"
+    },
+    {
+      "file": "design/Reserved Screens Delivered at T 834.dc.html",
+      "bytes": 233018,
+      "sha256": "9594d4ebe898b2f86b0f58b93f96fa62c95c31e4dd71852f1abe998adc321bf6"
+    },
+    {
+      "file": "design/Reserved Screens.dc.html",
+      "bytes": 154689,
+      "sha256": "9bbd8f3f248235c8653afb4e7a9bdb1c3ea3eed151d0b8203bb2d20f1e0a2e59"
+    },
+    {
+      "file": "design/Screen Register - Delivered and Owed.dc.html",
+      "bytes": 33893,
+      "sha256": "8ffa375f75edfb9fc3e4960873aa5a5a5b792ab40c6df0414d909bba379a94e1"
+    },
+    {
+      "file": "design/Screen log.csv",
+      "bytes": 27209,
+      "sha256": "8ea0378f60f582350d66d04eb192171093324a4f7e4e5ab75bbc6f48a75368fe"
+    },
+    {
+      "file": "design/Signup Flows.dc.html",
+      "bytes": 48610,
+      "sha256": "58c677390b65613513a22c53542409e78042168275a5878c88873ca2544bda46"
+    },
+    {
+      "file": "design/Splash 00 Locked.dc.html",
+      "bytes": 13273,
+      "sha256": "a28e7c901b61de341a9deaf745c5d8c982d0ea0b270a77cf5cc5463b23f6199b"
+    },
+    {
+      "file": "design/Splash and Front Door.dc.html",
+      "bytes": 33332,
+      "sha256": "ffffe99148c3cf07375975f0beb788ace4d71b219c78af662535f71536ab1de8"
+    },
+    {
+      "file": "design/Store and Ambassador Shop.dc.html",
+      "bytes": 23211,
+      "sha256": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93"
+    },
+    {
+      "file": "design/The Encounter.dc.html",
+      "bytes": 44414,
+      "sha256": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533"
+    },
+    {
+      "file": "design/Waverly Gestures.dc.html",
+      "bytes": 16303,
+      "sha256": "1969e22dcc69a23bb32ce3a01386ecca43abd743bfd0189e18ea25221c9e1fbb"
+    },
+    {
+      "file": "design/Waverlys Journey Locked.dc.html",
+      "bytes": 35700,
+      "sha256": "8cc30482ec91fb43bdfa72f24fd5a3e2fd937cf41d81e757d0400b84f6ad4c7a"
+    },
+    {
+      "file": "design/Waverlys Place Store All Sizes.dc.html",
+      "bytes": 33631,
+      "sha256": "91a7994715a79a9a4bdc7109b3a8090c5fdc84ee5fde8e789de13be4c00944d6"
+    },
+    {
+      "file": "design/Web Surfaces.dc.html",
+      "bytes": 63746,
+      "sha256": "ce26c682640d8db898a29ed1d8487269eea42c4111f7f8a41829837a07228bdd"
+    },
+    {
+      "file": "design/Website Landing Page.html",
+      "bytes": 40022,
+      "sha256": "5616843216cce866c42035bd4ae25e5c5de71344a270a298cfe568587c26efb3"
+    },
+    {
+      "file": "design/Whats Happening.dc.html",
+      "bytes": 29239,
+      "sha256": "3d703032e572a338ad8e7bd493fbcac712f0ef1838c6ab3e8399a37bb1be937a"
+    },
+    {
+      "file": "design/Whats Left.dc.html",
+      "bytes": 15853,
+      "sha256": "27651df666e7214108996cb315ad54afcfefb024914cf95c64c7afd0f791378d"
+    },
+    {
+      "file": "design/Work Surfaces All Sizes.dc.html",
+      "bytes": 52731,
+      "sha256": "26516e460dcb54e5f7725fa005c69f8b4c0c3a47858969f2a30680d53c2aa44d"
+    },
+    {
+      "file": "design/Work Tools.dc.html",
+      "bytes": 61767,
+      "sha256": "12da9241939655759671326dd5dec8c74cb2eb503b3550c01d390e4957f9a4df"
+    },
+    {
+      "file": "design/assets/Dreaming/StayDreaming.otf",
+      "bytes": 43464,
+      "sha256": "07738f1fd819e93b77fbb1dfb49fddfcf79890b65d2590caa097f18889bb7f87"
+    },
+    {
+      "file": "design/assets/appicon.png",
+      "bytes": 26788,
+      "sha256": "f4b2f03f3590c6bf5d731f124f0f36d17d8bdf0bd28b4faa60b155011726e186"
+    },
+    {
+      "file": "design/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/assets/hnadheart.png",
+      "bytes": 3093,
+      "sha256": "0ea74e1c669880ee405a173a0e762dda0dc25a9381e037bdbf7a9785ca8b2958"
+    },
+    {
+      "file": "design/assets/homehlo.png",
+      "bytes": 2398,
+      "sha256": "17cc66e6a71f23a0df06215369710671cf38a9e947a006aa8325d4c89b454b4f"
+    },
+    {
+      "file": "design/assets/logo.png",
+      "bytes": 24264,
+      "sha256": "e1dd541e821dbe5f3e8462366e1529ff32bc80885ee5ea2e1958da49f0d60b6c"
+    },
+    {
+      "file": "design/assets/manicon.png",
+      "bytes": 2248,
+      "sha256": "65d7c6ec606897735689eaf8e91ca8f4de575b886e46900cc29b6a3ba1d6d124"
+    },
+    {
+      "file": "design/assets/marketing/01-nudge.png",
+      "bytes": 150029,
+      "sha256": "be0b6d1f77c5a08ac5beebede1c3b08b66ee5c6384041a16a9cad305080473f7"
+    },
+    {
+      "file": "design/assets/marketing/02-accepted.png",
+      "bytes": 151441,
+      "sha256": "69ff7139956fa4e6ea3efd497826b3e06d2a5ba6e83f6e3730e25cb418401e63"
+    },
+    {
+      "file": "design/assets/marketing/03-scan.png",
+      "bytes": 106930,
+      "sha256": "5031c8e37508d22e3d09d012b4c21309ea0e4c68c8dbcc17aa3c69363eecb433"
+    },
+    {
+      "file": "design/assets/marketing/04-selfie.png",
+      "bytes": 118203,
+      "sha256": "23a3b7c7230e4792520a16e41b9707078a9738e7e9c6b2dc3cb718b7eea7b363"
+    },
+    {
+      "file": "design/assets/marketing/05-pin.png",
+      "bytes": 142862,
+      "sha256": "52affc6055446dc9276935528f034a01bc6b5246e329fadc19bc9f304e0f16d8"
+    },
+    {
+      "file": "design/assets/marketing/06-reveal.png",
+      "bytes": 179730,
+      "sha256": "303e3bbbbe5a34c519ea970e0a65de6e62fe456a70d8b517430572c3ca1454f7"
+    },
+    {
+      "file": "design/assets/marketing/07-home.png",
+      "bytes": 181555,
+      "sha256": "1af0e5897915ba5a0e20f0b745ebdb0a1d4e51d3f988f44d7d1cc78ae0708484"
+    },
+    {
+      "file": "design/assets/marketing/08-hootza.png",
+      "bytes": 138414,
+      "sha256": "97896551aabb6759a21005b0fce1ed7a5b6058163d5a11a8a3d7783af01b68f2"
+    },
+    {
+      "file": "design/assets/marketing/09-map.png",
+      "bytes": 146059,
+      "sha256": "e615690e23acde207a3ef7d34f8bcc0a9c93fe1902ea8c528da51680e1cf134e"
+    },
+    {
+      "file": "design/assets/marketing/10-pin-sheet.png",
+      "bytes": 127079,
+      "sha256": "f18f08d41b4af9d94d86e6830867c033150cc804112526b6e84ad3c2b052467e"
+    },
+    {
+      "file": "design/assets/marketing/11-front-door.png",
+      "bytes": 165537,
+      "sha256": "b0bac36c79731e7a9d4ddcd3fbea2f0b411588eb572445a5cf4bd870607da07f"
+    },
+    {
+      "file": "design/assets/marketing/12-colour-pick.png",
+      "bytes": 177183,
+      "sha256": "0bf6b628205c927fbb01a7efc0ed42f07af9c5918b4686ce18739a428a1e25d5"
+    },
+    {
+      "file": "design/assets/marketing/13-colour-confirmed.png",
+      "bytes": 115350,
+      "sha256": "ce3ff305c17bf9c2bc7b5532b941437ada13813046327f22bb995bf692f0dcf9"
+    },
+    {
+      "file": "design/assets/marketing/14-web-hero.png",
+      "bytes": 147748,
+      "sha256": "6f9eed984c413fa47a3c551432b6b0bd1fd8534ea82fc0d767e10d7b099d1ac2"
+    },
+    {
+      "file": "design/assets/marketing/15-web-game.png",
+      "bytes": 231682,
+      "sha256": "d949452ef7d9e9169e76fe7d7286d5dc8e94063bbae2980c167ab01fc2640ab8"
+    },
+    {
+      "file": "design/assets/marketing/16-web-close.png",
+      "bytes": 51571,
+      "sha256": "35bbe0ddaafccce820ae33e47a9802fadd7d2a30552458a526e1f13dfa9a4803"
+    },
+    {
+      "file": "design/assets/profile_img.png",
+      "bytes": 42676,
+      "sha256": "23976b85ff0871fa18277f0d5b26f8b4f85e2e8b7cd00af547fc4b9480ea5a1b"
+    },
+    {
+      "file": "design/canon-1-product-encounter/Notification.dc.html",
+      "bytes": 16657,
+      "sha256": "227ec66eb292b1d76be333fffbb97c8379548e31bd9d14561ab722eb899e5ff3"
+    },
+    {
+      "file": "design/canon-1-product-encounter/Splash 00 Locked.dc.html",
+      "bytes": 13273,
+      "sha256": "a28e7c901b61de341a9deaf745c5d8c982d0ea0b270a77cf5cc5463b23f6199b"
+    },
+    {
+      "file": "design/canon-1-product-encounter/The Encounter.dc.html",
+      "bytes": 43222,
+      "sha256": "fb0fefc9778d1531a548c6642eb0280c11075bc2c797ce40a7b19febae7e52e4"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/canon-1-product-encounter/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/canon-1-product-encounter/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/canon-1-product-encounter/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/canon-1-product-encounter/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Chat Moderation All Sizes.dc.html",
+      "bytes": 37659,
+      "sha256": "004a53cb8eb3befd0164e160ad43c2f4994733f64029d305a926727ce3aea8ba"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Feed and Prizes All Sizes.dc.html",
+      "bytes": 36332,
+      "sha256": "f21c66d7d335626cd18da3bc7464f1d9c6a5eddcb302c076f91f1b21b6b456f1"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Front Door and Navigation.dc.html",
+      "bytes": 28212,
+      "sha256": "b17e7dabd4d691ca7e41cd6ae1589eed9b6066afd367df5c10717f26e425bf9a"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Hello Map.dc.html",
+      "bytes": 27271,
+      "sha256": "33ac6b3a777585aa32e2fe8d2e0b9a4a0dfa10325b3fd61485d800a5c5e0edd5"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Icebreakers.dc.html",
+      "bytes": 45248,
+      "sha256": "a6ab429e751bef4f3eea985a0e9e8fca367543f3a6a871cb22946247d691f932"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Identity Colors.dc.html",
+      "bytes": 29219,
+      "sha256": "8a0e785a08886a5ec866d12ab49c0baa0352a6ff1a3f7ebe567a9edd17be8ff3"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Map and Pins.dc.html",
+      "bytes": 32123,
+      "sha256": "9834ad32f37bb08ae594ca733e60ad75069f43e1c13a0bf12742192bc373ea56"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Missing Mobile Screens.dc.html",
+      "bytes": 48112,
+      "sha256": "259a391d7e4925af9e07a7a8fd055055f8cf18b5c246ded5672aa83a459ce1b9"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Onboarding All Sizes.dc.html",
+      "bytes": 24308,
+      "sha256": "e7e3d4647ac3783c872a379556f40c31f007748f553aa1d37f378bf336672cdd"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/Waverlys Place Store All Sizes.dc.html",
+      "bytes": 33463,
+      "sha256": "6e263bd998a826e754707ef48101c375b26544346719e11c3b7f9d89778b47f9"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/canon-2-individual-core-app/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/canon-3-money/Admin Panel.dc.html",
+      "bytes": 73382,
+      "sha256": "42a8be51d2c8eb70635dc1415c05bf9c7174e605c5c611c3aeca7cf69ea45ca5"
+    },
+    {
+      "file": "design/canon-3-money/Agency Packet.dc.html",
+      "bytes": 35040,
+      "sha256": "f660374a462cb8f73c3881ee933eba2b2200c8189ed655a2909596261f253622"
+    },
+    {
+      "file": "design/canon-3-money/Ambassador and Influencer Panels.dc.html",
+      "bytes": 62936,
+      "sha256": "85456e9f55f474ca7ca9175ec274f13f17392672fd1073a8ca3ae9a7b8da3c66"
+    },
+    {
+      "file": "design/canon-3-money/Work Surfaces All Sizes.dc.html",
+      "bytes": 52057,
+      "sha256": "ed671f5d2586b9e4ef7823519a2a7da15ff2a85f25b5cef0d9f9e60be77b8393"
+    },
+    {
+      "file": "design/canon-3-money/Work Tools.dc.html",
+      "bytes": 61627,
+      "sha256": "dfd75e773c0e559a3473d72ba1749c5bf61ff788b07caff9cc674e05c254b1f6"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/canon-3-money/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/canon-3-money/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/canon-3-money/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/canon-3-money/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Category Marks.dc.html",
+      "bytes": 23781,
+      "sha256": "7b5b5d74af08c3d03438b0ce5fb55d076c9c218cd852ffc3fc38d5e912779a9d"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Hangout Directory Print.html",
+      "bytes": 59423,
+      "sha256": "c8620e3095d2cc1a25aa0c4e192dbf4f0a107c78dd0a46b724281419f5e16feb"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Hangout Directory.dc.html",
+      "bytes": 61545,
+      "sha256": "99985b2a61e5c46ca56b47ffbf673e0bc98c55666ff50c5347d930155c7272c4"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 37116,
+      "sha256": "06d1b216a5b6750d2e99de2bd3f19467a4e8577e4c9c03fe3d92061d7ae8f33f"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Signup Flows.dc.html",
+      "bytes": 48498,
+      "sha256": "1c5c33af26760f73fb8357da6f32c60cf1df8e969fcae32ca2352ee967823409"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Web Surfaces.dc.html",
+      "bytes": 63634,
+      "sha256": "80807cbad167e7c6b5dd6a2e40e1f67a0803f22f278a5a16473bc501b95b9764"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/Whats Happening.dc.html",
+      "bytes": 29207,
+      "sha256": "3c7227674316d0ad95521bb543aedfd24fe12283381b79b22d4bff0ab83bce2a"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/canon-4-hello-hangout/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Admin Rulings.dc.html",
+      "bytes": 46864,
+      "sha256": "3e6e16a2cd23d12cd71ab227410085fc2c5e8060be920e1f4221c409385e54e7"
+    },
+    {
+      "file": "design/design_handoff_say_hello/App Store Blockers.dc.html",
+      "bytes": 37357,
+      "sha256": "941f11cdfd8a811f575c572d018353050d7c0074cf6aba42470b647c725329e9"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Brand Directions.dc.html",
+      "bytes": 108454,
+      "sha256": "cbc68712de5f8895abcbc1ae4f2b5afa83e0f754415e0a2f2efb29f758653633"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Category Marks.dc.html",
+      "bytes": 23781,
+      "sha256": "7b5b5d74af08c3d03438b0ce5fb55d076c9c218cd852ffc3fc38d5e912779a9d"
+    },
+    {
+      "file": "design/design_handoff_say_hello/DIRECTORY.md",
+      "bytes": 6810,
+      "sha256": "11fe94498e365d2c26d2dfcbf8e93dee7bc0800e54d210f79c673ee44f5c48c1"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Delivered Screens and Sizes.dc.html",
+      "bytes": 35388,
+      "sha256": "9aeb838fb83e7fcd99431b48c827b5db6b9174bacf2722ac1fde48ce94faa1f7"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Feed and Prizes All Sizes.dc.html",
+      "bytes": 36332,
+      "sha256": "f21c66d7d335626cd18da3bc7464f1d9c6a5eddcb302c076f91f1b21b6b456f1"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Front Door and Navigation.dc.html",
+      "bytes": 26819,
+      "sha256": "148136d8f0e7993b2e941afa8a48d4fdf7b0ccb9c8f1e796e9a8bca662fd7412"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Hangout Directory.dc.html",
+      "bytes": 196348,
+      "sha256": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 36788,
+      "sha256": "65bb5e7c0f4364ff1ae224b72cda48d3bcf9b1b7e9adcf291f9d1b14606e3ef1"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Identity Colors.dc.html",
+      "bytes": 29219,
+      "sha256": "8a0e785a08886a5ec866d12ab49c0baa0352a6ff1a3f7ebe567a9edd17be8ff3"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Map and Pins.dc.html",
+      "bytes": 32123,
+      "sha256": "9834ad32f37bb08ae594ca733e60ad75069f43e1c13a0bf12742192bc373ea56"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Notification.dc.html",
+      "bytes": 16657,
+      "sha256": "227ec66eb292b1d76be333fffbb97c8379548e31bd9d14561ab722eb899e5ff3"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Onboarding All Sizes.dc.html",
+      "bytes": 24308,
+      "sha256": "e7e3d4647ac3783c872a379556f40c31f007748f553aa1d37f378bf336672cdd"
+    },
+    {
+      "file": "design/design_handoff_say_hello/README.md",
+      "bytes": 12318,
+      "sha256": "905080d6bcc227337c3d184db9d43374f775ad9535fe01b26b37ae15d72798bf"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Screen log.csv",
+      "bytes": 24197,
+      "sha256": "70224e1581597547058093b320c1e3ee651c48354c77fe8ff88d7e408afcc726"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Splash 00 Locked.dc.html",
+      "bytes": 13273,
+      "sha256": "a28e7c901b61de341a9deaf745c5d8c982d0ea0b270a77cf5cc5463b23f6199b"
+    },
+    {
+      "file": "design/design_handoff_say_hello/The Encounter.dc.html",
+      "bytes": 42723,
+      "sha256": "3b9705e48e40e6cff0eb7a168d406ac7731d265b403b4655c7f51307175b6ffb"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Work Surfaces All Sizes.dc.html",
+      "bytes": 52051,
+      "sha256": "48bc5b5a02da8a9c096031d13862e2811dad2aaa29a3e4746ab752ccb77af4fa"
+    },
+    {
+      "file": "design/design_handoff_say_hello/Work Tools.dc.html",
+      "bytes": 61627,
+      "sha256": "dfd75e773c0e559a3473d72ba1749c5bf61ff788b07caff9cc674e05c254b1f6"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/design_handoff_say_hello/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/design_handoff_say_hello/doc-page.js",
+      "bytes": 38579,
+      "sha256": "f52ae9c02fca7ab44c37f3ff363194fdf81caa20ae63e2fe1f518ed21133185e"
+    },
+    {
+      "file": "design/design_handoff_say_hello/image-slot.js",
+      "bytes": 65350,
+      "sha256": "fff26d081c8d9d60870f86c7539a5d179b9cdab15e67f2b205508a068e7c7ff6"
+    },
+    {
+      "file": "design/design_handoff_say_hello/rules.json",
+      "bytes": 6004,
+      "sha256": "b7b0ba6c0a9f8a054cc8282354c2f28469650918484dfe363fe8db2a84e3a90b"
+    },
+    {
+      "file": "design/design_handoff_say_hello/screens.json",
+      "bytes": 11851,
+      "sha256": "8c80751157bcd892b896fe2d2e77994e69809031cf9a11eb31376e8046110628"
+    },
+    {
+      "file": "design/design_handoff_say_hello/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/design_handoff_say_hello/uploads/Group 1261154628.png",
+      "bytes": 349824,
+      "sha256": "eef6052d02784b0ff776be1e76b9bba98d968bd736889398b53fd9da02749314"
+    },
+    {
+      "file": "design/design_handoff_say_hello/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/design_handoff_say_hello/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/doc-page.js",
+      "bytes": 38579,
+      "sha256": "f52ae9c02fca7ab44c37f3ff363194fdf81caa20ae63e2fe1f518ed21133185e"
+    },
+    {
+      "file": "design/exports/Reserved Screens at T 834 - standalone.html",
+      "bytes": 538831,
+      "sha256": "e55a5079ab8a50e71cd5d4901c768c0739b90687702e957eed1b5870131f2fbc"
+    },
+    {
+      "file": "design/exports/batch-01/01 - Ambassadors and Hello Hangouts (17 frames).html",
+      "bytes": 900442,
+      "sha256": "051eb94ef53d63d78d447b54cf5db6282d11a12de28a0da0f6563ae8370803e3"
+    },
+    {
+      "file": "design/exports/batch-01/02 - The Encounter (10 frames).html",
+      "bytes": 930110,
+      "sha256": "57dbdca81e817e26bb9f93df32d46dd513f1d84194c62cb85312aec23bace1c5"
+    },
+    {
+      "file": "design/exports/batch-01/03 - Landing and Stores (3 frames).html",
+      "bytes": 829636,
+      "sha256": "81e0e65e1f6ae61bf1ffbf37d3f16c524d35935065b0e093c4f9912f290bfa14"
+    },
+    {
+      "file": "design/exports/batch-02/01 - Missing Mobile Screens (9 frames).html",
+      "bytes": 568722,
+      "sha256": "9c4e8403b1c64bb11f5726d3dac3b49b40bfd45b091ec6827c5084f90652ec04"
+    },
+    {
+      "file": "design/exports/batch-02/02 - Work Surfaces All Sizes (9 frames).html",
+      "bytes": 574150,
+      "sha256": "9392f1bab8781594d39b620e09475a4fdf9b04d90d6b339d08b9d1d6e8210bda"
+    },
+    {
+      "file": "design/exports/batch-02/03 - Icebreakers (8 frames).html",
+      "bytes": 803001,
+      "sha256": "6fffa13403904477de1391599c256ae36e677f989fb267eff45f41e184cfef27"
+    },
+    {
+      "file": "design/exports/batch-02/04 - Hello Map (5 frames).html",
+      "bytes": 557823,
+      "sha256": "3c9234d1eda68e4c7ad8d80e62e7e091ab957959a99826d30ba51135717f3f23"
+    },
+    {
+      "file": "design/github.md",
+      "bytes": 5646,
+      "sha256": "5f96dec39c2778714ce3bcb7ed1e60160b942018f375f93636a8b79fe328b2a8"
+    },
+    {
+      "file": "design/image-slot.js",
+      "bytes": 65350,
+      "sha256": "fff26d081c8d9d60870f86c7539a5d179b9cdab15e67f2b205508a068e7c7ff6"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/Ambassador Field Flow.dc.html",
+      "bytes": 42798,
+      "sha256": "ceff5ce488c69ba01fbea40f8970ec61ea36aa5ec68ed6e69c3d3e4367a45867"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/Work Surfaces All Sizes.dc.html",
+      "bytes": 52057,
+      "sha256": "ed671f5d2586b9e4ef7823519a2a7da15ff2a85f25b5cef0d9f9e60be77b8393"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/Work Tools.dc.html",
+      "bytes": 61627,
+      "sha256": "dfd75e773c0e559a3473d72ba1749c5bf61ff788b07caff9cc674e05c254b1f6"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-1-ambassador-field-flow/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-1-organizations/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 37116,
+      "sha256": "06d1b216a5b6750d2e99de2bd3f19467a4e8577e4c9c03fe3d92061d7ae8f33f"
+    },
+    {
+      "file": "design/pack-1-organizations/Open Items and Gates.dc.html",
+      "bytes": 36771,
+      "sha256": "30ca4c432d026aa4dc6774c79c9243a1256049f504a6c395bf3c9298abf8bfc4"
+    },
+    {
+      "file": "design/pack-1-organizations/Organizations.dc.html",
+      "bytes": 38497,
+      "sha256": "9b924afe3d2cb0c625d07421a83fe697d405ff646e1876611b4b1ee2f1eebe44"
+    },
+    {
+      "file": "design/pack-1-organizations/Signup Flows.dc.html",
+      "bytes": 48498,
+      "sha256": "1c5c33af26760f73fb8357da6f32c60cf1df8e969fcae32ca2352ee967823409"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-1-organizations/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-1-organizations/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-1-organizations/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-1-organizations/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/Category Marks.dc.html",
+      "bytes": 23781,
+      "sha256": "7b5b5d74af08c3d03438b0ce5fb55d076c9c218cd852ffc3fc38d5e912779a9d"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/Hangout Directory.dc.html",
+      "bytes": 61545,
+      "sha256": "99985b2a61e5c46ca56b47ffbf673e0bc98c55666ff50c5347d930155c7272c4"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/Hello Hangout Operator Surfaces.dc.html",
+      "bytes": 37563,
+      "sha256": "9c5ea92a747544784d25a15b751dae62f0cfee1ce72287a1b0463c869533650b"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/Signup Flows.dc.html",
+      "bytes": 48498,
+      "sha256": "1c5c33af26760f73fb8357da6f32c60cf1df8e969fcae32ca2352ee967823409"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-2-hello-hangout-operator/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/Drawings and Points.dc.html",
+      "bytes": 33537,
+      "sha256": "c44005cb34002a653e49f09734c75d99fa850ce9fda67d19f2079aa226e40e35"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/Prizes.dc.html",
+      "bytes": 26784,
+      "sha256": "6ddf3d285d6defb831a00d89f8df0c0eafb2bea6fce18078c492b1ca055bd24b"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/Waverlys Place Store All Sizes.dc.html",
+      "bytes": 33463,
+      "sha256": "6e263bd998a826e754707ef48101c375b26544346719e11c3b7f9d89778b47f9"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-3-drawings-and-points/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-3-open-items/Open Items and Gates.dc.html",
+      "bytes": 36771,
+      "sha256": "30ca4c432d026aa4dc6774c79c9243a1256049f504a6c395bf3c9298abf8bfc4"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-3-open-items/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-3-open-items/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-3-open-items/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-3-open-items/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-4-admin/Admin Panel.dc.html",
+      "bytes": 73382,
+      "sha256": "42a8be51d2c8eb70635dc1415c05bf9c7174e605c5c611c3aeca7cf69ea45ca5"
+    },
+    {
+      "file": "design/pack-4-admin/Admin.dc.html",
+      "bytes": 44124,
+      "sha256": "dfffd752949ca77bbeb71ffc2070bf454a11ec6a647a94236d0235842d631cf5"
+    },
+    {
+      "file": "design/pack-4-admin/Chat Moderation All Sizes.dc.html",
+      "bytes": 37659,
+      "sha256": "004a53cb8eb3befd0164e160ad43c2f4994733f64029d305a926727ce3aea8ba"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-4-admin/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-4-admin/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-4-admin/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-4-admin/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-00/Admin Panel.dc.html",
+      "bytes": 58733,
+      "sha256": "639f957f930d915b23aede8471e58ef45952575b27319518dde79b7462b89be9"
+    },
+    {
+      "file": "design/pack-CANON-00/Admin.dc.html",
+      "bytes": 38615,
+      "sha256": "d5c4b2d5e4555ea58b6181368c131db46771f8c916aac939394dec6f9b6e83f5"
+    },
+    {
+      "file": "design/pack-CANON-00/App Store Screenshots.dc.html",
+      "bytes": 35781,
+      "sha256": "708d68c1457285b196cabd14dc65ce27c60db24298811f3131ea51a09d10461a"
+    },
+    {
+      "file": "design/pack-CANON-00/Chat Moderation All Sizes.dc.html",
+      "bytes": 37809,
+      "sha256": "61a1612c2c5f9f8a3caa6cb5df7ca51634410bab3dddbe5e3f8d0fd6abec645b"
+    },
+    {
+      "file": "design/pack-CANON-00/Hootzas.dc.html",
+      "bytes": 120309,
+      "sha256": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65"
+    },
+    {
+      "file": "design/pack-CANON-00/Legal Pages.dc.html",
+      "bytes": 50555,
+      "sha256": "1035edb9632df1369751e0cc4adf915fe69411ddb891e4af5dda3d9bf3496bca"
+    },
+    {
+      "file": "design/pack-CANON-00/Missing Mobile Screens.dc.html",
+      "bytes": 48361,
+      "sha256": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f"
+    },
+    {
+      "file": "design/pack-CANON-00/Points and Drawings All Sizes.dc.html",
+      "bytes": 68448,
+      "sha256": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3"
+    },
+    {
+      "file": "design/pack-CANON-00/Work Surfaces All Sizes.dc.html",
+      "bytes": 52300,
+      "sha256": "c075abc60f16e0b85208f5223f4f0c1b9de85a80eda6deab20192a6a1c00de67"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-00/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-00/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-00/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-00/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/Admin Panel.dc.html",
+      "bytes": 58733,
+      "sha256": "639f957f930d915b23aede8471e58ef45952575b27319518dde79b7462b89be9"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/Admin.dc.html",
+      "bytes": 38615,
+      "sha256": "d5c4b2d5e4555ea58b6181368c131db46771f8c916aac939394dec6f9b6e83f5"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/CANON-MN-01.dc.html",
+      "bytes": 11292,
+      "sha256": "3e3fbdd53fc5063c6679483d031243c448f73e0c9a2d69f50a2b3b2e55a01f38"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/Hello Admin Settings All Sizes.dc.html",
+      "bytes": 26243,
+      "sha256": "3b79719e4f633e9bf16238c184cc718901f1c399057f18bb788750bd0813001b"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/MANIFEST.md",
+      "bytes": 3660,
+      "sha256": "a5aed3886fec5af1b8575318c32db192aff14ed37f7cc11eb3e8b241f54eacc8"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-MN-01/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Ambassadors and Hello Hangouts.dc.html",
+      "bytes": 83757,
+      "sha256": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Dashboards.dc.html",
+      "bytes": 50742,
+      "sha256": "47c82bc02c145ce7736b2ce4bb535d873084dd30fc5c3fa9a3b48d667ac6521b"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Drawings and Points.dc.html",
+      "bytes": 33705,
+      "sha256": "b891f5dd5e995b728905a7d8518f939cbf0b774dbbdae1b1be3940390236ed08"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Feed and Prizes All Sizes.dc.html",
+      "bytes": 36528,
+      "sha256": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Hello Map.dc.html",
+      "bytes": 27411,
+      "sha256": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 37284,
+      "sha256": "a7e682cc8be095c5c6e87bdddfa4a1db7e7b2a9fe10c4757b623cae4e67d35cd"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Hootzas.dc.html",
+      "bytes": 120309,
+      "sha256": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Icebreakers.dc.html",
+      "bytes": 45472,
+      "sha256": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Identity Colors.dc.html",
+      "bytes": 29499,
+      "sha256": "2d0582812dd19c01f9332e51109f24fedcf858059fd8383ad996c9eaf34abd64"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Landing and Stores.dc.html",
+      "bytes": 48340,
+      "sha256": "ecfafdbf9b51f0c3f16a71b9c84d887d0cee680cf127b7f6c9747cf7a39f4355"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Map and Pins.dc.html",
+      "bytes": 32235,
+      "sha256": "32cc5ddc9482b14940605747ad736472e0a35bb03be2023cce8a3de85928bdbf"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Missing Mobile Screens.dc.html",
+      "bytes": 48361,
+      "sha256": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Onboarding All Sizes.dc.html",
+      "bytes": 24448,
+      "sha256": "bd3b4260517301ba887c5c4cef6bb4e1356044d95eec82866ddfb08cc5cf083b"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Onboarding Individual.dc.html",
+      "bytes": 136803,
+      "sha256": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Open Items and Gates.dc.html",
+      "bytes": 37014,
+      "sha256": "0ae4e0ab6dfbe1a94bb6b665b9b47f9838cdb8fca7feb75f7b5b74779c2f1e3c"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Organizations.dc.html",
+      "bytes": 52667,
+      "sha256": "125f7fded8892d3d243dde4800fb177a5970aa56713d8acf2fe192217caa48ef"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Points and Drawings All Sizes.dc.html",
+      "bytes": 68448,
+      "sha256": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Prizes.dc.html",
+      "bytes": 26896,
+      "sha256": "1a3cf79ddd278c7c955b5a6fb7bcc3efb8c513aececee9fd0b24ae152e98363f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Store and Ambassador Shop.dc.html",
+      "bytes": 23211,
+      "sha256": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Waverlys Place Store All Sizes.dc.html",
+      "bytes": 33631,
+      "sha256": "91a7994715a79a9a4bdc7109b3a8090c5fdc84ee5fde8e789de13be4c00944d6"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Web Surfaces.dc.html",
+      "bytes": 63746,
+      "sha256": "ce26c682640d8db898a29ed1d8487269eea42c4111f7f8a41829837a07228bdd"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/Whats Happening.dc.html",
+      "bytes": 29239,
+      "sha256": "3d703032e572a338ad8e7bd493fbcac712f0ef1838c6ab3e8399a37bb1be937a"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-RL-01/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Ambassadors and Hello Hangouts.dc.html",
+      "bytes": 83757,
+      "sha256": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Dashboards.dc.html",
+      "bytes": 50742,
+      "sha256": "47c82bc02c145ce7736b2ce4bb535d873084dd30fc5c3fa9a3b48d667ac6521b"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Hello Hangout Operator Surfaces.dc.html",
+      "bytes": 38584,
+      "sha256": "25de302c620c0ab6b2fd0538a19d0046a8315edebd99e4b705f041b439d1997b"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Hello Map.dc.html",
+      "bytes": 27411,
+      "sha256": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Hootzas.dc.html",
+      "bytes": 120309,
+      "sha256": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Signup Flows.dc.html",
+      "bytes": 48610,
+      "sha256": "58c677390b65613513a22c53542409e78042168275a5878c88873ca2544bda46"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Web Surfaces.dc.html",
+      "bytes": 63746,
+      "sha256": "ce26c682640d8db898a29ed1d8487269eea42c4111f7f8a41829837a07228bdd"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/Work Surfaces All Sizes.dc.html",
+      "bytes": 52300,
+      "sha256": "c075abc60f16e0b85208f5223f4f0c1b9de85a80eda6deab20192a6a1c00de67"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-RL-02/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Ambassador Field Flow.dc.html",
+      "bytes": 42994,
+      "sha256": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Ambassador Panel.dc.html",
+      "bytes": 62586,
+      "sha256": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Ambassador and Influencer Panels.dc.html",
+      "bytes": 63076,
+      "sha256": "bf4306e24b51fa03a41cfae05ae73aad01f4e02716c700a44f267d3eaf7d1f64"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Ambassadors and Hello Hangouts.dc.html",
+      "bytes": 83757,
+      "sha256": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Landing and Stores.dc.html",
+      "bytes": 48340,
+      "sha256": "ecfafdbf9b51f0c3f16a71b9c84d887d0cee680cf127b7f6c9747cf7a39f4355"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Open Items and Gates.dc.html",
+      "bytes": 37014,
+      "sha256": "0ae4e0ab6dfbe1a94bb6b665b9b47f9838cdb8fca7feb75f7b5b74779c2f1e3c"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Signup Flows.dc.html",
+      "bytes": 48610,
+      "sha256": "58c677390b65613513a22c53542409e78042168275a5878c88873ca2544bda46"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Store and Ambassador Shop.dc.html",
+      "bytes": 23211,
+      "sha256": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Work Surfaces All Sizes.dc.html",
+      "bytes": 52300,
+      "sha256": "c075abc60f16e0b85208f5223f4f0c1b9de85a80eda6deab20192a6a1c00de67"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/Work Tools.dc.html",
+      "bytes": 61767,
+      "sha256": "12da9241939655759671326dd5dec8c74cb2eb503b3550c01d390e4957f9a4df"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-RL-03/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/Ambassador and Influencer Panels.dc.html",
+      "bytes": 63076,
+      "sha256": "bf4306e24b51fa03a41cfae05ae73aad01f4e02716c700a44f267d3eaf7d1f64"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/Dashboards.dc.html",
+      "bytes": 50742,
+      "sha256": "47c82bc02c145ce7736b2ce4bb535d873084dd30fc5c3fa9a3b48d667ac6521b"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/Open Items and Gates.dc.html",
+      "bytes": 37014,
+      "sha256": "0ae4e0ab6dfbe1a94bb6b665b9b47f9838cdb8fca7feb75f7b5b74779c2f1e3c"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/Signup Flows.dc.html",
+      "bytes": 48610,
+      "sha256": "58c677390b65613513a22c53542409e78042168275a5878c88873ca2544bda46"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/Work Tools.dc.html",
+      "bytes": 61767,
+      "sha256": "12da9241939655759671326dd5dec8c74cb2eb503b3550c01d390e4957f9a4df"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-RL-04/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/Hootzas and Organizations All Sizes.dc.html",
+      "bytes": 37284,
+      "sha256": "a7e682cc8be095c5c6e87bdddfa4a1db7e7b2a9fe10c4757b623cae4e67d35cd"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/Organizations.dc.html",
+      "bytes": 52667,
+      "sha256": "125f7fded8892d3d243dde4800fb177a5970aa56713d8acf2fe192217caa48ef"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/Signup Flows.dc.html",
+      "bytes": 48610,
+      "sha256": "58c677390b65613513a22c53542409e78042168275a5878c88873ca2544bda46"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-RL-05/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Front Door and Navigation.dc.html",
+      "bytes": 28408,
+      "sha256": "0d30550df169c999423770d4d665eb663cf87ea2f67219de4d74cd608b4ac5e1"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Landing and Stores.dc.html",
+      "bytes": 48340,
+      "sha256": "ecfafdbf9b51f0c3f16a71b9c84d887d0cee680cf127b7f6c9747cf7a39f4355"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Onboarding Individual.dc.html",
+      "bytes": 136803,
+      "sha256": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Points and Drawings All Sizes.dc.html",
+      "bytes": 68448,
+      "sha256": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Splash and Front Door.dc.html",
+      "bytes": 33332,
+      "sha256": "ffffe99148c3cf07375975f0beb788ace4d71b219c78af662535f71536ab1de8"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/The Encounter.dc.html",
+      "bytes": 44129,
+      "sha256": "a4bf878ee691006fbdb482d671e47316f9212c87127a14fc57542f2b3ef2f8a5"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/Waverlys Journey Locked.dc.html",
+      "bytes": 35700,
+      "sha256": "8cc30482ec91fb43bdfa72f24fd5a3e2fd937cf41d81e757d0400b84f6ad4c7a"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/badge-founding-golden.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-CANON-SH-01/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-legal-pages/Legal Pages.dc.html",
+      "bytes": 50255,
+      "sha256": "a4fbf2d9ff388d67ec7f983fe1db87c0ac1c6fa6eb55053ef7e35b82186513a1"
+    },
+    {
+      "file": "design/pack-legal-pages/Missing Mobile Screens.dc.html",
+      "bytes": 48112,
+      "sha256": "259a391d7e4925af9e07a7a8fd055055f8cf18b5c246ded5672aa83a459ce1b9"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-legal-pages/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-legal-pages/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-legal-pages/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-legal-pages/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/pack-points-and-drawings/Drawings and Points.dc.html",
+      "bytes": 33537,
+      "sha256": "c44005cb34002a653e49f09734c75d99fa850ce9fda67d19f2079aa226e40e35"
+    },
+    {
+      "file": "design/pack-points-and-drawings/Points and Drawings All Sizes.dc.html",
+      "bytes": 67978,
+      "sha256": "4209ad3a628773578e9544e79162b79d97d1ae28622385e3ea531bbd4d971bcf"
+    },
+    {
+      "file": "design/pack-points-and-drawings/Prizes.dc.html",
+      "bytes": 26784,
+      "sha256": "6ddf3d285d6defb831a00d89f8df0c0eafb2bea6fce18078c492b1ca055bd24b"
+    },
+    {
+      "file": "design/pack-points-and-drawings/Waverlys Place Store All Sizes.dc.html",
+      "bytes": 33463,
+      "sha256": "6e263bd998a826e754707ef48101c375b26544346719e11c3b7f9d89778b47f9"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/badge-hootza.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/founding-hello-hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/icon-discount.png",
+      "bytes": 634092,
+      "sha256": "58045295027868ce2bcf4c0d8ea5ed6db648204f39853abbc03a1790195fb759"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/icon-hangout-founding.png",
+      "bytes": 441896,
+      "sha256": "3711f892d64c3d180248a480beeefa8fefeb82b0fd868c64bf5a1dd86197a98c"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/icon-hangout.png",
+      "bytes": 468858,
+      "sha256": "6302be3d867d3f6cfb3c800958345e34289f8a96ee27fc840e6b743de5188c72"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/icon-holla.png",
+      "bytes": 375465,
+      "sha256": "d8ef627087cd62a93c915607b513e5aea619e76d3f113fa82093d8a28afe1096"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/icon-hootza.png",
+      "bytes": 512767,
+      "sha256": "a863ca8df32279997124669575bcfc9edab8868fd6cd956ff40e3033168731b2"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/lockup-pink.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-amber.png",
+      "bytes": 191835,
+      "sha256": "75041cd145c86c5312069b784ce14e39485f3cf78a463d3906b4a8b8cbd251b9"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-black.png",
+      "bytes": 178738,
+      "sha256": "4801f88d4f65da8bd233062ca95498dd8b26d2ced932eeab152e22fbafdffb40"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-blue-alt.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-blue.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-green.png",
+      "bytes": 194147,
+      "sha256": "d20be207515e36d1c2b6044461d2ac77946943a3adb186c1683e1631296863ea"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-ok-black.png",
+      "bytes": 96506,
+      "sha256": "d290bddbae6c4f591e3565dd71c247a95c7121337423a58f3b5bffc39578449d"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-ok-white.png",
+      "bytes": 95205,
+      "sha256": "365374ceea398b010bb8680db227f9d6eb25c82528856668d81df05315545ab2"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-ok.svg",
+      "bytes": 18300,
+      "sha256": "cc4224e70d772764b7a242482911c9aeca2d85d37ac77cd4695aed8747ad90ba"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-pink.png",
+      "bytes": 193729,
+      "sha256": "69e579f9ba9ad57fa96bb815ef7a7900f5bbdc342f64a2e403e8b1d4706b2c0a"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-rose.png",
+      "bytes": 194755,
+      "sha256": "5217463afe5ce39882f032cba7847f34532607362b40f6569945165bf7784910"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-sky.png",
+      "bytes": 192301,
+      "sha256": "0a13740c77ca82ac44b42d9c5ddd12e51928ba0fa1b182965cb60248c4e17630"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-thumbsup-black.png",
+      "bytes": 300316,
+      "sha256": "c58048c38b556fa9f10d968aeb45957dbfe6b9d16fe28e05a4f8f19764184741"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-thumbsup-white.png",
+      "bytes": 248782,
+      "sha256": "63e8a7cfd27da67d89f2039752a2ece5cb6667533972144415707d795ce4ad4f"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/mark-white.png",
+      "bytes": 169435,
+      "sha256": "e5c991b4e385ce8d61559a8154593c0e43e15dc0d9454b58629ce78bf2e032ba"
+    },
+    {
+      "file": "design/pack-points-and-drawings/assets/brand/tag-outline.png",
+      "bytes": 4305,
+      "sha256": "0253a895679791993fae834b19c0e3d536d731d033acf9a4bd87194cbaa14442"
+    },
+    {
+      "file": "design/pack-points-and-drawings/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/pack-points-and-drawings/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/pack-points-and-drawings/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/screenshot-2026-08-02-at-9-59-51-pm-msbxflvk-ty65.png",
+      "bytes": 336206,
+      "sha256": "769629381e4af2eb7ea5e100599cea6f660c29cafadb01cd8eca7889c747a83a"
+    },
+    {
+      "file": "design/screenshot-2026-08-10-at-7-50-40-pm-msn8c7hw-worl.png",
+      "bytes": 95581,
+      "sha256": "65df1bd54e6bd4095f5e87408b3bab5b06a01d10e01bb24ce63df9fc377ba50c"
+    },
+    {
+      "file": "design/screenshots/four-steps.png",
+      "bytes": 381180,
+      "sha256": "0cb27f70a3c6e897588a6fb154594d3fe2fe0015b229172e8f95b7dbf0a6b033"
+    },
+    {
+      "file": "design/screenshots/step-04.png",
+      "bytes": 311110,
+      "sha256": "f3fc087234df34023e377cfe0edabbd23880b64c8d9c18174c8e816ffaf3ab70"
+    },
+    {
+      "file": "design/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/uploads/\"Goodbye ALS\"-4-cdcb15f6.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/uploads/\"Goodbye ALS\"-4.png",
+      "bytes": 118900,
+      "sha256": "cdcb15f636a544ef1af628155344a34a505153be91e5743a86bf42cf20f8634f"
+    },
+    {
+      "file": "design/uploads/0.jpg",
+      "bytes": 6199,
+      "sha256": "0d1267e37429a1fbe9f00f3712219bc9daea24395626b7fb894faa5885ab1b7c"
+    },
+    {
+      "file": "design/uploads/1.png",
+      "bytes": 241170,
+      "sha256": "345efba60679f11a5bfdfe990b69201fd47ef81b32a058a88b475419584fce99"
+    },
+    {
+      "file": "design/uploads/1.svg",
+      "bytes": 23777,
+      "sha256": "2f1b0f522c1bab2df49e03e5efa0fa2a39ea964577467213ed350828be3dda55"
+    },
+    {
+      "file": "design/uploads/10.svg",
+      "bytes": 48997,
+      "sha256": "1aacdf41936a8193624687ceebab85ac85af458afed50244139b36440f1f88e8"
+    },
+    {
+      "file": "design/uploads/13.svg",
+      "bytes": 23777,
+      "sha256": "c0ac6c828a542e9507f3091d95b2ac8c4e8f2488ce18e4582e2e1a5f5853f485"
+    },
+    {
+      "file": "design/uploads/18.svg",
+      "bytes": 46384,
+      "sha256": "f0cbb820ef4b2fa1870ae57397b2ec4f448d9e9c10b0f594cd5d18729c220ed1"
+    },
+    {
+      "file": "design/uploads/2-828ac67e.png",
+      "bytes": 123955,
+      "sha256": "828ac67ebcc6fd7f1ad0b6d1462c7306a37a1d040786cde1cfcdf38480398a1f"
+    },
+    {
+      "file": "design/uploads/2.png",
+      "bytes": 223340,
+      "sha256": "ebc709a461e25b9d9395169ccc6a91b76002f5f579b4ddb60da84ea5782dfe94"
+    },
+    {
+      "file": "design/uploads/2.svg",
+      "bytes": 23928,
+      "sha256": "cb8809bf4b2dd1314b04da065dc54840fca81bea405f1438f86a7ced04d1727e"
+    },
+    {
+      "file": "design/uploads/21.svg",
+      "bytes": 37691,
+      "sha256": "bdabe37188dd2f8a2328f4a2709afd100961f6badb8c4f3c4d08b0d5e9806069"
+    },
+    {
+      "file": "design/uploads/22.svg",
+      "bytes": 31456,
+      "sha256": "d35020482678db6673d728e126b3b6999471f5657fc7d35db5d100391066a30f"
+    },
+    {
+      "file": "design/uploads/3.png",
+      "bytes": 217906,
+      "sha256": "0ad0b0669f2787dad2da0e8837a89dcc17ba0594c34ee218eace6bb668a63b7d"
+    },
+    {
+      "file": "design/uploads/3.svg",
+      "bytes": 25913,
+      "sha256": "b65780b563924a796d22d6eb18454428d80a052cc38c153a494ba9225ee89ee7"
+    },
+    {
+      "file": "design/uploads/4.png",
+      "bytes": 223982,
+      "sha256": "81c7b1b20204d08dc2f3932714c49f57dcbc005e95daf6d3267e45b5b014815d"
+    },
+    {
+      "file": "design/uploads/5.png",
+      "bytes": 221696,
+      "sha256": "dbb7f39ee7a8cd9660b76a937a5cabf8ffb7109be11f4df71d13c428441515b9"
+    },
+    {
+      "file": "design/uploads/6.png",
+      "bytes": 120163,
+      "sha256": "5ffdbc6233e1cc15cf916c42d447a656228039f29ff3a66c73aec60998989630"
+    },
+    {
+      "file": "design/uploads/6.svg",
+      "bytes": 26207,
+      "sha256": "f5c4d674a738e548899c46ac8a1e81aa66a22a33a9337306a9779c2766bd5a2b"
+    },
+    {
+      "file": "design/uploads/Add a Heading - 1.jpg",
+      "bytes": 11832,
+      "sha256": "110e4ef658c9bb4a419e2c466b257023a46d9ccfe6a27afd64335f902eab94e8"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Exercise.dc.html",
+      "bytes": 49453,
+      "sha256": "c926022e38954684f6a2b2a708acf5be02a2c480b6855308bb910f37bef9e79d"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Front Porch.dc.html",
+      "bytes": 23449,
+      "sha256": "90e0f12be7a734bdb2df424d21242b019ddb60fa3de5904ed83b5b297898cff9"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Journal.dc.html",
+      "bytes": 15591,
+      "sha256": "c220d2abed2ac81d4cca918f4b97edb8736677f6fe26dd026f9f9ab987ac5935"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Notes.dc.html",
+      "bytes": 15560,
+      "sha256": "c6277d9d16d0d12a452ed416c4cb675ca51dbd3fb32b6d0b5fed3d8ca99ea38e"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Timer.dc.html",
+      "bytes": 17294,
+      "sha256": "65c6e199f27676618d0693bfab1af43ce7e047ab41b8818cf7a13236961b7d4c"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS To-Do.dc.html",
+      "bytes": 49771,
+      "sha256": "7ac87310083ed5eec3d6819ce5bb6160ae5e1a7ff7d51abe63214740512358c3"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS Vault.dc.html",
+      "bytes": 22910,
+      "sha256": "1016b6e1fe0b797386c87ed36060e5328c1bb4a016698babecad17ba0706d0c0"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/BMACOS.dc.html",
+      "bytes": 28202,
+      "sha256": "524435664ad13c3119bf3a4347d0b52a1400320943ba03fb0d5371125e7a6811"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/README.md",
+      "bytes": 15526,
+      "sha256": "ad97589de8b0c53f00a98b40ef65e1d1f12b9666c1d2abb061ecfca2146450a0"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/_ds/modernist-2b481624-82fa-4267-8613-0013031284a0/_ds_bundle.js",
+      "bytes": 303,
+      "sha256": "6138a8418649050c65574c0abd8394e05a58cfb233f29cc3c2502923753a18ca"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/_ds/modernist-2b481624-82fa-4267-8613-0013031284a0/styles.css",
+      "bytes": 10555,
+      "sha256": "cf9fcf75ac84dfe7517177eb14acf5a20ca4410c55691ab9879c6af7b2168400"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/assets/bmacos-logo.png",
+      "bytes": 453382,
+      "sha256": "7b53f5f92e0093acd5ef1191eb4252a2b2d7615ae5eefdd0e3da35fc75670135"
+    },
+    {
+      "file": "design/uploads/BMACOS mobile prototype/support.js",
+      "bytes": 69150,
+      "sha256": "8fe7df74405f3c55f49b7249c74ea1397e65d07dea2b1bd3b4a489bec2e28cbe"
+    },
+    {
+      "file": "design/uploads/Founding Hello Hangout-2.png",
+      "bytes": 532993,
+      "sha256": "6bdae1dece49f25893a5948021b2c1f5fa1a685315c9c39200ed4c343acb9dbc"
+    },
+    {
+      "file": "design/uploads/Founding Hello Hangout-2.svg",
+      "bytes": 44604,
+      "sha256": "c551cf6743be208dfb20c38dfae013a3078f93c037f0c755662d8a3d50f15125"
+    },
+    {
+      "file": "design/uploads/Founding Hello Hangout.png",
+      "bytes": 370596,
+      "sha256": "4e6327f1039788be53a4519e81a0dc558495f3777d5b4e7558a6ba97bc9eec7c"
+    },
+    {
+      "file": "design/uploads/Founding Hello Hangout.svg",
+      "bytes": 44388,
+      "sha256": "07f48a2becc85a5db480447bef5522b8d5a899cdca82dbf999490d14bde7f172"
+    },
+    {
+      "file": "design/uploads/Group 1261154621-952a8922.png",
+      "bytes": 361843,
+      "sha256": "952a8922b8aa509fcee23a2dc4ab8005deb6748f2eca4cc0ec265fd60d35f766"
+    },
+    {
+      "file": "design/uploads/Group 1261154621.png",
+      "bytes": 361843,
+      "sha256": "952a8922b8aa509fcee23a2dc4ab8005deb6748f2eca4cc0ec265fd60d35f766"
+    },
+    {
+      "file": "design/uploads/Group 1261154626-dc4db9c4.png",
+      "bytes": 291338,
+      "sha256": "dc4db9c44ca6068afe2cddd93ce54bcf58712dafc0b06464088a885faba192e7"
+    },
+    {
+      "file": "design/uploads/Group 1261154626.png",
+      "bytes": 291338,
+      "sha256": "dc4db9c44ca6068afe2cddd93ce54bcf58712dafc0b06464088a885faba192e7"
+    },
+    {
+      "file": "design/uploads/Group 1261154627-adb4fc11.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/uploads/Group 1261154627.png",
+      "bytes": 289088,
+      "sha256": "adb4fc11deb148405e88b046bed103102fe9ca308ec7eb028e7af05325a8e6bb"
+    },
+    {
+      "file": "design/uploads/Group 1261154628.png",
+      "bytes": 349824,
+      "sha256": "eef6052d02784b0ff776be1e76b9bba98d968bd736889398b53fd9da02749314"
+    },
+    {
+      "file": "design/uploads/Hootzas.dc.html",
+      "bytes": 77534,
+      "sha256": "61c3833ede4bc7f207107dc33419556e3b9c20a2433f72ca1b6051cc818f19f3"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-02 at 8.27.15 PM.png",
+      "bytes": 61027,
+      "sha256": "c0d2c514b7b7bc3069c939a1dad42f8dae54e249cbf07d4b6cf6ea71ca2c9055"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-02 at 9.18.24 PM.png",
+      "bytes": 69222,
+      "sha256": "b163948e3d9ae1c7ea9e3435d1e5f0eed235644c3eaadfa68582836d452388d6"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-07 at 10.13.02 PM.png",
+      "bytes": 90191,
+      "sha256": "2dcf0ee9191192c0216715a02870fc99d79023b440f385bbd55ecab29a880be5"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-08 at 1.21.07 PM.png",
+      "bytes": 61082,
+      "sha256": "6d670d003001f9f179993310cbbbe6c89ea9b01393972776856781cbae59bde2"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-08 at 1.28.47 PM.png",
+      "bytes": 386710,
+      "sha256": "83667a7ffc7646580c2ecc8bcb20ea9cc312eeb326094e52e4cde6f000702dae"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-08 at 1.29.42 PM.png",
+      "bytes": 286775,
+      "sha256": "71e1eacad77d090216040034a06d7babf49c9e337bb981bd8e59ef9e47223f2e"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-08 at 9.17.24 PM.png",
+      "bytes": 15925,
+      "sha256": "d98ff1e5b755b354444c6c66e6e5c329f1050ba6115301afa00db01a99bb3062"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-09 at 12.55.16 PM.png",
+      "bytes": 488704,
+      "sha256": "c9fae28651e3117eaad35706de59359b8725304fe58d56fd216fb3d9cae835f6"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-09 at 6.29.41 PM.png",
+      "bytes": 1053862,
+      "sha256": "23fc1bd04cdd27183f14fb8486bc60ff7c8909e247a93aa55b0e7b22fe867782"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-09 at 6.30.14 PM.png",
+      "bytes": 1057219,
+      "sha256": "b6550eed006ac3c8116f836794fea583584b0614325125b84c5be53fdf566e81"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 2.59.15 AM.png",
+      "bytes": 32656,
+      "sha256": "85ad90b64bea6833b0c16234c6bdd31524325262ebcf2f25439e802d106d63ce"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.14.13 AM.png",
+      "bytes": 92048,
+      "sha256": "e3e6ee6fced6fd2243dbf76cfea0713b53517919a8b63c318f94b9bc8f4ec42d"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.15.14 AM.png",
+      "bytes": 126147,
+      "sha256": "0f872f68d5d6063c58eeee3c3262ed5842d514de3ef0f11f1ebb4c9d8ea2f626"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.15.30 AM.png",
+      "bytes": 69993,
+      "sha256": "958e3ddabcf7ae728fdfe4a76d0ff25b66bb088a0cfa57a027271a5b75f6f91f"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.21.45 AM.png",
+      "bytes": 79295,
+      "sha256": "cc14eacbb55e66ae6728eefca62e0dcb2fb78784cf717029ff540d279d3be316"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.21.56 AM.png",
+      "bytes": 136481,
+      "sha256": "87186ac6e65f6dddf0bf62b3ddf8a2f36438df6fae9054ea49b829b614bed3a4"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.22.11 AM.png",
+      "bytes": 121375,
+      "sha256": "75824e6d9754458898eb123ce7ced5b07e88ec2b65b636d53f6b13861b787d45"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.26.48 AM.png",
+      "bytes": 161348,
+      "sha256": "44d1eec4f19ce8959893597bfd6e02b0b599d4ee77e356f24ebe584b1f9100d9"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.27.32 AM.png",
+      "bytes": 176567,
+      "sha256": "bc12067540847a96a0e40b5e8d12c0cb46534af6a3c4066ed563eaeb207e0e0b"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 3.28.33 AM.png",
+      "bytes": 95533,
+      "sha256": "095b87042b7f43254dce1d871271a5447707b126ab99e5bf2d76bd64a07ec222"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 5.21.10 PM.png",
+      "bytes": 142977,
+      "sha256": "05c518a3e9c46d8430c2acd413e1aa295de1d59decf595599c1c11110220e6bb"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-10 at 5.22.16 PM.png",
+      "bytes": 101913,
+      "sha256": "06a6ff1eb44052c25c37433e8381d54fd30c1909b15c0bf909fe16ebf17b388c"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-12 at 4.56.43 PM.png",
+      "bytes": 92239,
+      "sha256": "f80e811b33f2bc0df8a30033be0d63f3a6ee31b6c2f886c88f9d273d7083a5be"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-12 at 4.58.01 PM.png",
+      "bytes": 88737,
+      "sha256": "eb659b949457e15e64e076bc7ff04cef53e712a0b6859e2c145b87735f5fe9c5"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-22 at 6.47.52 PM.png",
+      "bytes": 10236,
+      "sha256": "bb48c0667292b5be98eef508c4dd7db3f615e5fef67d7168f3c6f4dc5844599c"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-22 at 6.48.00 PM.png",
+      "bytes": 10279,
+      "sha256": "f55a0e5301c31c10d181577a926ef6478ec75e3b15a4b3708e2d534e12ae5e9d"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.12.42 AM.png",
+      "bytes": 380541,
+      "sha256": "b9448b353c9d9e664694b00c5e41a892e0b381977e54091fdaee40cf3fed2f92"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.25.06 AM.png",
+      "bytes": 422393,
+      "sha256": "e547f5fb9652cea157dcce060459fdb901162f3e1c1520d171caa817ec1f907c"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.27.10 AM.png",
+      "bytes": 486856,
+      "sha256": "c4e9db3cc389bbb8e6f308590968c2cc42848ca95540442fa4960436950683a2"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.30.46 AM.png",
+      "bytes": 701447,
+      "sha256": "36201ed270995acdbc6403aece3d6b7d3b70a75b776909dd4604389548fe93da"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.32.52 AM.png",
+      "bytes": 503578,
+      "sha256": "4a9062bd516c3fb97a7294970630805153bdc6f6a38dffe564ec4b583bc19d9f"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.33.19 AM.png",
+      "bytes": 494020,
+      "sha256": "204f1c1a05ab9eead51a3c5ca1b20167db62485b4d0420f1625dcfb8da9d20c6"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.44.34 AM.png",
+      "bytes": 12823,
+      "sha256": "d11b4363712946450eed219146e506938600cca7430a2211fa4f974c30ebd474"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.48.00 AM.png",
+      "bytes": 509760,
+      "sha256": "7a7a35fa36b763e52f5665ebe6f791404f8a88f8618617ff7161e8cf9a84f5eb"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 7.49.40 AM.png",
+      "bytes": 267945,
+      "sha256": "c199428661d64a4b92e0cc44dddd36958a697d6f30fbcbcad3efa552e3039567"
+    },
+    {
+      "file": "design/uploads/Screenshot 2026-08-27 at 8.51.11 AM.png",
+      "bytes": 434108,
+      "sha256": "c1a9b187aa0a73b209953910d44ae25867ca9ebfa6a875f3dd516d53a121c8ce"
+    },
+    {
+      "file": "design/uploads/Untitled design-10.png",
+      "bytes": 390914,
+      "sha256": "8212044948178758733bc238dc525080bf112883b608da32b20a35034356f2d7"
+    },
+    {
+      "file": "design/uploads/Untitled design-11.png",
+      "bytes": 1593878,
+      "sha256": "9d3a433ff8ca328ef5921f7b4705e2adc39cc5bf9e88f785b8383a83521340c6"
+    },
+    {
+      "file": "design/uploads/Untitled design-7.png",
+      "bytes": 336225,
+      "sha256": "45e572cd71b2887d548c113effb2bf19423c539f33bd06c73cf2002948cbc369"
+    },
+    {
+      "file": "design/uploads/Untitled design-7.svg",
+      "bytes": 3001,
+      "sha256": "73ca7b96410c3899e29896e43638119d706a583a00affe79a30449c6ec3a64a2"
+    },
+    {
+      "file": "design/uploads/ambassador mockup.png",
+      "bytes": 11028665,
+      "sha256": "a23dd4098e502149fdf98ddbe2aa62b2da016b2560b731501472483a8f41f6bc"
+    },
+    {
+      "file": "design/uploads/athleisure-styled-t-shirt-mockup-featuring-a-woman-with-sunglasses-32444-2.png",
+      "bytes": 4074660,
+      "sha256": "823adf26d5e36e2018aa710bb0cdafb7ec79e69475c7e15bdf5576409d937f74"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/CLAUDE.md",
+      "bytes": 8304,
+      "sha256": "df85c44619bbf863732762c22024f50d2763fc1b7cb90ecda7126f2cbb0ac04c"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/MANIFEST.txt",
+      "bytes": 3891,
+      "sha256": "c0bb1d0cf3acc641486e1ad8be3e3b68fe70dd49ec6c9318036c27ea013e8bfd"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/CHANGELOG.md",
+      "bytes": 72899,
+      "sha256": "a6e1935850e4d7e856f7b07a95bc47db5300e2c3b84a33b42cbcf79158b44725"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/RULES.md",
+      "bytes": 71473,
+      "sha256": "52ae4d92a9aad476a29b7d279c6a9794aad7c09ea0687d707fc979b1c938caf0"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/SCREEN-REGISTER.md",
+      "bytes": 47556,
+      "sha256": "16972acf57ae1c47cc54be938db0811752a93c7c20082ae8c42baf3feb709209"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/SCREENS.md",
+      "bytes": 16583,
+      "sha256": "7c206838d2d87b33aba92546414fba1760e181abbdb3310b16cc772bc8154e3c"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/00_HOW-THIS-KB-WORKS.md",
+      "bytes": 9278,
+      "sha256": "ae4ac246412bc1a5028ec59f6104501e1b3fc599e3cc8f4ac318195591e7b195"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/01_PRODUCT.md",
+      "bytes": 11089,
+      "sha256": "da7eac53219f7eee05b5f725ddf421780808e85450c1cf78a3c2bdfca279c18d"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/CHANGELOG.md",
+      "bytes": 73684,
+      "sha256": "88d09842b17918bb2474a07444e20dad0a0c26a05101091f27d8f0f121332999"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/MONEY.md",
+      "bytes": 21550,
+      "sha256": "e1eb3574d3a92a71c650841c3a78e0eb4a9aa8b8f287c8b70b8c8983ff222964"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/ROLE-1-INDIVIDUAL.md",
+      "bytes": 9530,
+      "sha256": "da7781db4763567c1dbdc3536ec9d173ce411af146f0cdcc45598aca4dd2edcc"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/ROLE-2-HANGOUT.md",
+      "bytes": 7523,
+      "sha256": "31bff71874cc16e92a3b8578914f8bcbe186cb474aa5d8cbe6b8ef3194214100"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/ROLE-3-AMBASSADOR.md",
+      "bytes": 11288,
+      "sha256": "abc20f188e3cef6d3af7ca6cd3f82ffc1736650fce9e003a60fa8dbe437c5b83"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/ROLE-4-INFLUENCER.md",
+      "bytes": 5605,
+      "sha256": "dd3a0aad020b4b234015ebd9e0341eb700d4ee06deed262875f79bb23d2d637b"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/ROLE-5-ORGANIZATION.md",
+      "bytes": 4509,
+      "sha256": "2072cffe6cb6d4e357585bfceac1c844838dcc016bbbd53b1f9fc5e0d550a045"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/SCREENS.md",
+      "bytes": 10749,
+      "sha256": "c7fb4d18441eb8ec44df98bb10bd70a59272424a04575018f1dfab4eb5abe54b"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/TODO.md",
+      "bytes": 5621,
+      "sha256": "52df5659ba002c3fbd459d1ece3823a035194b290e7ef7915923c308f223af9a"
+    },
+    {
+      "file": "design/uploads/canon-2026-08-24/docs/canon/WHERE-EVERYTHING-IS.md",
+      "bytes": 9443,
+      "sha256": "569b0cbd320b1f7a496beec4342c91886cc99a4a7aa373eace3b19768191f907"
+    },
+    {
+      "file": "design/uploads/denim-jacket-mockup-of-a-woman-in-a-cool-pose-32568.png",
+      "bytes": 6203652,
+      "sha256": "8eea34f5c5c8addb4fdc8fca36070a211e2c696f077a079e3137f4f4e308d2a6"
+    },
+    {
+      "file": "design/uploads/dreaming-font-2/Befonts-License.txt",
+      "bytes": 74,
+      "sha256": "da0b8690744e850d72a6d707d6508aa6fc41c8545a1323320bd81496771cee7b"
+    },
+    {
+      "file": "design/uploads/dreaming-font-2/Dreaming-BF67894f0f5bbf0.otf",
+      "bytes": 192028,
+      "sha256": "11aeacbace47fbc79f85418dbc5dcf3f20e8ae8bb0d92a4ef2729b11cb0a18b3"
+    },
+    {
+      "file": "design/uploads/enhanced_Convert Low-Res Image to Vector.png",
+      "bytes": 1685273,
+      "sha256": "afbd4e4e73956842af1e5182416bf7fad798d0628cf3928c8999745666f89399"
+    },
+    {
+      "file": "design/uploads/mockup-of-a-beautiful-brunette-woman-wearing-a-pom-pom-beanie-24632.png",
+      "bytes": 5028222,
+      "sha256": "441d0a8a09def07a9d08d5a1d2c7b76ace6c92d079cbccea18e53fc74bf8c310"
+    },
+    {
+      "file": "design/uploads/mockup-of-a-smiling-girl-holding-a-phone-case-22885-5869d116.png",
+      "bytes": 4146268,
+      "sha256": "5869d11660f902750ad05c5ca9c527e153d85016b55798d25cf1415e09c75b24"
+    },
+    {
+      "file": "design/uploads/mockup-of-a-smiling-girl-holding-a-phone-case-22885.png",
+      "bytes": 4146268,
+      "sha256": "5869d11660f902750ad05c5ca9c527e153d85016b55798d25cf1415e09c75b24"
+    },
+    {
+      "file": "design/uploads/mockup-of-a-woman-pointing-at-her-polo-shirt-33543-3c2cfe5d.png",
+      "bytes": 4813538,
+      "sha256": "3c2cfe5dc53500022d86c7faa36793b33bb10298dc84911790cd084740346d79"
+    },
+    {
+      "file": "design/uploads/mockup-of-a-woman-pointing-at-her-polo-shirt-33543.png",
+      "bytes": 4813538,
+      "sha256": "3c2cfe5dc53500022d86c7faa36793b33bb10298dc84911790cd084740346d79"
+    },
+    {
+      "file": "design/uploads/phone-case-mockup-featuring-a-woman-in-a-hijab-32417.png",
+      "bytes": 4898764,
+      "sha256": "f4be86e17c7269dd0b25deff548e8b83082b157bcec02c72b1a60fffbcae658b"
+    },
+    {
+      "file": "design/uploads/pullover-hoodie-mockup-of-an-ai-created-man-inspired-by-a-video-game-m37997.png",
+      "bytes": 9587990,
+      "sha256": "ae00b9a711c63556cdacf6f26408c46b6b2d3a3334b2b42b2398e5f24017e069"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/AGENTS.md",
+      "bytes": 8396,
+      "sha256": "03bb374fab2042b91f16064c314bc39cf5308d45c3cbb075af4e0c4dbf063e15"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/CLAUDE.md",
+      "bytes": 8396,
+      "sha256": "e424b229e77cd2a4295029edb7256504402f4d33dd0e1985c59aa4700da3c400"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/MANIFEST.txt",
+      "bytes": 3012,
+      "sha256": "69b9a97f99ba17de0557be0af6b5966211024bc05112f2701293bc816834975d"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/FINDING-2026-08-26-B.md",
+      "bytes": 9852,
+      "sha256": "551b24ec38fcb0dc9691eada586dfd0efd35c7d968bef0a3ee0e71fbe2d47509"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/RULES.md",
+      "bytes": 82141,
+      "sha256": "b4d2bcbff51e3db9f6f9e849e453d9b8ee4dcbcc82ea868930ad179d5d0ad1f5"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/SCREEN-REGISTER.md",
+      "bytes": 47854,
+      "sha256": "19d3c7468ebd2d9071162206485e41b3826579070c58bd1718d626d6d437d7ba"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/00_HOW-THIS-KB-WORKS.md",
+      "bytes": 9841,
+      "sha256": "83e92a8ab7f77eb81604013d5d1893d69f7bb42f5959e70a0c848c8c4dc940cb"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/01_PRODUCT.md",
+      "bytes": 10874,
+      "sha256": "8d4c9d66cc303f2eec50966578682b73e8ec45c9e86f4c68ddc147d66ad27d87"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/CHANGELOG.md",
+      "bytes": 134870,
+      "sha256": "494014271817173bd618adf7793668a8edcd27ed4f0a2a7049d887311ef79e88"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/MONEY.md",
+      "bytes": 23205,
+      "sha256": "daee2356f93a8293134cd0e6af77d18190561a23a2dfca1d885b4ca380d6d3ba"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/ROLE-1-INDIVIDUAL.md",
+      "bytes": 9093,
+      "sha256": "01355d4e7daa015a9ce6f7a17169fa538f096c196c24f3d0734559afc8944446"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/ROLE-2-HANGOUT.md",
+      "bytes": 6581,
+      "sha256": "7287db72bcd2e3d12d73b819384823914a0724539021494d4f6a30d06010ea53"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/ROLE-3-AMBASSADOR.md",
+      "bytes": 9323,
+      "sha256": "90b699be7f2ab84aa1b70e4624c02a4ce376ad1492b76d22f723b9cf7680d97a"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/ROLE-4-INFLUENCER.md",
+      "bytes": 4854,
+      "sha256": "afaeeacfd5c97a6618e52f035f1020639a9053012aa3b4979de81fe960f9845c"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/ROLE-5-ORGANIZATION.md",
+      "bytes": 4040,
+      "sha256": "e3a5bb4f6da4a033584fce23ae4311ef4ed4fe57a6745799990e79f23879857f"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/SCREENS.md",
+      "bytes": 26942,
+      "sha256": "772eb4e8cbb716e82ea38c6488c1115b9fdb26e8ec3774a4ee332190bca55b37"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/TODO.md",
+      "bytes": 10024,
+      "sha256": "64200f6b535879b0a8726d5025ed547408d10dcf35d8c85a7a0584728cfa5a47"
+    },
+    {
+      "file": "design/uploads/sayhello-canon-2026-08-26-B/docs/canon/WHERE-EVERYTHING-IS.md",
+      "bytes": 9405,
+      "sha256": "8c7ca9b8a63f281734b2648725d3c655d9c60c887a3930a10c7915f06455e341"
+    },
+    {
+      "file": "design/uploads/screencapture-lovable-dev-projects-69c7d299-8b10-4c95-a6f1-ecb70d3597e1-2026-08-02-20_14_43.png",
+      "bytes": 15911889,
+      "sha256": "a5744f3cb2f7f456b1f5b731bed96a2d4e1d6118ec6ee5881086ad7ffbd29f2f"
+    },
+    {
+      "file": "design/uploads/screencapture-lovable-dev-projects-69c7d299-8b10-4c95-a6f1-ecb70d3597e1-2026-08-02-20_15_15.png",
+      "bytes": 7538684,
+      "sha256": "962075e6b1453af351d4f2b1abec4530d84f82a0190f54933dc4226e2bd3aa2c"
+    },
+    {
+      "file": "design/uploads/sublimated-bucket-hat-mockup-of-a-happy-woman-posing-in-a-studio-m37548.png",
+      "bytes": 6513748,
+      "sha256": "687633b4bb8a77a89dfb2923992a7d2370a20a454ee698ada950a69266dbcd9c"
+    },
+    {
+      "file": "design/uploads/tote-bag-mockup-featuring-a-happy-tattooed-person-sitting-on-a-couch-m39049.png",
+      "bytes": 10462326,
+      "sha256": "2f553a8be063617c44391d2551ce25420a81cce9ebf74787ff503b61e1a7f033"
+    },
+    {
+      "file": "design/uploads/umbrella-mockup-featuring-a-woman-walking-down-the-street-30740.png",
+      "bytes": 5571526,
+      "sha256": "b547df44218ce511730fd8e29b9af88a6c57f031ceb7ec992174a92db6a4fd3d"
+    }
+  ]
+}
