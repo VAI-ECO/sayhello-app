@@ -1,0 +1,47 @@
+{
+  "name": "sayhello-app",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^3.1.1",
+    "expo": "~57.0.11",
+    "expo-camera": "~57.0.5",
+    "expo-image-picker": "~57.0.1",
+    "expo-linear-gradient": "~57.0.1",
+    "expo-location": "~57.0.1",
+    "expo-notifications": "~57.0.1",
+    "expo-router": "~57.0.11",
+    "expo-secure-store": "~57.0.1",
+    "expo-status-bar": "~57.0.1",
+    "react": "^19.2.8",
+    "react-dom": "19.2.8",
+    "react-native": "0.86.2",
+    "react-native-qrcode-svg": "^6.3.24",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-screens": "~4.26.0",
+    "react-native-svg": "15.15.4",
+    "react-native-web": "0.21.3"
+  },
+  "devDependencies": {
+    "@react-native/jest-preset": "^0.86.2",
+    "@testing-library/react-native": "^14.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/react": "~19.2.2",
+    "jest": "^29.7.0",
+    "jest-expo": "^57.0.3",
+    "jsqr": "^1.4.0",
+    "ts-jest": "^29.4.12",
+    "typescript": "~5.9.2"
+  },
+  "scripts": {
+    "check:routes": "node scripts/check-route-tree.cjs",
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "private": true
+}
