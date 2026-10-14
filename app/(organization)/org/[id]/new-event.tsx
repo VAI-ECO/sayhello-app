@@ -1,0 +1,206 @@
+/**
+ * ORG HOOTZA COMPOSE — CANON-RL-05-SN-07 (cover charge display-only). Lead-attributed Hootza on the one Hootza model.
+ * GET /api/organizations/:id/dashboard (quota), POST /api/organizations/:id/events.
+ * Free posts stop when exhausted; there is no paid extra. No recurring Hootzas (§28.3). End time optional (§28.9).
+ */
+import { useEffect, useState } from 'react';
+import { Text, Switch, View, StyleSheet } from 'react-native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { Button, TextInput } from '../../../../src/components';
+import { t } from '../../../../src/i18n';
+import { Colors } from '../../../../src/theme/tokens';
+import { useLoader } from '../../../../src/lib/use-loader';
+import { getOrgDashboard, createOrgEvent, type OrgVenue } from '../../../../src/api/organizations';
+import { postHootzaAgain } from '../../../../src/api/hootzas';
+import { LocationPicker } from '../../../../src/components/hootza/LocationPicker';
+import { OrgScreen, Loading, ErrorState, Note, Choice, orgStyles } from '../../../../src/components/organization/parts';
+
+function parseLocal(date: string, clock: string): Date | null {
+  const d = /^(\d{4})-(\d{2})-(\d{2})$/.exec(date.trim());
+  const c = /^(\d{1,2}):(\d{2})$/.exec(clock.trim());
+  if (!d || !c) return null;
+  const out = new Date(Number(d[1]), Number(d[2]) - 1, Number(d[3]), Number(c[1]), Number(c[2]));
+  return Number.isNaN(out.getTime()) ? null : out;
+}
+
+/** Whole positive minutes only; anything else is null, never a substituted default. */
+function parseMinutes(text: string): number | null {
+  const trimmed = text.trim();
+  if (!/^\d+$/.test(trimmed)) return null;
+  const value = Number(trimmed);
+  return Number.isSafeInteger(value) && value > 0 ? value : null;
+}
+
+export default function OrganizationNewEvent() {
+  const router = useRouter();
+  const { id, fromHootzaId } = useLocalSearchParams<{ id: string; fromHootzaId?: string }>();
+  const { state, data, retry } = useLoader(() => getOrgDashboard(id));
+  const [title, setTitle] = useState('');
+  const [details, setDetails] = useState('');
+  const [date, setDate] = useState('');
+  const [start, setStart] = useState('');
+  const [end, setEnd] = useState('');
+  const [grace, setGrace] = useState('');
+  const [cover, setCover] = useState('');
+  const [onFeed, setOnFeed] = useState(false);
+  const [chatOn, setChatOn] = useState(false);
+  const [adultsOnly, setAdultsOnly] = useState(false);
+  const [hostModeOn, setHostModeOn] = useState(false);
+  const [everyText, setEveryText] = useState('');
+  const [windowLen, setWindowLen] = useState('');
+  // Carried from "post again" so the new event keeps the earlier place; a fresh compose leaves these to the server (the group's meeting place).
+  const [venue, setVenue] = useState<OrgVenue | undefined>(undefined);
+  const [place, setPlace] = useState<{ name?: string; lat?: number; lng?: number }>({});
+  const [copied, setCopied] = useState<'none' | 'ok' | 'failed'>('none');
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // "Post again" from an ended organization Hootza: copy its details; date and time stay empty (no recurring, §28.3).
+  useEffect(() => {
+    if (!fromHootzaId) return;
+    let live = true;
+    void postHootzaAgain(fromHootzaId).then((res) => {
+      if (!live) return;
+      const tpl = res.data?.template;
+      if (res.error || !tpl) { setCopied('failed'); return; }
+      setTitle(tpl.title);
+      setDetails(tpl.description ?? '');
+      setVenue(tpl.venueType);
+      setPlace({
+        name: tpl.locationName ?? undefined,
+        lat: tpl.locationLat ?? undefined, lng: tpl.locationLng ?? undefined,
+      });
+      if (tpl.coverChargeAmount && tpl.coverChargeAmount > 0) setCover(String(tpl.coverChargeAmount / 100));
+      setCopied('ok');
+    });
+    return () => { live = false; };
+  }, [fromHootzaId]);
+
+  if (state === 'loading') return <Loading />;
+  if (state === 'error') return <ErrorState message={t('organizations.common.couldNotLoad')} onRetry={retry} onBack={() => router.back()} />;
+  const quota = data!.quota;
+  const canFeed = quota.remaining > 0;
+  const closed = data!.organization.status === 'closed';
+  // The event's venue type is declared and displayed like every Hootza (§28.2); it starts as the group's own. A public event of a
+  // private-residence group must name its own place: the group's home is never copied in as a public address (server rule).
+  const eventVenue: OrgVenue = venue ?? data!.organization.venueType;
+  const needsOwnPlace = data!.organization.venueType === 'private_residence' && eventVenue === 'public_place' && !(place.name ?? '').trim();
+
+  const post = async () => {
+    const s = parseLocal(date, start);
+    const e = end.trim() ? parseLocal(date, end) : null;
+    if (!s || (end.trim() && !e) || (e && e <= s)) { setError(t('organizations.events.compose.badTime')); return; }
+    const everyMin = parseMinutes(everyText);
+    const openMin = parseMinutes(windowLen);
+    if (hostModeOn && (everyMin == null || openMin == null)) { setError(t('hootzas.howItRuns.validationMinutes')); return; }
+    const dollars = cover.trim() ? Number(cover.replace(/[^0-9.]/g, '')) : null;
+    setBusy(true); setError(null);
+    const res = await createOrgEvent(id, {
+      title: title.trim(), description: details.trim() || undefined, startTime: s.toISOString(), scheduledEndTime: e ? e.toISOString() : null,
+      endGraceMinutes: e && /^\d+$/.test(grace.trim()) ? Number(grace.trim()) : null,
+      venueType: eventVenue, locationName: place.name?.trim() || undefined, locationLat: place.lat, locationLng: place.lng,
+      coverChargeAmount: dollars && dollars > 0 ? Math.round(dollars * 100) : undefined, postToFeed: onFeed && canFeed,
+      adultsOnly, chatEnabled: chatOn,
+      hostMode: hostModeOn && everyMin != null && openMin != null ? { intervalMinutes: everyMin, windowLengthMinutes: openMin } : undefined,
+    });
+    setBusy(false);
+    if (res.error || !res.data) {
+      setError(res.error?.code === 'out_of_free_posts' ? t('organizations.events.compose.outOfPosts')
+        : res.error?.code === 'organization_closed' ? t('l06.events.closedGroup') : t('organizations.common.saveFailed'));
+      return;
+    }
+    router.replace({ pathname: '/(hootzas)/[id]', params: { id: res.data.hootza.id } });
+  };
+
+  return (
+    <OrgScreen title={t('organizations.events.compose.title')} onBack={() => router.back()}
+      footer={<Button title={busy ? t('organizations.events.compose.posting') : t('organizations.events.compose.post')} loading={busy} disabled={closed || !title.trim() || !date.trim() || !start.trim()} onPress={post} testID="org-event-post" />}>
+      {closed ? <Text style={orgStyles.error} testID="org-event-closed">{t('l06.events.closedGroup')}</Text> : null}
+      {copied === 'ok' ? <Text style={orgStyles.hint} testID="org-event-copied">{t('l06.events.postAgainNote')}</Text> : null}
+      {copied === 'failed' ? <Text style={orgStyles.hint} testID="org-event-copy-failed">{t('l06.events.postAgainFailed')}</Text> : null}
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.name')}</Text>
+      <TextInput value={title} onChangeText={setTitle} maxLength={200} testID="org-event-title" />
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.date')}</Text>
+      <TextInput value={date} onChangeText={setDate} placeholder="YYYY-MM-DD" testID="org-event-date" />
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.start')}</Text>
+      <TextInput value={start} onChangeText={setStart} placeholder="19:00" testID="org-event-start" />
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.end')}</Text>
+      <TextInput value={end} onChangeText={setEnd} placeholder="22:00" testID="org-event-end" />
+      {!end.trim() ? <Text style={orgStyles.hint}>{t('organizations.events.compose.endBlank')}</Text> : (
+        <>
+          <Text style={orgStyles.fieldLabel}>{t('hootzas.graceLabel')}</Text>
+          <TextInput value={grace} onChangeText={(v) => setGrace(v.replace(/[^0-9]/g, ''))} keyboardType="number-pad" testID="org-event-grace" />
+          <Text style={orgStyles.hint}>{t('hootzas.graceHint')}</Text>
+        </>
+      )}
+      <Text style={orgStyles.fieldLabel}>{t('hootzas.venue.pickOne')}</Text>
+      <Choice label={t('hootzas.venue.publicPlace')} hint={t('hootzas.venue.publicPlaceHint')} selected={eventVenue === 'public_place'} onPress={() => setVenue('public_place')} testID="org-event-venue-public" />
+      <Choice label={t('hootzas.venue.privateResidence')} hint={t('hootzas.venue.privateResidenceHint')} selected={eventVenue === 'private_residence'} onPress={() => setVenue('private_residence')} testID="org-event-venue-private" />
+      <Text style={orgStyles.fieldLabel}>{t('hootzas.venue.addressLabel')}</Text>
+      <LocationPicker
+        name={place.name ?? ''}
+        onName={(v) => setPlace((p) => ({ ...p, name: v }))}
+        lat={place.lat ?? null}
+        lng={place.lng ?? null}
+        onPin={(la, ln) => setPlace((p) => ({ ...p, lat: la ?? undefined, lng: ln ?? undefined }))}
+        placeholder={t('hootzas.venue.addressPlaceholder')}
+        testID="org-event-location"
+      />
+      {needsOwnPlace ? <Text style={orgStyles.hint} testID="org-event-needs-place">{t('l06.events.publicNeedsPlace')}</Text> : null}
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.details')}</Text>
+      <TextInput value={details} onChangeText={setDetails} multiline testID="org-event-details" />
+      <Text style={orgStyles.fieldLabel}>{t('organizations.events.compose.cover')}</Text>
+      <TextInput value={cover} onChangeText={setCover} keyboardType="decimal-pad" prefix="$" testID="org-event-cover" />
+      <Text style={orgStyles.hint}>{t('organizations.events.compose.coverNote')}</Text>
+      <View style={s.feed}>
+        <View style={{ flex: 1 }}>
+          <Text style={s.feedTitle}>{t('organizations.events.compose.feedTitle')}</Text>
+          <Text style={orgStyles.hint}>{canFeed ? t('organizations.events.compose.feedLeft', { n: quota.remaining }) : t('organizations.events.compose.feedNone')}</Text>
+        </View>
+        <Switch value={onFeed && canFeed} onValueChange={setOnFeed} disabled={!canFeed} testID="org-event-feed" />
+      </View>
+      <Text style={orgStyles.hint}>{t('organizations.events.compose.feedBody')}</Text>
+      <View style={s.feed}>
+        <View style={{ flex: 1 }}>
+          <Text style={s.feedTitle}>{t('hootzas.create.chatToggle')}</Text>
+          <Text style={orgStyles.hint}>{t('hootzas.create.chatToggleHint')}</Text>
+        </View>
+        <Switch value={chatOn} onValueChange={setChatOn} accessibilityLabel={t('hootzas.create.chatToggle')} testID="org-event-chat" />
+      </View>
+      <View style={s.feed}>
+        <View style={{ flex: 1 }}>
+          <Text style={s.feedTitle}>{t('hootzas.create.adultsToggle')}</Text>
+          <Text style={orgStyles.hint}>{t('hootzas.create.adultsToggleHint')}</Text>
+        </View>
+        <Switch value={adultsOnly} onValueChange={setAdultsOnly} accessibilityLabel={t('hootzas.create.adultsToggle')} testID="org-event-adults" />
+      </View>
+      <View style={s.feed}>
+        <View style={{ flex: 1 }}>
+          <Text style={s.feedTitle}>{t('hootzas.howItRuns.hostModeToggle')}</Text>
+          <Text style={orgStyles.hint}>{t('hootzas.howItRuns.hostModeToggleHint')}</Text>
+        </View>
+        <Switch value={hostModeOn} onValueChange={setHostModeOn} accessibilityLabel={t('hootzas.howItRuns.hostModeToggle')} testID="org-event-host-mode" />
+      </View>
+      {hostModeOn ? (
+        <View style={s.feed}>
+          <View style={{ flex: 1 }}>
+            <Text style={orgStyles.hint}>{t('hootzas.howItRuns.every')}</Text>
+            <TextInput value={everyText} onChangeText={setEveryText} keyboardType="number-pad" testID="org-event-host-interval" />
+            <Text style={orgStyles.hint}>{t('hootzas.howItRuns.minutes')}</Text>
+          </View>
+          <View style={{ flex: 1 }}>
+            <Text style={orgStyles.hint}>{t('hootzas.howItRuns.openFor')}</Text>
+            <TextInput value={windowLen} onChangeText={setWindowLen} keyboardType="number-pad" testID="org-event-host-window" />
+            <Text style={orgStyles.hint}>{t('hootzas.howItRuns.minutes')}</Text>
+          </View>
+        </View>
+      ) : null}
+      {error ? <Text style={orgStyles.error} testID="org-event-error">{error}</Text> : null}
+      <Note title={t('organizations.events.compose.recurringNote')} body={t('organizations.page.coverNote')} />
+    </OrgScreen>
+  );
+}
+const s = StyleSheet.create({
+  feed: { flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 1, borderColor: Colors.Line, borderRadius: 14, padding: 14 },
+  feedTitle: { fontSize: 16, fontWeight: '600', color: Colors.Ink },
+});
