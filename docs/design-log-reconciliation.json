@@ -1,0 +1,4737 @@
+{
+  "generated": "2026-09-19T06:35:52.143Z",
+  "warning": "The source CSV is known to contain stale totals and conflicting SNs. Matches are evidence, not automatic approval or proof of unique screen delivery. Unmatched rows are not automatically missing artwork.",
+  "source": "/Users/bmac/Documents/SayHello-Design-Preservation-2026-09-19/design/Screen log.csv",
+  "sourceStatusCounts": {
+    "DELIVERED": 148,
+    "DELIVERED 2026-08-26": 8,
+    "OWED - size": 22,
+    "IN PROGRESS": 6,
+    "DELIVERED 2026-09-02": 62,
+    "RETIRED HOLE": 1
+  },
+  "rows": [
+    {
+      "csvRecord": 2,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-03-D",
+      "Size": "D",
+      "Screen label": "Payout release queue",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - now Payouts",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 3,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-04-D",
+      "Size": "D",
+      "Screen label": "Price override",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - now Overrides",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 4,
+      "Status": "DELIVERED",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-02-D",
+      "Size": "D",
+      "Screen label": "Report review",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - now Reports",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "line": 122,
+          "label": "Code · desktop · support view",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 5,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-01-D",
+      "Size": "D",
+      "Screen label": "Admin settings",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - now Settings",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin.dc.html",
+          "line": 105,
+          "label": "Price override",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 6,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-02-T",
+      "Size": "T",
+      "Screen label": "Drawing runner",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - now Drawings",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        708
+      ]
+    },
+    {
+      "csvRecord": 7,
+      "Status": "DELIVERED",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-01-T",
+      "Size": "T",
+      "Screen label": "Audit log",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "Label ruled dead - Audit moved to CANON-00-SN-12",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        390
+      ]
+    },
+    {
+      "csvRecord": 8,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-05-P",
+      "Size": "P",
+      "Screen label": "A8 Find the business",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 165,
+          "label": "A4 Wrong venue's code",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 9,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-06-P",
+      "Size": "P",
+      "Screen label": "A9 Confirm details",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 196,
+          "label": "A5 Payouts · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        1440,
+        340
+      ]
+    },
+    {
+      "csvRecord": 10,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-01-P",
+      "Size": "P",
+      "Screen label": "A10 Photo of the place",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 46,
+          "label": "A8 Find the business",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 11,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-02-P",
+      "Size": "P",
+      "Screen label": "A4 Visit check-in - at the door",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 77,
+          "label": "A9 Confirm details",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 12,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-03-P",
+      "Size": "P",
+      "Screen label": "A4 Wrong venue's code",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 102,
+          "label": "A10 Photo of the place",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 13,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-04-P",
+      "Size": "P",
+      "Screen label": "A5 Payouts - phone",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 130,
+          "label": "A4 Visit check-in · at the door",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 14,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-04-D",
+      "Size": "D",
+      "Screen label": "A5 Payouts - desktop",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 15,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-08-D",
+      "Size": "D",
+      "Screen label": "DESKTOP - Commissions tracker",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        340
+      ]
+    },
+    {
+      "csvRecord": 16,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-10-D",
+      "Size": "D",
+      "Screen label": "DESKTOP - Visit history",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "line": 55,
+          "label": "DESKTOP · 11.1 Overview",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 17,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-01-D",
+      "Size": "D",
+      "Screen label": "DESKTOP - Influencer - two streams",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "Corrected 2026-09-03 - paid for life",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador and Influencer Panels.dc.html",
+          "line": 264,
+          "label": "DESKTOP · Influencer — two streams",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 18,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-09-T",
+      "Size": "T",
+      "Screen label": "DESKTOP - Pick a code",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        340,
+        1440,
+        375,
+        440
+      ]
+    },
+    {
+      "csvRecord": 19,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-07-T",
+      "Size": "T",
+      "Screen label": "DESKTOP - Code already taken",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        340
+      ]
+    },
+    {
+      "csvRecord": 20,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-11-P",
+      "Size": "P",
+      "Screen label": "A1 Earned and Building",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "line": 433,
+          "label": "MOBILE · 11.2 Portfolio",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 21,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-12-P",
+      "Size": "P",
+      "Screen label": "A2 My Hello Hangouts",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 22,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-13-P",
+      "Size": "P",
+      "Screen label": "A3 Queue offer",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 23,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-14-P",
+      "Size": "P",
+      "Screen label": "A4 Visit check-in",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Work Surfaces All Sizes.dc.html",
+          "line": 151,
+          "label": "Ambassador · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        1440,
+        834,
+        375
+      ]
+    },
+    {
+      "csvRecord": 24,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-04-P",
+      "Size": "P",
+      "Screen label": "A5 Payouts",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 130,
+          "label": "A4 Visit check-in · at the door",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 25,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-15-P",
+      "Size": "P",
+      "Screen label": "A6 Ambassador signup",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 26,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-16-P",
+      "Size": "P",
+      "Screen label": "A7 Ambassador store",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 27,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-05-P",
+      "Size": "P",
+      "Screen label": "A8 Find the business",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 165,
+          "label": "A4 Wrong venue's code",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 28,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-06-P",
+      "Size": "P",
+      "Screen label": "A9 Confirm details",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 196,
+          "label": "A5 Payouts · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        1440,
+        340
+      ]
+    },
+    {
+      "csvRecord": 29,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-01-P",
+      "Size": "P",
+      "Screen label": "A10 Photo of the place",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "line": 46,
+          "label": "A8 Find the business",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        340
+      ]
+    },
+    {
+      "csvRecord": 30,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-17-P",
+      "Size": "P",
+      "Screen label": "R1 Member refers a Hello Hangout",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 31,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-05-P",
+      "Size": "P",
+      "Screen label": "H8 Signup and tier",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        340,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 32,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-06-P",
+      "Size": "P",
+      "Screen label": "H9 Business dashboard",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Hangout Operator Surfaces.dc.html",
+          "line": 193,
+          "label": "H12 Deal redemption · at the till",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        340,
+        375
+      ]
+    },
+    {
+      "csvRecord": 33,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-01-P",
+      "Size": "P",
+      "Screen label": "H10 Create a post",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "line": 161,
+          "label": "Map — a place",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        340,
+        834,
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 34,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-03-P",
+      "Size": "P",
+      "Screen label": "H11a Hello Hangout directory",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        390
+      ]
+    },
+    {
+      "csvRecord": 35,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-02-P",
+      "Size": "P",
+      "Screen label": "H11 Directory listing",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Hangout Operator Surfaces.dc.html",
+          "line": 158,
+          "label": "H10 Create a post · Discount",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        340,
+        375,
+        390
+      ]
+    },
+    {
+      "csvRecord": 36,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-04-P",
+      "Size": "P",
+      "Screen label": "H12 Deal redemption",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        340,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 37,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-01-P",
+      "Size": "P",
+      "Screen label": "Chat - phone",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 45,
+          "label": "01 The nudge",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 38,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-02-P",
+      "Size": "P",
+      "Screen label": "Chat - report a message",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 62,
+          "label": "02 Accept",
+          "width": 375
+        },
+        {
+          "canvas": "Waverly Gestures.dc.html",
+          "line": 41,
+          "label": "Waverly accepting",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 39,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-03-P",
+      "Size": "P",
+      "Screen label": "Host switch - phone",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 80,
+          "label": "03 Mutual accept · the pin drops",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 40,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-01-T",
+      "Size": "T",
+      "Screen label": "Chat - tablet",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 41,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-04-D",
+      "Size": "D",
+      "Screen label": "Moderation queue - desktop",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 42,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-04-T",
+      "Size": "T",
+      "Screen label": "Moderation queue - tablet",
+      "Canvas file": "Chat Moderation All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 43,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-06-P",
+      "Size": "P",
+      "Screen label": "Happening - phone",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 180,
+          "label": "06 Selfie · before the camera",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 44,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-05-P",
+      "Size": "P",
+      "Screen label": "Happening - a Hello supersedes it",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "line": 73,
+          "label": "Code · phone · scan failed",
+          "width": 375
+        },
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 158,
+          "label": "05 Failed scan",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 45,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-06-T",
+      "Size": "T",
+      "Screen label": "Happening - tablet",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 46,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-06-D",
+      "Size": "D",
+      "Screen label": "Happening - desktop",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 47,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-05-P",
+      "Size": "P",
+      "Screen label": "Prizes - phone",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 48,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-05-T",
+      "Size": "T",
+      "Screen label": "Prizes - tablet",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 49,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-05-D",
+      "Size": "D",
+      "Screen label": "Prizes - desktop",
+      "Canvas file": "Feed and Prizes All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 50,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-02-P",
+      "Size": "P",
+      "Screen label": "Splash - phone",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding All Sizes.dc.html",
+          "line": 70,
+          "label": "Colour · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 415,
+          "label": "06 Your colour — nothing picked",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 51,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-01-P",
+      "Size": "P",
+      "Screen label": "Front door - phone",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding All Sizes.dc.html",
+          "line": 47,
+          "label": "Photo · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 493,
+          "label": "07 Photo — prompt",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834
+      ]
+    },
+    {
+      "csvRecord": 52,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-01-T",
+      "Size": "T",
+      "Screen label": "Front door - tablet",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding All Sizes.dc.html",
+          "line": 132,
+          "label": "Photo · tablet",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        375,
+        834
+      ]
+    },
+    {
+      "csvRecord": 53,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-01-D",
+      "Size": "D",
+      "Screen label": "Front door - desktop",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        834
+      ]
+    },
+    {
+      "csvRecord": 54,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-03-P",
+      "Size": "P",
+      "Screen label": "Tab bar - phone",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding All Sizes.dc.html",
+          "line": 97,
+          "label": "Birthday · under 18, first try",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 390,
+          "label": "05 Under 18",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 55,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-03-T",
+      "Size": "T",
+      "Screen label": "Tab bar - tablet",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 56,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-03-D",
+      "Size": "D",
+      "Screen label": "Tab bar - desktop",
+      "Canvas file": "Front Door and Navigation.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 57,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-07-D",
+      "Size": "D",
+      "Screen label": "5a Directory",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Dashboards.dc.html",
+          "line": 255,
+          "label": "DESKTOP · Hello Hangout dashboard",
+          "width": 1440
+        },
+        {
+          "canvas": "Hello Hangout Operator Surfaces.dc.html",
+          "line": 91,
+          "label": "H9 Business dashboard · desktop",
+          "width": 1440
+        },
+        {
+          "canvas": "Work Surfaces All Sizes.dc.html",
+          "line": 203,
+          "label": "Business · desktop",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440,
+        834,
+        375
+      ]
+    },
+    {
+      "csvRecord": 58,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-08-D",
+      "Size": "D",
+      "Screen label": "5b Map",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Signup Flows.dc.html",
+          "line": 43,
+          "label": "Hello Hangout signup",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 59,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-09-D",
+      "Size": "D",
+      "Screen label": "5c Hello Hangout page",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 60,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-10-D",
+      "Size": "D",
+      "Screen label": "5d Selfie wall",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 61,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-11-D",
+      "Size": "D",
+      "Screen label": "5e Filters",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 62,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-12-D",
+      "Size": "D",
+      "Screen label": "5f Empty",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "Verified 2026-09-03 - labels are on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 63,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-05-P",
+      "Size": "P",
+      "Screen label": "Map - browsing",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 106,
+          "label": "01 Value card 1",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 64,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-07-P",
+      "Size": "P",
+      "Screen label": "Map - search",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 162,
+          "label": "01 Value card 3",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 65,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-08-P",
+      "Size": "P",
+      "Screen label": "Pin - selfie sheet",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 265,
+          "label": "03 Phone — empty",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 66,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-04-P",
+      "Size": "P",
+      "Screen label": "Map - a place",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 67,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-06-P",
+      "Size": "P",
+      "Screen label": "Map - empty here",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 134,
+          "label": "01 Value card 2",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 68,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-02-P",
+      "Size": "P",
+      "Screen label": "Hootza - phone",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "Corrected 2026-09-03 - figure is now a token",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        834
+      ]
+    },
+    {
+      "csvRecord": 69,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-02-T",
+      "Size": "T",
+      "Screen label": "Hootza - tablet",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "Corrected 2026-09-03 - figure is now a token",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Organizations.dc.html",
+          "line": 343,
+          "label": "Org page · desktop",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        1440,
+        834
+      ]
+    },
+    {
+      "csvRecord": 70,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-01-D",
+      "Size": "D",
+      "Screen label": "Hootza - desktop, host mode",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "Corrected 2026-09-03 - figure is now a token",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        834
+      ]
+    },
+    {
+      "csvRecord": 71,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-03-P",
+      "Size": "P",
+      "Screen label": "Organization - phone",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Organizations.dc.html",
+          "line": 58,
+          "label": "Org signup 1 · who you are",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 72,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-03-T",
+      "Size": "T",
+      "Screen label": "Organization - tablet",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 73,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-03-D",
+      "Size": "D",
+      "Screen label": "Organization - desktop",
+      "Canvas file": "Hootzas and Organizations All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 74,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-10-P",
+      "Size": "P",
+      "Screen label": "Icebreakers - after the reveal",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 306,
+          "label": "04 OTP",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 75,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-11-P",
+      "Size": "P",
+      "Screen label": "Icebreakers - answering one",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 328,
+          "label": "04 OTP — error",
+          "width": 375
+        },
+        {
+          "canvas": "Open Items and Gates.dc.html",
+          "line": 127,
+          "label": "OTP · the code didn't arrive",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 76,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-12-P",
+      "Size": "P",
+      "Screen label": "Icebreakers - browse the library",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 351,
+          "label": "04 OTP — verifying",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 77,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-13-P",
+      "Size": "P",
+      "Screen label": "Icebreakers - the exit",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 372,
+          "label": "05 Name and DOB",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 78,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-15-P",
+      "Size": "P",
+      "Screen label": "Your Icebreakers - empty",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 467,
+          "label": "06 Your colour — confirmed",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 79,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-16-P",
+      "Size": "P",
+      "Screen label": "Your Icebreakers - filled",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 511,
+          "label": "07 Photo — captured",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 80,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-09-P",
+      "Size": "P",
+      "Screen label": "Connections - points earned",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "Hold released. Pack address CANON-RL-01-SN-51",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 285,
+          "label": "03 Phone — error",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 81,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-14-P",
+      "Size": "P",
+      "Screen label": "Notification - out of nowhere",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 441,
+          "label": "06 Your colour — picked, confirm live",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 82,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-06-D",
+      "Size": "D",
+      "Screen label": "Landing page",
+      "Canvas file": "Landing and Stores.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 83,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-07-D",
+      "Size": "D",
+      "Screen label": "Waverly's Place",
+      "Canvas file": "Landing and Stores.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 84,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-18-D",
+      "Size": "D",
+      "Screen label": "Ambassador Shop - locked",
+      "Canvas file": "Landing and Stores.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 85,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-24-P",
+      "Size": "P",
+      "Screen label": "Sign in - phone",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 655,
+          "label": "11 Map — seeded",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 86,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-22-P",
+      "Size": "P",
+      "Screen label": "Sign in - code",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 623,
+          "label": "10 Icebreaker question",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 87,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-23-P",
+      "Size": "P",
+      "Screen label": "Sign in - locked out",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 642,
+          "label": "10 You're in",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 88,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-21-P",
+      "Size": "P",
+      "Screen label": "Settings",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 606,
+          "label": "10 Icebreakers framing",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 89,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-19-P",
+      "Size": "P",
+      "Screen label": "Delete account",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 559,
+          "label": "08 Denied — limited mode",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 90,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-20-P",
+      "Size": "P",
+      "Screen label": "Report anything",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 575,
+          "label": "09 Notification primer",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 91,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-17-P",
+      "Size": "P",
+      "Screen label": "Block",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 526,
+          "label": "08 Location primer",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 92,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-08-P",
+      "Size": "P",
+      "Screen label": "Entries earned",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "Label ruled dead - now Points scored",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 93,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-18-P",
+      "Size": "P",
+      "Screen label": "Blocked list",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 551,
+          "label": "08 Granted",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 94,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-28-P",
+      "Size": "P",
+      "Screen label": "Photo - phone",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "line": 460,
+          "label": "Home empty · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Whats Happening.dc.html",
+          "line": 143,
+          "label": "Home — quiet day",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 95,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-28-T",
+      "Size": "T",
+      "Screen label": "Photo - tablet",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "line": 492,
+          "label": "Home empty · tablet",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 96,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-27-P",
+      "Size": "P",
+      "Screen label": "Colour - phone",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "line": 75,
+          "label": "Happening · a Hello supersedes it",
+          "width": 375
+        },
+        {
+          "canvas": "Whats Happening.dc.html",
+          "line": 118,
+          "label": "Superseded — the Hello",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 97,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-27-D",
+      "Size": "D",
+      "Screen label": "Colour - desktop",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 98,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-26-P",
+      "Size": "P",
+      "Screen label": "Birthday - under 18, first try",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "Verified 2026-09-03 - already correct on canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "line": 45,
+          "label": "Happening · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Whats Happening.dc.html",
+          "line": 42,
+          "label": "Home — What's Happening",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 99,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-25-P",
+      "Size": "P",
+      "Screen label": "Birthday - dead end",
+      "Canvas file": "Onboarding All Sizes.dc.html",
+      "Notes": "RETIRED 2026-09-03 - no dead end exists; frame removed from canvas",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "line": 198,
+          "label": "Map — empty here",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 686,
+          "label": "11 Map — empty area",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 100,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-07-P",
+      "Size": "P",
+      "Screen label": "Org signup 1 - who you are",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Organizations.dc.html",
+          "line": 216,
+          "label": "Org Hootza · cover charge",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 101,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-08-P",
+      "Size": "P",
+      "Screen label": "Org signup 2 - where you meet",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 102,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-09-P",
+      "Size": "P",
+      "Screen label": "Org signup 3 - your code",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 103,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-10-P",
+      "Size": "P",
+      "Screen label": "Org signup 4 - you're on",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 104,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-05-P",
+      "Size": "P",
+      "Screen label": "Org dashboard - phone",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Organizations.dc.html",
+          "line": 113,
+          "label": "Org signup 3 · your code",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 105,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-04-P",
+      "Size": "P",
+      "Screen label": "Org Hootza - cover charge",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Organizations.dc.html",
+          "line": 89,
+          "label": "Org signup 2 · where you meet",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 106,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-06-T",
+      "Size": "T",
+      "Screen label": "Org page - desktop",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "HOLD - drawn at 834 despite label; breakpoint disputed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 107,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-13-D",
+      "Size": "D",
+      "Screen label": "Hello Hangout signup",
+      "Canvas file": "Signup Flows.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 108,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-19-D",
+      "Size": "D",
+      "Screen label": "Ambassador application",
+      "Canvas file": "Signup Flows.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 109,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-02-D",
+      "Size": "D",
+      "Screen label": "Creator signup",
+      "Canvas file": "Signup Flows.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        690
+      ]
+    },
+    {
+      "csvRecord": 110,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-11-D",
+      "Size": "D",
+      "Screen label": "Organization signup",
+      "Canvas file": "Signup Flows.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 111,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-32-P",
+      "Size": "P",
+      "Screen label": "Splash - playing",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "line": 90,
+          "label": "Map — search",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 112,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-31-P",
+      "Size": "P",
+      "Screen label": "Splash - final frame",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "line": 41,
+          "label": "Map — browsing",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 113,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-33-P",
+      "Size": "P",
+      "Screen label": "Splash - when it plays",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "line": 124,
+          "label": "Pin — selfie sheet",
+          "width": 375
+        },
+        {
+          "canvas": "Map and Pins.dc.html",
+          "line": 98,
+          "label": "Pin sheet · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 114,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-30-P",
+      "Size": "P",
+      "Screen label": "Front door - first time",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "line": 187,
+          "label": "Prizes · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 115,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-29-P",
+      "Size": "P",
+      "Screen label": "Adding a role",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Whats Happening.dc.html",
+          "line": 196,
+          "label": "Hootza detail",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 116,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-07-P",
+      "Size": "P",
+      "Screen label": "01 The nudge",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 200,
+          "label": "07 Selfie · taken",
+          "width": 375
+        },
+        {
+          "canvas": "Waverly Gestures.dc.html",
+          "line": 60,
+          "label": "Waverly giving the OK",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 117,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-08-P",
+      "Size": "P",
+      "Screen label": "02 Accept",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 230,
+          "label": "08 The countdown",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 118,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-09-P",
+      "Size": "P",
+      "Screen label": "03 Mutual accept - the pin drops",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 246,
+          "label": "09 The reveal",
+          "width": 375
+        },
+        {
+          "canvas": "Waverly Gestures.dc.html",
+          "line": 91,
+          "label": "Waverly giving the thumbs up",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 119,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-10-P",
+      "Size": "P",
+      "Screen label": "04 The QR",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 280,
+          "label": "10 Lost connection",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 120,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-11-P",
+      "Size": "P",
+      "Screen label": "05 Failed scan",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Front Door and Navigation.dc.html",
+          "line": 47,
+          "label": "Splash · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 53,
+          "label": "00 Splash",
+          "width": 375
+        },
+        {
+          "canvas": "Splash and Front Door.dc.html",
+          "line": 52,
+          "label": "Splash — playing",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 121,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-12-P",
+      "Size": "P",
+      "Screen label": "06 Selfie - before the camera",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Splash and Front Door.dc.html",
+          "line": 81,
+          "label": "Splash — final frame",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 122,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-13-P",
+      "Size": "P",
+      "Screen label": "07 Selfie - taken",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Splash and Front Door.dc.html",
+          "line": 107,
+          "label": "Splash — when it plays",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 123,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-14-P",
+      "Size": "P",
+      "Screen label": "08 The countdown",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Front Door and Navigation.dc.html",
+          "line": 65,
+          "label": "Front door · phone",
+          "width": 375
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "line": 188,
+          "label": "02 Who are you",
+          "width": 375
+        },
+        {
+          "canvas": "Splash and Front Door.dc.html",
+          "line": 153,
+          "label": "Front door — first time",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 124,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-15-P",
+      "Size": "P",
+      "Screen label": "09 The reveal",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Splash and Front Door.dc.html",
+          "line": 202,
+          "label": "Adding a role",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 125,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-16-P",
+      "Size": "P",
+      "Screen label": "10 Lost connection",
+      "Canvas file": "The Encounter.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Front Door and Navigation.dc.html",
+          "line": 155,
+          "label": "Tab bar · phone",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 126,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-11-P",
+      "Size": "P",
+      "Screen label": "Store - phone",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 127,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-11-T",
+      "Size": "T",
+      "Screen label": "Store - tablet",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 128,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-11-D",
+      "Size": "D",
+      "Screen label": "Store - desktop",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 129,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-10-P",
+      "Size": "P",
+      "Screen label": "Product - phone",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 130,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-09-P",
+      "Size": "P",
+      "Screen label": "Checkout - phone",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 131,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-09-D",
+      "Size": "D",
+      "Screen label": "Checkout - desktop",
+      "Canvas file": "Waverlys Place Store All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 132,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-18-D",
+      "Size": "D",
+      "Screen label": "What's Happening - web",
+      "Canvas file": "Web Surfaces.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 133,
+      "Status": "DELIVERED",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-17-D",
+      "Size": "D",
+      "Screen label": "Hello Map - web",
+      "Canvas file": "Web Surfaces.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 134,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-34-D",
+      "Size": "D",
+      "Screen label": "Hello Hangout directory - web",
+      "Canvas file": "Web Surfaces.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Map and Pins.dc.html",
+          "line": 43,
+          "label": "Pin legend",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 135,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-35-D",
+      "Size": "D",
+      "Screen label": "Hello Hangout page - web",
+      "Canvas file": "Web Surfaces.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        300
+      ]
+    },
+    {
+      "csvRecord": 136,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-20-P",
+      "Size": "P",
+      "Screen label": "Ambassador - phone",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Open Items and Gates.dc.html",
+          "line": 249,
+          "label": "Renewal reminder · lead time",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 137,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-20-T",
+      "Size": "T",
+      "Screen label": "Ambassador - tablet",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 138,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-20-D",
+      "Size": "D",
+      "Screen label": "Ambassador - desktop",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "Corrected 2026-09-03 - price is now a token",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 139,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-14-P",
+      "Size": "P",
+      "Screen label": "Business - phone",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 140,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-14-T",
+      "Size": "T",
+      "Screen label": "Business - tablet",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 141,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-14-D",
+      "Size": "D",
+      "Screen label": "Business - desktop",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 142,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-12-P",
+      "Size": "P",
+      "Screen label": "Admin - phone",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 143,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-12-T",
+      "Size": "T",
+      "Screen label": "Admin - tablet",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 144,
+      "Status": "DELIVERED",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-12-D",
+      "Size": "D",
+      "Screen label": "Admin - desktop",
+      "Canvas file": "Work Surfaces All Sizes.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 145,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-22-D",
+      "Size": "D",
+      "Screen label": "Commissions tracker",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 146,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-23-D",
+      "Size": "D",
+      "Screen label": "Visit history",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 147,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-03-D",
+      "Size": "D",
+      "Screen label": "Influencer tracking",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        690,
+        375
+      ]
+    },
+    {
+      "csvRecord": 148,
+      "Status": "DELIVERED",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-21-D",
+      "Size": "D",
+      "Screen label": "Codes and QR stands",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 149,
+      "Status": "DELIVERED",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-03-D",
+      "Size": "D",
+      "Screen label": "Opt-out register",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        834,
+        390
+      ]
+    },
+    {
+      "csvRecord": 150,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-94-P",
+      "Size": "P",
+      "Screen label": "24-market phone picker",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "Numbered by canon s26.9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 33,
+          "label": "24-market phone picker",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 151,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-95-P",
+      "Size": "P",
+      "Screen label": "Limited mode - everything denied",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 71,
+          "label": "Limited mode · everything denied",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 152,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-96-P",
+      "Size": "P",
+      "Screen label": "Limited mode - the Hello Map",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 121,
+          "label": "Limited mode · the Hello Map",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 153,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-97-P",
+      "Size": "P",
+      "Screen label": "Limited mode - a Hello without Bluetooth",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 157,
+          "label": "Limited mode · a Hello without Bluetooth",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 154,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-21-P",
+      "Size": "P",
+      "Screen label": "Safety guidance in the meet flow",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 195,
+          "label": "Safety guidance in the meet flow",
+          "width": 375
+        },
+        {
+          "canvas": "The Encounter.dc.html",
+          "line": 130,
+          "label": "04b Enter the code",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 155,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-22-P",
+      "Size": "P",
+      "Screen label": "Selfie consent at capture",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 226,
+          "label": "Selfie consent at capture",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 156,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-13-P",
+      "Size": "P",
+      "Screen label": "EULA on the terms accept",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 250,
+          "label": "EULA on the terms accept",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 157,
+      "Status": "DELIVERED 2026-08-26",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-14-P",
+      "Size": "P",
+      "Screen label": "Contact in-app",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "SN proposed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "App Store Blockers.dc.html",
+          "line": 286,
+          "label": "Contact in-app",
+          "width": 375
+        }
+      ],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 158,
+      "Status": "OWED - size",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-94-T",
+      "Size": "T",
+      "Screen label": "24-market phone picker",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 159,
+      "Status": "OWED - size",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-95-T",
+      "Size": "T",
+      "Screen label": "Limited mode - everything denied",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 160,
+      "Status": "OWED - size",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-96-T",
+      "Size": "T",
+      "Screen label": "Limited mode - the Hello Map",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 161,
+      "Status": "OWED - size",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-97-T",
+      "Size": "T",
+      "Screen label": "Limited mode - a Hello without Bluetooth",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 162,
+      "Status": "OWED - size",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-21-T",
+      "Size": "T",
+      "Screen label": "Safety guidance in the meet flow",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 163,
+      "Status": "OWED - size",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-22-T",
+      "Size": "T",
+      "Screen label": "Selfie consent at capture",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 164,
+      "Status": "OWED - size",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-13-T",
+      "Size": "T",
+      "Screen label": "EULA on the terms accept",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 165,
+      "Status": "OWED - size",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-14-T",
+      "Size": "T",
+      "Screen label": "Contact in-app",
+      "Canvas file": "App Store Blockers.dc.html",
+      "Notes": "T 834 owed. D not owed - browser only per brief s5",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 166,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-19-D",
+      "Size": "D",
+      "Screen label": "Overrides - active, with annual cost",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s3.8 / s3.2",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 33,
+          "label": "Overrides — active, with annual cost",
+          "width": 1440
+        },
+        {
+          "canvas": "Hello Admin Settings All Sizes.dc.html",
+          "line": 23,
+          "label": "Settings · desktop",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440,
+        834,
+        375
+      ]
+    },
+    {
+      "csvRecord": 167,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-20-D",
+      "Size": "D",
+      "Screen label": "Override log",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s3.9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 99,
+          "label": "Override log",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 168,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-21-D",
+      "Size": "D",
+      "Screen label": "Split arrangement on one Hello Hangout",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s3.10",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 157,
+          "label": "Split arrangement on one Hello Hangout",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 169,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-35-D",
+      "Size": "D",
+      "Screen label": "Zero-candidate ring",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s16.33",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 219,
+          "label": "Zero-candidate ring",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 170,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-15-D",
+      "Size": "D",
+      "Screen label": "Report queue",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s36.3 / s23.14 / s35.3",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 285,
+          "label": "Report queue",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 171,
+      "Status": "IN PROGRESS",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-16-D",
+      "Size": "D",
+      "Screen label": "Selfie removal - admin action",
+      "Canvas file": "Admin Rulings.dc.html",
+      "Notes": "SN proposed. s10.11 - no user-facing button",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Admin Rulings.dc.html",
+          "line": 354,
+          "label": "Selfie removal — admin action",
+          "width": 1440
+        }
+      ],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 172,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T, D",
+      "Screen label": "(all 17 frames on this canvas)",
+      "Canvas file": "Ambassadors and Hello Hangouts.dc.html",
+      "Notes": "34 frames owed. Has P",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 173,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T, D",
+      "Screen label": "(all 9 frames on this canvas)",
+      "Canvas file": "Missing Mobile Screens.dc.html",
+      "Notes": "18 frames owed. Has P",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 174,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T, D",
+      "Screen label": "(all 8 frames on this canvas)",
+      "Canvas file": "Icebreakers.dc.html",
+      "Notes": "16 frames owed. Has P",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 175,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 6 frames on this canvas)",
+      "Canvas file": "Admin Panel.dc.html",
+      "Notes": "12 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 176,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 6 frames on this canvas)",
+      "Canvas file": "Hangout Directory.dc.html",
+      "Notes": "RECOUNT DUE - P frames exist (6e, 7a-7l). Owed figure stale",
+      "sourceFieldCount": 8,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 177,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 5 frames on this canvas)",
+      "Canvas file": "Ambassador and Influencer Panels.dc.html",
+      "Notes": "10 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 178,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T, D",
+      "Screen label": "(all 5 frames on this canvas)",
+      "Canvas file": "Hello Map.dc.html",
+      "Notes": "10 frames owed. Has P",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 179,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T, D",
+      "Screen label": "(all 5 frames on this canvas)",
+      "Canvas file": "Splash and Front Door.dc.html",
+      "Notes": "10 frames owed. Has P",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 180,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 5 frames on this canvas)",
+      "Canvas file": "Work Tools.dc.html",
+      "Notes": "10 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 181,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 4 frames on this canvas)",
+      "Canvas file": "Signup Flows.dc.html",
+      "Notes": "8 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 182,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 4 frames on this canvas)",
+      "Canvas file": "Web Surfaces.dc.html",
+      "Notes": "8 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 183,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "T",
+      "Screen label": "(all 7 frames on this canvas)",
+      "Canvas file": "Ambassador Field Flow.dc.html",
+      "Notes": "7 frames owed. Has P, D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 184,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "P, T",
+      "Screen label": "(all 3 frames on this canvas)",
+      "Canvas file": "Landing and Stores.dc.html",
+      "Notes": "6 frames owed. Has D",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 185,
+      "Status": "OWED - size",
+      "Canon": "",
+      "SN": "",
+      "Size": "confirm first",
+      "Screen label": "(all 7 frames on this canvas)",
+      "Canvas file": "Organizations.dc.html",
+      "Notes": "7 frames owed. Has disputed. HOLD - breakpoint disputed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Aggregate canvas row — expand to individual frames before counting",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 186,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-36",
+      "Size": "P, T, D",
+      "Screen label": "Connections tab - dedicated list",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        300,
+        375
+      ]
+    },
+    {
+      "csvRecord": 187,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-15",
+      "Size": "P, T, D",
+      "Screen label": "Hello Hangout billing",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 188,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-16",
+      "Size": "P, T, D",
+      "Screen label": "Hello Hangout hours editor",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 189,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-17",
+      "Size": "P, T, D",
+      "Screen label": "Hardship petition - Hangout-facing",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 190,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-24",
+      "Size": "P, T, D",
+      "Screen label": "Ambassador opt-out type-to-confirm",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 191,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-25",
+      "Size": "P, T, D",
+      "Screen label": "Ambassador territory map",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 192,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-26",
+      "Size": "P, T, D",
+      "Screen label": "Ambassador tax - payout history",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 193,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-27",
+      "Size": "P, T, D",
+      "Screen label": "Creator link-and-code screen",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 194,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-28",
+      "Size": "P, T, D",
+      "Screen label": "Hold-or-release sheet at ambassador cap",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 195,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-29",
+      "Size": "P, T, D",
+      "Screen label": "Ambassador Toolkit - full",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 196,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-30",
+      "Size": "P, T, D",
+      "Screen label": "QR Stands management",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 197,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-31",
+      "Size": "P, T, D",
+      "Screen label": "My Code screen",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 198,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-32",
+      "Size": "P, T, D",
+      "Screen label": "Test Hello screen",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 199,
+      "Status": "RETIRED HOLE",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-33",
+      "Size": "-",
+      "Screen label": "RETIRED - My Team. Hole stands, never drawn",
+      "Canvas file": "",
+      "Notes": "SN kept, hole stands",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address not found in root canvases; inspect nested packs and aliases",
+      "candidates": [],
+      "otherWidths": []
+    },
+    {
+      "csvRecord": 200,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-34",
+      "Size": "P, T, D",
+      "Screen label": "Ambassador Account settings",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 201,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-04",
+      "Size": "P, T, D",
+      "Screen label": "Influencer Earnings",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 202,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-05",
+      "Size": "P, T, D",
+      "Screen label": "Influencer Toolkit",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 203,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-06",
+      "Size": "P, T, D",
+      "Screen label": "Influencer Account",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 204,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-12",
+      "Size": "P, T, D",
+      "Screen label": "Organization exit - leave confirm",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 205,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-13",
+      "Size": "P, T, D",
+      "Screen label": "Organization exit - page fate",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 206,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-14",
+      "Size": "P, T, D",
+      "Screen label": "Organization exit - followers fate",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 207,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-13",
+      "Size": "P, T, D",
+      "Screen label": "Hello Admin > Settings table editor",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 208,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-14",
+      "Size": "P, T, D",
+      "Screen label": "Admin overrides table editor",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 209,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-15",
+      "Size": "P, T, D",
+      "Screen label": "Admin campaign engine UI",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 210,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-16",
+      "Size": "P, T, D",
+      "Screen label": "Admin coupon engine UI",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 211,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-17",
+      "Size": "P, T, D",
+      "Screen label": "Admin bonus and override engine UI",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 212,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-18",
+      "Size": "P, T, D",
+      "Screen label": "Admin see-layer full dashboard",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 213,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-04",
+      "Size": "P, T, D",
+      "Screen label": "Privacy Policy - live deployed page",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 214,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-05",
+      "Size": "P, T, D",
+      "Screen label": "Terms of Service - live deployed page",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        834
+      ]
+    },
+    {
+      "csvRecord": 215,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-06",
+      "Size": "P, T, D",
+      "Screen label": "Sweepstakes official rules - live page",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 216,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-07",
+      "Size": "P, T, D",
+      "Screen label": "What's Happening - Hangout directory pages",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 217,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-19",
+      "Size": "P, T, D",
+      "Screen label": "QR code generation / display UI",
+      "Canvas file": "",
+      "Notes": "3 frames owed",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 218,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-01",
+      "SN": "CANON-RL-01-SN-36-T",
+      "Size": "T",
+      "Screen label": "Connections - the list",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        300,
+        375
+      ]
+    },
+    {
+      "csvRecord": 219,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-15-T",
+      "Size": "T",
+      "Screen label": "Hello Hangout billing",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 220,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-16-T",
+      "Size": "T",
+      "Screen label": "Hello Hangout hours",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 221,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-02",
+      "SN": "CANON-RL-02-SN-17-T",
+      "Size": "T",
+      "Screen label": "Hardship petition",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 222,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-24-T",
+      "Size": "T",
+      "Screen label": "Opt out - type to confirm",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 223,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-25-T",
+      "Size": "T",
+      "Screen label": "Territory",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 224,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-26-T",
+      "Size": "T",
+      "Screen label": "Payout history",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 225,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-27-T",
+      "Size": "T",
+      "Screen label": "Creator link and code",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 226,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-28-T",
+      "Size": "T",
+      "Screen label": "At the cap - hold or release",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 227,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-29-T",
+      "Size": "T",
+      "Screen label": "Toolkit",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 228,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-30-T",
+      "Size": "T",
+      "Screen label": "QR stands",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 229,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-31-T",
+      "Size": "T",
+      "Screen label": "My code",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 230,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-32-T",
+      "Size": "T",
+      "Screen label": "Test Hello",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 231,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-03",
+      "SN": "CANON-RL-03-SN-34-T",
+      "Size": "T",
+      "Screen label": "Ambassador account",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 232,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-04-T",
+      "Size": "T",
+      "Screen label": "Influencer earnings",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 233,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-05-T",
+      "Size": "T",
+      "Screen label": "Influencer toolkit",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 234,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-04",
+      "SN": "CANON-RL-04-SN-06-T",
+      "Size": "T",
+      "Screen label": "Influencer account",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 235,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-12-T",
+      "Size": "T",
+      "Screen label": "Leaving - confirm",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 236,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-13-T",
+      "Size": "T",
+      "Screen label": "Leaving - what happens to the page",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 237,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-RL-05",
+      "SN": "CANON-RL-05-SN-14-T",
+      "Size": "T",
+      "Screen label": "Leaving - what happens to followers",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375
+      ]
+    },
+    {
+      "csvRecord": 238,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-SH-01",
+      "SN": "CANON-SH-01-SN-19-T",
+      "Size": "T",
+      "Screen label": "QR - generate and show",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440,
+        375
+      ]
+    },
+    {
+      "csvRecord": 239,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-13-T",
+      "Size": "T",
+      "Screen label": "Settings table editor",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 240,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-14-T",
+      "Size": "T",
+      "Screen label": "Overrides table editor",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 241,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-15-T",
+      "Size": "T",
+      "Screen label": "Campaign engine",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 242,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-16-T",
+      "Size": "T",
+      "Screen label": "Coupon engine",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 243,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-17-T",
+      "Size": "T",
+      "Screen label": "Bonus and override engine",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 244,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-MN-01",
+      "SN": "CANON-MN-01-SN-18-T",
+      "Size": "T",
+      "Screen label": "See-layer dashboard",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        1440
+      ]
+    },
+    {
+      "csvRecord": 245,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-04-T",
+      "Size": "T",
+      "Screen label": "Privacy Policy",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address found, requested width not found in root canvases",
+      "candidates": [],
+      "otherWidths": [
+        375,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 246,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-05-T",
+      "Size": "T",
+      "Screen label": "Terms of Service",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Chat Moderation All Sizes.dc.html",
+          "line": 251,
+          "label": "Moderation queue · tablet",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        1440,
+        834
+      ]
+    },
+    {
+      "csvRecord": 247,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-06-T",
+      "Size": "T",
+      "Screen label": "Official rules",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Legal Pages.dc.html",
+          "line": 70,
+          "label": "Settings · the small print · tablet",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    },
+    {
+      "csvRecord": 248,
+      "Status": "DELIVERED 2026-09-02",
+      "Canon": "CANON-00",
+      "SN": "CANON-00-SN-07-T",
+      "Size": "T",
+      "Screen label": "What's Happening - directory",
+      "Canvas file": "Reserved Screens Delivered at T 834.dc.html",
+      "Notes": "T 834 delivered turn 9",
+      "sourceFieldCount": 7,
+      "matchStatus": "Address and width found; label/state parity requires review",
+      "candidates": [
+        {
+          "canvas": "Legal Pages.dc.html",
+          "line": 158,
+          "label": "Privacy · tablet",
+          "width": 834
+        }
+      ],
+      "otherWidths": [
+        375,
+        834,
+        1440
+      ]
+    }
+  ]
+}
