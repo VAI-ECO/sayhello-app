@@ -1,0 +1,234 @@
+{
+  "source": "necessary-configuration-supplement",
+  "kind": "configuration-supplement",
+  "destination": "VAI-ECO/sayhello-app",
+  "fingerprint": "ab8e95d0c1860b0a2b8ba65e76416ffa3c3ff8395a88aeb27be22756473ab415",
+  "purpose": "Unreviewed preserved source; no adoption into main",
+  "included": [
+    {
+      "path": "necessary-configuration/016033843ad072bc9912/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/android/gradle.properties",
+      "sha256": "d02b52da10bf3abb24279fd102df47694b8130a6b7fe6110cc47a9476ac8673c"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/android/gradle/wrapper/gradle-wrapper.properties",
+      "sha256": "a180163249c7252412ddaee1c7adcf59f6494b1183136f690fbd9a3b8aaed00e"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/android/gradlew.bat",
+      "sha256": "982f1b2979dd2d13505c11e92192ab43eef338242ca61587f86f8d7fbc86f67b"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/ios/SayHello.xcodeproj/project.pbxproj",
+      "sha256": "79aba757fd557f28ebd67b0fb8b66354e69a452b10e40b30d89544b7b2944e57"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/ios/SayHello/SayHello-Bridging-Header.h",
+      "sha256": "4a625b53abd4333ca454a4161ba62ab1b0cb44e8a4581326c0bcfe03dc26dd5c"
+    },
+    {
+      "path": "necessary-configuration/024b50354b3efe0bf4d6/ios/SayHello/SayHello.entitlements",
+      "sha256": "f4b663f5b41b12078a2eeaf7713a11b4ba0c04a1f2109689a8c58dc51aba6e3f"
+    },
+    {
+      "path": "necessary-configuration/08c58261c19302529e71/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/08c58261c19302529e71/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/0f61221e42d11e965b8e/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/0f61221e42d11e965b8e/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/284e3dbaaab5799f2ca1/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/284e3dbaaab5799f2ca1/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/2afd89e6f43d25c0c62a/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/2afd89e6f43d25c0c62a/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/4753c414ee4509e42e8b/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/4753c414ee4509e42e8b/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/5032f6bc6e8e2e091d3c/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/5032f6bc6e8e2e091d3c/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/53c7f4505059d6d4ae3b/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/53c7f4505059d6d4ae3b/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/61d0e6a4bb54b79b867e/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/61d0e6a4bb54b79b867e/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/68808a39b018c2760072/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/68808a39b018c2760072/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/692e419a0f73244dcc6a/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/692e419a0f73244dcc6a/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/6afecff37317324ac4e8/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/6afecff37317324ac4e8/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/76548587979914ba9ffd/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/76548587979914ba9ffd/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/7981aee3f75cc06e4c46/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/7981aee3f75cc06e4c46/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/86992e14b18ada88565a/.env.example",
+      "sha256": "bfcf77ac0bff7c4d4e8da7e199dc0b9e602c80bb1ab0f9a2345932932b94299b"
+    },
+    {
+      "path": "necessary-configuration/8a8b382837ebfe0f8c34/.env.example",
+      "sha256": "bfcf77ac0bff7c4d4e8da7e199dc0b9e602c80bb1ab0f9a2345932932b94299b"
+    },
+    {
+      "path": "necessary-configuration/8bff731f7c0869aaf763/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/8bff731f7c0869aaf763/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/90344228cc0a27fab890/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/90344228cc0a27fab890/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/90f1b47eb030e301c501/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/90f1b47eb030e301c501/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/94e24bb5ded379322b9f/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/94e24bb5ded379322b9f/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/a857d1cc45c2a98b9b1b/.env.example",
+      "sha256": "62eb73d273144153dd906bd7621384a162e821e0f9452a72597ac827b7ff54a5"
+    },
+    {
+      "path": "necessary-configuration/b8640353b7ebde234aa3/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/b8640353b7ebde234aa3/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/c19ee6e8506317fbde2d/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/c19ee6e8506317fbde2d/.env.template",
+      "sha256": "96f1ac9d4ffef512a6e1f9e0eb11110cd39279262c4b1e22ff539737acf48111"
+    },
+    {
+      "path": "necessary-configuration/cd2c4d7a3609465a29f0/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/cd2c4d7a3609465a29f0/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/ef7f0960095d92910393/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/ef7f0960095d92910393/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    },
+    {
+      "path": "necessary-configuration/f380ad2f49d480f97a40/.env.example",
+      "sha256": "6b79df5f64e55920409359c50e30c8ab4e19aaf40fc9342fa23469595918c499"
+    },
+    {
+      "path": "necessary-configuration/f380ad2f49d480f97a40/.env.template",
+      "sha256": "42407a7b84d6f4de3a81d3b8b6ee174ed1558484e30c2eea7e9a320bd4975ed4"
+    }
+  ],
+  "excluded": []
+}
