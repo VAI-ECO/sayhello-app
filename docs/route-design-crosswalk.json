@@ -1,0 +1,3341 @@
+{
+  "generated": "2026-09-19T06:48:13.584Z",
+  "appCommit": "f0c1200dd021800e1dfe7550ac65320a512e1a80",
+  "method": "Human-selected source candidates anchored by canvas SHA256 and literal frame ordinal. Every route has one accounting row; this is not approval, complete state coverage, visual parity or a count of unique product screens. No screen is declared missing merely because it lacks a route.",
+  "counts": {
+    "routes": 75,
+    "locatedCurrentSourceCandidates": 72,
+    "supersededSourceOnly": 1,
+    "unresolvedOrInfrastructure": 2,
+    "deviceVerified": 0
+  },
+  "rows": [
+    {
+      "file": "app/(onboarding)/value-cards.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        2,
+        3,
+        4
+      ],
+      "note": "Three design states share one route; app presents cards together. Layout parity not established.",
+      "sourceSHA256": "fac9e94b4addf46de76efe17ee9c7a6bd25bf6e7c09002d22e84506d25f03ce0",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 2,
+          "label": "01 Value card 1",
+          "sn": "CANON-RL-01-SN-05",
+          "width": 375,
+          "line": 106,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 3,
+          "label": "01 Value card 2",
+          "sn": "CANON-RL-01-SN-06",
+          "width": 375,
+          "line": 134,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 4,
+          "label": "01 Value card 3",
+          "sn": "CANON-RL-01-SN-07",
+          "width": 375,
+          "line": 162,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 4,
+          "text": "* Shows 3 value proposition cards with placeholder copy"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/phone.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        8,
+        9
+      ],
+      "note": "Terms/EULA interaction also needs App Store Blockers frame 7; current DOB is fabricated.",
+      "sourceSHA256": "2d3cdf9497ff1a355a6fb5d0cdc5ca52e2abfb4cd853355c1c48beff0da97b54",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 8,
+          "label": "03 Phone — empty",
+          "sn": "CANON-RL-01-SN-08",
+          "width": 375,
+          "line": 265,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 9,
+          "label": "03 Phone — error",
+          "sn": "CANON-RL-01-SN-09",
+          "width": 375,
+          "line": 285,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 35,
+          "text": "// TODO: Get dateOfBirth from onboarding flow state"
+        },
+        {
+          "line": 64,
+          "text": "placeholder={market.entryHint}"
+        },
+        {
+          "line": 82,
+          "text": "disabled={!storedPhone}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/otp.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        10,
+        11,
+        12
+      ],
+      "note": "Session-token contract repaired. Device/SMS flow unverified.",
+      "sourceSHA256": "2bc88f4aaf1b8683b664f6844c273e39bb8c593af8b16285208f4eb7b8304a03",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 10,
+          "label": "04 OTP",
+          "sn": "CANON-RL-01-SN-10",
+          "width": 375,
+          "line": 306,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 11,
+          "label": "04 OTP — error",
+          "sn": "CANON-RL-01-SN-11",
+          "width": 375,
+          "line": 328,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 12,
+          "label": "04 OTP — verifying",
+          "sn": "CANON-RL-01-SN-12",
+          "width": 375,
+          "line": 351,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 31,
+          "text": "// TODO: Get locale from device settings"
+        },
+        {
+          "line": 47,
+          "text": "// TODO: Get dateOfBirth from onboarding flow state"
+        },
+        {
+          "line": 69,
+          "text": "placeholder=\"000000\""
+        },
+        {
+          "line": 92,
+          "text": "disabled={code.length < 6}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/name.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        13
+      ],
+      "note": "Name saves; birthday persistence/server age enforcement remains open.",
+      "sourceSHA256": "90a8e642ae6b15134aeee0cff1951aad3dbae7b9f87af908f488e91ab5e92cce",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 13,
+          "label": "05 Name and DOB",
+          "sn": "CANON-RL-01-SN-13",
+          "width": 375,
+          "line": 372,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 89,
+          "text": "placeholder={t('onboarding.name.placeholder')}"
+        },
+        {
+          "line": 107,
+          "text": "placeholder=\"MM\""
+        },
+        {
+          "line": 122,
+          "text": "placeholder=\"DD\""
+        },
+        {
+          "line": 137,
+          "text": "placeholder=\"YYYY\""
+        },
+        {
+          "line": 154,
+          "text": "disabled={!name.trim() || !month || !day || !year}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/photo.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        18,
+        19
+      ],
+      "note": "User explicitly requires photo BEFORE color, overriding this older canvas numbering. Actual upload is missing.",
+      "sourceSHA256": "817b892c0d0ee774d6bff2bdbc66918218d6473aa1d3cfbdae7ad43acf485895",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 18,
+          "label": "07 Photo — prompt",
+          "sn": "CANON-RL-01-SN-01",
+          "width": 375,
+          "line": 493,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 19,
+          "label": "07 Photo — captured",
+          "sn": "CANON-RL-01-SN-16",
+          "width": 375,
+          "line": 511,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 89,
+          "text": "<View style={styles.photoPlaceholder}>"
+        },
+        {
+          "line": 90,
+          "text": "<Text style={styles.photoPlaceholderText}>👤</Text>"
+        },
+        {
+          "line": 152,
+          "text": "photoPlaceholder: {"
+        },
+        {
+          "line": 162,
+          "text": "photoPlaceholderText: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/color.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        15,
+        16,
+        17
+      ],
+      "note": "User-confirmed order: name → photo → color → location. Ten-color persistence and restoration tested locally.",
+      "sourceSHA256": "218685d3530216333ec1e13daf60802a06b18aded0978793738d8b41ac5d16d8",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 15,
+          "label": "06 Your colour — nothing picked",
+          "sn": "CANON-RL-01-SN-02",
+          "width": 375,
+          "line": 415,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 16,
+          "label": "06 Your colour — picked, confirm live",
+          "sn": "CANON-RL-01-SN-14",
+          "width": 375,
+          "line": 441,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 17,
+          "label": "06 Your colour — confirmed",
+          "sn": "CANON-RL-01-SN-15",
+          "width": 375,
+          "line": 467,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 76,
+          "text": "accessibilityState={{ selected: selectedColor === color, disabled: loading }}"
+        },
+        {
+          "line": 77,
+          "text": "disabled={loading}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/under-18.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        14
+      ],
+      "note": "Client hard-stop tests pass; not proof of server enforcement.",
+      "sourceSHA256": "4adf6c7fab18515f1d2964a06d0bc5a7769f38d3bf65e0dcaaaf7826c1b2d050",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 14,
+          "label": "05 Under 18",
+          "sn": "CANON-RL-01-SN-03",
+          "width": 375,
+          "line": 390,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 37,
+          "text": "<Text style={styles.iconPlaceholder}>👋</Text>"
+        },
+        {
+          "line": 80,
+          "text": "iconPlaceholder: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/location.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        20,
+        21,
+        22
+      ],
+      "note": "Include permission-denied/limited-mode states, not only primer.",
+      "sourceSHA256": "a0495b5d4675ed29910e346b8c3c5b6f51ec17e9b24670fed59477828e3d35ae",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 20,
+          "label": "08 Location primer",
+          "sn": "CANON-RL-01-SN-17",
+          "width": 375,
+          "line": 526,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 21,
+          "label": "08 Granted",
+          "sn": "CANON-RL-01-SN-18",
+          "width": 375,
+          "line": 551,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        },
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 22,
+          "label": "08 Denied — limited mode",
+          "sn": "CANON-RL-01-SN-19",
+          "width": 375,
+          "line": 559,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/notifications.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        23
+      ],
+      "note": "Permission and delivery must be device-verified.",
+      "sourceSHA256": "e991e0589c01cf11a07ae7493a0a9e4bd2cb46b1c671b0d61327f79b74faad2c",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 23,
+          "label": "09 Notification primer",
+          "sn": "CANON-RL-01-SN-20",
+          "width": 375,
+          "line": 575,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(onboarding)/welcome.tsx",
+      "canvas": "Onboarding Individual.dc.html",
+      "ordinals": [
+        26
+      ],
+      "note": "Onboarding icebreaker framing/question (frames 24/25) are separate designed steps, not proven by this welcome route.",
+      "sourceSHA256": "3dc76da124ba00f8f387cd1904ce0884159a8d9a05ccd002ab9b90bb1e816121",
+      "frames": [
+        {
+          "canvas": "Onboarding Individual.dc.html",
+          "ordinal": 26,
+          "label": "10 You're in",
+          "sn": "CANON-RL-01-SN-23",
+          "width": 375,
+          "line": 642,
+          "docHash": "5e357c5fd7ef0e75cb4582bdc9d566ff359c28a6d596bca280c4e6640d1b845f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(auth)/index.tsx",
+      "canvas": null,
+      "ordinals": [],
+      "note": "Infrastructure: saved-session/loading/retry gate, not a separately identified design frame.",
+      "sourceSHA256": "cac66f82af62fd6390032c9619321209880e40932d333dee8335f38add67555c",
+      "frames": [],
+      "association": "Source unresolved / infrastructure",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(auth)/sign-in-phone.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        1
+      ],
+      "note": "Backend OTP request still receives placeholder DOB.",
+      "sourceSHA256": "dd3b1c0d09c198dba3cda7f51ec8c04fd0b2422e092f6d0bf7d6f379aba83070",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 1,
+          "label": "Sign in — phone",
+          "sn": "CANON-RL-01-SN-53",
+          "width": 390,
+          "line": 41,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 37,
+          "text": "// TODO: Sign-in flow needs dateOfBirth from backend session or stored locally"
+        },
+        {
+          "line": 38,
+          "text": "// For now, placeholder to match API signature"
+        },
+        {
+          "line": 73,
+          "text": "placeholder={market.entryHint}"
+        },
+        {
+          "line": 97,
+          "text": "disabled={!storedPhone}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(auth)/sign-in-code.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        2
+      ],
+      "note": "OTP session contract and saved-color restoration tests pass; live SMS unverified.",
+      "sourceSHA256": "8258949dc87b82c2083439b9ae49682692e81d1c25784fb979c14f272ad6667e",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 2,
+          "label": "Sign in — code",
+          "sn": "CANON-RL-01-SN-54",
+          "width": 390,
+          "line": 67,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 53,
+          "text": "// TODO: Get locale from device settings"
+        },
+        {
+          "line": 88,
+          "text": "// TODO: Sign-in flow needs dateOfBirth from backend session or stored locally"
+        },
+        {
+          "line": 121,
+          "text": "placeholder=\"000000\""
+        },
+        {
+          "line": 139,
+          "text": "disabled={resendCooldown > 0}"
+        },
+        {
+          "line": 140,
+          "text": "style={[styles.resendButton, resendCooldown > 0 && styles.resendDisabled]}"
+        },
+        {
+          "line": 142,
+          "text": "accessibilityState={{ disabled: resendCooldown > 0 }}"
+        },
+        {
+          "line": 151,
+          "text": "style={[styles.resendText, resendCooldown > 0 && styles.resendTextDisabled]}"
+        },
+        {
+          "line": 168,
+          "text": "disabled={code.length < 6}"
+        },
+        {
+          "line": 207,
+          "text": "resendDisabled: {"
+        },
+        {
+          "line": 216,
+          "text": "resendTextDisabled: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(auth)/sign-in-locked.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        3
+      ],
+      "note": "Rate-limit UI exists; help/why actions need inspection.",
+      "sourceSHA256": "ef239d64a3e8a7052414417cae03b12a59b137016fc935f3f4569f3a4377eb54",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 3,
+          "label": "Sign in — locked out",
+          "sn": "CANON-RL-01-SN-55",
+          "width": 390,
+          "line": 112,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 55,
+          "text": "// Placeholder — would open support contact"
+        },
+        {
+          "line": 56,
+          "text": "// Not implemented in this run"
+        },
+        {
+          "line": 103,
+          "text": "disabled={isLocked}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/nudge.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        1
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "f9a9def762d14e915c3431fefed8760198fde13ffa2eba9b5a81b447136693b5",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 1,
+          "label": "01 The nudge",
+          "sn": "CANON-SH-01-SN-01",
+          "width": 375,
+          "line": 45,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 23,
+          "text": "// For now, using the user's own color as placeholder"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/accepted.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        2
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "95f01bf9ca5b2d57318f2cb23d24e26de96145b84947f6cac9cd8f1e8f0a58f3",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 2,
+          "label": "02 Accept",
+          "sn": "CANON-SH-01-SN-02",
+          "width": 375,
+          "line": 62,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/pin-drop.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        3
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "32879ba4b7f0d7ff47bf45279eee2f37c92998dd491e7c980426921714faa15f",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 3,
+          "label": "03 Mutual accept · the pin drops",
+          "sn": "CANON-SH-01-SN-03",
+          "width": 375,
+          "line": 80,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/scan.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        4,
+        5,
+        6
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "63d452a596e1c25a67a45cc5dfe9ca4c7284049324ad7d6c42c0b1e11599c680",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 4,
+          "label": "04 The QR",
+          "sn": "CANON-SH-01-SN-04",
+          "width": 375,
+          "line": 103,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        },
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 5,
+          "label": "04b Enter the code",
+          "sn": "CANON-SH-01-SN-21",
+          "width": 375,
+          "line": 130,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        },
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 6,
+          "label": "05 Failed scan",
+          "sn": "CANON-SH-01-SN-05",
+          "width": 375,
+          "line": 158,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 41,
+          "text": "{/* Placeholder Waverly in center */}"
+        },
+        {
+          "line": 42,
+          "text": "<View style={styles.placeholderCircle}>"
+        },
+        {
+          "line": 145,
+          "text": "placeholderCircle: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/selfie-prompt.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        7
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "03be33bf50fcb43e2902e2f8367e6d27a31dba08d9d88aba1d2eff1b0e22f76a",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 7,
+          "label": "06 Selfie · before the camera",
+          "sn": "CANON-SH-01-SN-06",
+          "width": 375,
+          "line": 180,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/selfie-review.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        8
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "938b29f0273d2106f55cdb19047b4be37e2e11554b64010df4136b995b2dde23",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 8,
+          "label": "07 Selfie · taken",
+          "sn": "CANON-SH-01-SN-07",
+          "width": 375,
+          "line": 200,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 47,
+          "text": "{/* Placeholder for the actual selfie */}"
+        },
+        {
+          "line": 48,
+          "text": "<View style={styles.photoPlaceholder}>"
+        },
+        {
+          "line": 49,
+          "text": "<Text style={styles.placeholderText}>Selfie captured</Text>"
+        },
+        {
+          "line": 127,
+          "text": "photoPlaceholder: {"
+        },
+        {
+          "line": 132,
+          "text": "placeholderText: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/countdown.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        9
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "78e82c28465483ba98bd1d1cf77f0a89b02d653420d03ac83ddbde1677aed196",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 9,
+          "label": "08 The countdown",
+          "sn": "CANON-SH-01-SN-08",
+          "width": 375,
+          "line": 230,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 9,
+          "text": "* Multiple countdowns stack as a carousel (not implemented in this version)."
+        },
+        {
+          "line": 52,
+          "text": "{/* Placeholder for other person's photo */}"
+        },
+        {
+          "line": 53,
+          "text": "<View style={styles.photoPlaceholder}>"
+        },
+        {
+          "line": 54,
+          "text": "<Text style={styles.placeholderText}>{otherPersonName}'s photo</Text>"
+        },
+        {
+          "line": 123,
+          "text": "photoPlaceholder: {"
+        },
+        {
+          "line": 128,
+          "text": "placeholderText: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/reveal.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        10
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "08a05d8fe4d6f37c49420475858c3da75e98ab253dd6bed070602f26189b4a6a",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 10,
+          "label": "09 The reveal",
+          "sn": "CANON-SH-01-SN-09",
+          "width": 375,
+          "line": 246,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 91,
+          "text": "{/* Avatar placeholder */}"
+        },
+        {
+          "line": 106,
+          "text": "<View style={styles.selfiePlaceholder}>"
+        },
+        {
+          "line": 107,
+          "text": "<Text style={styles.selfiePlaceholderText}>The selfie you took together</Text>"
+        },
+        {
+          "line": 245,
+          "text": "selfiePlaceholder: {"
+        },
+        {
+          "line": 250,
+          "text": "selfiePlaceholderText: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/missed-connection.tsx",
+      "canvas": "The Encounter.dc.html",
+      "ordinals": [
+        11
+      ],
+      "note": "Encounter has placeholder data and incomplete API/camera/scanner wiring; source match does not certify function.",
+      "sourceSHA256": "4d5f0b743eb4b6311cac3d8e8cd540b2e76e8b2ed2324a38c828f3606a738291",
+      "frames": [
+        {
+          "canvas": "The Encounter.dc.html",
+          "ordinal": 11,
+          "label": "10 Lost connection",
+          "sn": "CANON-SH-01-SN-10",
+          "width": 375,
+          "line": 280,
+          "docHash": "c34d4d35c9c908b7c3948bcf7433880b2dc3481b1a8abcd2e240d19fe96a8533",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 63,
+          "text": "{/* Avatar placeholder - in Fern for this example */}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(encounter)/arrow.tsx",
+      "canvas": "Waverlys Journey Locked.dc.html",
+      "ordinals": [
+        2
+      ],
+      "note": "ONLY located candidate is in a superseded canvas. Resolve whether this route is obsolete; do not order replacement artwork automatically.",
+      "sourceSHA256": "7741e70b18a443c043e83715c4ee935044aaa377c6a2ff99d4bc5d03009b6913",
+      "frames": [
+        {
+          "canvas": "Waverlys Journey Locked.dc.html",
+          "ordinal": 2,
+          "label": "2 The arrow",
+          "sn": "CANON-SH-01-SN-20",
+          "width": 375,
+          "line": 82,
+          "docHash": "8cc30482ec91fb43bdfa72f24fd5a3e2fd937cf41d81e757d0400b84f6ad4c7a",
+          "superseded": true
+        }
+      ],
+      "association": "Superseded source only",
+      "staticEvidence": [
+        {
+          "line": 56,
+          "text": "{/* Placeholder photo background */}"
+        },
+        {
+          "line": 57,
+          "text": "<View style={styles.photoPlaceholder}>"
+        },
+        {
+          "line": 58,
+          "text": "<Text style={styles.placeholderText}>Her photo — this is how you'll know her</Text>"
+        },
+        {
+          "line": 135,
+          "text": "photoPlaceholder: {"
+        },
+        {
+          "line": 141,
+          "text": "placeholderText: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/index.tsx",
+      "canvas": "Feed and Prizes All Sizes.dc.html",
+      "ordinals": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "note": "Feed and active-Hello takeover are states of one route. API feed exists; takeover still needs wiring.",
+      "sourceSHA256": "114cd453a6ee98fcf88ddeaafdda53569880636e1be22bb7182bad1337eb0519",
+      "frames": [
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "ordinal": 1,
+          "label": "Happening · phone",
+          "sn": "CANON-RL-01-SN-26",
+          "width": 375,
+          "line": 45,
+          "docHash": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839",
+          "superseded": false
+        },
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "ordinal": 2,
+          "label": "Happening · a Hello supersedes it",
+          "sn": "CANON-RL-01-SN-27",
+          "width": 375,
+          "line": 75,
+          "docHash": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839",
+          "superseded": false
+        },
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "ordinal": 3,
+          "label": "Happening · tablet",
+          "sn": "CANON-RL-01-SN-26",
+          "width": 834,
+          "line": 110,
+          "docHash": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839",
+          "superseded": false
+        },
+        {
+          "canvas": "Feed and Prizes All Sizes.dc.html",
+          "ordinal": 4,
+          "label": "Happening · desktop",
+          "sn": "CANON-RL-01-SN-26",
+          "width": 1440,
+          "line": 142,
+          "docHash": "eba0880a47fba17786937f3716ecb9635d0fa1166aca822c7c25e507b6215839",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 8,
+          "text": "* 4. HOOTZA DETAIL — single Hootza opened (not implemented in this version)"
+        },
+        {
+          "line": 30,
+          "text": "import { mockFeedItems, mockQuietDayItems, type FeedItem as MockFeedItem } from '../../src/data/mockFeedData';"
+        },
+        {
+          "line": 36,
+          "text": "// UI feed item (transformed from API or mock)"
+        },
+        {
+          "line": 61,
+          "text": "const otherPersonColor = identityColor; // Placeholder: use user's own color"
+        },
+        {
+          "line": 403,
+          "text": "disabled={!onPress}"
+        },
+        {
+          "line": 458,
+          "text": "disabled={!onPress}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/points.tsx",
+      "canvas": "Points and Drawings All Sizes.dc.html",
+      "ordinals": [
+        11,
+        12
+      ],
+      "note": "Route is labeled Prizes but implements points/ledger. Full Prizes/Drawings designs are not accounted for by this route alone.",
+      "sourceSHA256": "a4710ce4ef5dad4c7f772dd9cce9119763ffd49c260d3be7c1608602cc166665",
+      "frames": [
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "ordinal": 11,
+          "label": "Points · phone",
+          "sn": "CANON-RL-01-SN-61",
+          "width": 375,
+          "line": 347,
+          "docHash": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3",
+          "superseded": false
+        },
+        {
+          "canvas": "Points and Drawings All Sizes.dc.html",
+          "ordinal": 12,
+          "label": "Points · tablet",
+          "sn": "CANON-RL-01-SN-61",
+          "width": 834,
+          "line": 377,
+          "docHash": "7c6ac7e26ede220045fddb7315bcca476cc006af11453aa7fb13f2a30220b3b3",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 85,
+          "text": "<Text style={styles.balanceValue}>{balance === null ? 'Unavailable' : displayBalance}</Text>"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/profile.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        4
+      ],
+      "note": "Several settings entry actions are disabled, including delivered legal/deletion/blocked-list designs.",
+      "sourceSHA256": "65b147dbbff496d0afaf29d3c7a3eade27ef5e2a5733fbdd74a58f7ad6175ae3",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 4,
+          "label": "Settings",
+          "sn": "CANON-RL-01-SN-56",
+          "width": 390,
+          "line": 155,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 7,
+          "text": "* DEAD DESTINATIONS (disabled, coming later):"
+        },
+        {
+          "line": 88,
+          "text": "// Disabled row handler (no-op)"
+        },
+        {
+          "line": 89,
+          "text": "const handleDisabledRow = () => {"
+        },
+        {
+          "line": 90,
+          "text": "// Intentionally empty - disabled rows do nothing"
+        },
+        {
+          "line": 144,
+          "text": "{/* Notifications - DISABLED */}"
+        },
+        {
+          "line": 146,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 147,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 148,
+          "text": "disabled"
+        },
+        {
+          "line": 150,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 154,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 158,
+          "text": "<Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>"
+        },
+        {
+          "line": 161,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 166,
+          "text": "{/* Host Mode - DISABLED */}"
+        },
+        {
+          "line": 168,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 169,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 170,
+          "text": "disabled"
+        },
+        {
+          "line": 172,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 176,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 180,
+          "text": "<Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>"
+        },
+        {
+          "line": 183,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 198,
+          "text": "accessibilityState={{ disabled: false }}"
+        },
+        {
+          "line": 219,
+          "text": "{/* Blocked - DISABLED */}"
+        },
+        {
+          "line": 221,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 222,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 223,
+          "text": "disabled"
+        },
+        {
+          "line": 225,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 229,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 233,
+          "text": "<Text style={[styles.rowValueText, styles.rowValueTextDisabled]}>"
+        },
+        {
+          "line": 236,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 246,
+          "text": "{/* Terms - DISABLED */}"
+        },
+        {
+          "line": 248,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 249,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 250,
+          "text": "disabled"
+        },
+        {
+          "line": 252,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 256,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 259,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 263,
+          "text": "{/* Privacy - DISABLED */}"
+        },
+        {
+          "line": 265,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 266,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 267,
+          "text": "disabled"
+        },
+        {
+          "line": 269,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 273,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 276,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 280,
+          "text": "{/* Drawing rules - DISABLED */}"
+        },
+        {
+          "line": 282,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 283,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 284,
+          "text": "disabled"
+        },
+        {
+          "line": 286,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 290,
+          "text": "<Text style={[styles.rowLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 293,
+          "text": "<Text style={[styles.rowChevron, styles.rowChevronDisabled]}>›</Text>"
+        },
+        {
+          "line": 304,
+          "text": "accessibilityState={{ disabled: false }}"
+        },
+        {
+          "line": 315,
+          "text": "{/* Delete account - DISABLED */}"
+        },
+        {
+          "line": 318,
+          "text": "style={[styles.row, styles.rowDisabled]}"
+        },
+        {
+          "line": 319,
+          "text": "onPress={handleDisabledRow}"
+        },
+        {
+          "line": 320,
+          "text": "disabled"
+        },
+        {
+          "line": 322,
+          "text": "accessibilityState={{ disabled: true }}"
+        },
+        {
+          "line": 326,
+          "text": "<Text style={[styles.rowLabel, styles.deleteLabel, styles.rowLabelDisabled]}>"
+        },
+        {
+          "line": 424,
+          "text": "rowDisabled: {"
+        },
+        {
+          "line": 440,
+          "text": "rowLabelDisabled: {"
+        },
+        {
+          "line": 453,
+          "text": "rowValueTextDisabled: {"
+        },
+        {
+          "line": 460,
+          "text": "rowChevronDisabled: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/profile/blocked.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        9
+      ],
+      "note": "Block-list route exists, but its settings entry is disabled.",
+      "sourceSHA256": "0359759e462b28741416d82c2dca4464bdb5518176fdaf1ffe54b11e679a1c3a",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 9,
+          "label": "Blocked list",
+          "sn": "CANON-RL-01-SN-59",
+          "width": 390,
+          "line": 354,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 157,
+          "text": "disabled={undoingUserId === user.id}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/profile/icebreakers.tsx",
+      "canvas": "Icebreakers.dc.html",
+      "ordinals": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "note": "Library/answer/filled/empty states share one route; after-reveal and exit states require separate review.",
+      "sourceSHA256": "85002e387f7f59c1920838e061595cbb73304ad6da9c1725e875160ec9f62056",
+      "frames": [
+        {
+          "canvas": "Icebreakers.dc.html",
+          "ordinal": 2,
+          "label": "Icebreakers — browse the library",
+          "sn": "CANON-RL-01-SN-46",
+          "width": 375,
+          "line": 141,
+          "docHash": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78",
+          "superseded": false
+        },
+        {
+          "canvas": "Icebreakers.dc.html",
+          "ordinal": 3,
+          "label": "Icebreakers — answering one",
+          "sn": "CANON-RL-01-SN-47",
+          "width": 375,
+          "line": 205,
+          "docHash": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78",
+          "superseded": false
+        },
+        {
+          "canvas": "Icebreakers.dc.html",
+          "ordinal": 4,
+          "label": "Your Icebreakers — filled",
+          "sn": "CANON-RL-01-SN-48",
+          "width": 375,
+          "line": 246,
+          "docHash": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78",
+          "superseded": false
+        },
+        {
+          "canvas": "Icebreakers.dc.html",
+          "ordinal": 5,
+          "label": "Your Icebreakers — empty",
+          "sn": "CANON-RL-01-SN-49",
+          "width": 375,
+          "line": 297,
+          "docHash": "e18829db5c245372939ea98945f2d6156dcd86ca080f5659d9c161f8c208cb78",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 173,
+          "text": "contentLanguage: 'en-US', // TODO: Get from device settings"
+        },
+        {
+          "line": 297,
+          "text": "placeholder={t('icebreakers.fieldPlaceholder')}"
+        },
+        {
+          "line": 298,
+          "text": "placeholderTextColor={Colors.Muted}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/hellos/index.tsx",
+      "canvas": "Reserved Screens.dc.html",
+      "ordinals": [
+        1
+      ],
+      "note": "Connections list candidate. ID collides with the Yellow color specimen; scope source by canvas.",
+      "sourceSHA256": "f3887adefc706cda0028fda50fe3eaad39339666470434ecb82621166436fb47",
+      "frames": [
+        {
+          "canvas": "Reserved Screens.dc.html",
+          "ordinal": 1,
+          "label": "Connections — the list",
+          "sn": "CANON-RL-01-SN-36",
+          "width": 375,
+          "line": 34,
+          "docHash": "9bbd8f3f248235c8653afb4e7a9bdb1c3ea3eed151d0b8203bb2d20f1e0a2e59",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/hellos/[id].tsx",
+      "canvas": null,
+      "ordinals": [],
+      "note": "Private connection-note editor exists in code. No exact standalone drawing positively identified; may be embedded in another canvas. Needs source confirmation, not automatic redraw.",
+      "sourceSHA256": "796e3114d4e51df6dfa021a282c4d2b543f90eda5e12043d2015d850ea628a75",
+      "frames": [],
+      "association": "Source unresolved / infrastructure",
+      "staticEvidence": [
+        {
+          "line": 116,
+          "text": "placeholder=\"Add a note\""
+        },
+        {
+          "line": 117,
+          "text": "placeholderTextColor={Colors.Ink + '66'}"
+        },
+        {
+          "line": 124,
+          "text": "disabled={saving || draft.trim().length === 0}"
+        },
+        {
+          "line": 132,
+          "text": "disabled={saving}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/map/index.tsx",
+      "canvas": "Hello Map.dc.html",
+      "ordinals": [
+        1,
+        2,
+        3
+      ],
+      "note": "Map browsing/search/pin sheet exist in designs. Native map is a placeholder and search uses mock data.",
+      "sourceSHA256": "21294244877a31245ab82c85e07abdf5df0e4cc300b0a300bd71fad9514210ce",
+      "frames": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "ordinal": 1,
+          "label": "Map — browsing",
+          "sn": "CANON-RL-01-SN-31",
+          "width": 375,
+          "line": 41,
+          "docHash": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4",
+          "superseded": false
+        },
+        {
+          "canvas": "Hello Map.dc.html",
+          "ordinal": 2,
+          "label": "Map — search",
+          "sn": "CANON-RL-01-SN-32",
+          "width": 375,
+          "line": 90,
+          "docHash": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4",
+          "superseded": false
+        },
+        {
+          "canvas": "Hello Map.dc.html",
+          "ordinal": 3,
+          "label": "Pin — selfie sheet",
+          "sn": "CANON-RL-01-SN-33",
+          "width": 375,
+          "line": 124,
+          "docHash": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 38,
+          "text": "mockPlaceResults,"
+        },
+        {
+          "line": 39,
+          "text": "mockHangoutResults,"
+        },
+        {
+          "line": 40,
+          "text": "mockRecentSearches,"
+        },
+        {
+          "line": 42,
+          "text": "} from '../../../src/data/mockMapData';"
+        },
+        {
+          "line": 187,
+          "text": "placeholder={t('map.search.placeholder')}"
+        },
+        {
+          "line": 188,
+          "text": "placeholderTextColor={Colors.Muted}"
+        },
+        {
+          "line": 207,
+          "text": "{mockPlaceResults.map((place) => ("
+        },
+        {
+          "line": 238,
+          "text": "{mockHangoutResults.map((hangout) => ("
+        },
+        {
+          "line": 260,
+          "text": "{mockRecentSearches.map((search, idx) => ("
+        },
+        {
+          "line": 281,
+          "text": "{/* Map area with placeholder */}"
+        },
+        {
+          "line": 283,
+          "text": "{/* Placeholder basemap - REPLACE WITH ACTUAL MAP TILE LAYER */}"
+        },
+        {
+          "line": 284,
+          "text": "<View style={styles.placeholderMap}>"
+        },
+        {
+          "line": 286,
+          "text": "<Text style={styles.placeholderText}>REPLACE WITH MAP TILE LAYER</Text>"
+        },
+        {
+          "line": 288,
+          "text": "{/* Mock pins - in production these would be map markers */}"
+        },
+        {
+          "line": 307,
+          "text": "{/* Mock clusters - only show if we have more than 3 pins */}"
+        },
+        {
+          "line": 330,
+          "text": "accessibilityLabel={t('map.search.placeholder')}"
+        },
+        {
+          "line": 334,
+          "text": "<Text style={styles.searchPlaceholder}>"
+        },
+        {
+          "line": 335,
+          "text": "{t('map.search.placeholder')}"
+        },
+        {
+          "line": 398,
+          "text": "<View style={styles.selfiePlaceholder} />"
+        },
+        {
+          "line": 399,
+          "text": "<View style={styles.selfiePlaceholder} />"
+        },
+        {
+          "line": 400,
+          "text": "<View style={styles.selfiePlaceholder} />"
+        },
+        {
+          "line": 562,
+          "text": "placeholderMap: {"
+        },
+        {
+          "line": 579,
+          "text": "placeholderText: {"
+        },
+        {
+          "line": 646,
+          "text": "searchPlaceholder: {"
+        },
+        {
+          "line": 732,
+          "text": "selfiePlaceholder: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/map/empty.tsx",
+      "canvas": "Hello Map.dc.html",
+      "ordinals": [
+        5
+      ],
+      "note": "Empty-area design exists; navigation/data parity unverified.",
+      "sourceSHA256": "ca311d7b3380348cc663a9368d109b010e2c98dfb7077a77b22facb0e10d42ea",
+      "frames": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "ordinal": 5,
+          "label": "Map — empty here",
+          "sn": "CANON-RL-01-SN-25",
+          "width": 375,
+          "line": 198,
+          "docHash": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(tabs)/map/place.tsx",
+      "canvas": "Hello Map.dc.html",
+      "ordinals": [
+        4
+      ],
+      "note": "Candidate is a place surface; exact city-statistics versus Hangout-page interpretation needs visual comparison.",
+      "sourceSHA256": "8ecb06a6147bf7965c1f6f392453e4d28f6d2b64cd08daf4ac51328bed5fe6d8",
+      "frames": [
+        {
+          "canvas": "Hello Map.dc.html",
+          "ordinal": 4,
+          "label": "Map — a place",
+          "sn": "CANON-RL-02-SN-01",
+          "width": 375,
+          "line": 161,
+          "docHash": "af25b1aa302417f30d1819c5c540f316fde53b9cc8c1b4e3082797071c3e71a4",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 77,
+          "text": "{/* Mock cluster pins */}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/block.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        7
+      ],
+      "note": "API action exists; not device-verified.",
+      "sourceSHA256": "960fbfc9d702e8bdad757cce4794b53d4a4887a5c52c61114461fc5433f57c5a",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 7,
+          "label": "Block",
+          "sn": "CANON-RL-01-SN-58",
+          "width": 390,
+          "line": 274,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 108,
+          "text": "disabled={isBlocking}"
+        },
+        {
+          "line": 118,
+          "text": "disabled={isBlocking}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/report.tsx",
+      "canvas": "Missing Mobile Screens.dc.html",
+      "ordinals": [
+        6
+      ],
+      "note": "API action exists; report context/state parity unverified.",
+      "sourceSHA256": "f3e22c2a0e5ebcafce523376bc63a21d8816b1476002b45f73ff16871edb2559",
+      "frames": [
+        {
+          "canvas": "Missing Mobile Screens.dc.html",
+          "ordinal": 6,
+          "label": "Report anything",
+          "sn": "CANON-00-SN-01",
+          "width": 390,
+          "line": 237,
+          "docHash": "28250a55af59a320187b4e1f281aff03348c25f1be4174310b4f8e7949ac0c5f",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 171,
+          "text": "placeholder=\"Anything that helps us understand.\""
+        },
+        {
+          "line": 172,
+          "text": "placeholderTextColor={Colors.Faint}"
+        },
+        {
+          "line": 195,
+          "text": "style={[styles.submitButton, !selectedReason && styles.submitButtonDisabled]}"
+        },
+        {
+          "line": 197,
+          "text": "disabled={!selectedReason || isSubmitting}"
+        },
+        {
+          "line": 378,
+          "text": "submitButtonDisabled: {"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/index.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        1,
+        2,
+        3,
+        16
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "8a65c6b495cecc07fbad80e0f3e890b089133f7e2b35e1927709ad918695529c",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 1,
+          "label": "Hootza page — live",
+          "sn": "CANON-RL-01-SN-72",
+          "width": 390,
+          "line": 51,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        },
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 2,
+          "label": "Hootza page — ended",
+          "sn": "CANON-RL-01-SN-73",
+          "width": 390,
+          "line": 105,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        },
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 3,
+          "label": "Hootza page — cancelled",
+          "sn": "CANON-RL-01-SN-74",
+          "width": 390,
+          "line": 150,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        },
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 16,
+          "label": "RSVP states",
+          "sn": "CANON-RL-01-SN-84",
+          "width": 390,
+          "line": 732,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/create/index.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        4
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "1e41a3c234e36ea36ff03c1481aabde1a45598d8a1bedb4c2cfae71b7413eeee",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 4,
+          "label": "Create — what and where",
+          "sn": "CANON-RL-01-SN-75",
+          "width": 390,
+          "line": 196,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 109,
+          "text": "placeholder={t('hootzas.create.calledLabel')}"
+        },
+        {
+          "line": 119,
+          "text": "placeholder=\"YYYY-MM-DD\""
+        },
+        {
+          "line": 126,
+          "text": "placeholder=\"19:00\""
+        },
+        {
+          "line": 133,
+          "text": "placeholder=\"22:00\""
+        },
+        {
+          "line": 167,
+          "text": "placeholder={t('hootzas.venue.addressPlaceholder')}"
+        },
+        {
+          "line": 175,
+          "text": "placeholder={t('hootzas.create.detailsLabel')}"
+        },
+        {
+          "line": 187,
+          "text": "placeholder=\"$\""
+        },
+        {
+          "line": 194,
+          "text": "placeholder={t('hootzas.create.youCollect')}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/create/how-it-runs.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        5
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "ef96ab15e80fd488b0c5c7a209ed6277d6cca1bc77ed322b32cc9e176dc79759",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 5,
+          "label": "Create — how it runs",
+          "sn": "CANON-RL-01-SN-76",
+          "width": 390,
+          "line": 246,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/host-controls.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        6
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "5661efc402dc385c487c885f7da6c695a11722ac274a0a5ebc9374e55ac552d2",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 6,
+          "label": "Host controls",
+          "sn": "CANON-RL-01-SN-77",
+          "width": 390,
+          "line": 299,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/check-in-code.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        7
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "4bb63d688f27d9748c279e47dd4a0787a05a36bcd15335db20101908aaeb39cd",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 7,
+          "label": "Check-in code",
+          "sn": "CANON-RL-01-SN-78",
+          "width": 390,
+          "line": 348,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/check-in.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        8
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "ea85258e184d024576dd12dd42bf313d48861a31395c618ee843a9155e193a7b",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 8,
+          "label": "Scanned in — Host Mode asked",
+          "sn": "CANON-RL-01-SN-79",
+          "width": 390,
+          "line": 376,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 49,
+          "text": "placeholder={t('hootzas.checkIn.scanPrompt')}"
+        },
+        {
+          "line": 57,
+          "text": "disabled={!code.trim()}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/host-mode-prompt.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        8
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "8ea508def088aef40211301069dcaea8a40931b625c3f9afaf5858b2bb3567c6",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 8,
+          "label": "Scanned in — Host Mode asked",
+          "sn": "CANON-RL-01-SN-79",
+          "width": 390,
+          "line": 376,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/host-mode-window.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        9
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "458032500cd2c50eb48fdbbd6d466413a7a60c535294b190c6ac0214336a35ec",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 9,
+          "label": "Host Mode — window open",
+          "sn": "CANON-RL-01-SN-80",
+          "width": 390,
+          "line": 402,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/discount/compose.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        10
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "5fcba60185b2636c77ec7a91030d7e3ad1e8aac16c4af8871ae47b53da026ece",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 10,
+          "label": "Discount composer",
+          "sn": "CANON-RL-02-SN-02",
+          "width": 390,
+          "line": 456,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 106,
+          "text": "placeholder={t('hootzas.discount.offerLabel')}"
+        },
+        {
+          "line": 112,
+          "text": "placeholder={t('hootzas.discount.preview')}"
+        },
+        {
+          "line": 137,
+          "text": "disabled={!title.trim()}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/discount/out-of-posts.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        11
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "9a8e8572cde8ee58fb63619876ee559503bc58370e9e5064cd0920b9ab6fc83e",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 11,
+          "label": "Discount — out of free posts",
+          "sn": "CANON-RL-02-SN-03",
+          "width": 390,
+          "line": 517,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 115,
+          "text": "disabled"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/edit.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        13
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "566021084e5ef47266f38528afcd1675e3bafe5b8dc6252652e4690d9ee9b664",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 13,
+          "label": "Edit a live Hootza",
+          "sn": "CANON-RL-01-SN-81",
+          "width": 390,
+          "line": 626,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/cancel-confirm.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        14
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "4ee5b666c5bc76a4e4cbeb2d2305127fa3d6de52c6ba1a3f9f2ef8aaac433621",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 14,
+          "label": "Cancel — confirm",
+          "sn": "CANON-RL-01-SN-82",
+          "width": 390,
+          "line": 662,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 110,
+          "text": "placeholder={t('hootzas.cancelConfirm.reasonLabel')}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/end-vs-cancel.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        15
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "f233d7873b1c9b0b7aff23855e5cd0a427771803354d30f3bf949028be7ca30b",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 15,
+          "label": "End vs Cancel",
+          "sn": "CANON-RL-01-SN-83",
+          "width": 390,
+          "line": 690,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/comments.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        17
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "ccefdeafadcac45d7c9d960e63d16691771abf685be4da1fdcba034654f619ff",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 17,
+          "label": "Comments",
+          "sn": "CANON-RL-01-SN-85",
+          "width": 390,
+          "line": 762,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 108,
+          "text": "placeholder={t('hootzas.comments.placeholder')}"
+        },
+        {
+          "line": 115,
+          "text": "disabled={!draft.trim()}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/[id]/whos-here.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        18
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "5b456df4d318cc40a2e4a02ce3d2bb83074fb6097194ac50dd6f90df8db37f49",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 18,
+          "label": "Who's here",
+          "sn": "CANON-RL-01-SN-86",
+          "width": 390,
+          "line": 786,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 90,
+          "text": "<Text style={styles.unavailable} testID=\"whos-here-api-note\">"
+        },
+        {
+          "line": 91,
+          "text": "{t('hootzas.whosHere.unavailable')}"
+        },
+        {
+          "line": 126,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/empty.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        20
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "0f3acd30cc2e5fb80f2b3d7bba76a73808686ea9b7030542309bf4075eb9f93d",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 20,
+          "label": "Nothing on",
+          "sn": "CANON-RL-01-SN-88",
+          "width": 390,
+          "line": 858,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hootzas)/create/post-error.tsx",
+      "canvas": "Hootzas.dc.html",
+      "ordinals": [
+        21
+      ],
+      "note": "Route/source candidate; role permissions, API outcomes and every state still require end-to-end verification.",
+      "sourceSHA256": "34cb7d29fb8b4ff69d8539718225aae98f3b9bd65c8360f6e666d862d50364d9",
+      "frames": [
+        {
+          "canvas": "Hootzas.dc.html",
+          "ordinal": 21,
+          "label": "Couldn't post",
+          "sn": "CANON-RL-01-SN-89",
+          "width": 390,
+          "line": 878,
+          "docHash": "b09717d9feff41ca51193aa726a5aea49fdbb7f9c56b3b420c9b871a58110e65",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/find-business.tsx",
+      "canvas": "Ambassador Field Flow.dc.html",
+      "ordinals": [
+        1
+      ],
+      "note": "Current screen contains unavailable/disabled functionality. Drawing exists; this is implementation debt.",
+      "sourceSHA256": "d7a11c2011ff3aa5b132d4a26da6319e62a56201aac91e1e50a06faae5fa71a7",
+      "frames": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 1,
+          "label": "A8 Find the business",
+          "sn": "CANON-RL-03-SN-01",
+          "width": 375,
+          "line": 46,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 22,
+          "text": "placeholder={t('ambassador.findBusiness.searchPlaceholder')}"
+        },
+        {
+          "line": 25,
+          "text": "<Text style={styles.unavailable} testID=\"find-business-unavailable\">"
+        },
+        {
+          "line": 26,
+          "text": "{t('ambassador.findBusiness.unavailable')}"
+        },
+        {
+          "line": 31,
+          "text": "disabled"
+        },
+        {
+          "line": 45,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/confirm-details.tsx",
+      "canvas": "Ambassador Field Flow.dc.html",
+      "ordinals": [
+        2
+      ],
+      "note": "Current screen contains unavailable/disabled functionality. Drawing exists; this is implementation debt.",
+      "sourceSHA256": "b999b057467d536d38e9f38e055bf94712442a6bc40f588ca2bfb5db1a5d6786",
+      "frames": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 2,
+          "label": "A9 Confirm details",
+          "sn": "CANON-RL-03-SN-02",
+          "width": 375,
+          "line": 77,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 21,
+          "text": "<Text style={styles.unavailable} testID=\"confirm-unavailable\">"
+        },
+        {
+          "line": 22,
+          "text": "{t('ambassador.confirmDetails.unavailable')}"
+        },
+        {
+          "line": 27,
+          "text": "disabled"
+        },
+        {
+          "line": 41,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/photo.tsx",
+      "canvas": "Ambassador Field Flow.dc.html",
+      "ordinals": [
+        3
+      ],
+      "note": "Current screen contains unavailable/disabled functionality. Drawing exists; this is implementation debt.",
+      "sourceSHA256": "068560f6f7694b095b671e15506816093c4912ea00666e90b7b9748e703fe609",
+      "frames": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 3,
+          "label": "A10 Photo of the place",
+          "sn": "CANON-RL-03-SN-03",
+          "width": 375,
+          "line": 102,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 22,
+          "text": "<Button title={t('ambassador.photo.takeNow')} onPress={() => {}} disabled testID=\"photo-camera\" />"
+        },
+        {
+          "line": 26,
+          "text": "disabled"
+        },
+        {
+          "line": 33,
+          "text": "<Text style={styles.unavailable} testID=\"photo-unavailable\">"
+        },
+        {
+          "line": 34,
+          "text": "{t('ambassador.photo.unavailable')}"
+        },
+        {
+          "line": 55,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/visit-check-in.tsx",
+      "canvas": "Ambassador Field Flow.dc.html",
+      "ordinals": [
+        4,
+        5
+      ],
+      "note": "API paths exist; payment/visit journey and visual parity unverified.",
+      "sourceSHA256": "5b3fc8ec201b1c77e6b613f60bdd8c50dcc4608a5a5a76e7091cf2ce54b5a9df",
+      "frames": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 4,
+          "label": "A4 Visit check-in · at the door",
+          "sn": "CANON-RL-03-SN-04",
+          "width": 375,
+          "line": 130,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        },
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 5,
+          "label": "A4 Wrong venue's code",
+          "sn": "CANON-RL-03-SN-05",
+          "width": 375,
+          "line": 165,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 68,
+          "text": "placeholder=\"QR stand serial (optional)\""
+        },
+        {
+          "line": 69,
+          "text": "placeholderTextColor=\"rgba(255,255,255,0.4)\""
+        },
+        {
+          "line": 87,
+          "text": "disabled={busy}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/payouts.tsx",
+      "canvas": "Ambassador Field Flow.dc.html",
+      "ordinals": [
+        6,
+        7
+      ],
+      "note": "API paths exist; payment/visit journey and visual parity unverified.",
+      "sourceSHA256": "2e0fa5ed3266a08f7881f5c1bdd36ff647fb9e82cd0a27f6cff0dad246cf7d90",
+      "frames": [
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 6,
+          "label": "A5 Payouts · phone",
+          "sn": "CANON-RL-03-SN-06",
+          "width": 375,
+          "line": 196,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        },
+        {
+          "canvas": "Ambassador Field Flow.dc.html",
+          "ordinal": 7,
+          "label": "A5 Payouts · desktop",
+          "sn": "CANON-RL-03-SN-06",
+          "width": 1440,
+          "line": 241,
+          "docHash": "76118a2db9ecec527b4b1a7bf5a1310c983b4205750ca163319353eac4bee095",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 134,
+          "text": "disabled={!balance || available < balance.minimumWithdrawal}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/earned-building.tsx",
+      "canvas": "Ambassador Panel.dc.html",
+      "ordinals": [
+        1,
+        2
+      ],
+      "note": "Candidate overview; Earned and Building must remain distinct and side by side.",
+      "sourceSHA256": "7611c31a5824c27aebe307310acf4c34874e63e3db045518d04d18c6d0964c13",
+      "frames": [
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "ordinal": 1,
+          "label": "DESKTOP · 11.1 Overview",
+          "sn": "CANON-RL-03-SN-10",
+          "width": 1440,
+          "line": 55,
+          "docHash": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02",
+          "superseded": false
+        },
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "ordinal": 2,
+          "label": "MOBILE · 11.1 Overview",
+          "sn": "CANON-RL-03-SN-10",
+          "width": 375,
+          "line": 178,
+          "docHash": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/hangouts.tsx",
+      "canvas": "Ambassador Panel.dc.html",
+      "ordinals": [
+        3,
+        4,
+        5
+      ],
+      "note": "Portfolio/list/empty candidate states.",
+      "sourceSHA256": "7780932742d41ecd0747841baac49ca4319df582e6da07cf9b5722da26d06daf",
+      "frames": [
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "ordinal": 3,
+          "label": "DESKTOP · 11.2 Portfolio",
+          "sn": "CANON-RL-03-SN-11",
+          "width": 1440,
+          "line": 243,
+          "docHash": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02",
+          "superseded": false
+        },
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "ordinal": 4,
+          "label": "MOBILE · 11.2 Portfolio",
+          "sn": "CANON-RL-03-SN-11",
+          "width": 375,
+          "line": 433,
+          "docHash": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02",
+          "superseded": false
+        },
+        {
+          "canvas": "Ambassador Panel.dc.html",
+          "ordinal": 5,
+          "label": "DESKTOP · 11.2 Portfolio empty",
+          "sn": "CANON-RL-03-SN-12",
+          "width": 1440,
+          "line": 490,
+          "docHash": "d89790c02a8b257223787a5c5017e87ad9fadf86b85ca90fb9e1a8d93916ad02",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 72,
+          "text": "<Text style={styles.unavailable}>{t('ambassador.hangouts.unavailable')}</Text>"
+        },
+        {
+          "line": 129,
+          "text": "unavailable: { fontSize: 15, lineHeight: 22, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/queue-offer.tsx",
+      "canvas": "Ambassadors and Hello Hangouts.dc.html",
+      "ordinals": [
+        1
+      ],
+      "note": "Older 340px frame; exact final P/T source needs approval.",
+      "sourceSHA256": "8450b520b7c8e34d396dc11536d3759e66875e3d6a1e142a3292bfeea9b86cee",
+      "frames": [
+        {
+          "canvas": "Ambassadors and Hello Hangouts.dc.html",
+          "ordinal": 1,
+          "label": "MOBILE · A3 Queue offer",
+          "sn": "CANON-RL-03-SN-07",
+          "width": 340,
+          "line": 61,
+          "docHash": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/signup.tsx",
+      "canvas": "Ambassadors and Hello Hangouts.dc.html",
+      "ordinals": [
+        4
+      ],
+      "note": "Drawing exists; tax/payout onboarding needs provider-backed completion, not a local checkbox.",
+      "sourceSHA256": "5d0b8a1ef256ab893bf8872bf5606d0aabbffd7df38b5cf72abd5303ab6fdabd",
+      "frames": [
+        {
+          "canvas": "Ambassadors and Hello Hangouts.dc.html",
+          "ordinal": 4,
+          "label": "MOBILE · A6 Ambassador signup",
+          "sn": "CANON-RL-03-SN-08",
+          "width": 340,
+          "line": 150,
+          "docHash": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/store.tsx",
+      "canvas": "Store and Ambassador Shop.dc.html",
+      "ordinals": [
+        3,
+        4,
+        5
+      ],
+      "note": "Locked/open drawings exist; current store is unavailable.",
+      "sourceSHA256": "4650abb880feb5fd79d52784253dc44911cde82ff84cae200e16767238d17c5e",
+      "frames": [
+        {
+          "canvas": "Store and Ambassador Shop.dc.html",
+          "ordinal": 3,
+          "label": "Ambassador shop · locked",
+          "sn": "CANON-RL-03-SN-09",
+          "width": 375,
+          "line": 100,
+          "docHash": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93",
+          "superseded": false
+        },
+        {
+          "canvas": "Store and Ambassador Shop.dc.html",
+          "ordinal": 4,
+          "label": "Ambassador shop · open",
+          "sn": "CANON-RL-03-SN-09",
+          "width": 375,
+          "line": 130,
+          "docHash": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93",
+          "superseded": false
+        },
+        {
+          "canvas": "Store and Ambassador Shop.dc.html",
+          "ordinal": 5,
+          "label": "Ambassador shop · large phone",
+          "sn": "CANON-RL-03-SN-09",
+          "width": 440,
+          "line": 156,
+          "docHash": "e7e52c296aa3689a1c8c70867c0d6a734ac0869319d8b5007896ae0e2dba7c93",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 23,
+          "text": "<Text style={styles.unavailable} testID=\"store-unavailable\">"
+        },
+        {
+          "line": 24,
+          "text": "{t('ambassador.store.unavailable')}"
+        },
+        {
+          "line": 39,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted, marginTop: 12 },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/commissions.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        18
+      ],
+      "note": "Current screen marks commissions unavailable. P artwork exists; do not reorder it.",
+      "sourceSHA256": "21c3df3486ebd17a30d64ea21d17b8b2ba1772e75536b59792bcf62b062e07c1",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 18,
+          "label": "Commissions tracker",
+          "sn": "CANON-RL-03-SN-13-P",
+          "width": 375,
+          "line": 582,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 35,
+          "text": "<Text style={styles.unavailable} testID=\"commissions-unavailable\">"
+        },
+        {
+          "line": 36,
+          "text": "{t('ambassador.commissions.unavailable')}"
+        },
+        {
+          "line": 71,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/ambassador/visit-history.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        19
+      ],
+      "note": "P artwork exists; ledger/backend response and visual parity require review.",
+      "sourceSHA256": "216ba2a4854fad764f6fedd0d3b1623cb9c36fcd7c4b81285bfc781215278cc5",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 19,
+          "label": "Visit history",
+          "sn": "CANON-RL-03-SN-14-P",
+          "width": 375,
+          "line": 620,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 73,
+          "text": "<Text style={styles.unavailable}>{t('ambassador.visitHistory.unavailable')}</Text>"
+        },
+        {
+          "line": 118,
+          "text": "unavailable: { fontSize: 15, lineHeight: 22, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/signup.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        11,
+        23
+      ],
+      "note": "Two signup candidates: tier and business signup. Confirm whether both are implemented by this route.",
+      "sourceSHA256": "cb680281069eb06df9ecb5c3ba5fe88b41c5cac8ff10f82869d0ba7110ec017a",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 11,
+          "label": "Signup and tier",
+          "sn": "CANON-RL-02-SN-04-P",
+          "width": 375,
+          "line": 352,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        },
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 23,
+          "label": "Hello Hangout signup",
+          "sn": "CANON-RL-02-SN-08-P",
+          "width": 375,
+          "line": 753,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 76,
+          "text": "placeholder=\"Business name\""
+        },
+        {
+          "line": 77,
+          "text": "placeholderTextColor={Colors.Muted}"
+        },
+        {
+          "line": 84,
+          "text": "placeholder=\"Address\""
+        },
+        {
+          "line": 85,
+          "text": "placeholderTextColor={Colors.Muted}"
+        },
+        {
+          "line": 104,
+          "text": "disabled={busy}"
+        },
+        {
+          "line": 117,
+          "text": "disabled={busy}"
+        },
+        {
+          "line": 129,
+          "text": "disabled={busy}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/dashboard.tsx",
+      "canvas": "Work Surfaces All Sizes.dc.html",
+      "ordinals": [
+        4,
+        5,
+        6
+      ],
+      "note": "Business dashboard P/T/D drawings exist; not equivalent to role journey verification.",
+      "sourceSHA256": "d2760ba11236b4b4a2fa20406b6cf7e65ab305d9615964ac5d9ef5ca5eaeeafc",
+      "frames": [
+        {
+          "canvas": "Work Surfaces All Sizes.dc.html",
+          "ordinal": 4,
+          "label": "Business · desktop",
+          "sn": "CANON-RL-02-SN-07",
+          "width": 1440,
+          "line": 203,
+          "docHash": "26516e460dcb54e5f7725fa005c69f8b4c0c3a47858969f2a30680d53c2aa44d",
+          "superseded": false
+        },
+        {
+          "canvas": "Work Surfaces All Sizes.dc.html",
+          "ordinal": 5,
+          "label": "Business · tablet",
+          "sn": "CANON-RL-02-SN-07",
+          "width": 834,
+          "line": 253,
+          "docHash": "26516e460dcb54e5f7725fa005c69f8b4c0c3a47858969f2a30680d53c2aa44d",
+          "superseded": false
+        },
+        {
+          "canvas": "Work Surfaces All Sizes.dc.html",
+          "ordinal": 6,
+          "label": "Business · phone",
+          "sn": "CANON-RL-02-SN-07",
+          "width": 375,
+          "line": 294,
+          "docHash": "26516e460dcb54e5f7725fa005c69f8b4c0c3a47858969f2a30680d53c2aa44d",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 71,
+          "text": "<View style={styles.hero} testID=\"dashboard-unavailable\">"
+        },
+        {
+          "line": 79,
+          "text": "<Text style={styles.unavailable}>{t('hangout.dashboard.unavailable')}</Text>"
+        },
+        {
+          "line": 115,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/create-post.tsx",
+      "canvas": "Hello Hangout Operator Surfaces.dc.html",
+      "ordinals": [
+        3
+      ],
+      "note": "Discount composer overlaps Hootza discount route; shared design is not a missing screen.",
+      "sourceSHA256": "1108d50273ce731def1c58fed737d97ca172edbc15020dda647769815e4d75fc",
+      "frames": [
+        {
+          "canvas": "Hello Hangout Operator Surfaces.dc.html",
+          "ordinal": 3,
+          "label": "H10 Create a post · Discount",
+          "sn": "CANON-RL-02-SN-02",
+          "width": 375,
+          "line": 158,
+          "docHash": "25de302c620c0ab6b2fd0538a19d0046a8315edebd99e4b705f041b439d1997b",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/redeem.tsx",
+      "canvas": "Hello Hangout Operator Surfaces.dc.html",
+      "ordinals": [
+        4
+      ],
+      "note": "At-the-till drawing exists; real redemption journey unverified.",
+      "sourceSHA256": "c196eaabe4daabb3c8aa92d9c9a476e93194c551847e1a183da13d0243923a5a",
+      "frames": [
+        {
+          "canvas": "Hello Hangout Operator Surfaces.dc.html",
+          "ordinal": 4,
+          "label": "H12 Deal redemption · at the till",
+          "sn": "CANON-RL-02-SN-06",
+          "width": 375,
+          "line": 193,
+          "docHash": "25de302c620c0ab6b2fd0538a19d0046a8315edebd99e4b705f041b439d1997b",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 22,
+          "text": "<Text style={styles.unavailable} testID=\"redeem-unavailable\">"
+        },
+        {
+          "line": 23,
+          "text": "{t('hangout.redeem.unavailable')}"
+        },
+        {
+          "line": 25,
+          "text": "<Button title={t('hangout.redeem.scanPrompt')} onPress={() => {}} disabled testID=\"redeem-scan\" />"
+        },
+        {
+          "line": 38,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/directory/index.tsx",
+      "canvas": "Hangout Directory.dc.html",
+      "ordinals": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "note": "Listing/map/filter/no-results frames exist. Do not infer all states implemented from the route.",
+      "sourceSHA256": "e9f5e985817b65e0071a152c984fc4e03195c23966685435678d1617eb33ded9",
+      "frames": [
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 1,
+          "label": "Directory — listing",
+          "sn": "CANON-RL-02-SN-07-P",
+          "width": 375,
+          "line": 44,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 2,
+          "label": "Directory — listing",
+          "sn": "CANON-RL-02-SN-07-T",
+          "width": 834,
+          "line": 44,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 3,
+          "label": "Directory — map",
+          "sn": "CANON-RL-02-SN-08-P",
+          "width": 375,
+          "line": 45,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 4,
+          "label": "Directory — map",
+          "sn": "CANON-RL-02-SN-08-T",
+          "width": 834,
+          "line": 45,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 9,
+          "label": "Directory — filters",
+          "sn": "CANON-RL-02-SN-11-P",
+          "width": 375,
+          "line": 48,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 10,
+          "label": "Directory — filters",
+          "sn": "CANON-RL-02-SN-11-T",
+          "width": 834,
+          "line": 48,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 11,
+          "label": "Directory — no results",
+          "sn": "CANON-RL-02-SN-12-P",
+          "width": 375,
+          "line": 49,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 12,
+          "label": "Directory — no results",
+          "sn": "CANON-RL-02-SN-12-T",
+          "width": 834,
+          "line": 49,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 13,
+          "label": "Directory — listing",
+          "sn": "CANON-RL-02-SN-07-D",
+          "width": 1440,
+          "line": 61,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 16,
+          "text": "<Text style={styles.unavailable}>{t('hangout.directory.unavailable')}</Text>"
+        },
+        {
+          "line": 29,
+          "text": "unavailable: { fontSize: 15, lineHeight: 22, color: Colors.Muted, textAlign: 'center' },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(hangout)/directory/[id].tsx",
+      "canvas": "Hangout Directory.dc.html",
+      "ordinals": [
+        5,
+        6,
+        7,
+        8,
+        14
+      ],
+      "note": "Place page and Hello wall have delivered P/T sources.",
+      "sourceSHA256": "6e279710738420d1c9966910b03f8aca2798d9faf48c7ef7ace23d6d087bb143",
+      "frames": [
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 5,
+          "label": "Hello Hangout page",
+          "sn": "CANON-RL-02-SN-09-P",
+          "width": 375,
+          "line": 46,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 6,
+          "label": "Hello Hangout page",
+          "sn": "CANON-RL-02-SN-09-T",
+          "width": 834,
+          "line": 46,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 7,
+          "label": "Hello Hangout page — Hello wall",
+          "sn": "CANON-RL-02-SN-10-P",
+          "width": 375,
+          "line": 47,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 8,
+          "label": "Hello Hangout page — Hello wall",
+          "sn": "CANON-RL-02-SN-10-T",
+          "width": 834,
+          "line": 47,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        },
+        {
+          "canvas": "Hangout Directory.dc.html",
+          "ordinal": 14,
+          "label": "Hello Hangout page",
+          "sn": "CANON-RL-02-SN-09-D",
+          "width": 1440,
+          "line": 214,
+          "docHash": "79836bb655f4285e3b0a7edd0a0c3b49c39fa60b370f418a4f3dd7581d572dbe",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 19,
+          "text": "<Text style={styles.unavailable} testID=\"listing-unavailable\">"
+        },
+        {
+          "line": 20,
+          "text": "{t('hangout.listing.unavailable')}"
+        },
+        {
+          "line": 32,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/influencer/pick-code.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        15
+      ],
+      "note": "P drawing exists.",
+      "sourceSHA256": "40fa902f1d42edc3124d73f4c0b5b976a118993c1e9301f3d6bcc33ab47b563b",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 15,
+          "label": "Pick a code",
+          "sn": "CANON-RL-04-SN-02-P",
+          "width": 375,
+          "line": 488,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 60,
+          "text": "<TextInput value={code} onChangeText={setCode} placeholder={t('influencer.pickCode.title')} testID=\"code-input\" />"
+        },
+        {
+          "line": 78,
+          "text": "disabled={status !== 'available'}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/influencer/code-taken.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        16
+      ],
+      "note": "P drawing exists; reserved/blocked-code cases also appear in Open Items and Gates.",
+      "sourceSHA256": "e5ee703a942d54c49ff9f709be2cfd3df01766a1312026921c042a91bf28323b",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 16,
+          "label": "Code already taken",
+          "sn": "CANON-RL-04-SN-03-P",
+          "width": 375,
+          "line": 514,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 49,
+          "text": "placeholder={t('influencer.codeTaken.tryAnother')}"
+        },
+        {
+          "line": 57,
+          "text": "disabled={!nextCode.trim()}"
+        }
+      ],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/influencer/earnings.tsx",
+      "canvas": "Desktop Surfaces at P 375.dc.html",
+      "ordinals": [
+        14
+      ],
+      "note": "Candidate two-stream earnings; finance/legal MA-05 gates remain distinct from artwork availability.",
+      "sourceSHA256": "d7123d44c2f96ab229f721ea6a32cc724ded8794900ea1091ac9f7d0ca3435a3",
+      "frames": [
+        {
+          "canvas": "Desktop Surfaces at P 375.dc.html",
+          "ordinal": 14,
+          "label": "Influencer — what you've earned",
+          "sn": "CANON-RL-04-SN-01-P",
+          "width": 375,
+          "line": 460,
+          "docHash": "f87e65a74f648c1e79cc0b04d1167bca16876d49b33b40213ed987727d85e3aa",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [],
+      "deviceVerified": false
+    },
+    {
+      "file": "app/(refer)/hangout.tsx",
+      "canvas": "Ambassadors and Hello Hangouts.dc.html",
+      "ordinals": [
+        9
+      ],
+      "note": "Referral submission is disabled. Source drawing exists at 340px; final-size confirmation needed.",
+      "sourceSHA256": "d77fe18bb75aaabe5825b249f5484a7da5569b68f25df19ba2ae217f41e270ba",
+      "frames": [
+        {
+          "canvas": "Ambassadors and Hello Hangouts.dc.html",
+          "ordinal": 9,
+          "label": "MOBILE · R1 Member refers a Hello Hangout",
+          "sn": "CANON-RL-01-SN-90",
+          "width": 340,
+          "line": 315,
+          "docHash": "c411fb6d9df90ce3d08b10130066e8c018d15da511c7c86ed6ae11493e63ef03",
+          "superseded": false
+        }
+      ],
+      "association": "Located source candidate — visual parity unverified",
+      "staticEvidence": [
+        {
+          "line": 29,
+          "text": "placeholder={t('refer.hangout.searchPlaceholder')}"
+        },
+        {
+          "line": 43,
+          "text": "<Text style={styles.unavailable} testID=\"refer-unavailable\">"
+        },
+        {
+          "line": 44,
+          "text": "{t('refer.hangout.unavailable')}"
+        },
+        {
+          "line": 47,
+          "text": "<Button title={t('refer.hangout.send')} onPress={() => {}} disabled testID=\"refer-submit\" />"
+        },
+        {
+          "line": 80,
+          "text": "unavailable: { fontSize: 14, lineHeight: 20, color: Colors.Muted },"
+        }
+      ],
+      "deviceVerified": false
+    }
+  ]
+}
