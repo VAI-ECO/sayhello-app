@@ -1,0 +1,28 @@
+{
+  "cli": {
+    "appVersionSource": "local"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "SENTRY_AUTH_TOKEN": "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"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "env": {
+        "SENTRY_AUTH_TOKEN": "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"
+      }
+    },
+    "production": {
+      "env": {
+        "SENTRY_AUTH_TOKEN": "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"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
