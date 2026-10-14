@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+google_sevices/
+*.p12
+*.mobileprovision
+*.ipa
+*.xcarchive/
+node_modules/
+*.log
+.expo/
+dist/
