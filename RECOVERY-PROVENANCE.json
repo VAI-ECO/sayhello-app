@@ -1,0 +1,14 @@
+{
+  "source": "/Users/bmac/vai-workspaces/sayhello-app",
+  "kind": "checkout",
+  "destination": "VAI-ECO/sayhello-app",
+  "fingerprint": "d07db75fc0d04693168ec76a844f074aa0ea3933327780f07beab6ab88ee58dc",
+  "purpose": "Unreviewed preserved source; no adoption into main",
+  "included": [
+    {
+      "path": ".gitignore",
+      "sha256": "01936ce33f7b4555437384cf677a411f9a1f1df81511dd568134d7bf9fa19e4d"
+    }
+  ],
+  "excluded": []
+}
