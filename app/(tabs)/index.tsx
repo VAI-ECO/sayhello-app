@@ -103,7 +103,11 @@ export default function WhatsHappeningScreen() {
         id: item.id,
         type: 'hootza',
         title: item.title,
-        locationName: item.locationName || 'Location TBD',
+        locationName: [
+          item.venueType === 'private_residence' ? t('whatsHappening.feedItem.privateResidence')
+            : item.venueType === 'public_place' ? t('whatsHappening.feedItem.publicPlace') : null,
+          item.locationName,
+        ].filter(Boolean).join(' · ') || t('whatsHappening.feedItem.placeTbd'),
         time: formatTime(startTime),
         date: formatDate(startTime),
         attendeeCount: item.rsvpCount + item.checkinCount,

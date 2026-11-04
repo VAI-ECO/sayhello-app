@@ -223,6 +223,9 @@ export const en = {
       holla: 'Holla',
       hootza: 'Hootza',
       going: 'going',
+      privateResidence: 'Private residence',
+      publicPlace: 'Public place',
+      placeTbd: 'Place to come',
     },
   },
 

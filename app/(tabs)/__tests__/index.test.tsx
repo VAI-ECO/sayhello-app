@@ -111,6 +111,25 @@ describe('What\'s Happening Screen', () => {
     });
   });
 
+  it('shows the venue type and only the address returned by the server', async () => {
+    const base = {
+      type: 'hootza' as const, startTime: new Date(Date.now() + 48 * 60 * 60 * 1000).toISOString(),
+      host: { id: 'host', fullName: 'Host' }, rsvpCount: 1, checkinCount: 0,
+      createdAt: new Date().toISOString(),
+    };
+    mockGetFeed.mockResolvedValue({ data: { view: 'today', count: 4, items: [
+      { ...base, id: '1', title: 'House', venueType: 'private_residence', locationName: '12 Elm' },
+      { ...base, id: '2', title: 'Withheld', venueType: 'private_residence', locationName: null as unknown as string },
+      { ...base, id: '3', title: 'Park', venueType: 'public_place', locationName: 'Bell St' },
+      { ...base, id: '4', title: 'Unknown', venueType: 'unknown' },
+    ] } });
+    await render(<ThemeProvider><WhatsHappeningScreen /></ThemeProvider>);
+    await waitFor(() => expect(screen.getByText('Private residence · 12 Elm · 1 going')).toBeTruthy());
+    expect(screen.getByText('Private residence · 1 going')).toBeTruthy();
+    expect(screen.getByText('Public place · Bell St · 1 going')).toBeTruthy();
+    expect(screen.getByText('Place to come · 1 going')).toBeTruthy();
+  });
+
   describe('THE FEED (default state)', () => {
     it('renders header with Say Hello wordmark and Waverly', async () => {
       await render(
